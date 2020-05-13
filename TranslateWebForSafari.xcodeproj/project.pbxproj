@@ -1,0 +1,768 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00DD6A4C246659DA004684DA /* TranslateWebForSafari.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */; };
+		00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A4D246659DA004684DA /* AppDelegate.swift */; };
+		00DD6A51246659DA004684DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4F246659DA004684DA /* Main.storyboard */; };
+		00DD6A53246659DA004684DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A52246659DA004684DA /* ViewController.swift */; };
+		00DD6A55246659DD004684DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A54246659DD004684DA /* Assets.xcassets */; };
+		00DD6A60246659DD004684DA /* TranslateWebForSafariTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A5F246659DD004684DA /* TranslateWebForSafariTests.swift */; };
+		00DD6A6B246659DD004684DA /* TranslateWebForSafariUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A6A246659DD004684DA /* TranslateWebForSafariUITests.swift */; };
+		00DD6A72246659DD004684DA /* TranslateWebForSafari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 00DD6A71246659DD004684DA /* TranslateWebForSafari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		00DD6A77246659DD004684DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DD6A76246659DD004684DA /* Cocoa.framework */; };
+		00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */; };
+		00DD6A82246659DD004684DA /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A81246659DD004684DA /* script.js */; };
+		00DD6A84246659DD004684DA /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		00DD6A5C246659DD004684DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00DD6A40246659DA004684DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00DD6A47246659DA004684DA;
+			remoteInfo = TranslateWebForSafari;
+		};
+		00DD6A67246659DD004684DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00DD6A40246659DA004684DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00DD6A47246659DA004684DA;
+			remoteInfo = TranslateWebForSafari;
+		};
+		00DD6A73246659DD004684DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 00DD6A40246659DA004684DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 00DD6A70246659DD004684DA;
+			remoteInfo = "TranslateWebForSafari Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		00DD6A8B246659DD004684DA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				00DD6A72246659DD004684DA /* TranslateWebForSafari Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		00A0E4A3246C3756000E8B22 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		00A0E4A4246C376C000E8B22 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		00A0E4A5246C3773000E8B22 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
+		00A0E4A6246C3778000E8B22 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
+		00A0E4A7246C3782000E8B22 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		00A0E4A8246C378B000E8B22 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		00DD6A48246659DA004684DA /* TranslateWebForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateWebForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari.entitlements; sourceTree = "<group>"; };
+		00DD6A4D246659DA004684DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		00DD6A50246659DA004684DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		00DD6A52246659DA004684DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00DD6A54246659DD004684DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00DD6A56246659DD004684DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00DD6A5B246659DD004684DA /* TranslateWebForSafariTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateWebForSafariTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00DD6A5F246659DD004684DA /* TranslateWebForSafariTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateWebForSafariTests.swift; sourceTree = "<group>"; };
+		00DD6A61246659DD004684DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00DD6A66246659DD004684DA /* TranslateWebForSafariUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateWebForSafariUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00DD6A6A246659DD004684DA /* TranslateWebForSafariUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateWebForSafariUITests.swift; sourceTree = "<group>"; };
+		00DD6A6C246659DD004684DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00DD6A71246659DD004684DA /* TranslateWebForSafari Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "TranslateWebForSafari Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00DD6A76246659DD004684DA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		00DD6A80246659DD004684DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00DD6A81246659DD004684DA /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		00DD6A85246659DD004684DA /* TranslateWebForSafari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		00DD6A45246659DA004684DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DD6A58246659DD004684DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DD6A63246659DD004684DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DD6A6E246659DD004684DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DD6A77246659DD004684DA /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		00DD6A3F246659DA004684DA = {
+			isa = PBXGroup;
+			children = (
+				00DD6A4A246659DA004684DA /* TranslateWebForSafari */,
+				00DD6A5E246659DD004684DA /* TranslateWebForSafariTests */,
+				00DD6A69246659DD004684DA /* TranslateWebForSafariUITests */,
+				00DD6A78246659DD004684DA /* TranslateWebForSafari Extension */,
+				00DD6A75246659DD004684DA /* Frameworks */,
+				00DD6A49246659DA004684DA /* Products */,
+			);
+			indentWidth = 4;
+			sourceTree = "<group>";
+			tabWidth = 4;
+		};
+		00DD6A49246659DA004684DA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				00DD6A48246659DA004684DA /* TranslateWebForSafari.app */,
+				00DD6A5B246659DD004684DA /* TranslateWebForSafariTests.xctest */,
+				00DD6A66246659DD004684DA /* TranslateWebForSafariUITests.xctest */,
+				00DD6A71246659DD004684DA /* TranslateWebForSafari Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		00DD6A4A246659DA004684DA /* TranslateWebForSafari */ = {
+			isa = PBXGroup;
+			children = (
+				00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */,
+				00DD6A4D246659DA004684DA /* AppDelegate.swift */,
+				00DD6A4F246659DA004684DA /* Main.storyboard */,
+				00DD6A52246659DA004684DA /* ViewController.swift */,
+				00DD6A54246659DD004684DA /* Assets.xcassets */,
+				00DD6A56246659DD004684DA /* Info.plist */,
+			);
+			path = TranslateWebForSafari;
+			sourceTree = "<group>";
+		};
+		00DD6A5E246659DD004684DA /* TranslateWebForSafariTests */ = {
+			isa = PBXGroup;
+			children = (
+				00DD6A5F246659DD004684DA /* TranslateWebForSafariTests.swift */,
+				00DD6A61246659DD004684DA /* Info.plist */,
+			);
+			path = TranslateWebForSafariTests;
+			sourceTree = "<group>";
+		};
+		00DD6A69246659DD004684DA /* TranslateWebForSafariUITests */ = {
+			isa = PBXGroup;
+			children = (
+				00DD6A6A246659DD004684DA /* TranslateWebForSafariUITests.swift */,
+				00DD6A6C246659DD004684DA /* Info.plist */,
+			);
+			path = TranslateWebForSafariUITests;
+			sourceTree = "<group>";
+		};
+		00DD6A75246659DD004684DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				00DD6A76246659DD004684DA /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		00DD6A78246659DD004684DA /* TranslateWebForSafari Extension */ = {
+			isa = PBXGroup;
+			children = (
+				00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */,
+				00DD6A80246659DD004684DA /* Info.plist */,
+				00DD6A81246659DD004684DA /* script.js */,
+				00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */,
+				00DD6A85246659DD004684DA /* TranslateWebForSafari_Extension.entitlements */,
+			);
+			path = "TranslateWebForSafari Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		00DD6A47246659DA004684DA /* TranslateWebForSafari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00DD6A8C246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafari" */;
+			buildPhases = (
+				00DD6A44246659DA004684DA /* Sources */,
+				00DD6A45246659DA004684DA /* Frameworks */,
+				00DD6A46246659DA004684DA /* Resources */,
+				00DD6A8B246659DD004684DA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00DD6A74246659DD004684DA /* PBXTargetDependency */,
+			);
+			name = TranslateWebForSafari;
+			productName = TranslateWebForSafari;
+			productReference = 00DD6A48246659DA004684DA /* TranslateWebForSafari.app */;
+			productType = "com.apple.product-type.application";
+		};
+		00DD6A5A246659DD004684DA /* TranslateWebForSafariTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00DD6A8F246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafariTests" */;
+			buildPhases = (
+				00DD6A57246659DD004684DA /* Sources */,
+				00DD6A58246659DD004684DA /* Frameworks */,
+				00DD6A59246659DD004684DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00DD6A5D246659DD004684DA /* PBXTargetDependency */,
+			);
+			name = TranslateWebForSafariTests;
+			productName = TranslateWebForSafariTests;
+			productReference = 00DD6A5B246659DD004684DA /* TranslateWebForSafariTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		00DD6A65246659DD004684DA /* TranslateWebForSafariUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00DD6A92246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafariUITests" */;
+			buildPhases = (
+				00DD6A62246659DD004684DA /* Sources */,
+				00DD6A63246659DD004684DA /* Frameworks */,
+				00DD6A64246659DD004684DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				00DD6A68246659DD004684DA /* PBXTargetDependency */,
+			);
+			name = TranslateWebForSafariUITests;
+			productName = TranslateWebForSafariUITests;
+			productReference = 00DD6A66246659DD004684DA /* TranslateWebForSafariUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		00DD6A70246659DD004684DA /* TranslateWebForSafari Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 00DD6A88246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafari Extension" */;
+			buildPhases = (
+				00DD6A6D246659DD004684DA /* Sources */,
+				00DD6A6E246659DD004684DA /* Frameworks */,
+				00DD6A6F246659DD004684DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "TranslateWebForSafari Extension";
+			productName = "TranslateWebForSafari Extension";
+			productReference = 00DD6A71246659DD004684DA /* TranslateWebForSafari Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		00DD6A40246659DA004684DA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Manabu Nakazawa";
+				TargetAttributes = {
+					00DD6A47246659DA004684DA = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					00DD6A5A246659DD004684DA = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 00DD6A47246659DA004684DA;
+					};
+					00DD6A65246659DD004684DA = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = 00DD6A47246659DA004684DA;
+					};
+					00DD6A70246659DD004684DA = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 00DD6A43246659DA004684DA /* Build configuration list for PBXProject "TranslateWebForSafari" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+				"zh-Hans",
+				"pt-BR",
+				de,
+				es,
+				fr,
+			);
+			mainGroup = 00DD6A3F246659DA004684DA;
+			productRefGroup = 00DD6A49246659DA004684DA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				00DD6A47246659DA004684DA /* TranslateWebForSafari */,
+				00DD6A5A246659DD004684DA /* TranslateWebForSafariTests */,
+				00DD6A65246659DD004684DA /* TranslateWebForSafariUITests */,
+				00DD6A70246659DD004684DA /* TranslateWebForSafari Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		00DD6A46246659DA004684DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DD6A4C246659DA004684DA /* TranslateWebForSafari.entitlements in Resources */,
+				00DD6A55246659DD004684DA /* Assets.xcassets in Resources */,
+				00DD6A51246659DA004684DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DD6A59246659DD004684DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DD6A64246659DD004684DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DD6A6F246659DD004684DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DD6A84246659DD004684DA /* ToolbarItemIcon.pdf in Resources */,
+				00DD6A82246659DD004684DA /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		00DD6A44246659DA004684DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DD6A53246659DA004684DA /* ViewController.swift in Sources */,
+				00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DD6A57246659DD004684DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DD6A60246659DD004684DA /* TranslateWebForSafariTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DD6A62246659DD004684DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DD6A6B246659DD004684DA /* TranslateWebForSafariUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		00DD6A6D246659DD004684DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		00DD6A5D246659DD004684DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00DD6A47246659DA004684DA /* TranslateWebForSafari */;
+			targetProxy = 00DD6A5C246659DD004684DA /* PBXContainerItemProxy */;
+		};
+		00DD6A68246659DD004684DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00DD6A47246659DA004684DA /* TranslateWebForSafari */;
+			targetProxy = 00DD6A67246659DD004684DA /* PBXContainerItemProxy */;
+		};
+		00DD6A74246659DD004684DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 00DD6A70246659DD004684DA /* TranslateWebForSafari Extension */;
+			targetProxy = 00DD6A73246659DD004684DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		00DD6A4F246659DA004684DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				00DD6A50246659DA004684DA /* Base */,
+				00A0E4A3246C3756000E8B22 /* ja */,
+				00A0E4A4246C376C000E8B22 /* zh-Hans */,
+				00A0E4A5246C3773000E8B22 /* pt-BR */,
+				00A0E4A6246C3778000E8B22 /* de */,
+				00A0E4A7246C3782000E8B22 /* es */,
+				00A0E4A8246C378B000E8B22 /* fr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		00DD6A86246659DD004684DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		00DD6A87246659DD004684DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		00DD6A89246659DD004684DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TranslateWebForSafari Extension/TranslateWebForSafari_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZVWN4UJS9M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "TranslateWebForSafari Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		00DD6A8A246659DD004684DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "TranslateWebForSafari Extension/TranslateWebForSafari_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZVWN4UJS9M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = "TranslateWebForSafari Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		00DD6A8D246659DD004684DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TranslateWebForSafari/TranslateWebForSafari.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZVWN4UJS9M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TranslateWebForSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		00DD6A8E246659DD004684DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TranslateWebForSafari/TranslateWebForSafari.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZVWN4UJS9M;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = TranslateWebForSafari/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		00DD6A90246659DD004684DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZVWN4UJS9M;
+				INFOPLIST_FILE = TranslateWebForSafariTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafariTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TranslateWebForSafari.app/Contents/MacOS/TranslateWebForSafari";
+			};
+			name = Debug;
+		};
+		00DD6A91246659DD004684DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZVWN4UJS9M;
+				INFOPLIST_FILE = TranslateWebForSafariTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafariTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TranslateWebForSafari.app/Contents/MacOS/TranslateWebForSafari";
+			};
+			name = Release;
+		};
+		00DD6A93246659DD004684DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZVWN4UJS9M;
+				INFOPLIST_FILE = TranslateWebForSafariUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafariUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TranslateWebForSafari;
+			};
+			name = Debug;
+		};
+		00DD6A94246659DD004684DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = ZVWN4UJS9M;
+				INFOPLIST_FILE = TranslateWebForSafariUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafariUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = TranslateWebForSafari;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		00DD6A43246659DA004684DA /* Build configuration list for PBXProject "TranslateWebForSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DD6A86246659DD004684DA /* Debug */,
+				00DD6A87246659DD004684DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00DD6A88246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafari Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DD6A89246659DD004684DA /* Debug */,
+				00DD6A8A246659DD004684DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00DD6A8C246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DD6A8D246659DD004684DA /* Debug */,
+				00DD6A8E246659DD004684DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00DD6A8F246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafariTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DD6A90246659DD004684DA /* Debug */,
+				00DD6A91246659DD004684DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		00DD6A92246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafariUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				00DD6A93246659DD004684DA /* Debug */,
+				00DD6A94246659DD004684DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 00DD6A40246659DA004684DA /* Project object */;
+}
