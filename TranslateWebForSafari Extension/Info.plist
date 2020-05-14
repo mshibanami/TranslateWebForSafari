@@ -19,11 +19,26 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSExtension</key>
 	<dict>
+		<key>SFSafariContextMenu</key>
+		<array>
+			<dict>
+				<key>Text</key>
+				<string>-</string>
+				<key>Command</key>
+				<string>translateSelectedText</string>
+			</dict>
+			<dict>
+				<key>Text</key>
+				<string>-</string>
+				<key>Command</key>
+				<string>translatePage</string>
+			</dict>
+		</array>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.Safari.extension</string>
 		<key>NSExtensionPrincipalClass</key>
@@ -57,6 +72,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2020 Manabu Nakazawa. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>This is a Safari Extension. You should tell us what your extension does here.</string>
+	<string>Safari extension that translates the current tab or selected text.</string>
 </dict>
 </plist>

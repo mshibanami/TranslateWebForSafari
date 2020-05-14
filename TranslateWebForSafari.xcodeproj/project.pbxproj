@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001853AD246D676600C75E4D /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001853AC246D676600C75E4D /* L10n.swift */; };
+		001853AE246D686E00C75E4D /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001853AC246D676600C75E4D /* L10n.swift */; };
+		001853B0246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
+		001853B1246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
 		00DD6A4C246659DA004684DA /* TranslateWebForSafari.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */; };
 		00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A4D246659DA004684DA /* AppDelegate.swift */; };
 		00DD6A51246659DA004684DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4F246659DA004684DA /* Main.storyboard */; };
@@ -60,6 +64,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		001853AC246D676600C75E4D /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		001853B4246D8CDC00C75E4D /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		001853B5246D8CDC00C75E4D /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		001853B6246D8CDD00C75E4D /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		001853B7246D8CE000C75E4D /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		001853B8246D8CE100C75E4D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		001853B9246D8CE200C75E4D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		001853BA246D91F300C75E4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00A0E4A3246C3756000E8B22 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		00A0E4A4246C376C000E8B22 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		00A0E4A5246C3773000E8B22 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -150,11 +162,13 @@
 			isa = PBXGroup;
 			children = (
 				00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */,
+				00DD6A56246659DD004684DA /* Info.plist */,
+				001853B3246D8CC400C75E4D /* Localizable.strings */,
 				00DD6A4D246659DA004684DA /* AppDelegate.swift */,
-				00DD6A4F246659DA004684DA /* Main.storyboard */,
+				001853AC246D676600C75E4D /* L10n.swift */,
 				00DD6A52246659DA004684DA /* ViewController.swift */,
 				00DD6A54246659DD004684DA /* Assets.xcassets */,
-				00DD6A56246659DD004684DA /* Info.plist */,
+				00DD6A4F246659DA004684DA /* Main.storyboard */,
 			);
 			path = TranslateWebForSafari;
 			sourceTree = "<group>";
@@ -330,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001853B0246D8CC400C75E4D /* Localizable.strings in Resources */,
 				00DD6A4C246659DA004684DA /* TranslateWebForSafari.entitlements in Resources */,
 				00DD6A55246659DD004684DA /* Assets.xcassets in Resources */,
 				00DD6A51246659DA004684DA /* Main.storyboard in Resources */,
@@ -356,6 +371,7 @@
 			files = (
 				00DD6A84246659DD004684DA /* ToolbarItemIcon.pdf in Resources */,
 				00DD6A82246659DD004684DA /* script.js in Resources */,
+				001853B1246D8CC400C75E4D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +384,7 @@
 			files = (
 				00DD6A53246659DA004684DA /* ViewController.swift in Sources */,
 				00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */,
+				001853AD246D676600C75E4D /* L10n.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				001853AE246D686E00C75E4D /* L10n.swift in Sources */,
 				00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +434,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		001853B3246D8CC400C75E4D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				001853B4246D8CDC00C75E4D /* es */,
+				001853B5246D8CDC00C75E4D /* pt-BR */,
+				001853B6246D8CDD00C75E4D /* ja */,
+				001853B7246D8CE000C75E4D /* de */,
+				001853B8246D8CE100C75E4D /* fr */,
+				001853B9246D8CE200C75E4D /* zh-Hans */,
+				001853BA246D91F300C75E4D /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		00DD6A4F246659DA004684DA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -553,6 +585,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "TranslateWebForSafari Extension/TranslateWebForSafari_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZVWN4UJS9M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "TranslateWebForSafari Extension/Info.plist";
@@ -573,6 +606,7 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "TranslateWebForSafari Extension/TranslateWebForSafari_Extension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZVWN4UJS9M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "TranslateWebForSafari Extension/Info.plist";
@@ -596,6 +630,7 @@
 				CODE_SIGN_ENTITLEMENTS = TranslateWebForSafari/TranslateWebForSafari.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZVWN4UJS9M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = TranslateWebForSafari/Info.plist;
@@ -603,6 +638,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -617,6 +653,7 @@
 				CODE_SIGN_ENTITLEMENTS = TranslateWebForSafari/TranslateWebForSafari.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = ZVWN4UJS9M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = TranslateWebForSafari/Info.plist;
@@ -624,6 +661,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

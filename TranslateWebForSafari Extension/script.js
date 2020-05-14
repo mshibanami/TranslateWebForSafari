@@ -14,4 +14,3 @@ safari.self.addEventListener(
         }
     },
     false);
-

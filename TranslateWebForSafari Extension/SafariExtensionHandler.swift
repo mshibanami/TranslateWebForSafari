@@ -15,11 +15,6 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         private init() {}
     }
     
-    private enum TranslationMediaType {
-        case text(String)
-        case webpage(URL)
-    }
-    
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
         page.getPropertiesWithCompletionHandler { properties in
             guard messageName == "selectionChanged" else {
@@ -39,18 +34,16 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func toolbarItemClicked(in window: SFSafariWindow) {
         if let selectedText = State.shared.selectedText, !selectedText.isEmpty {
             window.openTab(
-                with: makeURLForGoogleTranslate(mediaType: .text(selectedText)),
+                with: TranslationMediaType.text(selectedText).makeURLForGoogleTranslate(),
                 makeActiveIfPossible: true)
         } else {
             window.getActiveTab { tab in
                 tab?.getActivePage { page in
-                    page?.getPropertiesWithCompletionHandler { [weak self] properties in
-                        guard let self = self, let url = properties?.url else {
+                    page?.getPropertiesWithCompletionHandler { properties in
+                        guard let url = properties?.url else {
                             return
                         }
-                        page?.dispatchMessageToScript(
-                            withName: "openURL",
-                            userInfo: ["url": self.makeURLForGoogleTranslate(mediaType: .webpage(url)).absoluteString])
+                        page?.open(mediaType: .webpage(url))
                     }
                 }
             }
@@ -60,10 +53,51 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
         validationHandler(true, "")
     }
-        
-    private func makeURLForGoogleTranslate(mediaType: TranslationMediaType) -> URL {
+    
+    override func contextMenuItemSelected(withCommand command: String, in page: SFSafariPage, userInfo: [String : Any]? = nil) {
+        guard let command = ContextMenuCommand(rawValue: command) else {
+            return
+        }
+        switch command {
+        case .translatePage:
+            page.getPropertiesWithCompletionHandler { properties in
+                guard let url = properties?.url else {
+                    return
+                }
+                page.open(mediaType: .webpage(url))
+            }
+        case .translateSelectedText:
+            guard let text = State.shared.selectedText else {
+                return
+            }
+            page.open(mediaType: .text(text))
+        }
+    }
+    
+    override func validateContextMenuItem(withCommand command: String, in page: SFSafariPage, userInfo: [String : Any]? = nil, validationHandler: @escaping (Bool, String?) -> Void) {
+        guard let command = ContextMenuCommand(rawValue: command) else {
+            return
+        }
+        switch command {
+        case .translateSelectedText:
+            if let text = State.shared.selectedText, !text.isEmpty {
+                validationHandler(false, L10n.contextMenuTranslateText(with: text))
+            } else {
+                validationHandler(true, nil)
+            }
+        case .translatePage:
+            validationHandler(false, L10n.contextMenuTranslatePage)
+        }
+    }
+}
+
+private enum TranslationMediaType {
+    case text(String)
+    case webpage(URL)
+    
+    func makeURLForGoogleTranslate() -> URL {
         var urlComponents = URLComponents(string: "https://translate.google.com/")!
-        switch mediaType {
+        switch self {
         case let .text(text):
             urlComponents.path = "/"
             urlComponents.queryItems = [
@@ -78,4 +112,17 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         }
         return urlComponents.url!
     }
+}
+
+private extension SFSafariPage {
+    func open(mediaType: TranslationMediaType) {
+        dispatchMessageToScript(
+            withName: "openURL",
+            userInfo: ["url": mediaType.makeURLForGoogleTranslate().absoluteString])
+    }
+}
+
+private enum ContextMenuCommand: String {
+    case translatePage = "translatePage"
+    case translateSelectedText = "translateSelectedText"
 }
