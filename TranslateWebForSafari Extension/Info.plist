@@ -17,28 +17,13 @@
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSMinimumSystemVersion</key>
 	<string>$(MACOSX_DEPLOYMENT_TARGET)</string>
 	<key>NSExtension</key>
 	<dict>
-		<key>SFSafariContextMenu</key>
-		<array>
-			<dict>
-				<key>Text</key>
-				<string>-</string>
-				<key>Command</key>
-				<string>translateSelectedText</string>
-			</dict>
-			<dict>
-				<key>Text</key>
-				<string>-</string>
-				<key>Command</key>
-				<string>translatePage</string>
-			</dict>
-		</array>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.Safari.extension</string>
 		<key>NSExtensionPrincipalClass</key>
@@ -48,6 +33,21 @@
 			<dict>
 				<key>Script</key>
 				<string>script.js</string>
+			</dict>
+		</array>
+		<key>SFSafariContextMenu</key>
+		<array>
+			<dict>
+				<key>Command</key>
+				<string>translateSelectedText</string>
+				<key>Text</key>
+				<string>-</string>
+			</dict>
+			<dict>
+				<key>Command</key>
+				<string>translatePage</string>
+				<key>Text</key>
+				<string>-</string>
 			</dict>
 		</array>
 		<key>SFSafariToolbarItem</key>
