@@ -34,19 +34,10 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func toolbarItemClicked(in window: SFSafariWindow) {
         if let selectedText = State.shared.selectedText, !selectedText.isEmpty {
             window.openTab(
-                with: TranslationMediaType.text(selectedText).makeURLForGoogleTranslate(),
+                with: TranslationMedia.text(selectedText).makeURLForGoogleTranslate(),
                 makeActiveIfPossible: true)
         } else {
-            window.getActiveTab { tab in
-                tab?.getActivePage { page in
-                    page?.getPropertiesWithCompletionHandler { properties in
-                        guard let url = properties?.url else {
-                            return
-                        }
-                        page?.open(mediaType: .webpage(url))
-                    }
-                }
-            }
+            window.openTranslatedPageForActivePage()
         }
     }
     
@@ -58,19 +49,18 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         guard let command = ContextMenuCommand(rawValue: command) else {
             return
         }
-        switch command {
-        case .translatePage:
-            page.getPropertiesWithCompletionHandler { properties in
-                guard let url = properties?.url else {
-                    return
+        page.getContainingTab {
+            $0.getContainingWindow {
+                switch command {
+                case .translatePage:
+                    $0?.openTranslatedPageForActivePage()
+                case .translateSelectedText:
+                    guard let text = State.shared.selectedText else {
+                        return
+                    }
+                    $0?.openPage(for: .text(text))
                 }
-                page.open(mediaType: .webpage(url))
             }
-        case .translateSelectedText:
-            guard let text = State.shared.selectedText else {
-                return
-            }
-            page.open(mediaType: .text(text))
         }
     }
     
@@ -91,7 +81,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
 }
 
-private enum TranslationMediaType {
+private enum TranslationMedia {
     case text(String)
     case webpage(URL)
     
@@ -114,11 +104,29 @@ private enum TranslationMediaType {
     }
 }
 
-private extension SFSafariPage {
-    func open(mediaType: TranslationMediaType) {
-        dispatchMessageToScript(
-            withName: "openURL",
-            userInfo: ["url": mediaType.makeURLForGoogleTranslate().absoluteString])
+private extension SFSafariWindow {
+    func openTranslatedPageForActivePage() {
+        getActiveTab {
+            $0?.getActivePage {
+                $0?.getPropertiesWithCompletionHandler { properties in
+                    guard let url = properties?.url else {
+                        return
+                    }
+                    self.openPage(for: .webpage(url))
+                }
+            }
+        }
+    }
+    
+    func openPage(for media: TranslationMedia) {
+        switch media {
+        case .text:
+            openTab(with: media.makeURLForGoogleTranslate(), makeActiveIfPossible: true)
+        case .webpage:
+            getActiveTab {
+                $0?.navigate(to: media.makeURLForGoogleTranslate())
+            }
+        }
     }
 }
 
