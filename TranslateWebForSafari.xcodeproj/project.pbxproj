@@ -72,6 +72,10 @@
 		001853B8246D8CE100C75E4D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		001853B9246D8CE200C75E4D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		001853BA246D91F300C75E4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		001DCAD524753A7B00867B94 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		001DCAD624753A7B00867B94 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		001DCAD724753A8900867B94 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
+		001DCAD824753A8900867B94 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		00A0E4A3246C3756000E8B22 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		00A0E4A4246C376C000E8B22 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		00A0E4A5246C3773000E8B22 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -325,6 +329,8 @@
 				de,
 				es,
 				fr,
+				ru,
+				it,
 			);
 			mainGroup = 00DD6A3F246659DA004684DA;
 			productRefGroup = 00DD6A49246659DA004684DA /* Products */;
@@ -444,6 +450,8 @@
 				001853B8246D8CE100C75E4D /* fr */,
 				001853B9246D8CE200C75E4D /* zh-Hans */,
 				001853BA246D91F300C75E4D /* en */,
+				001DCAD624753A7B00867B94 /* ru */,
+				001DCAD824753A8900867B94 /* it */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -458,6 +466,8 @@
 				00A0E4A6246C3778000E8B22 /* de */,
 				00A0E4A7246C3782000E8B22 /* es */,
 				00A0E4A8246C378B000E8B22 /* fr */,
+				001DCAD524753A7B00867B94 /* ru */,
+				001DCAD724753A8900867B94 /* it */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -8,8 +8,21 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         
         var selectedText: String? {
             didSet {
-                selectedText = selectedText?.trimmingCharacters(in: .whitespacesAndNewlines)
+                let text = selectedText?.trimmingCharacters(in: .whitespacesAndNewlines)
+                selectedText = (text?.isEmpty ?? true) ? nil : text
             }
+        }
+        
+        func makeShortenedSelectedText() -> String? {
+            guard let selectedText = selectedText else {
+                return nil
+            }
+            let maxTextLength = 100
+            var text = selectedText.replacingOccurrences(of: "\n", with: " ")
+            if text.count > maxTextLength {
+                text = text.prefix(maxTextLength) + "…"
+            }
+            return text
         }
         
         private init() {}
@@ -28,38 +41,44 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                 return
             }
             State.shared.selectedText = selectedText
+            page.getContainingWindow {
+                guard let window = $0 else {
+                    return
+                }
+                self.updateToolbarItemLabel(in: window)
+            }
         }
     }
     
     override func toolbarItemClicked(in window: SFSafariWindow) {
-        if let selectedText = State.shared.selectedText, !selectedText.isEmpty {
-            window.openTab(
-                with: TranslationMedia.text(selectedText).makeURLForGoogleTranslate(),
-                makeActiveIfPossible: true)
+        if let selectedText = State.shared.selectedText {
+            window.openPage(for: .text(selectedText))
         } else {
             window.openTranslatedPageForActivePage()
         }
     }
     
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
-        validationHandler(true, "")
+        window.getActivePage {
+            $0?.dispatchMessageToScript(withName: "updateSelection")
+            validationHandler(true, "")
+        }
     }
     
     override func contextMenuItemSelected(withCommand command: String, in page: SFSafariPage, userInfo: [String : Any]? = nil) {
         guard let command = ContextMenuCommand(rawValue: command) else {
             return
         }
-        page.getContainingTab {
-            $0.getContainingWindow {
-                switch command {
-                case .translatePage:
-                    $0?.openTranslatedPageForActivePage()
-                case .translateSelectedText:
-                    guard let text = State.shared.selectedText else {
-                        return
-                    }
-                    $0?.openPage(for: .text(text))
+        page.getContainingWindow {
+            switch command {
+            case .translatePage:
+                $0?.openTranslatedPageForActivePage()
+            case .translateSelectedText:
+                guard let text = State.shared.selectedText else {
+                    assertionFailure()
+                    return
                 }
+                $0?.openPage(for: .text(text))
             }
         }
     }
@@ -70,13 +89,23 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         }
         switch command {
         case .translateSelectedText:
-            if let text = State.shared.selectedText, !text.isEmpty {
-                validationHandler(false, L10n.contextMenuTranslateText(with: text))
+            if let _ = State.shared.selectedText {
+                validationHandler(false, L10n.contextMenuTranslateText(with: State.shared.makeShortenedSelectedText() ?? ""))
             } else {
                 validationHandler(true, nil)
             }
         case .translatePage:
             validationHandler(false, L10n.contextMenuTranslatePage)
+        }
+    }
+    
+    private func updateToolbarItemLabel(in window: SFSafariWindow) {
+        window.getToolbarItem {
+            if let _ = State.shared.selectedText {
+                $0?.setLabel(L10n.toolbarItemTranslateText(with: State.shared.makeShortenedSelectedText() ?? ""))
+            } else {
+                $0?.setLabel(L10n.toolbarItemTranslatePage)
+            }
         }
     }
 }
@@ -104,11 +133,19 @@ private enum TranslationMedia {
     }
 }
 
+private extension SFSafariPage {
+    func getContainingWindow(completionHandler: @escaping (SFSafariWindow?) -> Void) {
+        getContainingTab {
+            $0.getContainingWindow(completionHandler: completionHandler)
+        }
+    }
+}
+
 private extension SFSafariWindow {
     func openTranslatedPageForActivePage() {
-        getActiveTab {
-            $0?.getActivePage {
-                $0?.getPropertiesWithCompletionHandler { properties in
+        getActiveTab { tab in
+            tab?.getActivePage { page in
+                page?.getPropertiesWithCompletionHandler { properties in
                     guard let url = properties?.url else {
                         return
                     }
@@ -125,6 +162,18 @@ private extension SFSafariWindow {
         case .webpage:
             getActiveTab {
                 $0?.navigate(to: media.makeURLForGoogleTranslate())
+            }
+        }
+    }
+    
+    func getActivePage(completionHandler: @escaping (SFSafariPage?) -> Void) {
+        getActiveTab {
+            guard let tab = $0 else {
+                completionHandler(nil)
+                return
+            }
+            tab.getActivePage {
+                completionHandler($0)
             }
         }
     }

@@ -1,16 +1,20 @@
 document.addEventListener(
     'selectionchange',
     () => {
-        safari.extension.dispatchMessage(
-            'selectionChanged',
-            { "selectedText": document.getSelection().toString() });
+        updateSelection();
     });
 
 safari.self.addEventListener(
     'message',
     (event) => {
-        if (event.name == 'openURL') {
-            window.location.href = event.message.url;
+        if (event.name == 'updateSelection') {
+            updateSelection();
         }
     },
     false);
+
+function updateSelection() {
+    safari.extension.dispatchMessage(
+        'selectionChanged',
+        { "selectedText": document.getSelection().toString() });
+}

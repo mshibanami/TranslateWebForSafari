@@ -111,11 +111,11 @@
                                         </textFieldCell>
                                     </textField>
                                     <stackView distribution="fill" orientation="vertical" alignment="centerX" spacing="16" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Feu-XH-atr">
-                                        <rect key="frame" x="105" y="0.0" width="270" height="55"/>
+                                        <rect key="frame" x="147" y="0.0" width="186" height="55"/>
                                         <subviews>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="34G-2l-NLY">
-                                                <rect key="frame" x="-6" y="27" width="282" height="32"/>
-                                                <buttonCell key="cell" type="push" title="Open in Safari Extensions Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ywq-21-b53">
+                                                <rect key="frame" x="-6" y="27" width="198" height="32"/>
+                                                <buttonCell key="cell" type="push" title="Open Safari Preferences…" alternateTitle="Install" bezelStyle="rounded" alignment="center" lineBreakMode="truncatingMiddle" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ywq-21-b53">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="system"/>
                                                     <string key="keyEquivalent" base64-UTF8="YES">
@@ -127,7 +127,7 @@ DQ
                                                 </buttonCell>
                                             </button>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nYU-xS-ukb">
-                                                <rect key="frame" x="66" y="-1" width="139" height="19"/>
+                                                <rect key="frame" x="24" y="-1" width="139" height="19"/>
                                                 <buttonCell key="cell" type="recessed" title="About this extension" bezelStyle="recessed" alignment="center" borderStyle="border" inset="2" id="FgX-zF-aXP">
                                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                     <font key="font" metaFont="systemBold" size="12"/>

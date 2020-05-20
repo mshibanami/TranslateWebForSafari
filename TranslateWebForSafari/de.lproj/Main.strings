@@ -5,7 +5,7 @@
 "3NW-RD-QwL.title" = "Fenster";
 
 /* Class = "NSMenuItem"; title = "Quit Translate Web for Safari"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Quit Translate Web for Safari";
+"4sb-4s-VLi.title" = "Translate Web for Safari beenden";
 
 /* Class = "NSMenu"; title = "Main Menu"; ObjectID = "AYu-sK-qS6"; */
 "AYu-sK-qS6.title" = "Main Menu";
@@ -14,22 +14,22 @@
 "FgX-zF-aXP.title" = "Über diese Erweiterung";
 
 /* Class = "NSMenuItem"; title = "Show All"; ObjectID = "Kd2-mp-pUS"; */
-"Kd2-mp-pUS.title" = "Show All";
+"Kd2-mp-pUS.title" = "Alle einblenden";
 
 /* Class = "NSMenuItem"; title = "Hide Translate Web for Safari"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Hide Translate Web for Safari";
+"Olw-nP-bQN.title" = "Translate Web for Safari ausblenden";
 
 /* Class = "NSTextFieldCell"; title = "App Name"; ObjectID = "VT3-gw-1rp"; */
 "VT3-gw-1rp.title" = "App Name";
 
 /* Class = "NSMenuItem"; title = "Hide Others"; ObjectID = "Vdr-fp-XzO"; */
-"Vdr-fp-XzO.title" = "Hide Others";
+"Vdr-fp-XzO.title" = "Andere ausblenden";
 
 /* Class = "NSButtonCell"; alternateTitle = "Install"; ObjectID = "Ywq-21-b53"; */
 "Ywq-21-b53.alternateTitle" = "Install";
 
-/* Class = "NSButtonCell"; title = "Open in Safari Extensions Preferences…"; ObjectID = "Ywq-21-b53"; */
-"Ywq-21-b53.title" = "In den Safari-Erweiterungseinstellungen öffnen…";
+/* Class = "NSButtonCell"; title = "Open Safari Preferences…"; ObjectID = "Ywq-21-b53"; */
+"Ywq-21-b53.title" = "Safari Einstellungen öffnen…";
 
 /* Class = "NSMenuItem"; title = "Close"; ObjectID = "dIf-cc-wzc"; */
 "dIf-cc-wzc.title" = "Schließen";
