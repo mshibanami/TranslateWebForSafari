@@ -1,4 +1,25 @@
 /* No comment provided by engineer. */
+"About this extension" = "关于此扩展";
+
+/* No comment provided by engineer. */
+"Close" = "关闭";
+
+/* No comment provided by engineer. */
+"Hide %@" = "隐藏 %@";
+
+/* No comment provided by engineer. */
+"Hide Others" = "隐藏其他";
+
+/* No comment provided by engineer. */
+"Open Safari Preferences…" = "打开Safari首选项…";
+
+/* No comment provided by engineer. */
+"Quit %@" = "退出 %@";
+
+/* No comment provided by engineer. */
+"Show All" = "显示全部";
+
+/* No comment provided by engineer. */
 "Translate \"%@\"" = "翻译为 \"%@\"";
 
 /* No comment provided by engineer. */
@@ -9,3 +30,6 @@
 
 /* No comment provided by engineer. */
 "Translate this page (Translate Web)" = "翻译此页面 (Translate Web)";
+
+/* No comment provided by engineer. */
+"Window" = "窗口";

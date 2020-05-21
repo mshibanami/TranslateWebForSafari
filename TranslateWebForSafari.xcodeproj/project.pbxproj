@@ -11,6 +11,7 @@
 		001853AE246D686E00C75E4D /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001853AC246D676600C75E4D /* L10n.swift */; };
 		001853B0246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
 		001853B1246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
+		004B6CCF2476AD2500C25112 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B6CCE2476AD2500C25112 /* Consts.swift */; };
 		00DD6A4C246659DA004684DA /* TranslateWebForSafari.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */; };
 		00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A4D246659DA004684DA /* AppDelegate.swift */; };
 		00DD6A51246659DA004684DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4F246659DA004684DA /* Main.storyboard */; };
@@ -72,16 +73,9 @@
 		001853B8246D8CE100C75E4D /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		001853B9246D8CE200C75E4D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		001853BA246D91F300C75E4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		001DCAD524753A7B00867B94 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
 		001DCAD624753A7B00867B94 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		001DCAD724753A8900867B94 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		001DCAD824753A8900867B94 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		00A0E4A3246C3756000E8B22 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
-		00A0E4A4246C376C000E8B22 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		00A0E4A5246C3773000E8B22 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Main.strings"; sourceTree = "<group>"; };
-		00A0E4A6246C3778000E8B22 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Main.strings; sourceTree = "<group>"; };
-		00A0E4A7246C3782000E8B22 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
-		00A0E4A8246C378B000E8B22 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		004B6CCE2476AD2500C25112 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		00DD6A48246659DA004684DA /* TranslateWebForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateWebForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari.entitlements; sourceTree = "<group>"; };
 		00DD6A4D246659DA004684DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -167,11 +161,12 @@
 			children = (
 				00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */,
 				00DD6A56246659DD004684DA /* Info.plist */,
-				001853B3246D8CC400C75E4D /* Localizable.strings */,
 				00DD6A4D246659DA004684DA /* AppDelegate.swift */,
+				004B6CCE2476AD2500C25112 /* Consts.swift */,
 				001853AC246D676600C75E4D /* L10n.swift */,
 				00DD6A52246659DA004684DA /* ViewController.swift */,
 				00DD6A54246659DD004684DA /* Assets.xcassets */,
+				001853B3246D8CC400C75E4D /* Localizable.strings */,
 				00DD6A4F246659DA004684DA /* Main.storyboard */,
 			);
 			path = TranslateWebForSafari;
@@ -389,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00DD6A53246659DA004684DA /* ViewController.swift in Sources */,
+				004B6CCF2476AD2500C25112 /* Consts.swift in Sources */,
 				00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */,
 				001853AD246D676600C75E4D /* L10n.swift in Sources */,
 			);
@@ -460,14 +456,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				00DD6A50246659DA004684DA /* Base */,
-				00A0E4A3246C3756000E8B22 /* ja */,
-				00A0E4A4246C376C000E8B22 /* zh-Hans */,
-				00A0E4A5246C3773000E8B22 /* pt-BR */,
-				00A0E4A6246C3778000E8B22 /* de */,
-				00A0E4A7246C3782000E8B22 /* es */,
-				00A0E4A8246C378B000E8B22 /* fr */,
-				001DCAD524753A7B00867B94 /* ru */,
-				001DCAD724753A8900867B94 /* it */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

@@ -1,4 +1,25 @@
 /* No comment provided by engineer. */
+"About this extension" = "この機能拡張について";
+
+/* No comment provided by engineer. */
+"Close" = "閉じる";
+
+/* No comment provided by engineer. */
+"Hide %@" = "%@を非表示";
+
+/* No comment provided by engineer. */
+"Hide Others" = "ほかを非表示";
+
+/* No comment provided by engineer. */
+"Open Safari Preferences…" = "Safariの環境設定を開く…";
+
+/* No comment provided by engineer. */
+"Quit %@" = "%@を閉じる";
+
+/* No comment provided by engineer. */
+"Show All" = "すべてを表示";
+
+/* No comment provided by engineer. */
 "Translate \"%@\"" = "「%@」を翻訳";
 
 /* No comment provided by engineer. */
@@ -9,3 +30,6 @@
 
 /* No comment provided by engineer. */
 "Translate this page (Translate Web)" = "このページを翻訳 (Translate Web)";
+
+/* No comment provided by engineer. */
+"Window" = "ウィンドウ";

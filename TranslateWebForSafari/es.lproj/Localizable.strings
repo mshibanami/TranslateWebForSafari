@@ -1,4 +1,25 @@
 /* No comment provided by engineer. */
+"About this extension" = "Acerca de esta extensión";
+
+/* No comment provided by engineer. */
+"Close" = "Cerrar";
+
+/* No comment provided by engineer. */
+"Hide %@" = "Ocultar %@";
+
+/* No comment provided by engineer. */
+"Hide Others" = "Ocultar otros";
+
+/* No comment provided by engineer. */
+"Open Safari Preferences…" = "Abrir Preferencias de Safari…";
+
+/* No comment provided by engineer. */
+"Quit %@" = "Salir de %@";
+
+/* No comment provided by engineer. */
+"Show All" = "Mostrar todo";
+
+/* No comment provided by engineer. */
 "Translate \"%@\"" = "Traduce \"%@\"";
 
 /* No comment provided by engineer. */
@@ -9,3 +30,6 @@
 
 /* No comment provided by engineer. */
 "Translate this page (Translate Web)" = "Traduce esta página (Translate Web)";
+
+/* No comment provided by engineer. */
+"Window" = "Ventana";

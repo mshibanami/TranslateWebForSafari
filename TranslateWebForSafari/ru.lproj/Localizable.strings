@@ -1,4 +1,25 @@
 /* No comment provided by engineer. */
+"About this extension" = "Об этом расширении";
+
+/* No comment provided by engineer. */
+"Close" = "Закрыть";
+
+/* No comment provided by engineer. */
+"Hide %@" = "Скрыть %@";
+
+/* No comment provided by engineer. */
+"Hide Others" = "Скрыть остальные";
+
+/* No comment provided by engineer. */
+"Open Safari Preferences…" = "Открыть настройки Safari…";
+
+/* No comment provided by engineer. */
+"Quit %@" = "Выход %@";
+
+/* No comment provided by engineer. */
+"Show All" = "Показать все";
+
+/* No comment provided by engineer. */
 "Translate \"%@\"" = "Перевести \"%@\"";
 
 /* No comment provided by engineer. */
@@ -9,3 +30,6 @@
 
 /* No comment provided by engineer. */
 "Translate this page (Translate Web)" = "Перевести эту страницу (Translate Web)";
+
+/* No comment provided by engineer. */
+"Window" = "Окно";
