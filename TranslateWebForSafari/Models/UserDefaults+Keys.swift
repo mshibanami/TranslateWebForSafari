@@ -80,4 +80,23 @@ extension UserDefaults {
             set(newValue.id, forKey: AppKey.textTranslateTo.rawValue)
         }
     }
+    
+    
+    func translationService(for media: TranslationMedia) -> TranslationService {
+        switch media {
+        case .text:
+            return textTranslationService
+        case .page:
+            return pageTranslationService
+        }
+    }
+    
+    func language(for media: TranslationMedia) -> Language {
+        switch media {
+        case .text:
+            return textTranslateTo
+        case .page:
+            return pageTranslateTo
+        }
+    }
 }

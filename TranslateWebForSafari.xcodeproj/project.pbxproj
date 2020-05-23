@@ -19,6 +19,9 @@
 		00D524192479393800556BA4 /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+Keys.swift */; };
 		00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		00D5241B24793A0A00556BA4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
+		00D5241D24795C5F00556BA4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5241C24795C5F00556BA4 /* MainViewModel.swift */; };
+		00D5241F24795F1400556BA4 /* TranslationMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5241E24795F1300556BA4 /* TranslationMedia.swift */; };
+		00D524202479613000556BA4 /* TranslationMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5241E24795F1300556BA4 /* TranslationMedia.swift */; };
 		00DD6A4C246659DA004684DA /* TranslateWebForSafari.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */; };
 		00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A4D246659DA004684DA /* AppDelegate.swift */; };
 		00DD6A51246659DA004684DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4F246659DA004684DA /* Main.storyboard */; };
@@ -87,6 +90,8 @@
 		006CE4FB2478191A00256895 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		006CE4FD24781F4500256895 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		006CE4FF2478388500256895 /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
+		00D5241C24795C5F00556BA4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		00D5241E24795F1300556BA4 /* TranslationMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationMedia.swift; sourceTree = "<group>"; };
 		00DD6A48246659DA004684DA /* TranslateWebForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateWebForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari.entitlements; sourceTree = "<group>"; };
 		00DD6A4D246659DA004684DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -155,8 +160,10 @@
 			children = (
 				004B6CCE2476AD2500C25112 /* Consts.swift */,
 				006CE4FD24781F4500256895 /* Language.swift */,
+				00D5241E24795F1300556BA4 /* TranslationMedia.swift */,
 				006CE4FB2478191A00256895 /* TranslationService.swift */,
 				006CE4FF2478388500256895 /* UserDefaults+Keys.swift */,
+				006CE5032478C6BA00256895 /* Screens */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -165,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				00DD6A52246659DA004684DA /* MainViewController.swift */,
+				00D5241C24795C5F00556BA4 /* MainViewModel.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -214,7 +222,6 @@
 				00DD6A54246659DD004684DA /* Assets.xcassets */,
 				006CE5042478C70600256895 /* L10n */,
 				006CE50124783B0600256895 /* Models */,
-				006CE5032478C6BA00256895 /* Screens */,
 			);
 			path = TranslateWebForSafari;
 			sourceTree = "<group>";
@@ -248,11 +255,11 @@
 		00DD6A78246659DD004684DA /* TranslateWebForSafari Extension */ = {
 			isa = PBXGroup;
 			children = (
-				00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */,
-				00DD6A80246659DD004684DA /* Info.plist */,
+				00DD6A85246659DD004684DA /* TranslateWebForSafari_Extension.entitlements */,
 				00DD6A81246659DD004684DA /* script.js */,
 				00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */,
-				00DD6A85246659DD004684DA /* TranslateWebForSafari_Extension.entitlements */,
+				00DD6A80246659DD004684DA /* Info.plist */,
+				00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */,
 			);
 			path = "TranslateWebForSafari Extension";
 			sourceTree = "<group>";
@@ -436,8 +443,10 @@
 				006CE5002478388500256895 /* UserDefaults+Keys.swift in Sources */,
 				00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */,
 				004D82872479289000817E8B /* Collection+Extensions.swift in Sources */,
+				00D524202479613000556BA4 /* TranslationMedia.swift in Sources */,
 				001853AD246D676600C75E4D /* L10n.swift in Sources */,
 				006CE4FC2478191A00256895 /* TranslationService.swift in Sources */,
+				00D5241D24795C5F00556BA4 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +472,7 @@
 			files = (
 				00D524192479393800556BA4 /* UserDefaults+Keys.swift in Sources */,
 				00D5241B24793A0A00556BA4 /* Language.swift in Sources */,
+				00D5241F24795F1400556BA4 /* TranslationMedia.swift in Sources */,
 				001853AE246D686E00C75E4D /* L10n.swift in Sources */,
 				00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */,
 				00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */,

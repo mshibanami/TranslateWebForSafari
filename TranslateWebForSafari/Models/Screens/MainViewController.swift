@@ -4,6 +4,14 @@ import Cocoa
 import SafariServices.SFSafariApplication
 
 class MainViewController: NSViewController {
+    private static var pageTranslationServices: [TranslationService] {
+        TranslationService.allCases.filter { $0.supportsPageTranslation }
+    }
+    
+    private static var textTranslationServices: [TranslationService] {
+        TranslationService.allCases
+    }
+    
     private lazy var containerStackView: NSStackView = {
         let view = NSStackView(views: [
             appIconImageView,
@@ -125,7 +133,7 @@ class MainViewController: NSViewController {
     private lazy var pageTranslationServicePopUpButton: NSPopUpButton = {
         let button = NSPopUpButton(title: "", target: self, action: #selector(didTapPageTranslationService(_:)))
         let menu = NSMenu()
-        for service in TranslationService.allCases {
+        for service in Self.pageTranslationServices {
             menu.addItem(NSMenuItem(title: service.localizedName, action: nil, keyEquivalent: ""))
         }
         button.menu = menu
@@ -141,7 +149,7 @@ class MainViewController: NSViewController {
     private lazy var textTranslationServicePopUpButton: NSPopUpButton = {
         let button = NSPopUpButton(title: "", target: self, action: #selector(didTapTextTranslationService(_:)))
         let menu = NSMenu()
-        for service in TranslationService.allCases {
+        for service in Self.textTranslationServices {
             menu.addItem(NSMenuItem(title: service.localizedName, action: nil, keyEquivalent: ""))
         }
         button.menu = menu
@@ -210,7 +218,7 @@ class MainViewController: NSViewController {
         
         // Page Translation
         let pageService = settings.pageTranslationService
-        if let index = TranslationService.allCases.firstIndex(of: pageService) {
+        if let index = Self.pageTranslationServices.firstIndex(of: pageService) {
             pageTranslationServicePopUpButton.selectItem(at: index)
         }
         if let index = pageService.supportedLanguages().firstIndex(of: settings.pageTranslateTo) {
@@ -219,7 +227,7 @@ class MainViewController: NSViewController {
         
         // Text Translation
         let textService = settings.textTranslationService
-        if let index = TranslationService.allCases.firstIndex(of: textService) {
+        if let index = Self.textTranslationServices.firstIndex(of: textService) {
             textTranslationServicePopUpButton.selectItem(at: index)
         }
         if let index = textService.supportedLanguages().firstIndex(of: settings.textTranslateTo) {
@@ -229,7 +237,7 @@ class MainViewController: NSViewController {
     
     private func currentSelectionOfPageTranslationService() -> TranslationService? {
         let selectedIndex = pageTranslationServicePopUpButton.indexOfSelectedItem
-        guard selectedIndex >= 0, let service = TranslationService.allCases[optional: selectedIndex] else {
+        guard selectedIndex >= 0, let service = Self.pageTranslationServices[optional: selectedIndex] else {
             return nil
         }
         return service
@@ -237,7 +245,7 @@ class MainViewController: NSViewController {
     
     private func currentSelectionOfTextTranslationService() -> TranslationService? {
         let selectedIndex = textTranslationServicePopUpButton.indexOfSelectedItem
-        guard selectedIndex >= 0, let service = TranslationService.allCases[optional: selectedIndex] else {
+        guard selectedIndex >= 0, let service = Self.textTranslationServices[optional: selectedIndex] else {
             return nil
         }
         return service
