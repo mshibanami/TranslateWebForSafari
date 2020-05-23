@@ -44,16 +44,16 @@ enum TranslationService: String, CaseIterable {
     }
     
     func defaultLanguage() -> Language {
-        let defaultLocalization = Bundle.main.defaultLocalizationForTranslation
+        let defaultLanguage = Bundle.main.defaultLanguageForTranslation
         let languages = supportedLanguages()
         return languages
-            .first(where: { $0.id == defaultLocalization })
+            .first(where: { $0.id == defaultLanguage })
             ?? languages.first(where: { $0.id == "en" })!
     }
 }
 
 private extension Bundle {
-    var defaultLocalizationForTranslation: String {
+    var defaultLanguageForTranslation: String {
         return Bundle.main.preferredLocalizations.first ?? "en"
     }
 }

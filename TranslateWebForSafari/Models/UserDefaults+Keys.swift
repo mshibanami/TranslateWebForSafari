@@ -16,9 +16,7 @@ extension UserDefaults {
         case textTranslateTo = "textTranslateTo"
     }
     
-    static var group: UserDefaults {
-        UserDefaults(suiteName: "group.io.github.mshibanami.TranslateWebForSafari")!
-    }
+    static var group: UserDefaults = UserDefaults(suiteName: "group.io.github.mshibanami.TranslateWebForSafari")!
     
     var pageTranslationService: TranslationService {
         get {

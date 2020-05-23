@@ -114,21 +114,51 @@ private enum TranslationMedia {
     case text(String)
     case webpage(URL)
     
-    func makeURLForGoogleTranslate() -> URL {
+    func makeURL(for service: TranslationService, translateTo: Language) -> URL {
+        switch service {
+        case .baidu:
+            return makeURLForBaidu(translateTo: translateTo)
+        case .bing:
+            return makeURLForBing(translateTo: translateTo)
+        case .deepL:
+            return makeURLForDeepL(translateTo: translateTo)
+        case .google:
+            return makeURLForGoogle(translateTo: translateTo)
+        }
+    }
+
+    private func makeURLForBaidu(translateTo: Language) -> URL {
+        return URL(string: "https://example.com/")!
+    }
+    
+    private func makeURLForBing(translateTo: Language) -> URL {
+        return URL(string: "https://example.com/")!
+    }
+    
+    private func makeURLForDeepL(translateTo: Language) -> URL {
+        return URL(string: "https://example.com/")!
+    }
+    
+    private func makeURLForGoogle(translateTo: Language) -> URL {
         var urlComponents = URLComponents(string: "https://translate.google.com/")!
+        var queryItems = [
+            URLQueryItem(name: "tl", value: translateTo.id)
+        ]
         switch self {
         case let .text(text):
             urlComponents.path = "/"
-            urlComponents.queryItems = [
+            queryItems.append(contentsOf: [
                 URLQueryItem(name: "text", value: text)
-            ]
+            ])
         case let .webpage(url):
             urlComponents.path = "/translate"
             let urlString = url.absoluteString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-            urlComponents.queryItems = [
+            queryItems.append(contentsOf: [
                 URLQueryItem(name: "u", value: urlString)
-            ]
+            ])
         }
+        urlComponents.queryItems = queryItems
+        NSLog("★URL: \(urlComponents.url)")
         return urlComponents.url!
     }
 }
@@ -156,12 +186,18 @@ private extension SFSafariWindow {
     }
     
     func openPage(for media: TranslationMedia) {
+        let settings = UserDefaults.group
+
+        let url = media.makeURL(
+            for: settings.pageTranslationService,
+            translateTo: settings.pageTranslateTo)
+        
         switch media {
         case .text:
-            openTab(with: media.makeURLForGoogleTranslate(), makeActiveIfPossible: true)
+            openTab(with: url, makeActiveIfPossible: true)
         case .webpage:
             getActiveTab {
-                $0?.navigate(to: media.makeURLForGoogleTranslate())
+                $0?.navigate(to: url)
             }
         }
     }

@@ -16,6 +16,9 @@
 		006CE4FC2478191A00256895 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		006CE4FE24781F4500256895 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
 		006CE5002478388500256895 /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+Keys.swift */; };
+		00D524192479393800556BA4 /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+Keys.swift */; };
+		00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
+		00D5241B24793A0A00556BA4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
 		00DD6A4C246659DA004684DA /* TranslateWebForSafari.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */; };
 		00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A4D246659DA004684DA /* AppDelegate.swift */; };
 		00DD6A51246659DA004684DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4F246659DA004684DA /* Main.storyboard */; };
@@ -458,8 +461,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D524192479393800556BA4 /* UserDefaults+Keys.swift in Sources */,
+				00D5241B24793A0A00556BA4 /* Language.swift in Sources */,
 				001853AE246D686E00C75E4D /* L10n.swift in Sources */,
 				00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */,
+				00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
