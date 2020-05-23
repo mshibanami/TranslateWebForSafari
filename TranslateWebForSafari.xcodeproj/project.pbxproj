@@ -12,10 +12,14 @@
 		001853B0246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
 		001853B1246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
 		004B6CCF2476AD2500C25112 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B6CCE2476AD2500C25112 /* Consts.swift */; };
+		004D82872479289000817E8B /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D82862479289000817E8B /* Collection+Extensions.swift */; };
+		006CE4FC2478191A00256895 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
+		006CE4FE24781F4500256895 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
+		006CE5002478388500256895 /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+Keys.swift */; };
 		00DD6A4C246659DA004684DA /* TranslateWebForSafari.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */; };
 		00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A4D246659DA004684DA /* AppDelegate.swift */; };
 		00DD6A51246659DA004684DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4F246659DA004684DA /* Main.storyboard */; };
-		00DD6A53246659DA004684DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A52246659DA004684DA /* ViewController.swift */; };
+		00DD6A53246659DA004684DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A52246659DA004684DA /* MainViewController.swift */; };
 		00DD6A55246659DD004684DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A54246659DD004684DA /* Assets.xcassets */; };
 		00DD6A60246659DD004684DA /* TranslateWebForSafariTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A5F246659DD004684DA /* TranslateWebForSafariTests.swift */; };
 		00DD6A6B246659DD004684DA /* TranslateWebForSafariUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A6A246659DD004684DA /* TranslateWebForSafariUITests.swift */; };
@@ -76,11 +80,15 @@
 		001DCAD624753A7B00867B94 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		001DCAD824753A8900867B94 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		004B6CCE2476AD2500C25112 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
+		004D82862479289000817E8B /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		006CE4FB2478191A00256895 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
+		006CE4FD24781F4500256895 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
+		006CE4FF2478388500256895 /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
 		00DD6A48246659DA004684DA /* TranslateWebForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateWebForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari.entitlements; sourceTree = "<group>"; };
 		00DD6A4D246659DA004684DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		00DD6A50246659DA004684DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		00DD6A52246659DA004684DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		00DD6A52246659DA004684DA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		00DD6A54246659DD004684DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		00DD6A56246659DD004684DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00DD6A5B246659DD004684DA /* TranslateWebForSafariTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranslateWebForSafariTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +139,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		004D82852479287C00817E8B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				004D82862479289000817E8B /* Collection+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		006CE50124783B0600256895 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				004B6CCE2476AD2500C25112 /* Consts.swift */,
+				006CE4FD24781F4500256895 /* Language.swift */,
+				006CE4FB2478191A00256895 /* TranslationService.swift */,
+				006CE4FF2478388500256895 /* UserDefaults+Keys.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		006CE5032478C6BA00256895 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				00DD6A52246659DA004684DA /* MainViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		006CE5042478C70600256895 /* L10n */ = {
+			isa = PBXGroup;
+			children = (
+				001853AC246D676600C75E4D /* L10n.swift */,
+				001853B3246D8CC400C75E4D /* Localizable.strings */,
+			);
+			path = L10n;
+			sourceTree = "<group>";
+		};
 		00DD6A3F246659DA004684DA = {
 			isa = PBXGroup;
 			children = (
@@ -159,15 +203,15 @@
 		00DD6A4A246659DA004684DA /* TranslateWebForSafari */ = {
 			isa = PBXGroup;
 			children = (
+				004D82852479287C00817E8B /* Extensions */,
+				00DD6A4F246659DA004684DA /* Main.storyboard */,
+				00DD6A4D246659DA004684DA /* AppDelegate.swift */,
 				00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */,
 				00DD6A56246659DD004684DA /* Info.plist */,
-				00DD6A4D246659DA004684DA /* AppDelegate.swift */,
-				004B6CCE2476AD2500C25112 /* Consts.swift */,
-				001853AC246D676600C75E4D /* L10n.swift */,
-				00DD6A52246659DA004684DA /* ViewController.swift */,
 				00DD6A54246659DD004684DA /* Assets.xcassets */,
-				001853B3246D8CC400C75E4D /* Localizable.strings */,
-				00DD6A4F246659DA004684DA /* Main.storyboard */,
+				006CE5042478C70600256895 /* L10n */,
+				006CE50124783B0600256895 /* Models */,
+				006CE5032478C6BA00256895 /* Screens */,
 			);
 			path = TranslateWebForSafari;
 			sourceTree = "<group>";
@@ -383,10 +427,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00DD6A53246659DA004684DA /* ViewController.swift in Sources */,
+				00DD6A53246659DA004684DA /* MainViewController.swift in Sources */,
 				004B6CCF2476AD2500C25112 /* Consts.swift in Sources */,
+				006CE4FE24781F4500256895 /* Language.swift in Sources */,
+				006CE5002478388500256895 /* UserDefaults+Keys.swift in Sources */,
 				00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */,
+				004D82872479289000817E8B /* Collection+Extensions.swift in Sources */,
 				001853AD246D676600C75E4D /* L10n.swift in Sources */,
+				006CE4FC2478191A00256895 /* TranslationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

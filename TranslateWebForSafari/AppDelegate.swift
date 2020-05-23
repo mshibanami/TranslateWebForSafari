@@ -19,7 +19,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     private func setupWindow() {
-        let window = NSWindow(contentViewController: ViewController())
+        let window = NSWindow(contentViewController: MainViewController())
         window.titleVisibility = .hidden
         window.titlebarAppearsTransparent = true
         window.isMovableByWindowBackground = true
