@@ -2,7 +2,34 @@
 "About this extension" = "About this extension";
 
 /* No comment provided by engineer. */
+"Chinese" = "Chinese";
+
+/* No comment provided by engineer. */
+"Chinese (Simplified)" = "Chinese (Simplified)";
+
+/* No comment provided by engineer. */
+"Chinese (Traditional)" = "Chinese (Traditional)";
+
+/* No comment provided by engineer. */
 "Close" = "Close";
+
+/* No comment provided by engineer. */
+"Dutch" = "Dutch";
+
+/* No comment provided by engineer. */
+"English" = "English";
+
+/* No comment provided by engineer. */
+"Finnish" = "Finnish";
+
+/* No comment provided by engineer. */
+"French" = "French";
+
+/* No comment provided by engineer. */
+"German" = "German";
+
+/* No comment provided by engineer. */
+"Greek" = "Greek";
 
 /* No comment provided by engineer. */
 "Hide %@" = "Hide %@";
@@ -11,13 +38,52 @@
 "Hide Others" = "Hide Others";
 
 /* No comment provided by engineer. */
+"Hindi" = "Hindi";
+
+/* No comment provided by engineer. */
+"Italian" = "Italian";
+
+/* No comment provided by engineer. */
+"Japanese" = "Japanese";
+
+/* No comment provided by engineer. */
+"Korean" = "Korean";
+
+/* No comment provided by engineer. */
+"Malay" = "Malay";
+
+/* No comment provided by engineer. */
+"Mongolian" = "Mongolian";
+
+/* No comment provided by engineer. */
 "Open Safari Preferences…" = "Open Safari Preferences…";
+
+/* No comment provided by engineer. */
+"Polish" = "Polish";
+
+/* No comment provided by engineer. */
+"Portuguese" = "Portuguese";
+
+/* No comment provided by engineer. */
+"Portuguese (Brazil)" = "Portuguese (Brazil)";
+
+/* No comment provided by engineer. */
+"Portuguese (Portugal)" = "Portuguese (Portugal)";
 
 /* No comment provided by engineer. */
 "Quit %@" = "Quit %@";
 
 /* No comment provided by engineer. */
+"Russian" = "Russian";
+
+/* No comment provided by engineer. */
 "Show All" = "Show All";
+
+/* No comment provided by engineer. */
+"Spanish" = "Spanish";
+
+/* No comment provided by engineer. */
+"Thai" = "Thai";
 
 /* No comment provided by engineer. */
 "Translate \"%@\"" = "Translate \"%@\"";
@@ -30,6 +96,9 @@
 
 /* No comment provided by engineer. */
 "Translate to" = "Translate to";
+
+/* No comment provided by engineer. */
+"Turkish" = "Turkish";
 
 /* No comment provided by engineer. */
 "Window" = "Window";

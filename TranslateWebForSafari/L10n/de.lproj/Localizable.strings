@@ -2,7 +2,34 @@
 "About this extension" = "Über diese Erweiterung";
 
 /* No comment provided by engineer. */
+"Chinese" = "Chinesisch";
+
+/* No comment provided by engineer. */
+"Chinese (Simplified)" = "Chinesisch (Simplificado)";
+
+/* No comment provided by engineer. */
+"Chinese (Traditional)" = "Chinesisch (Vereinfacht)";
+
+/* No comment provided by engineer. */
 "Close" = "Schließen";
+
+/* No comment provided by engineer. */
+"Dutch" = "Niederländisch";
+
+/* No comment provided by engineer. */
+"English" = "Englisch";
+
+/* No comment provided by engineer. */
+"Finnish" = "Finnisch";
+
+/* No comment provided by engineer. */
+"French" = "Französisch";
+
+/* No comment provided by engineer. */
+"German" = "Deutsch";
+
+/* No comment provided by engineer. */
+"Greek" = "Griechisch";
 
 /* No comment provided by engineer. */
 "Hide %@" = "%@ ausblenden";
@@ -11,13 +38,52 @@
 "Hide Others" = "Andere ausblenden";
 
 /* No comment provided by engineer. */
+"Hindi" = "Hindi";
+
+/* No comment provided by engineer. */
+"Italian" = "Italienisch";
+
+/* No comment provided by engineer. */
+"Japanese" = "Japanisch";
+
+/* No comment provided by engineer. */
+"Korean" = "Koreanisch";
+
+/* No comment provided by engineer. */
+"Malay" = "Malaiisch";
+
+/* No comment provided by engineer. */
+"Mongolian" = "Mongolisch";
+
+/* No comment provided by engineer. */
 "Open Safari Preferences…" = "Safari Einstellungen öffnen…";
+
+/* No comment provided by engineer. */
+"Polish" = "Polnisch";
+
+/* No comment provided by engineer. */
+"Portuguese" = "Portugiesisch";
+
+/* No comment provided by engineer. */
+"Portuguese (Brazil)" = "Portugiesisch (Brasilien)";
+
+/* No comment provided by engineer. */
+"Portuguese (Portugal)" = "Portugiesisch (Portugal)";
 
 /* No comment provided by engineer. */
 "Quit %@" = "%@ beenden";
 
 /* No comment provided by engineer. */
+"Russian" = "Russisch";
+
+/* No comment provided by engineer. */
 "Show All" = "Alle einblenden";
+
+/* No comment provided by engineer. */
+"Spanish" = "Spanisch";
+
+/* No comment provided by engineer. */
+"Thai" = "Thai";
 
 /* No comment provided by engineer. */
 "Translate \"%@\"" = "Übersetzen Sie \"%@\"";
@@ -29,7 +95,10 @@
 "Translate this page" = "Diese Seite übersetzen";
 
 /* No comment provided by engineer. */
-"Translate to" = "Translate to";
+"Translate to" = "Sprache, in die übersetzt wird";
+
+/* No comment provided by engineer. */
+"Turkish" = "Türkisch";
 
 /* No comment provided by engineer. */
 "Window" = "Fenster";

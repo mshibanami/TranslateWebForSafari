@@ -2,7 +2,34 @@
 "About this extension" = "Об этом расширении";
 
 /* No comment provided by engineer. */
+"Chinese" = "Китайский";
+
+/* No comment provided by engineer. */
+"Chinese (Simplified)" = "Китайский (Упрощенный)";
+
+/* No comment provided by engineer. */
+"Chinese (Traditional)" = "Китайский (Традиционный)";
+
+/* No comment provided by engineer. */
 "Close" = "Закрыть";
+
+/* No comment provided by engineer. */
+"Dutch" = "Голландский";
+
+/* No comment provided by engineer. */
+"English" = "Английский";
+
+/* No comment provided by engineer. */
+"Finnish" = "Финский";
+
+/* No comment provided by engineer. */
+"French" = "Французский";
+
+/* No comment provided by engineer. */
+"German" = "Немецкий";
+
+/* No comment provided by engineer. */
+"Greek" = "Греческий";
 
 /* No comment provided by engineer. */
 "Hide %@" = "Скрыть %@";
@@ -11,13 +38,52 @@
 "Hide Others" = "Скрыть остальные";
 
 /* No comment provided by engineer. */
+"Hindi" = "Хинди";
+
+/* No comment provided by engineer. */
+"Italian" = "Итальянский";
+
+/* No comment provided by engineer. */
+"Japanese" = "Японский";
+
+/* No comment provided by engineer. */
+"Korean" = "Корейский";
+
+/* No comment provided by engineer. */
+"Malay" = "Малайский";
+
+/* No comment provided by engineer. */
+"Mongolian" = "Монгольский";
+
+/* No comment provided by engineer. */
 "Open Safari Preferences…" = "Открыть настройки Safari…";
+
+/* No comment provided by engineer. */
+"Polish" = "Польский";
+
+/* No comment provided by engineer. */
+"Portuguese" = "Португальский";
+
+/* No comment provided by engineer. */
+"Portuguese (Brazil)" = "Португальский (Бразилия)";
+
+/* No comment provided by engineer. */
+"Portuguese (Portugal)" = "Португальский (Португалия)";
 
 /* No comment provided by engineer. */
 "Quit %@" = "Выход %@";
 
 /* No comment provided by engineer. */
+"Russian" = "Русский";
+
+/* No comment provided by engineer. */
 "Show All" = "Показать все";
+
+/* No comment provided by engineer. */
+"Spanish" = "Испанский";
+
+/* No comment provided by engineer. */
+"Thai" = "Тайский";
 
 /* No comment provided by engineer. */
 "Translate \"%@\"" = "Перевести \"%@\"";
@@ -29,7 +95,10 @@
 "Translate this page" = "Перевести эту страницу";
 
 /* No comment provided by engineer. */
-"Translate to" = "Translate to";
+"Translate to" = "Язык перевода";
+
+/* No comment provided by engineer. */
+"Turkish" = "Турецкий";
 
 /* No comment provided by engineer. */
 "Window" = "Окно";

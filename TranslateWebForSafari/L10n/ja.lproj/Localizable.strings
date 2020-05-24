@@ -2,7 +2,34 @@
 "About this extension" = "この機能拡張について";
 
 /* No comment provided by engineer. */
+"Chinese" = "中国語";
+
+/* No comment provided by engineer. */
+"Chinese (Simplified)" = "中国語 (簡体字)";
+
+/* No comment provided by engineer. */
+"Chinese (Traditional)" = "中国語 (繁体字)";
+
+/* No comment provided by engineer. */
 "Close" = "閉じる";
+
+/* No comment provided by engineer. */
+"Dutch" = "オランダ語";
+
+/* No comment provided by engineer. */
+"English" = "英語";
+
+/* No comment provided by engineer. */
+"Finnish" = "フィンランド語";
+
+/* No comment provided by engineer. */
+"French" = "フランス語";
+
+/* No comment provided by engineer. */
+"German" = "ドイツ語";
+
+/* No comment provided by engineer. */
+"Greek" = "ギリシャ語";
 
 /* No comment provided by engineer. */
 "Hide %@" = "%@を非表示";
@@ -11,13 +38,52 @@
 "Hide Others" = "ほかを非表示";
 
 /* No comment provided by engineer. */
+"Hindi" = "ヒンディー語";
+
+/* No comment provided by engineer. */
+"Italian" = "イタリア語";
+
+/* No comment provided by engineer. */
+"Japanese" = "日本語";
+
+/* No comment provided by engineer. */
+"Korean" = "韓国語";
+
+/* No comment provided by engineer. */
+"Malay" = "マレー語";
+
+/* No comment provided by engineer. */
+"Mongolian" = "モンゴル語";
+
+/* No comment provided by engineer. */
 "Open Safari Preferences…" = "Safariの環境設定を開く…";
+
+/* No comment provided by engineer. */
+"Polish" = "ポーランド語";
+
+/* No comment provided by engineer. */
+"Portuguese" = "ポルトガル語";
+
+/* No comment provided by engineer. */
+"Portuguese (Brazil)" = "ポルトガル語 (ブラジル)";
+
+/* No comment provided by engineer. */
+"Portuguese (Portugal)" = "ポルトガル語 (ポーランド)";
 
 /* No comment provided by engineer. */
 "Quit %@" = "%@を閉じる";
 
 /* No comment provided by engineer. */
+"Russian" = "ロシア語";
+
+/* No comment provided by engineer. */
 "Show All" = "すべてを表示";
+
+/* No comment provided by engineer. */
+"Spanish" = "スペイン語";
+
+/* No comment provided by engineer. */
+"Thai" = "タイ語";
 
 /* No comment provided by engineer. */
 "Translate \"%@\"" = "「%@」を翻訳";
@@ -29,7 +95,10 @@
 "Translate this page" = "このページを翻訳";
 
 /* No comment provided by engineer. */
-"Translate to" = "Translate to";
+"Translate to" = "翻訳先の言語";
+
+/* No comment provided by engineer. */
+"Turkish" = "トルコ語";
 
 /* No comment provided by engineer. */
 "Window" = "ウィンドウ";
