@@ -20,12 +20,7 @@ class L10n {
     static let menuItemClose = NSLocalizedString("Close", comment: "")
     static let toolbarItemTranslatePage = NSLocalizedString("Translate the current page", comment: "")
     static let contextMenuTranslatePage = NSLocalizedString("Translate this page", comment: "")
-    static func contextMenuTranslateText(with text: String) -> String {
-        return String.localizedStringWithFormat(
-            NSLocalizedString("Translate \"%@\"", comment: ""),
-            text)
-    }
-    static func toolbarItemTranslateText(with text: String) -> String {
+    static func menuTranslateText(with text: String) -> String {
         return String.localizedStringWithFormat(
             NSLocalizedString("Translate \"%@\"", comment: ""),
             text)

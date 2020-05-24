@@ -90,7 +90,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         switch command {
         case .translateSelectedText:
             if let _ = State.shared.selectedText {
-                validationHandler(false, L10n.contextMenuTranslateText(with: State.shared.makeShortenedSelectedText() ?? ""))
+                validationHandler(false, L10n.menuTranslateText(with: State.shared.makeShortenedSelectedText() ?? ""))
             } else {
                 validationHandler(true, nil)
             }
@@ -102,7 +102,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     private func updateToolbarItemLabel(in window: SFSafariWindow) {
         window.getToolbarItem {
             if let _ = State.shared.selectedText {
-                $0?.setLabel(L10n.toolbarItemTranslateText(with: State.shared.makeShortenedSelectedText() ?? ""))
+                $0?.setLabel(L10n.menuTranslateText(with: State.shared.makeShortenedSelectedText() ?? ""))
             } else {
                 $0?.setLabel(L10n.toolbarItemTranslatePage)
             }
