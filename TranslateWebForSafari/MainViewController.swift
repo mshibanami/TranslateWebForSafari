@@ -44,7 +44,7 @@ class MainViewController: NSViewController {
     }()
     
     private let appTitleLabel: NSTextField = {
-        let label = NSTextField(settingLabelWithString: L10n.appName)
+        let label = NSTextField(labelWithString: L10n.appName)
         label.font = NSFont.boldSystemFont(ofSize: 18)
         return label
     }()
@@ -110,8 +110,8 @@ class MainViewController: NSViewController {
     
     private lazy var settingsGridView: NSGridView = {
         let view = NSGridView(views: [
-            [NSTextField(settingLabelWithString: "Page Translation"), pageTranslationStackView],
-            [NSTextField(settingLabelWithString: "Text Translation"), textTranslationStackView],
+            [NSTextField(settingLabelWithString: L10n.pageTranslation), pageTranslationStackView],
+            [NSTextField(settingLabelWithString: L10n.textTranslation), textTranslationStackView],
         ])
         view.rowSpacing = 20
         view.setContentHuggingPriority(.defaultLow, for: .horizontal)

@@ -59,6 +59,9 @@
 "Open Safari Preferences…" = "Safariの環境設定を開く…";
 
 /* No comment provided by engineer. */
+"Page Translation" = "ページ翻訳";
+
+/* No comment provided by engineer. */
 "Polish" = "ポーランド語";
 
 /* No comment provided by engineer. */
@@ -81,6 +84,9 @@
 
 /* No comment provided by engineer. */
 "Spanish" = "スペイン語";
+
+/* No comment provided by engineer. */
+"Text Translation" = "テキスト翻訳";
 
 /* No comment provided by engineer. */
 "Thai" = "タイ語";

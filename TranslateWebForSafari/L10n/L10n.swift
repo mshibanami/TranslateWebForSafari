@@ -25,12 +25,15 @@ class L10n {
             NSLocalizedString("Translate \"%@\"", comment: ""),
             text)
     }
+    static let pageTranslation = NSLocalizedString("Page Translation", comment: "")
+    static let textTranslation = NSLocalizedString("Text Translation", comment: "")
     static let translateTo = NSLocalizedString("Translate to", comment: "")
     
     static let baidu = "Baidu"
     static let bing = "Bing"
     static let deepL = "DeepL"
     static let google = "Google"
+    
     
     static let achinese = "Achinese"
     static let afrikaans = "Afrikaans"
