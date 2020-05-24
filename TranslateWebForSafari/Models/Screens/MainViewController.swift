@@ -221,7 +221,7 @@ class MainViewController: NSViewController {
         if let index = Self.pageTranslationServices.firstIndex(of: pageService) {
             pageTranslationServicePopUpButton.selectItem(at: index)
         }
-        if let index = pageService.supportedLanguages().firstIndex(of: settings.pageTranslateTo) {
+        if let index = pageService.supportedLanguages().firstIndex(of: settings.pageTargetLanguage) {
             pageTranslateToPopUpButton.selectItem(at: index)
         }
         
@@ -230,7 +230,7 @@ class MainViewController: NSViewController {
         if let index = Self.textTranslationServices.firstIndex(of: textService) {
             textTranslationServicePopUpButton.selectItem(at: index)
         }
-        if let index = textService.supportedLanguages().firstIndex(of: settings.textTranslateTo) {
+        if let index = textService.supportedLanguages().firstIndex(of: settings.textTargetLanguage) {
             textTranslateToPopUpButton.selectItem(at: index)
         }
     }
@@ -275,7 +275,7 @@ class MainViewController: NSViewController {
             assertionFailure()
             return
         }
-        UserDefaults.group.pageTranslateTo = service.supportedLanguages()[pageTranslateToPopUpButton.indexOfSelectedItem]
+        UserDefaults.group.pageTargetLanguage = service.supportedLanguages()[pageTranslateToPopUpButton.indexOfSelectedItem]
     }
     
     @IBAction private func didTapTextTranslationService(_ sender: AnyObject?) {
@@ -292,7 +292,7 @@ class MainViewController: NSViewController {
             assertionFailure()
             return
         }
-        UserDefaults.group.textTranslateTo = service.supportedLanguages()[textTranslateToPopUpButton.indexOfSelectedItem]
+        UserDefaults.group.textTargetLanguage = service.supportedLanguages()[textTranslateToPopUpButton.indexOfSelectedItem]
     }
 }
 

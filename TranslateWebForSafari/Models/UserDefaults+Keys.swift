@@ -12,8 +12,8 @@ extension UserDefaults {
     enum AppKey: String {
         case pageTranslationService = "pageTranslationService"
         case textTranslationService = "textTranslationService"
-        case pageTranslateTo = "pageTranslateTo"
-        case textTranslateTo = "textTranslateTo"
+        case pageTargetLanguage = "pageTargetLanguage"
+        case textTargetLanguage = "textTargetLanguage"
     }
     
     static var group: UserDefaults = UserDefaults(suiteName: "group.io.github.mshibanami.TranslateWebForSafari")!
@@ -29,24 +29,24 @@ extension UserDefaults {
         }
         
         set {
-            let languageID = pageTranslateTo.id
+            let languageID = pageTargetLanguage.id
             set(newValue.rawValue, forKey: AppKey.pageTranslationService.rawValue)
-            pageTranslateTo = newValue.supportedLanguages().first(where: { $0.id == languageID})
+            pageTargetLanguage = newValue.supportedLanguages().first(where: { $0.id == languageID})
                 ?? newValue.defaultLanguage()
         }
     }
     
-    var pageTranslateTo: Language {
+    var pageTargetLanguage: Language {
         get {
             guard
-                let id = string(forKey: AppKey.pageTranslateTo.rawValue),
+                let id = string(forKey: AppKey.pageTargetLanguage.rawValue),
                 let language = pageTranslationService.supportedLanguages().first(where: { $0.id == id }) else {
                     return pageTranslationService.defaultLanguage()
             }
             return language
         }
         set {
-            set(newValue.id, forKey: AppKey.pageTranslateTo.rawValue)
+            set(newValue.id, forKey: AppKey.pageTargetLanguage.rawValue)
         }
     }
     
@@ -60,24 +60,24 @@ extension UserDefaults {
             return service
         }
         set {
-            let languageID = textTranslateTo.id
+            let languageID = textTargetLanguage.id
             set(newValue.rawValue, forKey: AppKey.textTranslationService.rawValue)
-            textTranslateTo = newValue.supportedLanguages().first(where: { $0.id == languageID})
+            textTargetLanguage = newValue.supportedLanguages().first(where: { $0.id == languageID})
                 ?? newValue.defaultLanguage()
         }
     }
     
-    var textTranslateTo: Language {
+    var textTargetLanguage: Language {
         get {
             guard
-                let id = string(forKey: AppKey.textTranslateTo.rawValue),
+                let id = string(forKey: AppKey.textTargetLanguage.rawValue),
                 let language = textTranslationService.supportedLanguages().first(where: { $0.id == id }) else {
                     return textTranslationService.defaultLanguage()
             }
             return language
         }
         set {
-            set(newValue.id, forKey: AppKey.textTranslateTo.rawValue)
+            set(newValue.id, forKey: AppKey.textTargetLanguage.rawValue)
         }
     }
     
@@ -94,9 +94,9 @@ extension UserDefaults {
     func language(for media: TranslationMedia) -> Language {
         switch media {
         case .text:
-            return textTranslateTo
+            return textTargetLanguage
         case .page:
-            return pageTranslateTo
+            return pageTargetLanguage
         }
     }
 }
