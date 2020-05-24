@@ -19,7 +19,6 @@
 		00D524192479393800556BA4 /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+Keys.swift */; };
 		00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		00D5241B24793A0A00556BA4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
-		00D5241D24795C5F00556BA4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5241C24795C5F00556BA4 /* MainViewModel.swift */; };
 		00D5241F24795F1400556BA4 /* TranslationMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5241E24795F1300556BA4 /* TranslationMedia.swift */; };
 		00D524202479613000556BA4 /* TranslationMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5241E24795F1300556BA4 /* TranslationMedia.swift */; };
 		00DD6A4C246659DA004684DA /* TranslateWebForSafari.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */; };
@@ -90,7 +89,6 @@
 		006CE4FB2478191A00256895 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		006CE4FD24781F4500256895 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		006CE4FF2478388500256895 /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
-		00D5241C24795C5F00556BA4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		00D5241E24795F1300556BA4 /* TranslationMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationMedia.swift; sourceTree = "<group>"; };
 		00DD6A48246659DA004684DA /* TranslateWebForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateWebForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari.entitlements; sourceTree = "<group>"; };
@@ -163,18 +161,8 @@
 				00D5241E24795F1300556BA4 /* TranslationMedia.swift */,
 				006CE4FB2478191A00256895 /* TranslationService.swift */,
 				006CE4FF2478388500256895 /* UserDefaults+Keys.swift */,
-				006CE5032478C6BA00256895 /* Screens */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		006CE5032478C6BA00256895 /* Screens */ = {
-			isa = PBXGroup;
-			children = (
-				00DD6A52246659DA004684DA /* MainViewController.swift */,
-				00D5241C24795C5F00556BA4 /* MainViewModel.swift */,
-			);
-			path = Screens;
 			sourceTree = "<group>";
 		};
 		006CE5042478C70600256895 /* L10n */ = {
@@ -217,6 +205,7 @@
 				004D82852479287C00817E8B /* Extensions */,
 				00DD6A4F246659DA004684DA /* Main.storyboard */,
 				00DD6A4D246659DA004684DA /* AppDelegate.swift */,
+				00DD6A52246659DA004684DA /* MainViewController.swift */,
 				00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */,
 				00DD6A56246659DD004684DA /* Info.plist */,
 				00DD6A54246659DD004684DA /* Assets.xcassets */,
@@ -446,7 +435,6 @@
 				00D524202479613000556BA4 /* TranslationMedia.swift in Sources */,
 				001853AD246D676600C75E4D /* L10n.swift in Sources */,
 				006CE4FC2478191A00256895 /* TranslationService.swift in Sources */,
-				00D5241D24795C5F00556BA4 /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

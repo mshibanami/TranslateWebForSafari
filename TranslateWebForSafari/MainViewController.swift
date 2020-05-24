@@ -171,13 +171,13 @@ class MainViewController: NSViewController {
         NSLayoutConstraint.activate([
             containerStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
             containerStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-            containerStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            containerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            containerStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            containerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
             containerStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             upperSeparatorView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
             lowerSeparatorView.widthAnchor.constraint(equalTo: upperSeparatorView.widthAnchor),
-            view.widthAnchor.constraint(greaterThanOrEqualToConstant: 500),
+            view.widthAnchor.constraint(greaterThanOrEqualToConstant: 600),
             view.trailingAnchor.constraint(equalTo: aboutThisExtensionButton.trailingAnchor, constant: 10),
             view.bottomAnchor.constraint(equalTo: aboutThisExtensionButton.bottomAnchor, constant: 10),
         ])
