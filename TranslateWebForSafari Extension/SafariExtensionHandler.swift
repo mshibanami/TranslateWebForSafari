@@ -135,9 +135,9 @@ private extension SFSafariWindow {
     func openPage(for media: TranslationMedia) {
         let settings = UserDefaults.group
 
-        let url = media.makeURL(
-            for: settings.translationService(for: media),
-            langauge: settings.language(for: media))
+        guard let url = media.makeURL(for: settings.translationService(for: media), langauge: settings.language(for: media)) else {
+            return
+        }
         
         switch media {
         case .text:

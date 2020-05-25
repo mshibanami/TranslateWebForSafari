@@ -12,7 +12,9 @@ enum TranslationMedia {
     case text(String)
     case page(URL)
     
-    func makeURL(for service: TranslationService, langauge: Language) -> URL {
+    fileprivate typealias QueryParameter = (key: String, encodedValue: String)
+    
+    func makeURL(for service: TranslationService, langauge: Language) -> URL? {
         switch service {
         case .baidu:
             return makeURLForBaidu(for: langauge)
@@ -25,55 +27,75 @@ enum TranslationMedia {
         }
     }
 
-    private func makeURLForBaidu(for language: Language) -> URL {
+    private func makeURLForBaidu(for language: Language) -> URL? {
         switch self {
         case let .text(text):
-            //https://www.deepl.com/translator#auto/fr/sdfsd
-            var urlComponents = URLComponents(string: "https://fanyi.baidu.com/")!
-            urlComponents.fragment = "auto/\(language.id)/\(text)"
-            return urlComponents.url!
+            let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+            return URL(string: "https://fanyi.baidu.com/#auto/\(language.id)/\(encodedText)")
         case .page:
             assertionFailure("Baidu doesn't support page translation")
             return makeURLForGoogle(for: language)
         }
     }
     
-    private func makeURLForBing(for language: Language) -> URL {
-        return URL(string: "https://example.com/")!
-    }
-    
-    private func makeURLForDeepL(for language: Language) -> URL {
+    private func makeURLForBing(for language: Language) -> URL? {
+        var urlComponents: URLComponents
+        var percentEncodedQueries: [QueryParameter] = [
+            (key: "to", encodedValue: language.id)
+        ]
         switch self {
         case let .text(text):
-            //https://www.deepl.com/translator#auto/fr/sdfsd
-            var urlComponents = URLComponents(string: "https://www.deepl.com/translator")!
-            urlComponents.fragment = "auto/\(language.id)/\(text)"
-            return urlComponents.url!
+            urlComponents = URLComponents(string: "https://www.bing.com/translator/")!
+            guard let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+                break
+            }
+            percentEncodedQueries.append((key: "text", encodedValue: encodedText))
+        case let .page(url):
+            urlComponents = URLComponents(string: "https://www.translatetheweb.com/")!
+            guard let encodedURL = url.absoluteString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+                break
+            }
+            percentEncodedQueries.append((key: "a", encodedValue: encodedURL))
+        }
+        urlComponents.percentEncodedQuery = percentEncodedQueries.map({ "\($0)=\($1)" }).joined(separator: "&")
+        return urlComponents.url
+    }
+    
+    private func makeURLForDeepL(for language: Language) -> URL? {
+        switch self {
+        case let .text(text):
+            let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+            return URL(string: "https://www.deepl.com/translator#auto/\(language.id)/\(encodedText)")
         case .page:
             assertionFailure("DeepL doesn't support page translation")
             return makeURLForGoogle(for: language)
         }
     }
     
-    private func makeURLForGoogle(for language: Language) -> URL {
-        var urlComponents = URLComponents(string: "https://translate.google.com/")!
-        var queryItems = [
-            URLQueryItem(name: "tl", value: language.id)
+    private func makeURLForGoogle(for language: Language) -> URL? {
+        var parameters: [QueryParameter] = [
+            (key: "tl", encodedValue: language.id)
         ]
         switch self {
         case let .text(text):
-            urlComponents.path = "/"
-            queryItems.append(contentsOf: [
-                URLQueryItem(name: "text", value: text)
-            ])
+            guard let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+                break
+            }
+            parameters.append((key: "text", encodedValue: encodedText))
+            return URL(string: "https://translate.google.com/?\(parameters.makeQueryString())")
         case let .page(url):
-            urlComponents.path = "/translate"
-            let urlString = url.absoluteString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
-            queryItems.append(contentsOf: [
-                URLQueryItem(name: "u", value: urlString)
-            ])
+            guard let encodedURL = url.absoluteString.removingPercentEncoding?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
+                break
+            }
+            parameters.append((key: "u", encodedValue: encodedURL))
+            return URL(string: "https://translate.google.com/translate?\(parameters.makeQueryString())")
         }
-        urlComponents.queryItems = queryItems
-        return urlComponents.url!
+        return nil
+    }
+}
+
+private extension Array where Element == TranslationMedia.QueryParameter {
+    func makeQueryString() -> String {
+        return map({ "\($0)=\($1)" }).joined(separator: "&")
     }
 }
