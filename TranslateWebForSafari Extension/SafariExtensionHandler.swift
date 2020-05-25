@@ -17,7 +17,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             guard let selectedText = selectedText else {
                 return nil
             }
-            let maxTextLength = 100
+            let maxTextLength = 20
             var text = selectedText.replacingOccurrences(of: "\n", with: " ")
             if text.count > maxTextLength {
                 text = text.prefix(maxTextLength) + "…"
