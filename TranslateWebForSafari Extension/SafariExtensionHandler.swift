@@ -51,10 +51,19 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
     override func toolbarItemClicked(in window: SFSafariWindow) {
-        if let selectedText = State.shared.selectedText {
-            window.openPage(for: .text(selectedText))
-        } else {
+        switch UserDefaults.group.toolbarItemBehavior {
+        case .alwaysTranslatePage:
             window.openTranslatedPageForActivePage()
+        case .alwaysTranslateSelectedText:
+            if let selectedText = State.shared.selectedText {
+                window.openPage(for: .text(selectedText))
+            }
+        case .translateTextIfSelected:
+            if let selectedText = State.shared.selectedText {
+                window.openPage(for: .text(selectedText))
+            } else {
+                window.openTranslatedPageForActivePage()
+            }
         }
     }
     
