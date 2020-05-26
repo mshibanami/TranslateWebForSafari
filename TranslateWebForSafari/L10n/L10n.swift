@@ -35,7 +35,7 @@ class L10n {
     static let toolbarItemBehavior = NSLocalizedString("Toolbar button behavior", comment: "")
     static let alwaysTranslatePage = NSLocalizedString("Always translate the current page", comment: "")
     static let alwaysTranslateSelectedText = NSLocalizedString("Always translate the selected text", comment: "")
-    static let translateTextIfSelected = NSLocalizedString("If text is selected, translate it, otherwise translate the page", comment: "")
+    static let translateTextIfSelected = NSLocalizedString("If text is selected, translate it, otherwise translate the current page", comment: "")
     static let openSafariPreferences = NSLocalizedString("Open Safari Preferences…", comment: "")
     static let aboutThisExtension = NSLocalizedString("About this extension", comment: "")
     
