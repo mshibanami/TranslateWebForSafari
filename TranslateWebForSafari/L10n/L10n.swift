@@ -10,14 +10,9 @@ import Foundation
 
 class L10n {
     static let appName = "Translate Web for Safari"
-    static let openSafariPreferences = NSLocalizedString("Open Safari Preferences…", comment: "")
-    static let aboutThisExtension = NSLocalizedString("About this extension", comment: "")
-    static let menuItemHideApp = String(format: NSLocalizedString("Hide %@", comment: ""), appName)
-    static let menuItemHideOthers = NSLocalizedString("Hide Others", comment: "")
-    static let menuItemShowAll = NSLocalizedString("Show All", comment: "")
-    static let menuItemQuitApp = String(format: NSLocalizedString("Quit %@", comment: ""), appName)
-    static let menuItemWindow = NSLocalizedString("Window", comment: "")
-    static let menuItemClose = NSLocalizedString("Close", comment: "")
+
+    // MARK: Extension
+    
     static let toolbarItemTranslatePage = NSLocalizedString("Translate the current page", comment: "")
     static let contextMenuTranslatePage = NSLocalizedString("Translate this page", comment: "")
     static func menuTranslateText(with text: String) -> String {
@@ -25,15 +20,33 @@ class L10n {
             NSLocalizedString("Translate \"%@\"", comment: ""),
             text)
     }
+    
+    // MARK: Settings
+    
+    static let menuItemHideApp = String(format: NSLocalizedString("Hide %@", comment: ""), appName)
+    static let menuItemHideOthers = NSLocalizedString("Hide Others", comment: "")
+    static let menuItemShowAll = NSLocalizedString("Show All", comment: "")
+    static let menuItemQuitApp = String(format: NSLocalizedString("Quit %@", comment: ""), appName)
+    static let menuItemWindow = NSLocalizedString("Window", comment: "")
+    static let menuItemClose = NSLocalizedString("Close", comment: "")
     static let pageTranslation = NSLocalizedString("Page Translation", comment: "")
     static let textTranslation = NSLocalizedString("Text Translation", comment: "")
     static let translateTo = NSLocalizedString("Translate to", comment: "")
+    static let toolbarItemBehavior = NSLocalizedString("Toolbar button behavior", comment: "")
+    static let alwaysTranslatePage = NSLocalizedString("Always translate the current page", comment: "")
+    static let alwaysTranslateSelectedText = NSLocalizedString("Always translate the selected text", comment: "")
+    static let translateTextIfSelected = NSLocalizedString("If text is selected, translate it, otherwise translate the page", comment: "")
+    static let openSafariPreferences = NSLocalizedString("Open Safari Preferences…", comment: "")
+    static let aboutThisExtension = NSLocalizedString("About this extension", comment: "")
+    
+    // MARK: Translation Service
     
     static let baidu = "Baidu"
     static let bing = "Bing"
     static let deepL = "DeepL"
     static let google = "Google"
     
+    // MARK: Languages the translation services support
     
     static let achinese = "Achinese"
     static let afrikaans = "Afrikaans"

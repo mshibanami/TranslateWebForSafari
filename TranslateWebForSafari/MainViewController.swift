@@ -4,13 +4,9 @@ import Cocoa
 import SafariServices.SFSafariApplication
 
 class MainViewController: NSViewController {
-    private static var pageTranslationServices: [TranslationService] {
-        TranslationService.allCases.filter { $0.supportsPageTranslation }
-    }
-    
-    private static var textTranslationServices: [TranslationService] {
-        TranslationService.allCases
-    }
+    private static let pageTranslationServices = TranslationService.allCases.filter { $0.supportsPageTranslation }
+    private static let textTranslationServices = TranslationService.allCases
+    private static let toolbarItemBehavior = ToolbarItemBehavior.allCases
     
     private lazy var containerStackView: NSStackView = {
         let view = NSStackView(views: [
@@ -108,10 +104,21 @@ class MainViewController: NSViewController {
         return view
     }()
     
+    private lazy var toolbarItemBehaviorStackView: NSStackView = {
+        let view = NSStackView(views: Self.toolbarItemBehavior.map {
+            NSButton(radioButtonWithTitle: $0.localizedTitle, target: self, action: #selector(didTapToolbarItemBehavior(_:)))
+        })
+        view.spacing = 6
+        view.orientation = .vertical
+        view.alignment = .leading
+        return view
+    }()
+    
     private lazy var settingsGridView: NSGridView = {
         let view = NSGridView(views: [
             [NSTextField(settingLabelWithString: L10n.pageTranslation), pageTranslationStackView],
             [NSTextField(settingLabelWithString: L10n.textTranslation), textTranslationStackView],
+            [NSTextField(settingLabelWithString: L10n.toolbarItemBehavior), toolbarItemBehaviorStackView]
         ])
         view.rowSpacing = 20
         view.setContentHuggingPriority(.defaultLow, for: .horizontal)
@@ -133,34 +140,26 @@ class MainViewController: NSViewController {
     private lazy var pageTranslationServicePopUpButton: NSPopUpButton = {
         let button = NSPopUpButton(title: "", target: self, action: #selector(didTapPageTranslationService(_:)))
         let menu = NSMenu()
-        for service in Self.pageTranslationServices {
-            menu.addItem(NSMenuItem(title: service.localizedName, action: nil, keyEquivalent: ""))
+        menu.items = Self.pageTranslationServices.map {
+            NSMenuItem(title: $0.localizedName, action: nil, keyEquivalent: "")
         }
         button.menu = menu
         return button
     }()
     
-    private lazy var pageTranslateToPopUpButton: NSPopUpButton = {
-        let button = NSPopUpButton(title: "", target: self, action: #selector(didTapPageTranslateTo(_:)))
-        let menu = NSMenu()
-        return button
-    }()
+    private lazy var pageTranslateToPopUpButton = NSPopUpButton(title: "", target: self, action: #selector(didTapPageTranslateTo(_:)))
     
     private lazy var textTranslationServicePopUpButton: NSPopUpButton = {
         let button = NSPopUpButton(title: "", target: self, action: #selector(didTapTextTranslationService(_:)))
         let menu = NSMenu()
-        for service in Self.textTranslationServices {
-            menu.addItem(NSMenuItem(title: service.localizedName, action: nil, keyEquivalent: ""))
+        menu.items = Self.textTranslationServices.map {
+            NSMenuItem(title: $0.localizedName, action: nil, keyEquivalent: "")
         }
         button.menu = menu
         return button
     }()
     
-    private lazy var textTranslateToPopUpButton: NSPopUpButton = {
-        let button = NSPopUpButton(title: "", target: self, action: #selector(didTapTextTranslateTo(_:)))
-        let menu = NSMenu()
-        return button
-    }()
+    private lazy var textTranslateToPopUpButton = NSPopUpButton(title: "", target: self, action: #selector(didTapTextTranslateTo(_:)))
     
     override func loadView() {
         let view = NSView()
@@ -210,10 +209,10 @@ class MainViewController: NSViewController {
             textTranslateToPopUpButton.addItem(withTitle: language.titleForMenu)
         }
         
-        updateButtonsSelections()
+        updateUI()
     }
     
-    private func updateButtonsSelections() {
+    private func updateUI() {
         let settings = UserDefaults.group
         
         // Page Translation
@@ -233,11 +232,20 @@ class MainViewController: NSViewController {
         if let index = textService.supportedLanguages().firstIndex(of: settings.textTargetLanguage) {
             textTranslateToPopUpButton.selectItem(at: index)
         }
+        
+        // Toolbar button behavior
+        if let index = Self.toolbarItemBehavior.firstIndex(of: settings.toolbarItemBehavior) {
+            if let button = toolbarItemBehaviorStackView.arrangedSubviews[optional: index] as? NSButton {
+                button.state = .on
+            } else {
+                assertionFailure()
+            }
+        }
     }
     
     private func currentSelectionOfPageTranslationService() -> TranslationService? {
         let selectedIndex = pageTranslationServicePopUpButton.indexOfSelectedItem
-        guard selectedIndex >= 0, let service = Self.pageTranslationServices[optional: selectedIndex] else {
+        guard let service = Self.pageTranslationServices[optional: selectedIndex] else {
             return nil
         }
         return service
@@ -245,7 +253,7 @@ class MainViewController: NSViewController {
     
     private func currentSelectionOfTextTranslationService() -> TranslationService? {
         let selectedIndex = textTranslationServicePopUpButton.indexOfSelectedItem
-        guard selectedIndex >= 0, let service = Self.textTranslationServices[optional: selectedIndex] else {
+        guard let service = Self.textTranslationServices[optional: selectedIndex] else {
             return nil
         }
         return service
@@ -253,15 +261,15 @@ class MainViewController: NSViewController {
     
     // MARK: Actions
     
-    @IBAction private func didTapOpenSafariPreferences(_ sender: AnyObject?) {
+    @objc private func didTapOpenSafariPreferences(_ sender: NSView) {
         SFSafariApplication.showPreferencesForExtension(withIdentifier: "io.github.mshibanami.TranslateWebForSafari.Extension")
     }
     
-    @IBAction private func didTapAboutThisApp(_ sender: AnyObject?) {
+    @objc private func didTapAboutThisApp(_ sender: AnyObject?) {
         NSWorkspace.shared.open(Consts.supportPageURL)
     }
     
-    @IBAction private func didTapPageTranslationService(_ sender: AnyObject?) {
+    @objc private func didTapPageTranslationService(_ sender: NSView) {
         guard let service = currentSelectionOfPageTranslationService() else {
             assertionFailure()
             return
@@ -270,7 +278,7 @@ class MainViewController: NSViewController {
         resetUI()
     }
 
-    @IBAction private func didTapPageTranslateTo(_ sender: AnyObject?) {
+    @objc private func didTapPageTranslateTo(_ sender: NSView) {
         guard let service = currentSelectionOfPageTranslationService() else {
             assertionFailure()
             return
@@ -278,7 +286,7 @@ class MainViewController: NSViewController {
         UserDefaults.group.pageTargetLanguage = service.supportedLanguages()[pageTranslateToPopUpButton.indexOfSelectedItem]
     }
     
-    @IBAction private func didTapTextTranslationService(_ sender: AnyObject?) {
+    @objc private func didTapTextTranslationService(_ sender: NSView) {
         guard let service = currentSelectionOfTextTranslationService() else {
             assertionFailure()
             return
@@ -287,12 +295,20 @@ class MainViewController: NSViewController {
         resetUI()
     }
     
-    @IBAction private func didTapTextTranslateTo(_ sender: AnyObject?) {
+    @objc private func didTapTextTranslateTo(_ sender: NSView) {
         guard let service = currentSelectionOfTextTranslationService() else {
             assertionFailure()
             return
         }
         UserDefaults.group.textTargetLanguage = service.supportedLanguages()[textTranslateToPopUpButton.indexOfSelectedItem]
+    }
+    
+    @objc private func didTapToolbarItemBehavior(_ sender: NSView) {
+        guard let index = toolbarItemBehaviorStackView.arrangedSubviews.firstIndex(of: sender),
+            let behavior = Self.toolbarItemBehavior[optional: index] else {
+            return
+        }
+        UserDefaults.group.toolbarItemBehavior = behavior
     }
 }
 

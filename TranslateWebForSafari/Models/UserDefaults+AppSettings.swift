@@ -1,5 +1,5 @@
 //
-//  UserDefaults+Keys.swift
+//  UserDefaults+AppSettings.swift
 //  TranslateWebForSafari
 //
 //  Created by Manabu Nakazawa on 23/5/20.
@@ -14,6 +14,7 @@ extension UserDefaults {
         case textTranslationService = "textTranslationService"
         case pageTargetLanguage = "pageTargetLanguage"
         case textTargetLanguage = "textTargetLanguage"
+        case toolbarItemBehavior = "toolbarItemBehavior"
     }
     
     static var group: UserDefaults = UserDefaults(suiteName: "group.io.github.mshibanami.TranslateWebForSafari")!
@@ -81,6 +82,21 @@ extension UserDefaults {
         }
     }
     
+    var toolbarItemBehavior: ToolbarItemBehavior {
+        get {
+            guard
+                let id = string(forKey: AppKey.toolbarItemBehavior.rawValue),
+                let behavior = ToolbarItemBehavior(rawValue: id) else {
+                    return ToolbarItemBehavior.defaultValue
+            }
+            return behavior
+        }
+        set {
+            set(newValue.rawValue, forKey: AppKey.toolbarItemBehavior.rawValue)
+        }
+    }
+    
+    // MARK: - Helpers
     
     func translationService(for media: TranslationMedia) -> TranslationService {
         switch media {

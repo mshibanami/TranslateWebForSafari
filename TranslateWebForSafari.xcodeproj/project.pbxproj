@@ -15,8 +15,10 @@
 		004D82872479289000817E8B /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D82862479289000817E8B /* Collection+Extensions.swift */; };
 		006CE4FC2478191A00256895 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		006CE4FE24781F4500256895 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
-		006CE5002478388500256895 /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+Keys.swift */; };
-		00D524192479393800556BA4 /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+Keys.swift */; };
+		006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
+		00C726DE247D222400090155 /* ToolbarItemBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C726DD247D222400090155 /* ToolbarItemBehavior.swift */; };
+		00C726DF247D711C00090155 /* ToolbarItemBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C726DD247D222400090155 /* ToolbarItemBehavior.swift */; };
+		00D524192479393800556BA4 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
 		00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		00D5241B24793A0A00556BA4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
 		00D5241F24795F1400556BA4 /* TranslationMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D5241E24795F1300556BA4 /* TranslationMedia.swift */; };
@@ -88,7 +90,8 @@
 		004D82862479289000817E8B /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		006CE4FB2478191A00256895 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		006CE4FD24781F4500256895 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
-		006CE4FF2478388500256895 /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
+		006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppSettings.swift"; sourceTree = "<group>"; };
+		00C726DD247D222400090155 /* ToolbarItemBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemBehavior.swift; sourceTree = "<group>"; };
 		00D5241E24795F1300556BA4 /* TranslationMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationMedia.swift; sourceTree = "<group>"; };
 		00DD6A48246659DA004684DA /* TranslateWebForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateWebForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari.entitlements; sourceTree = "<group>"; };
@@ -160,7 +163,8 @@
 				006CE4FD24781F4500256895 /* Language.swift */,
 				00D5241E24795F1300556BA4 /* TranslationMedia.swift */,
 				006CE4FB2478191A00256895 /* TranslationService.swift */,
-				006CE4FF2478388500256895 /* UserDefaults+Keys.swift */,
+				006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */,
+				00C726DD247D222400090155 /* ToolbarItemBehavior.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,8 +433,9 @@
 				00DD6A53246659DA004684DA /* MainViewController.swift in Sources */,
 				004B6CCF2476AD2500C25112 /* Consts.swift in Sources */,
 				006CE4FE24781F4500256895 /* Language.swift in Sources */,
-				006CE5002478388500256895 /* UserDefaults+Keys.swift in Sources */,
+				006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */,
 				00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */,
+				00C726DE247D222400090155 /* ToolbarItemBehavior.swift in Sources */,
 				004D82872479289000817E8B /* Collection+Extensions.swift in Sources */,
 				00D524202479613000556BA4 /* TranslationMedia.swift in Sources */,
 				001853AD246D676600C75E4D /* L10n.swift in Sources */,
@@ -458,9 +463,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00D524192479393800556BA4 /* UserDefaults+Keys.swift in Sources */,
+				00D524192479393800556BA4 /* UserDefaults+AppSettings.swift in Sources */,
 				00D5241B24793A0A00556BA4 /* Language.swift in Sources */,
 				00D5241F24795F1400556BA4 /* TranslationMedia.swift in Sources */,
+				00C726DF247D711C00090155 /* ToolbarItemBehavior.swift in Sources */,
 				001853AE246D686E00C75E4D /* L10n.swift in Sources */,
 				00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */,
 				00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */,
