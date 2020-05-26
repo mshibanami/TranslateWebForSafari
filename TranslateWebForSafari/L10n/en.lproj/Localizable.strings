@@ -2,6 +2,12 @@
 "About this extension" = "About this extension";
 
 /* No comment provided by engineer. */
+"Always translate the current page" = "Always translate the current page";
+
+/* No comment provided by engineer. */
+"Always translate the selected text" = "Always translate the selected text";
+
+/* No comment provided by engineer. */
 "Chinese" = "Chinese";
 
 /* No comment provided by engineer. */
@@ -39,6 +45,9 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "Hindi";
+
+/* No comment provided by engineer. */
+"If text is selected, translate it, otherwise translate the current page" = "If text is selected, translate it, otherwise translate the current page";
 
 /* No comment provided by engineer. */
 "Italian" = "Italian";
@@ -90,6 +99,9 @@
 
 /* No comment provided by engineer. */
 "Thai" = "Thai";
+
+/* No comment provided by engineer. */
+"Toolbar button behavior" = "Toolbar button behavior";
 
 /* No comment provided by engineer. */
 "Translate \"%@\"" = "Translate \"%@\"";

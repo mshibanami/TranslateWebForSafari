@@ -2,6 +2,12 @@
 "About this extension" = "关于此扩展";
 
 /* No comment provided by engineer. */
+"Always translate the current page" = "始终翻译当前页面";
+
+/* No comment provided by engineer. */
+"Always translate the selected text" = "始终翻译所选文本";
+
+/* No comment provided by engineer. */
 "Chinese" = "中文";
 
 /* No comment provided by engineer. */
@@ -39,6 +45,9 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "印地语";
+
+/* No comment provided by engineer. */
+"If text is selected, translate it, otherwise translate the current page" = "如果选择了文本，则翻译它，否则翻译当前的页面";
 
 /* No comment provided by engineer. */
 "Italian" = "意大利语";
@@ -90,6 +99,9 @@
 
 /* No comment provided by engineer. */
 "Thai" = "泰语";
+
+/* No comment provided by engineer. */
+"Toolbar button behavior" = "工具栏按钮行为";
 
 /* No comment provided by engineer. */
 "Translate \"%@\"" = "翻译为 \"%@\"";

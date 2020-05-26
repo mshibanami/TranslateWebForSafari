@@ -2,6 +2,12 @@
 "About this extension" = "Об этом расширении";
 
 /* No comment provided by engineer. */
+"Always translate the current page" = "Всегда переводить текущую страницу";
+
+/* No comment provided by engineer. */
+"Always translate the selected text" = "Всегда переводить выделенный текст";
+
+/* No comment provided by engineer. */
 "Chinese" = "Китайский";
 
 /* No comment provided by engineer. */
@@ -39,6 +45,9 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "Хинди";
+
+/* No comment provided by engineer. */
+"If text is selected, translate it, otherwise translate the current page" = "Если выбран текст, переведите его, в противном случае переведите текущую страницу";
 
 /* No comment provided by engineer. */
 "Italian" = "Итальянский";
@@ -90,6 +99,9 @@
 
 /* No comment provided by engineer. */
 "Thai" = "Тайский";
+
+/* No comment provided by engineer. */
+"Toolbar button behavior" = "Поведение кнопки панели инструментов";
 
 /* No comment provided by engineer. */
 "Translate \"%@\"" = "Перевести \"%@\"";

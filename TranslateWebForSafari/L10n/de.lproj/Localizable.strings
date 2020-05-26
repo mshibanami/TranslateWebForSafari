@@ -2,6 +2,12 @@
 "About this extension" = "Über diese Erweiterung";
 
 /* No comment provided by engineer. */
+"Always translate the current page" = "Immer die aktuelle Seite übersetzen";
+
+/* No comment provided by engineer. */
+"Always translate the selected text" = "Immer den ausgewählten Text übersetzen";
+
+/* No comment provided by engineer. */
 "Chinese" = "Chinesisch";
 
 /* No comment provided by engineer. */
@@ -39,6 +45,9 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "Hindi";
+
+/* No comment provided by engineer. */
+"If text is selected, translate it, otherwise translate the current page" = "Wenn Text ausgewählt ist, übersetzen Sie ihn, andernfalls übersetzen Sie die aktuelle Seite";
 
 /* No comment provided by engineer. */
 "Italian" = "Italienisch";
@@ -90,6 +99,9 @@
 
 /* No comment provided by engineer. */
 "Thai" = "Thai";
+
+/* No comment provided by engineer. */
+"Toolbar button behavior" = "Verhalten von Symbolleistenschaltflächen";
 
 /* No comment provided by engineer. */
 "Translate \"%@\"" = "Übersetzen Sie \"%@\"";
