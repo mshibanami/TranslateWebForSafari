@@ -10,4 +10,11 @@ import Foundation
 
 enum Consts {
     static let supportPageURL = URL(string: "https://github.com/mshibanami/TranslateWebForSafari")!
+    static let usesMojaveCompatibleAPIOnly: Bool = {
+        if #available(OSX 10.14.4, *) {
+            return false
+        } else {
+            return true
+        }
+    }()
 }

@@ -9,6 +9,8 @@ safari.self.addEventListener(
     (event) => {
         if (event.name == 'updateSelection') {
             updateSelection();
+        } else if (event.name == 'navigate') {
+            window.location = event.message.url;
         }
     },
     false);
