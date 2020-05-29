@@ -8,6 +8,12 @@
 "Always translate the selected text" = "Always translate the selected text";
 
 /* No comment provided by engineer. */
+"Arabic" = "Arabic";
+
+/* No comment provided by engineer. */
+"Cantonese" = "Cantonese";
+
+/* No comment provided by engineer. */
 "Chinese" = "Chinese";
 
 /* No comment provided by engineer. */
@@ -20,10 +26,16 @@
 "Close" = "Close";
 
 /* No comment provided by engineer. */
+"Danish" = "Danish";
+
+/* No comment provided by engineer. */
 "Dutch" = "Dutch";
 
 /* No comment provided by engineer. */
 "English" = "English";
+
+/* No comment provided by engineer. */
+"Estonian" = "Estonian";
 
 /* No comment provided by engineer. */
 "Finnish" = "Finnish";
@@ -38,6 +50,9 @@
 "Greek" = "Greek";
 
 /* No comment provided by engineer. */
+"Hebrew" = "Hebrew";
+
+/* No comment provided by engineer. */
 "Hide %@" = "Hide %@";
 
 /* No comment provided by engineer. */
@@ -50,13 +65,25 @@
 "If text is selected, translate it, otherwise translate the current page" = "If text is selected, translate it, otherwise translate the current page";
 
 /* No comment provided by engineer. */
+"Indonesian" = "Indonesian";
+
+/* No comment provided by engineer. */
+"Irish" = "Irish";
+
+/* No comment provided by engineer. */
 "Italian" = "Italian";
 
 /* No comment provided by engineer. */
 "Japanese" = "Japanese";
 
 /* No comment provided by engineer. */
+"Javanese" = "Javanese";
+
+/* No comment provided by engineer. */
 "Korean" = "Korean";
+
+/* No comment provided by engineer. */
+"Latin" = "Latin";
 
 /* No comment provided by engineer. */
 "Malay" = "Malay";
@@ -65,10 +92,19 @@
 "Mongolian" = "Mongolian";
 
 /* No comment provided by engineer. */
+"Norwegian" = "Norwegian";
+
+/* No comment provided by engineer. */
+"Old English" = "Old English";
+
+/* No comment provided by engineer. */
 "Open Safari Preferences…" = "Open Safari Preferences…";
 
 /* No comment provided by engineer. */
 "Page Translation" = "Page Translation";
+
+/* No comment provided by engineer. */
+"Persian" = "Persian";
 
 /* No comment provided by engineer. */
 "Polish" = "Polish";
@@ -89,10 +125,31 @@
 "Russian" = "Russian";
 
 /* No comment provided by engineer. */
+"Sanskrit" = "Sanskrit";
+
+/* No comment provided by engineer. */
+"Serbian" = "Serbian";
+
+/* No comment provided by engineer. */
+"Serbian (Cyrillic)" = "Serbian (Cyrillic)";
+
+/* No comment provided by engineer. */
+"Serbian (Latin)" = "Serbian (Latin)";
+
+/* No comment provided by engineer. */
 "Show All" = "Show All";
 
 /* No comment provided by engineer. */
 "Spanish" = "Spanish";
+
+/* No comment provided by engineer. */
+"Swahili" = "Swahili";
+
+/* No comment provided by engineer. */
+"Swedish" = "Swedish";
+
+/* No comment provided by engineer. */
+"Tamil" = "Tamil";
 
 /* No comment provided by engineer. */
 "Text Translation" = "Text Translation";
@@ -117,6 +174,12 @@
 
 /* No comment provided by engineer. */
 "Turkish" = "Turkish";
+
+/* No comment provided by engineer. */
+"Uyghur" = "Uyghur";
+
+/* No comment provided by engineer. */
+"Welsh" = "Welsh";
 
 /* No comment provided by engineer. */
 "Window" = "Window";

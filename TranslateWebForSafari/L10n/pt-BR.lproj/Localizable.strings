@@ -8,6 +8,12 @@
 "Always translate the selected text" = "Traduza sempre o texto selecionado";
 
 /* No comment provided by engineer. */
+"Arabic" = "Arábico";
+
+/* No comment provided by engineer. */
+"Cantonese" = "Cantonês";
+
+/* No comment provided by engineer. */
 "Chinese" = "Chinês";
 
 /* No comment provided by engineer. */
@@ -20,10 +26,16 @@
 "Close" = "Fechar";
 
 /* No comment provided by engineer. */
+"Danish" = "Dinamarquês";
+
+/* No comment provided by engineer. */
 "Dutch" = "Holandês";
 
 /* No comment provided by engineer. */
 "English" = "Inglês";
+
+/* No comment provided by engineer. */
+"Estonian" = "Estoniano";
 
 /* No comment provided by engineer. */
 "Finnish" = "Finlandês";
@@ -38,6 +50,9 @@
 "Greek" = "Grego";
 
 /* No comment provided by engineer. */
+"Hebrew" = "Hebraico";
+
+/* No comment provided by engineer. */
 "Hide %@" = "Ocultar %@";
 
 /* No comment provided by engineer. */
@@ -50,13 +65,25 @@
 "If text is selected, translate it, otherwise translate the current page" = "Se o texto for selecionado, traduza-o, caso contrário traduza a página atual";
 
 /* No comment provided by engineer. */
+"Indonesian" = "Indonésio";
+
+/* No comment provided by engineer. */
+"Irish" = "Irlandês";
+
+/* No comment provided by engineer. */
 "Italian" = "Italiano";
 
 /* No comment provided by engineer. */
 "Japanese" = "Japonês";
 
 /* No comment provided by engineer. */
+"Javanese" = "Javanês";
+
+/* No comment provided by engineer. */
 "Korean" = "Coreano";
+
+/* No comment provided by engineer. */
+"Latin" = "Latim";
 
 /* No comment provided by engineer. */
 "Malay" = "Malaio";
@@ -65,10 +92,19 @@
 "Mongolian" = "Mongol";
 
 /* No comment provided by engineer. */
+"Norwegian" = "Norueguês";
+
+/* No comment provided by engineer. */
+"Old English" = "Inglês antigo";
+
+/* No comment provided by engineer. */
 "Open Safari Preferences…" = "Preferências do Safari Aberto…";
 
 /* No comment provided by engineer. */
 "Page Translation" = "Tradução da Página";
+
+/* No comment provided by engineer. */
+"Persian" = "Persa";
 
 /* No comment provided by engineer. */
 "Polish" = "Polaco";
@@ -89,10 +125,31 @@
 "Russian" = "Russo";
 
 /* No comment provided by engineer. */
+"Sanskrit" = "Sânscrito";
+
+/* No comment provided by engineer. */
+"Serbian" = "Sérvio";
+
+/* No comment provided by engineer. */
+"Serbian (Cyrillic)" = "Sérvio (Cirílico)";
+
+/* No comment provided by engineer. */
+"Serbian (Latin)" = "Serbian (Latim)";
+
+/* No comment provided by engineer. */
 "Show All" = "Mostrar Tudo";
 
 /* No comment provided by engineer. */
 "Spanish" = "Espanhol";
+
+/* No comment provided by engineer. */
+"Swahili" = "Swahili";
+
+/* No comment provided by engineer. */
+"Swedish" = "Sueco";
+
+/* No comment provided by engineer. */
+"Tamil" = "Tâmil";
 
 /* No comment provided by engineer. */
 "Text Translation" = "Tradução do texto";
@@ -117,6 +174,12 @@
 
 /* No comment provided by engineer. */
 "Turkish" = "Turco";
+
+/* No comment provided by engineer. */
+"Uyghur" = "Uyghur";
+
+/* No comment provided by engineer. */
+"Welsh" = "Galês";
 
 /* No comment provided by engineer. */
 "Window" = "Janela";

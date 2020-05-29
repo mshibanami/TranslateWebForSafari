@@ -8,6 +8,12 @@
 "Always translate the selected text" = "常に選択したテキストを翻訳";
 
 /* No comment provided by engineer. */
+"Arabic" = "アラビア語";
+
+/* No comment provided by engineer. */
+"Cantonese" = "広東語";
+
+/* No comment provided by engineer. */
 "Chinese" = "中国語";
 
 /* No comment provided by engineer. */
@@ -20,10 +26,16 @@
 "Close" = "閉じる";
 
 /* No comment provided by engineer. */
+"Danish" = "デンマーク語";
+
+/* No comment provided by engineer. */
 "Dutch" = "オランダ語";
 
 /* No comment provided by engineer. */
 "English" = "英語";
+
+/* No comment provided by engineer. */
+"Estonian" = "エストニア語";
 
 /* No comment provided by engineer. */
 "Finnish" = "フィンランド語";
@@ -38,6 +50,9 @@
 "Greek" = "ギリシャ語";
 
 /* No comment provided by engineer. */
+"Hebrew" = "ヘブライ語";
+
+/* No comment provided by engineer. */
 "Hide %@" = "%@を非表示";
 
 /* No comment provided by engineer. */
@@ -50,13 +65,25 @@
 "If text is selected, translate it, otherwise translate the current page" = "テキストが選択されている場合はそのテキストを翻訳し、そうでなければ現在のページを翻訳";
 
 /* No comment provided by engineer. */
+"Indonesian" = "インドネシア語";
+
+/* No comment provided by engineer. */
+"Irish" = "アイルランド語";
+
+/* No comment provided by engineer. */
 "Italian" = "イタリア語";
 
 /* No comment provided by engineer. */
 "Japanese" = "日本語";
 
 /* No comment provided by engineer. */
+"Javanese" = "ジャワ語";
+
+/* No comment provided by engineer. */
 "Korean" = "韓国語";
+
+/* No comment provided by engineer. */
+"Latin" = "ラテン語";
 
 /* No comment provided by engineer. */
 "Malay" = "マレー語";
@@ -65,10 +92,19 @@
 "Mongolian" = "モンゴル語";
 
 /* No comment provided by engineer. */
+"Norwegian" = "ノルウェー語";
+
+/* No comment provided by engineer. */
+"Old English" = "古英語";
+
+/* No comment provided by engineer. */
 "Open Safari Preferences…" = "Safariの環境設定を開く…";
 
 /* No comment provided by engineer. */
 "Page Translation" = "ページ翻訳";
+
+/* No comment provided by engineer. */
+"Persian" = "ペルシア語";
 
 /* No comment provided by engineer. */
 "Polish" = "ポーランド語";
@@ -89,10 +125,31 @@
 "Russian" = "ロシア語";
 
 /* No comment provided by engineer. */
+"Sanskrit" = "サンスクリット語";
+
+/* No comment provided by engineer. */
+"Serbian" = "セルビア語";
+
+/* No comment provided by engineer. */
+"Serbian (Cyrillic)" = "セルビア語 (キリル文字)";
+
+/* No comment provided by engineer. */
+"Serbian (Latin)" = "セルビア語 (ラテン文字)";
+
+/* No comment provided by engineer. */
 "Show All" = "すべてを表示";
 
 /* No comment provided by engineer. */
 "Spanish" = "スペイン語";
+
+/* No comment provided by engineer. */
+"Swahili" = "スワヒリ語";
+
+/* No comment provided by engineer. */
+"Swedish" = "スウェーデン語";
+
+/* No comment provided by engineer. */
+"Tamil" = "タミル語";
 
 /* No comment provided by engineer. */
 "Text Translation" = "テキスト翻訳";
@@ -117,6 +174,12 @@
 
 /* No comment provided by engineer. */
 "Turkish" = "トルコ語";
+
+/* No comment provided by engineer. */
+"Uyghur" = "ウイグル語";
+
+/* No comment provided by engineer. */
+"Welsh" = "ウェールズ語";
 
 /* No comment provided by engineer. */
 "Window" = "ウィンドウ";

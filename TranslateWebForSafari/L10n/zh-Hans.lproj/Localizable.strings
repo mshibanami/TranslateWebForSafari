@@ -8,6 +8,12 @@
 "Always translate the selected text" = "始终翻译所选文本";
 
 /* No comment provided by engineer. */
+"Arabic" = "阿拉伯语";
+
+/* No comment provided by engineer. */
+"Cantonese" = "粤语";
+
+/* No comment provided by engineer. */
 "Chinese" = "中文";
 
 /* No comment provided by engineer. */
@@ -20,10 +26,16 @@
 "Close" = "关闭";
 
 /* No comment provided by engineer. */
+"Danish" = "丹麦语";
+
+/* No comment provided by engineer. */
 "Dutch" = "荷兰语";
 
 /* No comment provided by engineer. */
 "English" = "英语";
+
+/* No comment provided by engineer. */
+"Estonian" = "爱沙尼亚语";
 
 /* No comment provided by engineer. */
 "Finnish" = "芬兰语";
@@ -38,6 +50,9 @@
 "Greek" = "希腊语";
 
 /* No comment provided by engineer. */
+"Hebrew" = "希伯来语";
+
+/* No comment provided by engineer. */
 "Hide %@" = "隐藏 %@";
 
 /* No comment provided by engineer. */
@@ -50,13 +65,25 @@
 "If text is selected, translate it, otherwise translate the current page" = "如果选择了文本，则翻译它，否则翻译当前的页面";
 
 /* No comment provided by engineer. */
+"Indonesian" = "印度尼西亚语";
+
+/* No comment provided by engineer. */
+"Irish" = "爱尔兰语";
+
+/* No comment provided by engineer. */
 "Italian" = "意大利语";
 
 /* No comment provided by engineer. */
 "Japanese" = "日语";
 
 /* No comment provided by engineer. */
+"Javanese" = "爪哇语";
+
+/* No comment provided by engineer. */
 "Korean" = "韩语";
+
+/* No comment provided by engineer. */
+"Latin" = "拉丁语";
 
 /* No comment provided by engineer. */
 "Malay" = "马来语";
@@ -65,10 +92,19 @@
 "Mongolian" = "蒙古语";
 
 /* No comment provided by engineer. */
+"Norwegian" = "挪威语";
+
+/* No comment provided by engineer. */
+"Old English" = "古英语";
+
+/* No comment provided by engineer. */
 "Open Safari Preferences…" = "打开Safari首选项…";
 
 /* No comment provided by engineer. */
 "Page Translation" = "页面翻译";
+
+/* No comment provided by engineer. */
+"Persian" = "波斯语";
 
 /* No comment provided by engineer. */
 "Polish" = "波兰语";
@@ -89,10 +125,31 @@
 "Russian" = "俄语";
 
 /* No comment provided by engineer. */
+"Sanskrit" = "梵语";
+
+/* No comment provided by engineer. */
+"Serbian" = "塞尔维亚语";
+
+/* No comment provided by engineer. */
+"Serbian (Cyrillic)" = "塞尔维亚语（基里尔文字）";
+
+/* No comment provided by engineer. */
+"Serbian (Latin)" = "塞尔维亚语（拉丁文字）";
+
+/* No comment provided by engineer. */
 "Show All" = "显示全部";
 
 /* No comment provided by engineer. */
 "Spanish" = "西班牙语";
+
+/* No comment provided by engineer. */
+"Swahili" = "斯瓦希里语";
+
+/* No comment provided by engineer. */
+"Swedish" = "瑞典语";
+
+/* No comment provided by engineer. */
+"Tamil" = "泰米尔语";
 
 /* No comment provided by engineer. */
 "Text Translation" = "文本翻译";
@@ -117,6 +174,12 @@
 
 /* No comment provided by engineer. */
 "Turkish" = "土耳其语";
+
+/* No comment provided by engineer. */
+"Uyghur" = "维吾尔语";
+
+/* No comment provided by engineer. */
+"Welsh" = "威尔士语";
 
 /* No comment provided by engineer. */
 "Window" = "窗口";

@@ -8,6 +8,12 @@
 "Always translate the selected text" = "Всегда переводить выделенный текст";
 
 /* No comment provided by engineer. */
+"Arabic" = "Арабский";
+
+/* No comment provided by engineer. */
+"Cantonese" = "Кантонский";
+
+/* No comment provided by engineer. */
 "Chinese" = "Китайский";
 
 /* No comment provided by engineer. */
@@ -20,10 +26,16 @@
 "Close" = "Закрыть";
 
 /* No comment provided by engineer. */
+"Danish" = "Датский";
+
+/* No comment provided by engineer. */
 "Dutch" = "Голландский";
 
 /* No comment provided by engineer. */
 "English" = "Английский";
+
+/* No comment provided by engineer. */
+"Estonian" = "Эстонский";
 
 /* No comment provided by engineer. */
 "Finnish" = "Финский";
@@ -38,6 +50,9 @@
 "Greek" = "Греческий";
 
 /* No comment provided by engineer. */
+"Hebrew" = "Иврит";
+
+/* No comment provided by engineer. */
 "Hide %@" = "Скрыть %@";
 
 /* No comment provided by engineer. */
@@ -50,13 +65,25 @@
 "If text is selected, translate it, otherwise translate the current page" = "Если выбран текст, переведите его, в противном случае переведите текущую страницу";
 
 /* No comment provided by engineer. */
+"Indonesian" = "Индонезийский";
+
+/* No comment provided by engineer. */
+"Irish" = "Ирландский";
+
+/* No comment provided by engineer. */
 "Italian" = "Итальянский";
 
 /* No comment provided by engineer. */
 "Japanese" = "Японский";
 
 /* No comment provided by engineer. */
+"Javanese" = "Яванский";
+
+/* No comment provided by engineer. */
 "Korean" = "Корейский";
+
+/* No comment provided by engineer. */
+"Latin" = "Латина";
 
 /* No comment provided by engineer. */
 "Malay" = "Малайский";
@@ -65,10 +92,19 @@
 "Mongolian" = "Монгольский";
 
 /* No comment provided by engineer. */
+"Norwegian" = "норвежский";
+
+/* No comment provided by engineer. */
+"Old English" = "Старый английский";
+
+/* No comment provided by engineer. */
 "Open Safari Preferences…" = "Открыть настройки Safari…";
 
 /* No comment provided by engineer. */
 "Page Translation" = "Перевод страницы";
+
+/* No comment provided by engineer. */
+"Persian" = "Персидский";
 
 /* No comment provided by engineer. */
 "Polish" = "Польский";
@@ -89,10 +125,31 @@
 "Russian" = "Русский";
 
 /* No comment provided by engineer. */
+"Sanskrit" = "Санскрит";
+
+/* No comment provided by engineer. */
+"Serbian" = "Сербский";
+
+/* No comment provided by engineer. */
+"Serbian (Cyrillic)" = "Сербский (кириллица)";
+
+/* No comment provided by engineer. */
+"Serbian (Latin)" = "Сербский (латиница)";
+
+/* No comment provided by engineer. */
 "Show All" = "Показать все";
 
 /* No comment provided by engineer. */
 "Spanish" = "Испанский";
+
+/* No comment provided by engineer. */
+"Swahili" = "Суахили";
+
+/* No comment provided by engineer. */
+"Swedish" = "Шведский";
+
+/* No comment provided by engineer. */
+"Tamil" = "Тамил";
 
 /* No comment provided by engineer. */
 "Text Translation" = "Перевод текста";
@@ -117,6 +174,12 @@
 
 /* No comment provided by engineer. */
 "Turkish" = "Турецкий";
+
+/* No comment provided by engineer. */
+"Uyghur" = "Уйгурский";
+
+/* No comment provided by engineer. */
+"Welsh" = "Уэльс";
 
 /* No comment provided by engineer. */
 "Window" = "Окно";
