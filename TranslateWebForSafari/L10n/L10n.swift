@@ -9,8 +9,16 @@
 import Foundation
 
 class L10n {
+    // MARK: General
+    
     static let appName = "Translate Web for Safari"
-
+    static func appVersion(version: String, buildVersion: String) -> String {
+         return String(
+            format: NSLocalizedString("Version %@ (%@)", comment: ""),
+            version,
+            buildVersion)
+    }
+    
     // MARK: Extension
     
     static let toolbarItemTranslatePage = NSLocalizedString("Translate the current page", comment: "")

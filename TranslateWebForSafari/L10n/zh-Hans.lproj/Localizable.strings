@@ -179,6 +179,9 @@
 "Uyghur" = "维吾尔语";
 
 /* No comment provided by engineer. */
+"Version %@ (%@)" = "版本 %1$@ (%2$@)";
+
+/* No comment provided by engineer. */
 "Welsh" = "威尔士语";
 
 /* No comment provided by engineer. */

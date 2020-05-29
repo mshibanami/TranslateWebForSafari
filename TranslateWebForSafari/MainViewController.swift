@@ -62,9 +62,9 @@ class MainViewController: NSViewController {
     }()
     
     private let versionLabel: NSTextField = {
-        let label = NSTextField(labelWithString: String(
-            format: NSLocalizedString("Version %@ (%@)", comment: ""),
-            Consts.bundleShortVersion, Consts.bundleVersion))
+        let label = NSTextField(labelWithString: L10n.appVersion(
+            version: Consts.bundleShortVersion,
+            buildVersion: Consts.bundleVersion))
         label.font = NSFont.systemFont(ofSize: 13)
         label.isSelectable = true
         label.textColor = NSColor.textColor.withAlphaComponent(0.7)

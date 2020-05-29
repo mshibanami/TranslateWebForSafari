@@ -179,6 +179,9 @@
 "Uyghur" = "Уйгурский";
 
 /* No comment provided by engineer. */
+"Version %@ (%@)" = "Версия %1$@ (%2$@)";
+
+/* No comment provided by engineer. */
 "Welsh" = "Уэльс";
 
 /* No comment provided by engineer. */
