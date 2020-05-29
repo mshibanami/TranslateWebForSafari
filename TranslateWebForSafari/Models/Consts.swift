@@ -10,4 +10,6 @@ import Foundation
 
 enum Consts {
     static let supportPageURL = URL(string: "https://github.com/mshibanami/TranslateWebForSafari")!
+    static let bundleVersion = Bundle.main.infoDictionary!["CFBundleVersion"] as! String
+    static let bundleShortVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
 }

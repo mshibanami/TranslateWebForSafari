@@ -9,9 +9,26 @@ class MainViewController: NSViewController {
     private static let toolbarItemBehavior = ToolbarItemBehavior.allCases
     
     private lazy var containerStackView: NSStackView = {
-        let view = NSStackView(views: [
-            appIconImageView,
+        let titleStackView = NSStackView(views: [
             appTitleLabel,
+            versionLabel
+        ])
+        titleStackView.spacing = 8
+        titleStackView.orientation = .vertical
+        titleStackView.alignment = .centerX
+        titleStackView.distribution = .fill
+        
+        let headerStackView = NSStackView(views: [
+            appIconImageView,
+            titleStackView
+        ])
+        headerStackView.spacing = 20
+        headerStackView.orientation = .vertical
+        headerStackView.alignment = .centerY
+        headerStackView.distribution = .fill
+        
+        let view = NSStackView(views: [
+            headerStackView,
             upperSeparatorView,
             settingsGridView,
             lowerSeparatorView,
@@ -20,8 +37,7 @@ class MainViewController: NSViewController {
         view.orientation = .vertical
         view.alignment = .centerX
         view.distribution = .equalCentering
-        view.setCustomSpacing(10, after: appIconImageView)
-        view.setCustomSpacing(30, after: appTitleLabel)
+        view.setCustomSpacing(20, after: headerStackView)
         view.setCustomSpacing(30, after: upperSeparatorView)
         view.setCustomSpacing(30, after: settingsGridView)
         view.setCustomSpacing(30, after: lowerSeparatorView)
@@ -42,6 +58,16 @@ class MainViewController: NSViewController {
     private let appTitleLabel: NSTextField = {
         let label = NSTextField(labelWithString: L10n.appName)
         label.font = NSFont.boldSystemFont(ofSize: 18)
+        return label
+    }()
+    
+    private let versionLabel: NSTextField = {
+        let label = NSTextField(labelWithString: String(
+            format: NSLocalizedString("Version %@ (%@)", comment: ""),
+            Consts.bundleShortVersion, Consts.bundleVersion))
+        label.font = NSFont.systemFont(ofSize: 13)
+        label.isSelectable = true
+        label.textColor = NSColor.textColor.withAlphaComponent(0.7)
         return label
     }()
     
@@ -106,7 +132,8 @@ class MainViewController: NSViewController {
     
     private lazy var toolbarItemBehaviorStackView: NSStackView = {
         let view = NSStackView(views: Self.toolbarItemBehavior.map {
-            NSButton(radioButtonWithTitle: $0.localizedTitle, target: self, action: #selector(didTapToolbarItemBehavior(_:)))
+            let button = NSButton(radioButtonWithTitle: $0.localizedTitle, target: self, action: #selector(didTapToolbarItemBehavior(_:)))
+            return  button
         })
         view.spacing = 6
         view.orientation = .vertical
@@ -176,7 +203,6 @@ class MainViewController: NSViewController {
             containerStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             upperSeparatorView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
             lowerSeparatorView.widthAnchor.constraint(equalTo: upperSeparatorView.widthAnchor),
-            view.widthAnchor.constraint(greaterThanOrEqualToConstant: 600),
             view.trailingAnchor.constraint(equalTo: aboutThisExtensionButton.trailingAnchor, constant: 10),
             view.bottomAnchor.constraint(equalTo: aboutThisExtensionButton.bottomAnchor, constant: 10),
         ])
