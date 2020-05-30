@@ -50,6 +50,17 @@ enum TranslationService: String, CaseIterable {
             .first(where: { $0.id == defaultLanguage })
             ?? languages.first(where: { $0.id == "en" })!
     }
+    
+    func language(fromSystemLanguageCode systemLanguageCode: String) -> Language? {
+        let serviceCode: String
+        if let code = systemLanguageCodesTable().first(where: { $0.systemCode == systemLanguageCode }) {
+            serviceCode = code.serviceCode
+        } else {
+            serviceCode = systemLanguageCode
+        }
+        return supportedLanguages().first(where: { $0.id == serviceCode })
+    }
+    
 }
 
 private extension Bundle {
@@ -468,5 +479,49 @@ private extension TranslationService {
             Language(id: "zh", localizedName: L10n.chinese),
             Language(id: "zul", localizedName: L10n.zulu),
         ]
+    }
+    
+    func systemLanguageCodesTable() -> [(systemCode: String, serviceCode: String)] {
+        switch self {
+        case .baidu:
+            return [
+                ("ar", "ar"),
+                ("ca", "cat"),
+                ("cy", "wel"),
+                ("da", "dan"),
+                ("es", "spa"),
+                ("et", "est"),
+                ("fa", "per"),
+                ("fr", "fra"),
+                ("ga", "gle"),
+                ("he", "heb"),
+                ("ja", "jp"),
+                ("jw", "jav"),
+                ("ko", "kor"),
+                ("mk", "mac"),
+                ("ms", "may"),
+                ("ne", "nep"),
+                ("ro", "rom"),
+                ("sv", "swe"),
+                ("sr", "srp"),
+                ("ta", "tam"),
+                ("vi", "vie"),
+                ("zh-Hans", "zh"),
+                ("zh-Hant", "cht")
+            ]
+        case .bing:
+            return []
+        case .deepL:
+            return [
+                ("zh-Hans", "zh"),
+                ("zh-Hant", "zh"),
+            ]
+        case .google:
+            return [
+                ("he", "iw"),
+                ("zh-Hans", "zh-CN"),
+                ("zh-Hant", "zh-TW"),
+            ]
+        }
     }
 }

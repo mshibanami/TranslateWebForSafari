@@ -28,6 +28,8 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         private init() {}
     }
     
+    static let languageDetector = LanguageDetector()
+    
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
         page.getPropertiesWithCompletionHandler { properties in
             guard messageName == "selectionChanged" else {
@@ -55,13 +57,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         case .alwaysTranslatePage:
             window.openTranslatedPageForActivePage()
         case .alwaysTranslateSelectedText:
-            if let selectedText = State.shared.selectedText {
-                window.openPage(for: .text(selectedText))
-            }
+            openTextTranslationPageIfSelected(window: window)
         case .translateTextIfSelected:
-            if let selectedText = State.shared.selectedText {
-                window.openPage(for: .text(selectedText))
-            } else {
+            if !openTextTranslationPageIfSelected(window: window) {
                 window.openTranslatedPageForActivePage()
             }
         }
@@ -79,15 +77,14 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             return
         }
         page.getContainingWindow {
+            guard let window = $0 else {
+                return
+            }
             switch command {
             case .translatePage:
-                $0?.openTranslatedPageForActivePage()
+                window.openTranslatedPageForActivePage()
             case .translateSelectedText:
-                guard let text = State.shared.selectedText else {
-                    assertionFailure()
-                    return
-                }
-                $0?.openPage(for: .text(text))
+                self.openTextTranslationPageIfSelected(window: window)
             }
         }
     }
@@ -117,6 +114,18 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             }
         }
     }
+    
+    @discardableResult
+    func openTextTranslationPageIfSelected(window: SFSafariWindow) -> Bool {
+        guard let selectedText = State.shared.selectedText else {
+            return false
+        }
+        let sourceLanguage = Self.languageDetector.detect(
+            text: selectedText,
+            for: UserDefaults.group.textTranslationService)
+        window.openPage(for: .text(selectedText, sourceLanguage))
+        return true
+    }
 }
 
 private extension SFSafariPage {
@@ -135,7 +144,7 @@ private extension SFSafariWindow {
                     guard let url = properties?.url else {
                         return
                     }
-                    self.openPage(for: .page(url))
+                    self.openPage(for: .page(url, nil)) // TODO: calc from page
                 }
             }
         }
@@ -144,8 +153,10 @@ private extension SFSafariWindow {
     func openPage(for media: TranslationMedia) {
         let settings = UserDefaults.group
 
-        guard let url = media.makeURL(for: settings.translationService(for: media), langauge: settings.language(for: media)) else {
-            return
+        guard let url = media.makeURL(
+            for: settings.translationService(for: media),
+            targetLanguage: settings.language(for: media)) else {
+                return
         }
         
         switch media {

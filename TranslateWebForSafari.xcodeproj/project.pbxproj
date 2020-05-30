@@ -11,11 +11,13 @@
 		001853AE246D686E00C75E4D /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001853AC246D676600C75E4D /* L10n.swift */; };
 		001853B0246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
 		001853B1246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
+		003FC5C2248248E700CA10AD /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A42DDD248204AA003F24AA /* LanguageDetector.swift */; };
 		004B6CCF2476AD2500C25112 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B6CCE2476AD2500C25112 /* Consts.swift */; };
 		004D82872479289000817E8B /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D82862479289000817E8B /* Collection+Extensions.swift */; };
 		006CE4FC2478191A00256895 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		006CE4FE24781F4500256895 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
 		006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
+		00A42DDE248204AA003F24AA /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A42DDD248204AA003F24AA /* LanguageDetector.swift */; };
 		00C726DE247D222400090155 /* ToolbarItemBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C726DD247D222400090155 /* ToolbarItemBehavior.swift */; };
 		00C726DF247D711C00090155 /* ToolbarItemBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C726DD247D222400090155 /* ToolbarItemBehavior.swift */; };
 		00D524192479393800556BA4 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
@@ -91,6 +93,7 @@
 		006CE4FB2478191A00256895 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		006CE4FD24781F4500256895 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppSettings.swift"; sourceTree = "<group>"; };
+		00A42DDD248204AA003F24AA /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
 		00C726DD247D222400090155 /* ToolbarItemBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemBehavior.swift; sourceTree = "<group>"; };
 		00D5241E24795F1300556BA4 /* TranslationMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationMedia.swift; sourceTree = "<group>"; };
 		00DD6A48246659DA004684DA /* TranslateWebForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateWebForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -165,6 +168,7 @@
 				006CE4FB2478191A00256895 /* TranslationService.swift */,
 				006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */,
 				00C726DD247D222400090155 /* ToolbarItemBehavior.swift */,
+				00A42DDD248204AA003F24AA /* LanguageDetector.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -439,6 +443,7 @@
 				004D82872479289000817E8B /* Collection+Extensions.swift in Sources */,
 				00D524202479613000556BA4 /* TranslationMedia.swift in Sources */,
 				001853AD246D676600C75E4D /* L10n.swift in Sources */,
+				00A42DDE248204AA003F24AA /* LanguageDetector.swift in Sources */,
 				006CE4FC2478191A00256895 /* TranslationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +475,7 @@
 				001853AE246D686E00C75E4D /* L10n.swift in Sources */,
 				00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */,
 				00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */,
+				003FC5C2248248E700CA10AD /* LanguageDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
