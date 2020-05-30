@@ -11,16 +11,25 @@ class MainViewController: NSViewController {
     private lazy var containerStackView: NSStackView = {
         let titleStackView = NSStackView(views: [
             appTitleLabel,
+            forSafariLabel,
+        ])
+        titleStackView.spacing = 6
+        titleStackView.orientation = .horizontal
+        titleStackView.alignment = .firstBaseline
+        titleStackView.distribution = .fill
+        
+        let headerTrailingStackView = NSStackView(views: [
+            titleStackView,
             versionLabel
         ])
-        titleStackView.spacing = 8
-        titleStackView.orientation = .vertical
-        titleStackView.alignment = .centerX
-        titleStackView.distribution = .fill
+        headerTrailingStackView.spacing = 8
+        headerTrailingStackView.orientation = .vertical
+        headerTrailingStackView.alignment = .leading
+        headerTrailingStackView.distribution = .fill
         
         let headerStackView = NSStackView(views: [
             appIconImageView,
-            titleStackView
+            headerTrailingStackView
         ])
         headerStackView.spacing = 20
         headerStackView.orientation = .vertical
@@ -56,8 +65,15 @@ class MainViewController: NSViewController {
     }()
     
     private let appTitleLabel: NSTextField = {
-        let label = NSTextField(labelWithString: L10n.appName)
-        label.font = NSFont.boldSystemFont(ofSize: 18)
+        let label = NSTextField(labelWithString: L10n.appShortName)
+        label.font = NSFont.boldSystemFont(ofSize: 24)
+        return label
+    }()
+    
+    private let forSafariLabel: NSTextField = {
+        let label = NSTextField(labelWithString: L10n.forSafari)
+        label.font = NSFont.systemFont(ofSize: 18)
+        label.textColor = NSColor.textColor.withAlphaComponent(0.7)
         return label
     }()
     

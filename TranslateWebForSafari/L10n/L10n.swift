@@ -12,6 +12,9 @@ class L10n {
     // MARK: General
     
     static let appName = "Translate Web for Safari"
+    static let appShortName = "Translate Web"
+    static let forSafari = "for Safari"
+    
     static func appVersion(version: String, buildVersion: String) -> String {
          return String(
             format: NSLocalizedString("Version %@ (%@)", comment: ""),
@@ -31,10 +34,10 @@ class L10n {
     
     // MARK: Settings
     
-    static let menuItemHideApp = String(format: NSLocalizedString("Hide %@", comment: ""), appName)
+    static let menuItemHideApp = String(format: NSLocalizedString("Hide %@", comment: ""), appShortName)
     static let menuItemHideOthers = NSLocalizedString("Hide Others", comment: "")
     static let menuItemShowAll = NSLocalizedString("Show All", comment: "")
-    static let menuItemQuitApp = String(format: NSLocalizedString("Quit %@", comment: ""), appName)
+    static let menuItemQuitApp = String(format: NSLocalizedString("Quit %@", comment: ""), appShortName)
     static let menuItemWindow = NSLocalizedString("Window", comment: "")
     static let menuItemClose = NSLocalizedString("Close", comment: "")
     static let pageTranslation = NSLocalizedString("Page Translation", comment: "")
