@@ -36,7 +36,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         let mainMenu = NSMenu(title: "MainMenu")
         NSApp.mainMenu = mainMenu
         
-        // swiftlint:disable line_length
         let menuList: [(String, (NSMenu) -> ([NSMenuItem]))] = [
             (L10n.appName, { (menu: NSMenu) in
                 [
