@@ -115,13 +115,9 @@ class MainViewController: NSViewController {
     private lazy var pageTranslationStackView: NSStackView = {
         let view = NSStackView(views: [
             pageTranslationServicePopUpButton,
-            {
-                let view = NSStackView(views: [
-                    NSTextField(settingLabelWithString: L10n.translateTo),
-                    pageTranslateToPopUpButton
-                ])
-                return view
-            }()
+            NSStackView(views: [
+                NSTextField(settingLabelWithString: L10n.translateTo),
+                pageTranslateToPopUpButton])
         ])
         view.spacing = 6
         view.orientation = .vertical
@@ -132,13 +128,9 @@ class MainViewController: NSViewController {
     private lazy var textTranslationStackView: NSStackView = {
         let view = NSStackView(views: [
             textTranslationServicePopUpButton,
-            {
-                let view = NSStackView(views: [
-                    NSTextField(settingLabelWithString: L10n.translateTo),
-                    textTranslateToPopUpButton
-                ])
-                return view
-            }()
+            NSStackView(views: [
+                NSTextField(settingLabelWithString: L10n.translateTo),
+                textTranslateToPopUpButton])
         ])
         view.spacing = 6
         view.orientation = .vertical
