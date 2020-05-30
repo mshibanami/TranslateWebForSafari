@@ -227,7 +227,7 @@ private extension TranslationService {
             Language(id: "ms", localizedName: L10n.malayLatin),
             Language(id: "mt", localizedName: L10n.maltese),
             Language(id: "mww", localizedName: L10n.hmongDaw),
-            Language(id: "nb", localizedName: L10n.norwegianBokmål),
+            Language(id: "nb", localizedName: L10n.norwegianBokmal),
             Language(id: "nl", localizedName: L10n.dutch),
             Language(id: "otq", localizedName: L10n.querétaroOtomi),
             Language(id: "pa", localizedName: L10n.punjabiGurmukhi),

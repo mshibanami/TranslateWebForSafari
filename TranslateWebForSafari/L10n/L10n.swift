@@ -207,7 +207,7 @@ class L10n {
     static let northernSami = "Northern Sami"
     static let northernSotho = "Northern Sotho"
     static let norwegian = NSLocalizedString("Norwegian", comment: "")
-    static let norwegianBokmål = "Norwegian Bokmål"
+    static let norwegianBokmal = "Norwegian Bokmål"
     static let nynorsk = "Nynorsk"
     static let occitan = "Occitan"
     static let odiaOriya = "Odia (Oriya)"
