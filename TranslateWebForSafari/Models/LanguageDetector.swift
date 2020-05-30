@@ -15,14 +15,22 @@ class LanguageDetector {
         recognizer.reset()
         let recognizer = NLLanguageRecognizer()
         recognizer.processString(text)
-        guard
-            let language = recognizer.languageHypotheses(withMaximum: 1).first,
-            language.value > 0.95 else {
-                return nil
-        }
-        guard let detected = translationService.language(fromSystemLanguageCode: language.key.rawValue) else {
+        let detecteds = recognizer
+            .languageHypotheses(withMaximum: 2)
+            .sorted(by: { keyValue1, keyValue2 in
+                keyValue1.value > keyValue2.value
+            })
+        guard let mostPossibleLanguage = detecteds.first else {
             return nil
         }
-        return detected
+        let isHighProbability = (mostPossibleLanguage.value) > 0.94
+        let noOtherLanguagesFound = (mostPossibleLanguage.value) > 0.8 && (detecteds[optional: 1]?.value ?? 0) < 0.5
+        guard isHighProbability || noOtherLanguagesFound else {
+            return nil
+        }
+        guard let transformed = translationService.language(fromSystemLanguageCode: mostPossibleLanguage.key.rawValue) else {
+            return nil
+        }
+        return transformed
     }
 }
