@@ -22,7 +22,7 @@ enum ToolbarItemBehavior: String, CaseIterable {
         case .alwaysTranslateSelectedText:
             return L10n.alwaysTranslateSelectedText
         case .translateTextIfSelected:
-            return L10n.translateTextIfSelected
+            return L10n.textAndRecommended(text: L10n.translateTextIfSelected)
         }
     }
 }

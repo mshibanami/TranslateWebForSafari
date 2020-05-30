@@ -46,6 +46,13 @@ class L10n {
     static let translateTextIfSelected = NSLocalizedString("If text is selected, translate it, otherwise translate the current page", comment: "")
     static let openSafariPreferences = NSLocalizedString("Open Safari Preferences…", comment: "")
     static let aboutThisExtension = NSLocalizedString("About this extension", comment: "")
+    static let recommended = NSLocalizedString("(recommended)", comment: "")
+    static func textAndRecommended(text: String) -> String {
+        return String(
+            format: NSLocalizedString("%@ %@", comment: "<Text for settings etc.> <(recommended)>"),
+            text,
+            recommended)
+    }
     
     // MARK: Translation Service
     

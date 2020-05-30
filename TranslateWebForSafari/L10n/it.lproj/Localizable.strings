@@ -1,3 +1,9 @@
+/* <Text for settings etc.> <(recommended)> */
+"%@ %@" = "%1$@ %2$@";
+
+/* No comment provided by engineer. */
+"(recommended)" = "(raccomandato)";
+
 /* No comment provided by engineer. */
 "About this extension" = "A proposito di questa estensione";
 

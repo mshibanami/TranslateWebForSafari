@@ -1,3 +1,9 @@
+/* <Text for settings etc.> <(recommended)> */
+"%@ %@" = "%1$@%2$@";
+
+/* No comment provided by engineer. */
+"(recommended)" = "（推荐）";
+
 /* No comment provided by engineer. */
 "About this extension" = "关于此扩展";
 
@@ -17,10 +23,10 @@
 "Chinese" = "中文";
 
 /* No comment provided by engineer. */
-"Chinese (Simplified)" = "中文 (简体)";
+"Chinese (Simplified)" = "中文（简体）";
 
 /* No comment provided by engineer. */
-"Chinese (Traditional)" = "中文 (繁体)";
+"Chinese (Traditional)" = "中文（繁体）";
 
 /* No comment provided by engineer. */
 "Close" = "关闭";
@@ -113,10 +119,10 @@
 "Portuguese" = "葡萄牙语";
 
 /* No comment provided by engineer. */
-"Portuguese (Brazil)" = "葡萄牙语 (巴西)";
+"Portuguese (Brazil)" = "葡萄牙语（巴西）";
 
 /* No comment provided by engineer. */
-"Portuguese (Portugal)" = "葡萄牙语 (葡萄牙)";
+"Portuguese (Portugal)" = "葡萄牙语（葡萄牙）";
 
 /* No comment provided by engineer. */
 "Quit %@" = "退出 %@";

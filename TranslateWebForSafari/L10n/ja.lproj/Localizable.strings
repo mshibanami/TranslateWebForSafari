@@ -1,3 +1,9 @@
+/* <Text for settings etc.> <(recommended)> */
+"%@ %@" = "%1$@%2$@";
+
+/* No comment provided by engineer. */
+"(recommended)" = "（推奨）";
+
 /* No comment provided by engineer. */
 "About this extension" = "この機能拡張について";
 
@@ -17,10 +23,10 @@
 "Chinese" = "中国語";
 
 /* No comment provided by engineer. */
-"Chinese (Simplified)" = "中国語 (簡体字)";
+"Chinese (Simplified)" = "中国語（簡体字）";
 
 /* No comment provided by engineer. */
-"Chinese (Traditional)" = "中国語 (繁体字)";
+"Chinese (Traditional)" = "中国語（繁体字）";
 
 /* No comment provided by engineer. */
 "Close" = "閉じる";
@@ -113,10 +119,10 @@
 "Portuguese" = "ポルトガル語";
 
 /* No comment provided by engineer. */
-"Portuguese (Brazil)" = "ポルトガル語 (ブラジル)";
+"Portuguese (Brazil)" = "ポルトガル語（ブラジル）";
 
 /* No comment provided by engineer. */
-"Portuguese (Portugal)" = "ポルトガル語 (ポーランド)";
+"Portuguese (Portugal)" = "ポルトガル語（ポルトガル）";
 
 /* No comment provided by engineer. */
 "Quit %@" = "%@を閉じる";
@@ -131,10 +137,10 @@
 "Serbian" = "セルビア語";
 
 /* No comment provided by engineer. */
-"Serbian (Cyrillic)" = "セルビア語 (キリル文字)";
+"Serbian (Cyrillic)" = "セルビア語（キリル文字）";
 
 /* No comment provided by engineer. */
-"Serbian (Latin)" = "セルビア語 (ラテン文字)";
+"Serbian (Latin)" = "セルビア語（ラテン文字）";
 
 /* No comment provided by engineer. */
 "Show All" = "すべてを表示";
