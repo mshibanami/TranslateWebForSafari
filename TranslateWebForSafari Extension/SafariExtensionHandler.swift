@@ -32,22 +32,38 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
         page.getPropertiesWithCompletionHandler { properties in
-            guard messageName == "selectionChanged" else {
-                assertionFailure("Message name \(messageName) is not supported")
-                return
-            }
-            let selectedTextKey = "selectedText"
-            let selectedTextOptional = (userInfo ?? [:])[selectedTextKey]
-            guard let selectedText = selectedTextOptional as? String else {
-                assertionFailure("Unexpected data type or it's not set: \(String(describing: selectedTextOptional))")
-                return
-            }
-            State.shared.selectedText = selectedText
-            page.getContainingWindow {
-                guard let window = $0 else {
+            switch messageName {
+            case "selectionChanged":
+                let selectedTextKey = "selectedText"
+                let selectedTextOptional = (userInfo ?? [:])[selectedTextKey]
+                guard let selectedText = selectedTextOptional as? String else {
+                    assertionFailure("Unexpected data type or it's not set: \(selectedTextKey)=\(String(describing: selectedTextOptional))")
                     return
                 }
-                self.updateToolbarItemLabel(in: window)
+                State.shared.selectedText = selectedText
+                page.getContainingWindow {
+                    guard let window = $0 else {
+                        return
+                    }
+                    self.updateToolbarItemLabel(in: window)
+                }
+            case "pageTranslationPageTextDispatched":
+                let textKey = "text"
+                let textOptional = (userInfo ?? [:])[textKey]
+                guard let text = textOptional as? String else {
+                    assertionFailure("Unexpected data type or it's not set: \(textKey)=\(String(describing: textOptional))")
+                    return
+                }
+                let language = SafariExtensionHandler.languageDetector.detect(
+                    text: text,
+                    for: UserDefaults.group.pageTranslationService)
+                SFSafariApplication.getActiveWindow {
+                    $0?.openTranslatedPageForActivePage(language: language)
+                }
+                break
+            default:
+                assertionFailure("Message name \(messageName) is not supported")
+                break
             }
         }
     }
@@ -55,12 +71,12 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func toolbarItemClicked(in window: SFSafariWindow) {
         switch UserDefaults.group.toolbarItemBehavior {
         case .alwaysTranslatePage:
-            window.openTranslatedPageForActivePage()
+            window.triggerPageTranslation()
         case .alwaysTranslateSelectedText:
             openTextTranslationPageIfSelected(window: window)
         case .translateTextIfSelected:
             if !openTextTranslationPageIfSelected(window: window) {
-                window.openTranslatedPageForActivePage()
+                window.triggerPageTranslation()
             }
         }
     }
@@ -82,7 +98,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             }
             switch command {
             case .translatePage:
-                window.openTranslatedPageForActivePage()
+                window.triggerPageTranslation()
             case .translateSelectedText:
                 self.openTextTranslationPageIfSelected(window: window)
             }
@@ -137,14 +153,20 @@ private extension SFSafariPage {
 }
 
 private extension SFSafariWindow {
-    func openTranslatedPageForActivePage() {
+    func triggerPageTranslation() {
+        getActivePage {
+            $0?.dispatchMessageToScript(withName: "pageTranslationGetPageText")
+        }
+    }
+    
+    func openTranslatedPageForActivePage(language: Language?) {
         getActiveTab { tab in
             tab?.getActivePage { page in
                 page?.getPropertiesWithCompletionHandler { properties in
                     guard let url = properties?.url else {
                         return
                     }
-                    self.openPage(for: .page(url, nil)) // TODO: calc from page
+                    self.openPage(for: .page(url, language))
                 }
             }
         }

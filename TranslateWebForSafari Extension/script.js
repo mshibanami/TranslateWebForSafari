@@ -1,20 +1,28 @@
 document.addEventListener(
     'selectionchange',
     () => {
-        updateSelection();
+        sendSelectionToExtension();
     });
 
 safari.self.addEventListener(
     'message',
     (event) => {
         if (event.name == 'updateSelection') {
-            updateSelection();
+            sendSelectionToExtension();
+        } else if (event.name == 'pageTranslationGetPageText') {
+            pageTranslationSendPageTextToExtension();
         }
     },
     false);
 
-function updateSelection() {
+function sendSelectionToExtension() {
     safari.extension.dispatchMessage(
         'selectionChanged',
         { "selectedText": document.getSelection().toString() });
+}
+
+function pageTranslationSendPageTextToExtension() {
+    safari.extension.dispatchMessage(
+        'pageTranslationPageTextDispatched',
+        { "text": document.body.innerText });
 }
