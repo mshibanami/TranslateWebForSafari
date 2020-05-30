@@ -26,6 +26,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.styleMask = [.titled, .miniaturizable, .closable]
         windowController = NSWindowController(window: window)
         windowController?.showWindow(self)
+
+        let frameAutosaveName = NSWindow.FrameAutosaveName("MainWindow")
+        windowController?.windowFrameAutosaveName = frameAutosaveName
+        window.setFrameAutosaveName(frameAutosaveName)
     }
     
     private func setupMenuItems() {
