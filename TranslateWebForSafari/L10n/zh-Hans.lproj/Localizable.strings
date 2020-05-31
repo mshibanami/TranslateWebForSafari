@@ -50,6 +50,9 @@
 "French" = "法语";
 
 /* No comment provided by engineer. */
+"Georgian" = "格鲁吉亚语";
+
+/* No comment provided by engineer. */
 "German" = "德语";
 
 /* No comment provided by engineer. */
@@ -66,6 +69,12 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "印地语";
+
+/* No comment provided by engineer. */
+"Hungarian" = "匈牙利语";
+
+/* No comment provided by engineer. */
+"Icelandic" = "冰岛语";
 
 /* No comment provided by engineer. */
 "If text is selected, translate it, otherwise translate the current page" = "如果选择了文本，则翻译它，否则翻译当前的页面";
@@ -86,16 +95,25 @@
 "Javanese" = "爪哇语";
 
 /* No comment provided by engineer. */
+"Kazakh" = "哈萨克语";
+
+/* No comment provided by engineer. */
 "Korean" = "韩语";
 
 /* No comment provided by engineer. */
 "Latin" = "拉丁语";
 
 /* No comment provided by engineer. */
+"Macedonian" = "马其顿语";
+
+/* No comment provided by engineer. */
 "Malay" = "马来语";
 
 /* No comment provided by engineer. */
 "Mongolian" = "蒙古语";
+
+/* No comment provided by engineer. */
+"Nepali" = "尼泊尔语";
 
 /* No comment provided by engineer. */
 "Norwegian" = "挪威语";
@@ -128,6 +146,9 @@
 "Quit %@" = "退出 %@";
 
 /* No comment provided by engineer. */
+"Romanian" = "罗马尼亚语";
+
+/* No comment provided by engineer. */
 "Russian" = "俄语";
 
 /* No comment provided by engineer. */
@@ -153,6 +174,9 @@
 
 /* No comment provided by engineer. */
 "Swedish" = "瑞典语";
+
+/* No comment provided by engineer. */
+"Tagalog" = "他加祿語";
 
 /* No comment provided by engineer. */
 "Tamil" = "泰米尔语";

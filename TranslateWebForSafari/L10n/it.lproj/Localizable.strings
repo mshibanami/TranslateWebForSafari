@@ -50,6 +50,9 @@
 "French" = "Francese";
 
 /* No comment provided by engineer. */
+"Georgian" = "Georgiano";
+
+/* No comment provided by engineer. */
 "German" = "Tedesco";
 
 /* No comment provided by engineer. */
@@ -66,6 +69,12 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "Hindi";
+
+/* No comment provided by engineer. */
+"Hungarian" = "Ungherese";
+
+/* No comment provided by engineer. */
+"Icelandic" = "Islandese";
 
 /* No comment provided by engineer. */
 "If text is selected, translate it, otherwise translate the current page" = "Se il testo è selezionato, tradurlo, altrimenti tradurre la pagina corrente";
@@ -86,16 +95,25 @@
 "Javanese" = "Giavanese";
 
 /* No comment provided by engineer. */
+"Kazakh" = "Kazakistan";
+
+/* No comment provided by engineer. */
 "Korean" = "Coreano";
 
 /* No comment provided by engineer. */
 "Latin" = "Latino";
 
 /* No comment provided by engineer. */
+"Macedonian" = "Macedone";
+
+/* No comment provided by engineer. */
 "Malay" = "Malese";
 
 /* No comment provided by engineer. */
 "Mongolian" = "Mongol";
+
+/* No comment provided by engineer. */
+"Nepali" = "Nepal";
 
 /* No comment provided by engineer. */
 "Norwegian" = "Norwegian";
@@ -128,6 +146,9 @@
 "Quit %@" = "Esci da %@";
 
 /* No comment provided by engineer. */
+"Romanian" = "Rumeno";
+
+/* No comment provided by engineer. */
 "Russian" = "Russo";
 
 /* No comment provided by engineer. */
@@ -153,6 +174,9 @@
 
 /* No comment provided by engineer. */
 "Swedish" = "Svedese";
+
+/* No comment provided by engineer. */
+"Tagalog" = "Tagalog";
 
 /* No comment provided by engineer. */
 "Tamil" = "Tamil";
