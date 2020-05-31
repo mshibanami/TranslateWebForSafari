@@ -146,8 +146,23 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 
 private extension SFSafariPage {
     func getContainingWindow(completionHandler: @escaping (SFSafariWindow?) -> Void) {
-        getContainingTab {
-            $0.getContainingWindow(completionHandler: completionHandler)
+        if Consts.usesMojaveCompatibleAPIOnly {
+            SFSafariApplication.getActiveWindow {
+                guard let window = $0 else {
+                    completionHandler(nil)
+                    return
+                }
+                window.getActiveTab(completionHandler: {
+                    guard self == $0 else {
+                        return
+                    }
+                    completionHandler(window)
+                })
+            }
+        } else {
+            getContainingTab {
+                $0.getContainingWindow(completionHandler: completionHandler)
+            }
         }
     }
 }
@@ -186,7 +201,7 @@ private extension SFSafariWindow {
             openTab(with: url, makeActiveIfPossible: true)
         case .page:
             getActiveTab {
-                $0?.navigate(to: url)
+                $0?.mojaveCompatibleNavigate(to: url)
             }
         }
     }
@@ -200,6 +215,20 @@ private extension SFSafariWindow {
             tab.getActivePage {
                 completionHandler($0)
             }
+        }
+    }
+}
+
+private extension SFSafariTab {
+    func mojaveCompatibleNavigate(to url: URL) {
+        if Consts.usesMojaveCompatibleAPIOnly {
+            getActivePage {
+                $0?.dispatchMessageToScript(
+                    withName: "navigate",
+                    userInfo: ["url": url.absoluteString])
+            }
+        } else {
+            navigate(to: url)
         }
     }
 }

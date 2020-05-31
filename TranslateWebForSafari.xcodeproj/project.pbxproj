@@ -38,6 +38,7 @@
 		00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */; };
 		00DD6A82246659DD004684DA /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A81246659DD004684DA /* script.js */; };
 		00DD6A84246659DD004684DA /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */; };
+		28B65A0A247FF754009FBD19 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B6CCE2476AD2500C25112 /* Consts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -470,6 +471,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00D524192479393800556BA4 /* UserDefaults+AppSettings.swift in Sources */,
+				28B65A0A247FF754009FBD19 /* Consts.swift in Sources */,
 				00D5241B24793A0A00556BA4 /* Language.swift in Sources */,
 				00D5241F24795F1400556BA4 /* TranslationMedia.swift in Sources */,
 				00C726DF247D711C00090155 /* ToolbarItemBehavior.swift in Sources */,

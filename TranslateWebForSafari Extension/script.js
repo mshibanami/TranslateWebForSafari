@@ -11,6 +11,8 @@ safari.self.addEventListener(
             sendSelectionToExtension();
         } else if (event.name == 'pageTranslationGetPageText') {
             pageTranslationSendPageTextToExtension();
+        } else if (event.name == 'navigate') {
+            window.location = event.message.url;
         }
     },
     false);

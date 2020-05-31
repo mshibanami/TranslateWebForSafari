@@ -12,4 +12,12 @@ enum Consts {
     static let supportPageURL = URL(string: "https://github.com/mshibanami/TranslateWebForSafari")!
     static let bundleVersion = Bundle.main.infoDictionary!["CFBundleVersion"] as! String
     static let bundleShortVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
+    
+    static let usesMojaveCompatibleAPIOnly: Bool = {
+        if #available(OSX 10.14.4, *) {
+            return false
+        } else {
+            return true
+        }
+    }()
 }
