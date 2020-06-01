@@ -91,7 +91,7 @@ class MainViewController: NSViewController {
         let button = NSButton(
             title: L10n.openSafariPreferences,
             target: self,
-            action: #selector(didTapOpenSafariPreferences(_:)))
+            action: #selector(didSelectOpenSafariPreferences(_:)))
         button.isHighlighted = true
         return button
     }()
@@ -117,7 +117,8 @@ class MainViewController: NSViewController {
             pageTranslationServicePopUpButton,
             NSStackView(views: [
                 NSTextField(settingLabelWithString: L10n.translateTo),
-                pageTranslateToPopUpButton])
+                pageTranslateToPopUpButton]),
+            pageTranslationOpenInNewTabButton
         ])
         view.spacing = 6
         view.orientation = .vertical
@@ -130,7 +131,8 @@ class MainViewController: NSViewController {
             textTranslationServicePopUpButton,
             NSStackView(views: [
                 NSTextField(settingLabelWithString: L10n.translateTo),
-                textTranslateToPopUpButton])
+                textTranslateToPopUpButton]),
+            textTranslationOpenInNewTabButton
         ])
         view.spacing = 6
         view.orientation = .vertical
@@ -140,7 +142,7 @@ class MainViewController: NSViewController {
     
     private lazy var toolbarItemBehaviorStackView: NSStackView = {
         let view = NSStackView(views: Self.toolbarItemBehavior.map {
-            let button = NSButton(radioButtonWithTitle: $0.localizedTitle, target: self, action: #selector(didTapToolbarItemBehavior(_:)))
+            let button = NSButton(radioButtonWithTitle: $0.localizedTitle, target: self, action: #selector(didSelectToolbarItemBehavior(_:)))
             return  button
         })
         view.spacing = 6
@@ -155,7 +157,7 @@ class MainViewController: NSViewController {
             [NSTextField(settingLabelWithString: L10n.textTranslation), textTranslationStackView],
             [NSTextField(settingLabelWithString: L10n.toolbarItemBehavior), toolbarItemBehaviorStackView]
         ])
-        view.rowSpacing = 20
+        view.rowSpacing = 24
         view.setContentHuggingPriority(.defaultLow, for: .horizontal)
         view.column(at: 0).xPlacement = .trailing
         view.rowAlignment = .firstBaseline
@@ -163,7 +165,7 @@ class MainViewController: NSViewController {
     }()
     
     private lazy var aboutThisExtensionButton: NSButton = {
-        let button = NSButton(title: L10n.aboutThisExtension, target: self, action: #selector(didTapAboutThisApp(_:)))
+        let button = NSButton(title: L10n.aboutThisExtension, target: self, action: #selector(didSelectAboutThisApp(_:)))
         button.font = NSFont.boldSystemFont(ofSize: 12)
         button.setButtonType(.momentaryPushIn)
         button.isBordered = true
@@ -173,7 +175,7 @@ class MainViewController: NSViewController {
     }()
     
     private lazy var pageTranslationServicePopUpButton: NSPopUpButton = {
-        let button = NSPopUpButton(title: "", target: self, action: #selector(didTapPageTranslationService(_:)))
+        let button = NSPopUpButton(title: "", target: self, action: #selector(didSelectPageTranslationService(_:)))
         let menu = NSMenu()
         menu.items = Self.pageTranslationServices.map {
             NSMenuItem(title: $0.localizedName, action: nil, keyEquivalent: "")
@@ -182,10 +184,12 @@ class MainViewController: NSViewController {
         return button
     }()
     
-    private lazy var pageTranslateToPopUpButton = NSPopUpButton(title: "", target: self, action: #selector(didTapPageTranslateTo(_:)))
+    private lazy var pageTranslateToPopUpButton = NSPopUpButton(title: "", target: self, action: #selector(didSelectPageTranslateTo(_:)))
+    
+    private lazy var pageTranslationOpenInNewTabButton = NSButton(checkboxWithTitle: L10n.openInNewTab, target: self, action: #selector(didSelectPageTranslationOpenInNewTabButton(_:)))
     
     private lazy var textTranslationServicePopUpButton: NSPopUpButton = {
-        let button = NSPopUpButton(title: "", target: self, action: #selector(didTapTextTranslationService(_:)))
+        let button = NSPopUpButton(title: "", target: self, action: #selector(didSelectTextTranslationService(_:)))
         let menu = NSMenu()
         menu.items = Self.textTranslationServices.map {
             NSMenuItem(title: $0.localizedName, action: nil, keyEquivalent: "")
@@ -194,7 +198,9 @@ class MainViewController: NSViewController {
         return button
     }()
     
-    private lazy var textTranslateToPopUpButton = NSPopUpButton(title: "", target: self, action: #selector(didTapTextTranslateTo(_:)))
+    private lazy var textTranslateToPopUpButton = NSPopUpButton(title: "", target: self, action: #selector(didSelectTextTranslateTo(_:)))
+    
+    private lazy var textTranslationOpenInNewTabButton = NSButton(checkboxWithTitle: L10n.openInNewTab, target: self, action: #selector(didSelectTextTranslationOpenInNewTabButton(_:)))
     
     override func loadView() {
         let view = NSView()
@@ -225,9 +231,9 @@ class MainViewController: NSViewController {
     
     private func setupBindings() {
         openSafariPreferencesButton.target = self
-        openSafariPreferencesButton.action = #selector(didTapOpenSafariPreferences(_:))
+        openSafariPreferencesButton.action = #selector(didSelectOpenSafariPreferences(_:))
         aboutThisExtensionButton.target = self
-        aboutThisExtensionButton.action = #selector(didTapAboutThisApp(_:))
+        aboutThisExtensionButton.action = #selector(didSelectAboutThisApp(_:))
     }
     
     private func resetUI() {
@@ -275,6 +281,20 @@ class MainViewController: NSViewController {
                 assertionFailure()
             }
         }
+        
+        // Open in a new tab
+        switch settings.pageTranslationTransitionBehavior {
+        case .newTab:
+            pageTranslationOpenInNewTabButton.state = .on
+        case .currentTab:
+            pageTranslationOpenInNewTabButton.state = .off
+        }
+        switch settings.textTranslationTransitionBehavior {
+        case .newTab:
+            textTranslationOpenInNewTabButton.state = .on
+        case .currentTab:
+            textTranslationOpenInNewTabButton.state = .off
+        }
     }
     
     private func currentSelectionOfPageTranslationService() -> TranslationService? {
@@ -295,15 +315,7 @@ class MainViewController: NSViewController {
     
     // MARK: Actions
     
-    @objc private func didTapOpenSafariPreferences(_ sender: NSView) {
-        SFSafariApplication.showPreferencesForExtension(withIdentifier: "io.github.mshibanami.TranslateWebForSafari.Extension")
-    }
-    
-    @objc private func didTapAboutThisApp(_ sender: AnyObject?) {
-        NSWorkspace.shared.open(Consts.supportPageURL)
-    }
-    
-    @objc private func didTapPageTranslationService(_ sender: NSView) {
+    @objc private func didSelectPageTranslationService(_ sender: NSView) {
         guard let service = currentSelectionOfPageTranslationService() else {
             assertionFailure()
             return
@@ -312,15 +324,7 @@ class MainViewController: NSViewController {
         resetUI()
     }
 
-    @objc private func didTapPageTranslateTo(_ sender: NSView) {
-        guard let service = currentSelectionOfPageTranslationService() else {
-            assertionFailure()
-            return
-        }
-        UserDefaults.group.pageTargetLanguage = service.supportedLanguages()[pageTranslateToPopUpButton.indexOfSelectedItem]
-    }
-    
-    @objc private func didTapTextTranslationService(_ sender: NSView) {
+    @objc private func didSelectTextTranslationService(_ sender: NSView) {
         guard let service = currentSelectionOfTextTranslationService() else {
             assertionFailure()
             return
@@ -329,7 +333,15 @@ class MainViewController: NSViewController {
         resetUI()
     }
     
-    @objc private func didTapTextTranslateTo(_ sender: NSView) {
+    @objc private func didSelectPageTranslateTo(_ sender: NSView) {
+        guard let service = currentSelectionOfPageTranslationService() else {
+            assertionFailure()
+            return
+        }
+        UserDefaults.group.pageTargetLanguage = service.supportedLanguages()[pageTranslateToPopUpButton.indexOfSelectedItem]
+    }
+    
+    @objc private func didSelectTextTranslateTo(_ sender: NSView) {
         guard let service = currentSelectionOfTextTranslationService() else {
             assertionFailure()
             return
@@ -337,13 +349,32 @@ class MainViewController: NSViewController {
         UserDefaults.group.textTargetLanguage = service.supportedLanguages()[textTranslateToPopUpButton.indexOfSelectedItem]
     }
     
-    @objc private func didTapToolbarItemBehavior(_ sender: NSView) {
+    @objc private func didSelectPageTranslationOpenInNewTabButton(_ sender: NSView) {
+        UserDefaults.group.pageTranslationTransitionBehavior
+            = (pageTranslationOpenInNewTabButton.state == .on) ? .newTab : .currentTab
+    }
+    
+    @objc private func didSelectTextTranslationOpenInNewTabButton(_ sender: NSView) {
+        UserDefaults.group.textTranslationTransitionBehavior
+            = (textTranslationOpenInNewTabButton.state == .on) ? .newTab : .currentTab
+    }
+    
+    @objc private func didSelectToolbarItemBehavior(_ sender: NSView) {
         guard let index = toolbarItemBehaviorStackView.arrangedSubviews.firstIndex(of: sender),
             let behavior = Self.toolbarItemBehavior[optional: index] else {
             return
         }
         UserDefaults.group.toolbarItemBehavior = behavior
     }
+    
+    @objc private func didSelectOpenSafariPreferences(_ sender: NSView) {
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: "io.github.mshibanami.TranslateWebForSafari.Extension")
+    }
+    
+    @objc private func didSelectAboutThisApp(_ sender: AnyObject?) {
+        NSWorkspace.shared.open(Consts.supportPageURL)
+    }
+    
 }
 
 private extension Language {

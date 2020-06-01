@@ -13,8 +13,6 @@ enum ToolbarItemBehavior: String, CaseIterable {
     case alwaysTranslateSelectedText = "alwaysTranslateSelectedText"
     case translateTextIfSelected = "translateTextIfSelected"
     
-    static var defaultValue = Self.translateTextIfSelected
-    
     var localizedTitle: String {
         switch self {
         case .alwaysTranslatePage:

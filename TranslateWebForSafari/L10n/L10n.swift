@@ -56,6 +56,7 @@ class L10n {
             text,
             recommended)
     }
+    static let openInNewTab = NSLocalizedString("Open in a new tab", comment: "")
     
     // MARK: Translation Service
     

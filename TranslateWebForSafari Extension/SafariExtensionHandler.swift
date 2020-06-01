@@ -196,13 +196,20 @@ private extension SFSafariWindow {
                 return
         }
         
+        let behavior: TransitionBehavior
         switch media {
         case .text:
-            openTab(with: url, makeActiveIfPossible: true)
+            behavior = settings.textTranslationTransitionBehavior
         case .page:
+            behavior = settings.pageTranslationTransitionBehavior
+        }
+        switch behavior {
+        case .currentTab:
             getActiveTab {
                 $0?.mojaveCompatibleNavigate(to: url)
             }
+        case .newTab:
+            openTab(with: url, makeActiveIfPossible: true)
         }
     }
     

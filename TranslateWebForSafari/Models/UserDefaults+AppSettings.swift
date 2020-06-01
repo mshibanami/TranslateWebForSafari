@@ -15,6 +15,8 @@ extension UserDefaults {
         case pageTargetLanguage = "pageTargetLanguage"
         case textTargetLanguage = "textTargetLanguage"
         case toolbarItemBehavior = "toolbarItemBehavior"
+        case pageTranslationTransitionBehavior = "pageTranslationTransitionBehavior"
+        case textTranslationTransitionBehavior = "textTranslationTransitionBehavior"
     }
     
     static var group: UserDefaults = UserDefaults(suiteName: "group.io.github.mshibanami.TranslateWebForSafari")!
@@ -87,12 +89,40 @@ extension UserDefaults {
             guard
                 let id = string(forKey: AppKey.toolbarItemBehavior.rawValue),
                 let behavior = ToolbarItemBehavior(rawValue: id) else {
-                    return ToolbarItemBehavior.defaultValue
+                    return .translateTextIfSelected
             }
             return behavior
         }
         set {
             set(newValue.rawValue, forKey: AppKey.toolbarItemBehavior.rawValue)
+        }
+    }
+    
+    var pageTranslationTransitionBehavior: TransitionBehavior {
+        get {
+            guard
+                let id = string(forKey: AppKey.pageTranslationTransitionBehavior.rawValue),
+                let behavior = TransitionBehavior(rawValue: id) else {
+                    return TransitionBehavior.currentTab
+            }
+            return behavior
+        }
+        set {
+            set(newValue.rawValue, forKey: AppKey.pageTranslationTransitionBehavior.rawValue)
+        }
+    }
+    
+    var textTranslationTransitionBehavior: TransitionBehavior {
+        get {
+            guard
+                let id = string(forKey: AppKey.textTranslationTransitionBehavior.rawValue),
+                let behavior = TransitionBehavior(rawValue: id) else {
+                    return TransitionBehavior.newTab
+            }
+            return behavior
+        }
+        set {
+            set(newValue.rawValue, forKey: AppKey.textTranslationTransitionBehavior.rawValue)
         }
     }
     
