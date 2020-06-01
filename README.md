@@ -4,12 +4,16 @@ This is a Safari extension that translates the current tab or selected text.
 
 You can get this extension from:
 
-- [App Store](https://itunes.apple.com/app/id1513175329); or
-- [Releases on Github](https://github.com/mshibanami/TranslateWebForSafari/releases) (free)
+- <a href="https://itunes.apple.com/app/id1513175329">![appstore-badge](./appstore-badge.svg)</a> or
+- [Releases on Github](https://github.com/mshibanami/TranslateWebForSafari/releases) (FREE)
 
-Please feel free to send feedback or a pull request if you found a bug or a localization issue.
+Please feel free to send a feedback if you found a problem.
 
-![screenshot](screenshot.png)
+![screenshot1](screenshots/1.jpg)
+
+![screenshot1](screenshots/2.jpg)
+
+![screenshot1](screenshots/3.jpg)
 
 ## Licence
 
