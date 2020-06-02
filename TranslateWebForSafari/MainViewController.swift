@@ -73,7 +73,7 @@ class MainViewController: NSViewController {
     private let forSafariLabel: NSTextField = {
         let label = NSTextField(labelWithString: L10n.forSafari)
         label.font = NSFont.systemFont(ofSize: 18)
-        label.textColor = NSColor.textColor.withAlphaComponent(0.7)
+        label.textColor = Colors.subtitleColor
         return label
     }()
     
@@ -83,7 +83,7 @@ class MainViewController: NSViewController {
             buildVersion: Consts.bundleVersion))
         label.font = NSFont.systemFont(ofSize: 13)
         label.isSelectable = true
-        label.textColor = NSColor.textColor.withAlphaComponent(0.7)
+        label.textColor = Colors.subtitleColor
         return label
     }()
     

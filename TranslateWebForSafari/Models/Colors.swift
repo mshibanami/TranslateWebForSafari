@@ -17,4 +17,8 @@ enum Colors {
             return NSColor(named: .init("separatorColor"))!
         }
     }()
+    
+    static let subtitleColor: NSColor = {
+        return NSColor(named: .init("subtitleColor"))!
+    }()
 }
