@@ -57,7 +57,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                 }
                 
                 let language: Language?
-                if #available(OSXApplicationExtension 10.14, *) {
+                if #available(OSX 10.14, *) {
                     language = SafariExtensionHandler.languageDetector.detect(
                         text: text,
                         for: UserDefaults.group.pageTranslationService)
