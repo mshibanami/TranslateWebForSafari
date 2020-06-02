@@ -21,6 +21,7 @@
 		006CE4FE24781F4500256895 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
 		006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
 		00A42DDE248204AA003F24AA /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A42DDD248204AA003F24AA /* LanguageDetector.swift */; };
+		00B1D36924866EF000232F3A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1D36824866EF000232F3A /* Colors.swift */; };
 		00C726DE247D222400090155 /* ToolbarItemBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C726DD247D222400090155 /* ToolbarItemBehavior.swift */; };
 		00C726DF247D711C00090155 /* ToolbarItemBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C726DD247D222400090155 /* ToolbarItemBehavior.swift */; };
 		00D524192479393800556BA4 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
@@ -99,6 +100,7 @@
 		006CE4FD24781F4500256895 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppSettings.swift"; sourceTree = "<group>"; };
 		00A42DDD248204AA003F24AA /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
+		00B1D36824866EF000232F3A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		00C726DD247D222400090155 /* ToolbarItemBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemBehavior.swift; sourceTree = "<group>"; };
 		00D5241E24795F1300556BA4 /* TranslationMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationMedia.swift; sourceTree = "<group>"; };
 		00DD6A48246659DA004684DA /* TranslateWebForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateWebForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +177,7 @@
 				00C726DD247D222400090155 /* ToolbarItemBehavior.swift */,
 				00A42DDD248204AA003F24AA /* LanguageDetector.swift */,
 				0041D92D24850A4E00E24AFE /* TransitionBehavior.swift */,
+				00B1D36824866EF000232F3A /* Colors.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				004B6CCF2476AD2500C25112 /* Consts.swift in Sources */,
 				006CE4FE24781F4500256895 /* Language.swift in Sources */,
 				006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */,
+				00B1D36924866EF000232F3A /* Colors.swift in Sources */,
 				00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */,
 				00C726DE247D222400090155 /* ToolbarItemBehavior.swift in Sources */,
 				004D82872479289000817E8B /* Collection+Extensions.swift in Sources */,
@@ -588,7 +592,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -643,7 +647,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;

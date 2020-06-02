@@ -99,7 +99,7 @@ class MainViewController: NSViewController {
     private let upperSeparatorView: NSView = {
         let view = NSView()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.separatorColor.cgColor
+        view.layer?.backgroundColor = Colors.separatorColor.cgColor
         view.heightAnchor.constraint(equalToConstant: 1).isActive = true
         return view
     }()
@@ -107,7 +107,7 @@ class MainViewController: NSViewController {
     private let lowerSeparatorView: NSView = {
         let view = NSView()
         view.wantsLayer = true
-        view.layer?.backgroundColor = NSColor.separatorColor.cgColor
+        view.layer?.backgroundColor = Colors.separatorColor.cgColor
         view.heightAnchor.constraint(equalToConstant: 1).isActive = true
         return view
     }()

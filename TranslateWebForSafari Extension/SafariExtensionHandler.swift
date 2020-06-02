@@ -28,6 +28,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         private init() {}
     }
     
+    @available(OSX 10.14, *)
     static let languageDetector = LanguageDetector()
     
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
@@ -54,9 +55,15 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                     assertionFailure("Unexpected data type or it's not set: \(textKey)=\(String(describing: textOptional))")
                     return
                 }
-                let language = SafariExtensionHandler.languageDetector.detect(
-                    text: text,
-                    for: UserDefaults.group.pageTranslationService)
+                
+                let language: Language?
+                if #available(OSXApplicationExtension 10.14, *) {
+                    language = SafariExtensionHandler.languageDetector.detect(
+                        text: text,
+                        for: UserDefaults.group.pageTranslationService)
+                } else {
+                    language = nil
+                }
                 SFSafariApplication.getActiveWindow {
                     $0?.openTranslatedPageForActivePage(language: language)
                 }
@@ -136,9 +143,15 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         guard let selectedText = State.shared.selectedText else {
             return false
         }
-        let sourceLanguage = Self.languageDetector.detect(
-            text: selectedText,
-            for: UserDefaults.group.textTranslationService)
+        
+        let sourceLanguage: Language?
+        if #available(OSX 10.14, *) {
+            sourceLanguage = Self.languageDetector.detect(
+                text: selectedText,
+                for: UserDefaults.group.textTranslationService)
+        } else {
+            sourceLanguage = nil
+        }
         window.openPage(for: .text(selectedText, sourceLanguage))
         return true
     }

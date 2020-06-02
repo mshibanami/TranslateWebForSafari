@@ -8,6 +8,7 @@
 
 import NaturalLanguage
 
+@available(OSX 10.14, *)
 class LanguageDetector {
     private let recognizer = NLLanguageRecognizer()
     
