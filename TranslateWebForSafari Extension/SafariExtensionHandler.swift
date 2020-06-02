@@ -167,6 +167,7 @@ private extension SFSafariPage {
                 }
                 window.getActiveTab(completionHandler: {
                     guard self == $0 else {
+                        completionHandler(nil)
                         return
                     }
                     completionHandler(window)
