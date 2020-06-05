@@ -7,52 +7,7 @@ class MainViewController: NSViewController {
     private static let pageTranslationServices = TranslationService.allCases.filter { $0.supportsPageTranslation }
     private static let textTranslationServices = TranslationService.allCases
     private static let toolbarItemBehavior = ToolbarItemBehavior.allCases
-    
-    private lazy var containerStackView: NSStackView = {
-        let titleStackView = NSStackView(views: [
-            appTitleLabel,
-            forSafariLabel,
-        ])
-        titleStackView.spacing = 6
-        titleStackView.orientation = .horizontal
-        titleStackView.alignment = .firstBaseline
-        titleStackView.distribution = .fill
         
-        let headerTrailingStackView = NSStackView(views: [
-            titleStackView,
-            versionLabel
-        ])
-        headerTrailingStackView.spacing = 8
-        headerTrailingStackView.orientation = .vertical
-        headerTrailingStackView.alignment = .leading
-        headerTrailingStackView.distribution = .fill
-        
-        let headerStackView = NSStackView(views: [
-            appIconImageView,
-            headerTrailingStackView
-        ])
-        headerStackView.spacing = 20
-        headerStackView.orientation = .vertical
-        headerStackView.alignment = .centerY
-        headerStackView.distribution = .fill
-        
-        let view = NSStackView(views: [
-            headerStackView,
-            upperSeparatorView,
-            settingsGridView,
-            lowerSeparatorView,
-            openSafariPreferencesButton
-        ])
-        view.orientation = .vertical
-        view.alignment = .centerX
-        view.distribution = .equalCentering
-        view.setCustomSpacing(20, after: headerStackView)
-        view.setCustomSpacing(30, after: upperSeparatorView)
-        view.setCustomSpacing(30, after: settingsGridView)
-        view.setCustomSpacing(30, after: lowerSeparatorView)
-        return view
-    }()
-    
     private let appIconImageView: NSImageView = {
         let image = NSImage(named: "AppIcon")!
         let view = NSImageView(image: image)
@@ -93,6 +48,17 @@ class MainViewController: NSViewController {
             target: self,
             action: #selector(didSelectOpenSafariPreferences(_:)))
         button.isHighlighted = true
+        return button
+    }()
+    
+    private lazy var aboutThisExtensionButton: NSButton = {
+        let button = NSButton(title: L10n.aboutThisExtension, target: self, action: #selector(didSelectAboutThisApp(_:)))
+        button.font = NSFont.boldSystemFont(ofSize: 12)
+        button.setButtonType(.momentaryPushIn)
+        button.isBordered = true
+        button.showsBorderOnlyWhileMouseInside = true
+        button.bezelStyle = .recessed
+        button.setContentHuggingPriority(.required, for: .horizontal)
         return button
     }()
     
@@ -158,20 +124,9 @@ class MainViewController: NSViewController {
             [NSTextField(settingLabelWithString: L10n.toolbarItemBehavior), toolbarItemBehaviorStackView]
         ])
         view.rowSpacing = 24
-        view.setContentHuggingPriority(.defaultLow, for: .horizontal)
         view.column(at: 0).xPlacement = .trailing
         view.rowAlignment = .firstBaseline
         return view
-    }()
-    
-    private lazy var aboutThisExtensionButton: NSButton = {
-        let button = NSButton(title: L10n.aboutThisExtension, target: self, action: #selector(didSelectAboutThisApp(_:)))
-        button.font = NSFont.boldSystemFont(ofSize: 12)
-        button.setButtonType(.momentaryPushIn)
-        button.isBordered = true
-        button.showsBorderOnlyWhileMouseInside = true
-        button.bezelStyle = .recessed
-        return button
     }()
     
     private lazy var pageTranslationServicePopUpButton: NSPopUpButton = {
@@ -204,21 +159,65 @@ class MainViewController: NSViewController {
     
     override func loadView() {
         let view = NSView()
-        containerStackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(containerStackView)
-        aboutThisExtensionButton.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(aboutThisExtensionButton)
+        
+        let titleStackView = NSStackView(views: [
+            appTitleLabel,
+            forSafariLabel,
+        ])
+        titleStackView.spacing = 6
+        titleStackView.orientation = .horizontal
+        titleStackView.alignment = .firstBaseline
+        titleStackView.distribution = .fill
+        
+        let headerTrailingStackView = NSStackView(views: [
+            titleStackView,
+            versionLabel
+        ])
+        headerTrailingStackView.spacing = 8
+        headerTrailingStackView.orientation = .vertical
+        headerTrailingStackView.alignment = .leading
+        headerTrailingStackView.distribution = .fill
+        
+        let headerStackView = NSStackView(views: [
+            appIconImageView,
+            headerTrailingStackView
+        ])
+        headerStackView.spacing = 20
+        headerStackView.orientation = .vertical
+        headerStackView.alignment = .centerY
+        headerStackView.distribution = .fill
+        
+        let contentStackView = NSStackView(views: [
+            headerStackView,
+            upperSeparatorView,
+            settingsGridView,
+            lowerSeparatorView,
+            openSafariPreferencesButton,
+            aboutThisExtensionButton
+        ])
+        contentStackView.orientation = .vertical
+        contentStackView.distribution = .fill
+        contentStackView.setCustomSpacing(20, after: headerStackView)
+        contentStackView.setCustomSpacing(30, after: upperSeparatorView)
+        contentStackView.setCustomSpacing(30, after: settingsGridView)
+        contentStackView.setCustomSpacing(30, after: lowerSeparatorView)
+        contentStackView.setCustomSpacing(10, after: aboutThisExtensionButton)
+        
+        let contentEdgeView = NSView()
+        contentEdgeView.addSubview(contentStackView)
+        contentStackView.fillToSuperview(edgeInsets: .init(top: 10, left: 30, bottom: 10, right: 30))
+        
+        let stackView = NSStackView(views: [
+            contentEdgeView
+        ])
+        stackView.orientation = .vertical
+        stackView.alignment = .trailing
+        stackView.distribution = .fill
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(stackView)
+        stackView.fillToSuperview()
         NSLayoutConstraint.activate([
-            containerStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
-            containerStackView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -50),
-            containerStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-            containerStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30),
-            containerStackView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            containerStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            upperSeparatorView.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9),
-            lowerSeparatorView.widthAnchor.constraint(equalTo: upperSeparatorView.widthAnchor),
-            view.trailingAnchor.constraint(equalTo: aboutThisExtensionButton.trailingAnchor, constant: 10),
-            view.bottomAnchor.constraint(equalTo: aboutThisExtensionButton.bottomAnchor, constant: 10),
+            aboutThisExtensionButton.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor)
         ])
         self.view = view
     }
