@@ -12,8 +12,6 @@ enum TranslationMedia {
     case text(String, Language?)
     case page(URL, Language?)
     
-    fileprivate typealias QueryParameter = (key: String, encodedValue: String)
-    
     var sourceLanguage: Language? {
         switch self {
         case let .text(_, language):
@@ -40,7 +38,7 @@ enum TranslationMedia {
         switch self {
         case let .text(text, sourceLanguage):
             let sourceID = sourceLanguage?.id ?? "auto"
-            let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+            let encodedText = text.addingPercentEncoding(withAllowedCharacters: .rfc3986Unreserved) ?? ""
             return URL(string: "https://fanyi.baidu.com/#\(sourceID)/\(targetLanguage.id)/\(encodedText)")
         case .page:
             assertionFailure("Baidu doesn't support page translation")
@@ -50,32 +48,26 @@ enum TranslationMedia {
     
     private func makeURLForBing(targetLanguage: Language) -> URL? {
         var urlComponents: URLComponents
-        var percentEncodedQueries: [QueryParameter] = [
-            (key: "to", encodedValue: targetLanguage.id),
-            (key: "from", encodedValue: sourceLanguage?.id ?? "auto")
+        var percentEncodedQueries: [URLQueryParameter] = [
+            (key: "to", value: targetLanguage.id),
+            (key: "from", value: sourceLanguage?.id ?? "auto")
         ]
         switch self {
         case let .text(text, _):
             urlComponents = URLComponents(string: "https://www.bing.com/translator/")!
-            guard let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
-                break
-            }
-            percentEncodedQueries.append((key: "text", encodedValue: encodedText))
+            percentEncodedQueries.append((key: "text", value: text))
         case let .page(url, _):
             urlComponents = URLComponents(string: "https://www.translatetheweb.com/")!
-            guard let encodedURL = url.absoluteString.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
-                break
-            }
-            percentEncodedQueries.append((key: "a", encodedValue: encodedURL))
+            percentEncodedQueries.append((key: "a", value: url.absoluteString))
         }
-        urlComponents.percentEncodedQuery = percentEncodedQueries.map({ "\($0)=\($1)" }).joined(separator: "&")
+        urlComponents.percentEncodedQuery = percentEncodedQueries.makeQueryString()
         return urlComponents.url
     }
     
     private func makeURLForDeepL(targetLanguage: Language) -> URL? {
         switch self {
         case let .text(text, sourceLanguage):
-            let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
+            let encodedText = text.addingPercentEncoding(withAllowedCharacters: .rfc3986Unreserved) ?? ""
             let sourceCode = sourceLanguage?.id ?? "auto"
             return URL(string: "https://www.deepl.com/translator#\(sourceCode)/\(targetLanguage.id)/\(encodedText)")
         case .page:
@@ -85,30 +77,17 @@ enum TranslationMedia {
     }
     
     private func makeURLForGoogle(targetLanguage: Language) -> URL? {
-        var parameters: [QueryParameter] = [
-            (key: "tl", encodedValue: targetLanguage.id),
-            (key: "sl", encodedValue: sourceLanguage?.id ?? "auto")
+        var parameters: [URLQueryParameter] = [
+            (key: "tl", value: targetLanguage.id),
+            (key: "sl", value: sourceLanguage?.id ?? "auto")
         ]
         switch self {
         case let .text(text, _):
-            guard let encodedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
-                break
-            }
-            parameters.append((key: "text", encodedValue: encodedText))
+            parameters.append((key: "text", value: text))
             return URL(string: "https://translate.google.com/?\(parameters.makeQueryString())")
         case let .page(url, _):
-            guard let encodedURL = url.absoluteString.removingPercentEncoding?.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else {
-                break
-            }
-            parameters.append((key: "u", encodedValue: encodedURL))
+            parameters.append((key: "u", value: url.absoluteString.removingPercentEncoding ?? ""))
             return URL(string: "https://translate.google.com/translate?\(parameters.makeQueryString())")
         }
-        return nil
-    }
-}
-
-private extension Array where Element == TranslationMedia.QueryParameter {
-    func makeQueryString() -> String {
-        return map({ "\($0)=\($1)" }).joined(separator: "&")
     }
 }

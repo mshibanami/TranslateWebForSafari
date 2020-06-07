@@ -22,7 +22,7 @@ class TranslateWebForSafariTests: XCTestCase {
     }
     
     func testPageTranslationURLIncludingMultiWidthCharacters() throws {
-        let sourceLanguage = Language(id: "en", localizedName: L10n.english)
+        let sourceLanguage = Language(id: "ja", localizedName: L10n.japanese)
         let media = TranslationMedia.page(
             URL(string: "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%82%A2%E3%83%8C%E3%83%BB%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9")!,
             sourceLanguage)
@@ -30,16 +30,29 @@ class TranslateWebForSafariTests: XCTestCase {
         let googleURL = media.makeURL(
             for: .google,
             targetLanguage: Language(id: "en", localizedName: L10n.english))!
-        XCTAssertEqual(googleURL.absoluteString, "https://translate.google.com/translate?tl=en&sl=en&u=https%3A%2F%2Fja.wikipedia.org%2Fwiki%2F%E3%82%AD%E3%82%A2%E3%83%8C%E3%83%BB%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9")
+        XCTAssertEqual(googleURL.absoluteString, "https://translate.google.com/translate?tl=en&sl=ja&u=https%3A%2F%2Fja.wikipedia.org%2Fwiki%2F%E3%82%AD%E3%82%A2%E3%83%8C%E3%83%BB%E3%83%AA%E3%83%BC%E3%83%96%E3%82%B9")
         
         let bingURL = media.makeURL(
             for: .bing,
             targetLanguage: Language(id: "en", localizedName: L10n.english))!
-        print("""
-            \(bingURL.absoluteString)
-            https://www.translatetheweb.com/?to=en&a=https%3A%2F%2Fja.wikipedia.org%2Fwiki%2F%25E3%2582%25AD%25E3%2582%25A2%25E3%2583%258C%25E3%2583%25BB%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2596%25E3%2582%25B9
-            """)
-        XCTAssertEqual(bingURL.absoluteString, "https://www.translatetheweb.com/?to=en&from=en&a=https%3A%2F%2Fja.wikipedia.org%2Fwiki%2F%25E3%2582%25AD%25E3%2582%25A2%25E3%2583%258C%25E3%2583%25BB%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2596%25E3%2582%25B9")
+        XCTAssertEqual(bingURL.absoluteString, "https://www.translatetheweb.com/?to=en&from=ja&a=https%3A%2F%2Fja.wikipedia.org%2Fwiki%2F%25E3%2582%25AD%25E3%2582%25A2%25E3%2583%258C%25E3%2583%25BB%25E3%2583%25AA%25E3%2583%25BC%25E3%2583%2596%25E3%2582%25B9")
+    }
+    
+    func testPageTranslationURLIncludingPlusSign() throws {
+        let sourceLanguage = Language(id: "ja", localizedName: L10n.japanese)
+        let media = TranslationMedia.page(
+            URL(string: "https://example.com/hello+world")!,
+            sourceLanguage)
+        
+        let googleURL = media.makeURL(
+            for: .google,
+            targetLanguage: Language(id: "en", localizedName: L10n.english))!
+        XCTAssertEqual(googleURL.absoluteString, "https://translate.google.com/translate?tl=en&sl=ja&u=https%3A%2F%2Fexample.com%2Fhello%2Bworld")
+        
+        let bingURL = media.makeURL(
+            for: .bing,
+            targetLanguage: Language(id: "en", localizedName: L10n.english))!
+        XCTAssertEqual(bingURL.absoluteString, "https://www.translatetheweb.com/?to=en&from=ja&a=https%3A%2F%2Fexample.com%2Fhello%2Bworld")
     }
     
     func testTextTranslationURLIncludingMultiWidthCharacters() throws {
