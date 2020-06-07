@@ -19,4 +19,13 @@ enum AppRatingService {
             return URL(string: "https://github.com/\(userID)/\(repositoryID)")!
         }
     }
+    
+    var localizedName: String {
+        switch self {
+        case .appStore:
+            return L10n.appStore
+        case .gitHub:
+            return L10n.gitHub
+        }
+    }
 }

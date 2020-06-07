@@ -65,6 +65,26 @@ class L10n {
     static let deepL = "DeepL"
     static let google = "Google"
     
+    // MARK: Rating App
+    
+    static let askAppRate = NSLocalizedString("How would you rate this version?", comment: "")
+    static let thankYouForNormalReviewer = NSLocalizedString("Thank you 👍", comment: "")
+    static let thankYouForPositiveRevier = NSLocalizedString("Thank you!! 🙏", comment: "")
+    static let noThanks = NSLocalizedString("No thanks", comment: "")
+    static let askFeedback = NSLocalizedString("Would you mind giving us some feedback?", comment: "")
+    static let sendFeedback = NSLocalizedString("Send Feedback…", comment: "")
+    static let ask5StarsOnAppStore = NSLocalizedString("Would you mind giving us 5 stars on App Store as well?", comment: "")
+    static let askStarOnGitHub = NSLocalizedString("Would you mind giving us a star on GitHub as well?", comment: "")
+    
+    static let appStore = NSLocalizedString("App Store", comment: "")
+    static let gitHub = NSLocalizedString("GitHub", comment: "")
+    
+    static func positiveOpenService(serviceName: String) -> String {
+        return String.localizedStringWithFormat(
+            NSLocalizedString("Sure, open %@", comment: ""),
+            serviceName)
+    }
+    
     // MARK: Languages the translation services support
     
     static let achinese = "Achinese"

@@ -90,10 +90,10 @@ class AppRatingViewController: NSViewController {
         rateAppView.onSelectRate = { [weak self] index in
             self?.rateAppView.setup(
                 title: index < 4
-                    ? "Thank you 🙂"
-                    : "Thank you!! 🙏",
+                    ? L10n.thankYouForNormalReviewer
+                    : L10n.thankYouForPositiveRevier,
                 canRate: false,
-                negativeAnswer: "")
+                negativeAnswer: " ")
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 self?.selectedRateIndex = index
             }
@@ -149,19 +149,19 @@ class AppRatingViewController: NSViewController {
         switch mode {
         case .opening:
             rateAppView.setup(
-                title: "How would you rate this version?",
+                title: L10n.askAppRate,
                 canRate: true,
-                negativeAnswer: "No thanks")
+                negativeAnswer: L10n.noThanks)
         case .gotHighRate:
             appRatedView.setup(
                 title: ratingService.ratingRequestTitle,
                 positiveAnswer: ratingService.positiveButtonTitle,
-                negativeAnswer: "No thanks")
+                negativeAnswer: L10n.noThanks)
         case .gotLowRate:
             appRatedView.setup(
-                title: "Would you mind giving us some feedback?",
-                positiveAnswer: "Send Feedback…",
-                negativeAnswer: "No thanks")
+                title: L10n.askFeedback,
+                positiveAnswer: L10n.sendFeedback,
+                negativeAnswer: L10n.noThanks)
         }
         
         NSAnimationContext.runAnimationGroup({ context in
@@ -190,11 +190,6 @@ class AppRatingViewController: NSViewController {
             }
         })
     }
-
-    private func updateUIAnimation() {
-        
-
-    }
     
     @objc private func didSelectFeedbackMenuItem(_ sender: NSMenuItem) {
         guard let service = feedbackServices[optional: sender.tag] else {
@@ -209,18 +204,13 @@ private extension AppRatingService {
     var ratingRequestTitle: String {
         switch self {
         case .appStore:
-            return "Would you mind giving us 5 stars on App Store as well?"
+            return L10n.ask5StarsOnAppStore
         case .gitHub:
-            return "Would you mind giving us a star on GitHub as well?"
+            return L10n.askStarOnGitHub
         }
     }
     
     var positiveButtonTitle: String {
-        switch self {
-        case .appStore:
-            return "Sure, go to App Store"
-        case .gitHub:
-            return "Sure, go to GitHub"
-        }
+        return L10n.positiveOpenService(serviceName: localizedName)
     }
 }
