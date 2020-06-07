@@ -10,9 +10,9 @@ import AppKit
 
 extension NSView {
     @discardableResult
-    public func fillToSuperview(edgeInsets: NSEdgeInsets? = nil) -> NSView {
+    func fillToSuperview(edgeInsets: NSEdgeInsets? = nil) -> NSView {
         guard let superview = superview else {
-            assertionFailure("No superview found!")
+            assertionFailure()
             return self
         }
         translatesAutoresizingMaskIntoConstraints = false
@@ -24,5 +24,23 @@ extension NSView {
             trailingAnchor.constraint(equalTo: superview.trailingAnchor, constant: -insets.right)
         ])
         return self
+    }
+    
+    @discardableResult
+    func centerInSuperview() -> NSView {
+        guard let superview = superview else {
+            assertionFailure()
+            return self
+        }
+        NSLayoutConstraint.activate([
+            centerXAnchor.constraint(equalTo: superview.centerXAnchor),
+            centerYAnchor.constraint(equalTo: superview.centerYAnchor)
+        ])
+        return self
+    }
+    
+    func addAutoLayoutSubview(_ view: NSView, positioned place: NSWindow.OrderingMode = .above, relativeTo otherView: NSView? = nil) {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view, positioned: place, relativeTo: otherView)
     }
 }

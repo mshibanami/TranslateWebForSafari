@@ -62,22 +62,6 @@ class MainViewController: NSViewController {
         return button
     }()
     
-    private let upperSeparatorView: NSView = {
-        let view = NSView()
-        view.wantsLayer = true
-        view.layer?.backgroundColor = Colors.separatorColor.cgColor
-        view.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        return view
-    }()
-    
-    private let lowerSeparatorView: NSView = {
-        let view = NSView()
-        view.wantsLayer = true
-        view.layer?.backgroundColor = Colors.separatorColor.cgColor
-        view.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        return view
-    }()
-    
     private lazy var pageTranslationStackView: NSStackView = {
         let view = NSStackView(views: [
             pageTranslationServicePopUpButton,
@@ -157,9 +141,23 @@ class MainViewController: NSViewController {
     
     private lazy var textTranslationOpenInNewTabButton = NSButton(checkboxWithTitle: L10n.openInNewTab, target: self, action: #selector(didSelectTextTranslationOpenInNewTabButton(_:)))
     
-    override func loadView() {
+    private lazy var appRatingViewController = AppRatingViewController(
+        ratingService: AppConsts.ratingService,
+        feedbackServices: AppConsts.feedbackServices)
+    
+    private lazy var rateAppContainerView: NSView = {
         let view = NSView()
-        
+        var appRateTopSeparator = Self.makeSeparatorView()
+        view.addAutoLayoutSubview(appRateTopSeparator)
+        NSLayoutConstraint.activate([
+            appRateTopSeparator.topAnchor.constraint(equalTo: view.topAnchor),
+            appRateTopSeparator.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            appRateTopSeparator.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
+        return view
+    }()
+    
+    override func loadView() {
         let titleStackView = NSStackView(views: [
             appTitleLabel,
             forSafariLabel,
@@ -187,52 +185,70 @@ class MainViewController: NSViewController {
         headerStackView.alignment = .centerY
         headerStackView.distribution = .fill
         
+        let settingsUpperSeparator = Self.makeSeparatorView()
+        let settingsLowerSeparator = Self.makeSeparatorView()
+        
         let contentStackView = NSStackView(views: [
             headerStackView,
-            upperSeparatorView,
+            settingsUpperSeparator,
             settingsGridView,
-            lowerSeparatorView,
+            settingsLowerSeparator,
             openSafariPreferencesButton,
             aboutThisExtensionButton
         ])
         contentStackView.orientation = .vertical
         contentStackView.distribution = .fill
         contentStackView.setCustomSpacing(20, after: headerStackView)
-        contentStackView.setCustomSpacing(30, after: upperSeparatorView)
+        contentStackView.setCustomSpacing(30, after: settingsUpperSeparator)
         contentStackView.setCustomSpacing(30, after: settingsGridView)
-        contentStackView.setCustomSpacing(30, after: lowerSeparatorView)
+        contentStackView.setCustomSpacing(30, after: settingsLowerSeparator)
         contentStackView.setCustomSpacing(10, after: aboutThisExtensionButton)
         
         let contentEdgeView = NSView()
-        contentEdgeView.addSubview(contentStackView)
+        contentEdgeView.addAutoLayoutSubview(contentStackView)
         contentStackView.fillToSuperview(edgeInsets: .init(top: 10, left: 30, bottom: 10, right: 30))
         
         let stackView = NSStackView(views: [
-            contentEdgeView
+            contentEdgeView,
+            rateAppContainerView
         ])
         stackView.orientation = .vertical
         stackView.alignment = .trailing
         stackView.distribution = .fill
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(stackView)
+        let view = NSView()
+        view.addAutoLayoutSubview(stackView)
         stackView.fillToSuperview()
         NSLayoutConstraint.activate([
-            aboutThisExtensionButton.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor)
+            aboutThisExtensionButton.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor),
+            rateAppContainerView.widthAnchor.constraint(equalTo: view.widthAnchor)
         ])
         self.view = view
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupBindings()
+        
+        addChild(appRatingViewController)
+        rateAppContainerView.addAutoLayoutSubview(appRatingViewController.view, positioned: .below)
+        appRatingViewController.view.fillToSuperview()
+        
+        setupGestureHandlers()
         resetUI()
     }
     
-    private func setupBindings() {
+    private func setupGestureHandlers() {
         openSafariPreferencesButton.target = self
         openSafariPreferencesButton.action = #selector(didSelectOpenSafariPreferences(_:))
         aboutThisExtensionButton.target = self
         aboutThisExtensionButton.action = #selector(didSelectAboutThisApp(_:))
+        appRatingViewController.onSelectDismiss = { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.appRatingViewController.view.isHidden = true
+            self.appRatingViewController.heightConstraint?.constant = 0
+            self.view.window?.setContentSize(self.view.fittingSize)
+        }
     }
     
     private func resetUI() {
@@ -312,6 +328,14 @@ class MainViewController: NSViewController {
         return service
     }
     
+    private static func makeSeparatorView() -> NSView {
+        let view = NSView()
+        view.wantsLayer = true
+        view.layer?.backgroundColor = Colors.separatorColor.cgColor
+        view.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        return view
+    }
+    
     // MARK: Actions
     
     @objc private func didSelectPageTranslationService(_ sender: NSView) {
@@ -373,7 +397,6 @@ class MainViewController: NSViewController {
     @objc private func didSelectAboutThisApp(_ sender: AnyObject?) {
         NSWorkspace.shared.open(Consts.supportPageURL)
     }
-    
 }
 
 private extension Language {

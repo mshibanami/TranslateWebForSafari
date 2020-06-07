@@ -10,15 +10,19 @@ import Foundation
 import AppKit
 
 enum Colors {
-    static let separatorColor: NSColor = {
+    static var separatorColor: NSColor {
         if #available(OSX 10.14, *) {
             return NSColor.separatorColor
         } else {
-            return NSColor(named: .init("separatorColor"))!
+            return NSColor(named: "separatorColor")!
         }
-    }()
+    }
     
-    static let subtitleColor: NSColor = {
-        return NSColor(named: .init("subtitleColor"))!
-    }()
+    static var subtitleColor: NSColor {
+        return NSColor(named: "subtitleColor")!
+    }
+    
+    static var rateAppBackgroundColor: NSColor {
+        return NSColor(named: "rateAppBackgroundColor")!
+    }
 }
