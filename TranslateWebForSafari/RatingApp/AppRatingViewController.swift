@@ -197,6 +197,7 @@ class AppRatingViewController: NSViewController {
             return
         }
         NSWorkspace.shared.open(service.url)
+        self.onSelectDismiss?()
     }
 }
 
