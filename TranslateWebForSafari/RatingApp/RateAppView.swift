@@ -73,7 +73,8 @@ class RateAppView: NSView {
 
 
 class RatingStarsView: NSView {
-    static let userInfoTagKey = "tag"
+    private static let userInfoTagKey = "tag"
+    
     var onSelectRate: ((Int) -> Void)?
     
     private var stackView: NSStackView = {
