@@ -16,7 +16,13 @@ enum AppFeedbackService {
     var url: URL {
         switch self {
         case let .email(address):
-            return URL(string: "mailto:\(address)")!
+            return URL(
+                mailTo: address,
+                subject: "Feedback for \(L10n.appName)",
+                body: """
+                \n\n\(L10n.appName) \(Consts.bundleShortVersion) (\(Consts.bundleVersion))
+                macOS \(ProcessInfo.processInfo.operatingSystemVersionString)
+                """)
         case let .twitter(userID):
             return URL(string: "https://twitter.com/\(userID)")!
         case let .gitHub(userID, repositoryID):
@@ -33,5 +39,18 @@ enum AppFeedbackService {
         case .gitHub:
             return "GitHub"
         }
+    }
+}
+
+private extension URL {
+    init(mailTo emailAddress: String, subject: String?, body: String?) {
+        let encodedAddress = emailAddress.addingPercentEncoding(withAllowedCharacters: .rfc3986Unreserved)!
+        var components = URLComponents(string: "mailto:\(encodedAddress)")!
+        let percentEncodedQueries: [URLQueryParameter] = [
+            subject.flatMap { (key: "subject", value: $0) } ?? nil,
+            body.flatMap { (key: "body", value: $0) } ?? nil
+            ].compactMap { $0 }
+        components.percentEncodedQuery = percentEncodedQueries.makeQueryString()
+        self = components.url!
     }
 }
