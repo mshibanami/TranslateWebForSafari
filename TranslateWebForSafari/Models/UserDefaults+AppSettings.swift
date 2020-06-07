@@ -17,8 +17,12 @@ extension UserDefaults {
         case toolbarItemBehavior = "toolbarItemBehavior"
         case pageTranslationTransitionBehavior = "pageTranslationTransitionBehavior"
         case textTranslationTransitionBehavior = "textTranslationTransitionBehavior"
+        case translationCountForCurrentVersion = "translationCountForCurrentVersion"
+        case lastRunBundleVersion = "lastRunBundleVersion"
+        case lastRatedBundleVersion = "lastRatedBundleVersion"
+        case lastRatedDate = "lastRatedDate"
     }
-    
+        
     static var group: UserDefaults = UserDefaults(suiteName: "group.io.github.mshibanami.TranslateWebForSafari")!
     
     var pageTranslationService: TranslationService {
@@ -123,6 +127,44 @@ extension UserDefaults {
         }
         set {
             set(newValue.rawValue, forKey: AppKey.textTranslationTransitionBehavior.rawValue)
+        }
+    }
+    
+    // MARK: - App Rating
+    
+    var translationCountForCurrentVersion: Int {
+        get {
+            return integer(forKey: AppKey.translationCountForCurrentVersion.rawValue)
+        }
+        set {
+            set(newValue, forKey: AppKey.translationCountForCurrentVersion.rawValue)
+        }
+    }
+    
+    var lastRunBundleVersion: String? {
+        get {
+            return string(forKey: AppKey.lastRunBundleVersion.rawValue)
+        }
+        set {
+            set(newValue, forKey: AppKey.lastRunBundleVersion.rawValue)
+        }
+    }
+    
+    var lastRatedBundleVersion: String? {
+        get {
+            return string(forKey: AppKey.lastRatedBundleVersion.rawValue)
+        }
+        set {
+            set(newValue, forKey: AppKey.lastRatedBundleVersion.rawValue)
+        }
+    }
+    
+    var lastRatedDate: Date? {
+        get {
+            return object(forKey: AppKey.lastRatedDate.rawValue) as? Date
+        }
+        set {
+            set(newValue, forKey: AppKey.lastRatedDate.rawValue)
         }
     }
     

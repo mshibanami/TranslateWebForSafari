@@ -142,8 +142,8 @@ class MainViewController: NSViewController {
     private lazy var textTranslationOpenInNewTabButton = NSButton(checkboxWithTitle: L10n.openInNewTab, target: self, action: #selector(didSelectTextTranslationOpenInNewTabButton(_:)))
     
     private lazy var appRatingViewController = AppRatingViewController(
-        ratingService: AppConsts.ratingService,
-        feedbackServices: AppConsts.feedbackServices)
+        ratingService: AppRatingSettings.ratingService,
+        feedbackServices: AppRatingSettings.feedbackServices)
     
     private lazy var rateAppContainerView: NSView = {
         let view = NSView()
@@ -228,9 +228,11 @@ class MainViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addChild(appRatingViewController)
-        rateAppContainerView.addAutoLayoutSubview(appRatingViewController.view, positioned: .below)
-        appRatingViewController.view.fillToSuperview()
+        if AppRatingSettings.showsAppRatingRequest {
+            addChild(appRatingViewController)
+            rateAppContainerView.addAutoLayoutSubview(appRatingViewController.view, positioned: .below)
+            appRatingViewController.view.fillToSuperview()
+        }
         
         setupGestureHandlers()
         resetUI()
@@ -248,6 +250,7 @@ class MainViewController: NSViewController {
             self.appRatingViewController.view.isHidden = true
             self.appRatingViewController.heightConstraint?.constant = 0
             self.view.window?.setContentSize(self.view.fittingSize)
+            AppRatingSettings.markLastAppRating()
         }
     }
     

@@ -217,6 +217,7 @@ private extension SFSafariWindow {
         case .page:
             behavior = settings.pageTranslationTransitionBehavior
         }
+        
         switch behavior {
         case .currentTab:
             getActiveTab {
@@ -225,6 +226,7 @@ private extension SFSafariWindow {
         case .newTab:
             openTab(with: url, makeActiveIfPossible: true)
         }
+        AppRatingSettings.incrementTranslationCount()
     }
     
     func getActivePage(completionHandler: @escaping (SFSafariPage?) -> Void) {

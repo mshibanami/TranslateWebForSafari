@@ -7,6 +7,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     var windowController: NSWindowController?
     
     func applicationWillFinishLaunching(_ notification: Notification) {
+        AppRatingSettings.setup()
         setupMenuItems()
     }
     

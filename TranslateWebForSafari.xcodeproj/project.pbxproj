@@ -21,6 +21,8 @@
 		0041D92F24850FA300E24AFE /* TransitionBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0041D92D24850A4E00E24AFE /* TransitionBehavior.swift */; };
 		004B6CCF2476AD2500C25112 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B6CCE2476AD2500C25112 /* Consts.swift */; };
 		004D82872479289000817E8B /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D82862479289000817E8B /* Collection+Extensions.swift */; };
+		006A9909248D120800503F5D /* AppRatingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A9908248D120800503F5D /* AppRatingSettings.swift */; };
+		006A990A248D129800503F5D /* AppRatingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A9908248D120800503F5D /* AppRatingSettings.swift */; };
 		006CE4FC2478191A00256895 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		006CE4FE24781F4500256895 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
 		006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
@@ -28,13 +30,15 @@
 		0093F9DE248BCF75000DA70D /* AppRatingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9DD248BCF75000DA70D /* AppRatingService.swift */; };
 		0093F9DF248BCFF2000DA70D /* AppRatingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9DD248BCF75000DA70D /* AppRatingService.swift */; };
 		0093F9E1248BE056000DA70D /* AppFeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9E0248BE056000DA70D /* AppFeedbackService.swift */; };
-		0093F9E3248BE4DB000DA70D /* AppConsts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9E2248BE4DB000DA70D /* AppConsts.swift */; };
 		0093F9E5248C88CB000DA70D /* URLQueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9E4248C88CB000DA70D /* URLQueryParameter.swift */; };
 		0093F9E6248C891F000DA70D /* URLQueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9E4248C88CB000DA70D /* URLQueryParameter.swift */; };
+		0093F9E7248CFA2F000DA70D /* AppFeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9E0248BE056000DA70D /* AppFeedbackService.swift */; };
 		00A42DDE248204AA003F24AA /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A42DDD248204AA003F24AA /* LanguageDetector.swift */; };
 		00B1D36924866EF000232F3A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B1D36824866EF000232F3A /* Colors.swift */; };
 		00C726DE247D222400090155 /* ToolbarItemBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C726DD247D222400090155 /* ToolbarItemBehavior.swift */; };
 		00C726DF247D711C00090155 /* ToolbarItemBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C726DD247D222400090155 /* ToolbarItemBehavior.swift */; };
+		00C80BCD248D021600DF1FDF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C80BCC248D021600DF1FDF /* Log.swift */; };
+		00C80BCE248D02B400DF1FDF /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C80BCC248D021600DF1FDF /* Log.swift */; };
 		00D524192479393800556BA4 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
 		00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		00D5241B24793A0A00556BA4 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
@@ -111,17 +115,18 @@
 		0041D92D24850A4E00E24AFE /* TransitionBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionBehavior.swift; sourceTree = "<group>"; };
 		004B6CCE2476AD2500C25112 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		004D82862479289000817E8B /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		006A9908248D120800503F5D /* AppRatingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingSettings.swift; sourceTree = "<group>"; };
 		006CE4FB2478191A00256895 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		006CE4FD24781F4500256895 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppSettings.swift"; sourceTree = "<group>"; };
 		0093F9DB248B9535000DA70D /* AppRatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatedView.swift; sourceTree = "<group>"; };
 		0093F9DD248BCF75000DA70D /* AppRatingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingService.swift; sourceTree = "<group>"; };
 		0093F9E0248BE056000DA70D /* AppFeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeedbackService.swift; sourceTree = "<group>"; };
-		0093F9E2248BE4DB000DA70D /* AppConsts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConsts.swift; sourceTree = "<group>"; };
 		0093F9E4248C88CB000DA70D /* URLQueryParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryParameter.swift; sourceTree = "<group>"; };
 		00A42DDD248204AA003F24AA /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
 		00B1D36824866EF000232F3A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		00C726DD247D222400090155 /* ToolbarItemBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItemBehavior.swift; sourceTree = "<group>"; };
+		00C80BCC248D021600DF1FDF /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		00D5241E24795F1300556BA4 /* TranslationMedia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationMedia.swift; sourceTree = "<group>"; };
 		00DD6A48246659DA004684DA /* TranslateWebForSafari.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TranslateWebForSafari.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00DD6A4B246659DA004684DA /* TranslateWebForSafari.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari.entitlements; sourceTree = "<group>"; };
@@ -178,7 +183,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00368E742488EE7B001C4224 /* RatingApp */ = {
+		00368E742488EE7B001C4224 /* AppRating */ = {
 			isa = PBXGroup;
 			children = (
 				0093F9E0248BE056000DA70D /* AppFeedbackService.swift */,
@@ -188,7 +193,7 @@
 				00368E7C248A416A001C4224 /* AppRatingViewController.swift */,
 				00368E7E248A451D001C4224 /* RateApp.xcassets */,
 			);
-			path = RatingApp;
+			path = AppRating;
 			sourceTree = "<group>";
 		};
 		004D82852479287C00817E8B /* Utilities */ = {
@@ -205,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				004B6CCE2476AD2500C25112 /* Consts.swift */,
-				0093F9E2248BE4DB000DA70D /* AppConsts.swift */,
 				006CE4FD24781F4500256895 /* Language.swift */,
 				00D5241E24795F1300556BA4 /* TranslationMedia.swift */,
 				006CE4FB2478191A00256895 /* TranslationService.swift */,
@@ -214,6 +218,7 @@
 				00A42DDD248204AA003F24AA /* LanguageDetector.swift */,
 				0041D92D24850A4E00E24AFE /* TransitionBehavior.swift */,
 				00B1D36824866EF000232F3A /* Colors.swift */,
+				006A9908248D120800503F5D /* AppRatingSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,12 +264,13 @@
 				00DD6A56246659DD004684DA /* Info.plist */,
 				00DD6A4D246659DA004684DA /* AppDelegate.swift */,
 				00DD6A52246659DA004684DA /* MainViewController.swift */,
+				00C80BCC248D021600DF1FDF /* Log.swift */,
 				00DD6A54246659DD004684DA /* Assets.xcassets */,
 				004D82852479287C00817E8B /* Utilities */,
 				006CE5042478C70600256895 /* L10n */,
 				00DD6A4F246659DA004684DA /* Main.storyboard */,
 				006CE50124783B0600256895 /* Models */,
-				00368E742488EE7B001C4224 /* RatingApp */,
+				00368E742488EE7B001C4224 /* AppRating */,
 			);
 			path = TranslateWebForSafari;
 			sourceTree = "<group>";
@@ -485,13 +491,14 @@
 				004B6CCF2476AD2500C25112 /* Consts.swift in Sources */,
 				00368E7D248A416A001C4224 /* AppRatingViewController.swift in Sources */,
 				00368E7624891764001C4224 /* NSView+Extensions.swift in Sources */,
+				00C80BCD248D021600DF1FDF /* Log.swift in Sources */,
 				0093F9DC248B9535000DA70D /* AppRatedView.swift in Sources */,
 				00368E732488EE73001C4224 /* RateAppView.swift in Sources */,
 				0093F9E1248BE056000DA70D /* AppFeedbackService.swift in Sources */,
 				0093F9E5248C88CB000DA70D /* URLQueryParameter.swift in Sources */,
 				0093F9DE248BCF75000DA70D /* AppRatingService.swift in Sources */,
 				006CE4FE24781F4500256895 /* Language.swift in Sources */,
-				0093F9E3248BE4DB000DA70D /* AppConsts.swift in Sources */,
+				006A9909248D120800503F5D /* AppRatingSettings.swift in Sources */,
 				006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */,
 				00B1D36924866EF000232F3A /* Colors.swift in Sources */,
 				00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */,
@@ -529,11 +536,14 @@
 				0093F9DF248BCFF2000DA70D /* AppRatingService.swift in Sources */,
 				0041D92F24850FA300E24AFE /* TransitionBehavior.swift in Sources */,
 				00D524192479393800556BA4 /* UserDefaults+AppSettings.swift in Sources */,
+				0093F9E7248CFA2F000DA70D /* AppFeedbackService.swift in Sources */,
 				28B65A0A247FF754009FBD19 /* Consts.swift in Sources */,
 				00D5241B24793A0A00556BA4 /* Language.swift in Sources */,
 				00D5241F24795F1400556BA4 /* TranslationMedia.swift in Sources */,
 				00C726DF247D711C00090155 /* ToolbarItemBehavior.swift in Sources */,
+				006A990A248D129800503F5D /* AppRatingSettings.swift in Sources */,
 				001853AE246D686E00C75E4D /* L10n.swift in Sources */,
+				00C80BCE248D02B400DF1FDF /* Log.swift in Sources */,
 				00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */,
 				00D5241A247939FE00556BA4 /* TranslationService.swift in Sources */,
 				003FC5C2248248E700CA10AD /* LanguageDetector.swift in Sources */,
