@@ -14,6 +14,9 @@
 "Always translate the selected text" = "常に選択したテキストを翻訳";
 
 /* No comment provided by engineer. */
+"App Store" = "App Store";
+
+/* No comment provided by engineer. */
 "Arabic" = "アラビア語";
 
 /* No comment provided by engineer. */
@@ -56,6 +59,9 @@
 "German" = "ドイツ語";
 
 /* No comment provided by engineer. */
+"GitHub" = "GitHub";
+
+/* No comment provided by engineer. */
 "Greek" = "ギリシャ語";
 
 /* No comment provided by engineer. */
@@ -69,6 +75,9 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "ヒンディー語";
+
+/* No comment provided by engineer. */
+"How would you rate this version?" = "このバージョンを評価するなら星いくつですか？";
 
 /* No comment provided by engineer. */
 "Hungarian" = "ハンガリー語";
@@ -116,6 +125,9 @@
 "Nepali" = "ネパール語";
 
 /* No comment provided by engineer. */
+"No thanks" = "キャンセル";
+
+/* No comment provided by engineer. */
 "Norwegian" = "ノルウェー語";
 
 /* No comment provided by engineer. */
@@ -158,6 +170,9 @@
 "Sanskrit" = "サンスクリット語";
 
 /* No comment provided by engineer. */
+"Send Feedback…" = "フィードバックを送る…";
+
+/* No comment provided by engineer. */
 "Serbian" = "セルビア語";
 
 /* No comment provided by engineer. */
@@ -171,6 +186,9 @@
 
 /* No comment provided by engineer. */
 "Spanish" = "スペイン語";
+
+/* No comment provided by engineer. */
+"Sure, open %@" = "OK、%@を開く";
 
 /* No comment provided by engineer. */
 "Swahili" = "スワヒリ語";
@@ -189,6 +207,12 @@
 
 /* No comment provided by engineer. */
 "Thai" = "タイ語";
+
+/* No comment provided by engineer. */
+"Thank you 👍" = "ありがとうございます。";
+
+/* No comment provided by engineer. */
+"Thank you!! 🙏" = "ありがとうございます！！ 🙇🏻‍♂️";
 
 /* No comment provided by engineer. */
 "Toolbar button behavior" = "ツールバーボタンの挙動";
@@ -219,3 +243,12 @@
 
 /* No comment provided by engineer. */
 "Window" = "ウィンドウ";
+
+/* No comment provided by engineer. */
+"Would you mind giving us 5 stars on App Store as well?" = "もしよければApp Storeでも５つ星いただけると開発の励みになります。";
+
+/* No comment provided by engineer. */
+"Would you mind giving us a star on GitHub as well?" = "GitHubでも星をいただけると開発の励みになります。";
+
+/* No comment provided by engineer. */
+"Would you mind giving us some feedback?" = "改善点などをフィードバックとしてお送りいただければ幸いです。";

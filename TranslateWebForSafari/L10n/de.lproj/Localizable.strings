@@ -14,6 +14,9 @@
 "Always translate the selected text" = "Immer den ausgewählten Text übersetzen";
 
 /* No comment provided by engineer. */
+"App Store" = "App Store";
+
+/* No comment provided by engineer. */
 "Arabic" = "Arabisch";
 
 /* No comment provided by engineer. */
@@ -56,6 +59,9 @@
 "German" = "Deutsch";
 
 /* No comment provided by engineer. */
+"GitHub" = "GitHub";
+
+/* No comment provided by engineer. */
 "Greek" = "Griechisch";
 
 /* No comment provided by engineer. */
@@ -69,6 +75,9 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "Hindi";
+
+/* No comment provided by engineer. */
+"How would you rate this version?" = "Wie würden Sie diese Version bewerten?";
 
 /* No comment provided by engineer. */
 "Hungarian" = "Ungarisch";
@@ -116,6 +125,9 @@
 "Nepali" = "Nepalesisch";
 
 /* No comment provided by engineer. */
+"No thanks" = "Nein danke";
+
+/* No comment provided by engineer. */
 "Norwegian" = "Norwegisch";
 
 /* No comment provided by engineer. */
@@ -158,6 +170,9 @@
 "Sanskrit" = "Sanskrit";
 
 /* No comment provided by engineer. */
+"Send Feedback…" = "Rückmeldung senden…";
+
+/* No comment provided by engineer. */
 "Serbian" = "Serbisch";
 
 /* No comment provided by engineer. */
@@ -171,6 +186,9 @@
 
 /* No comment provided by engineer. */
 "Spanish" = "Spanisch";
+
+/* No comment provided by engineer. */
+"Sure, open %@" = "Sicher, öffnen Sie %@";
 
 /* No comment provided by engineer. */
 "Swahili" = "Suaheli";
@@ -189,6 +207,12 @@
 
 /* No comment provided by engineer. */
 "Thai" = "Thai";
+
+/* No comment provided by engineer. */
+"Thank you 👍" = "Danke 👍";
+
+/* No comment provided by engineer. */
+"Thank you!! 🙏" = "Danke!! 🙏";
 
 /* No comment provided by engineer. */
 "Toolbar button behavior" = "Verhalten von Symbolleistenschaltflächen";
@@ -219,3 +243,12 @@
 
 /* No comment provided by engineer. */
 "Window" = "Fenster";
+
+/* No comment provided by engineer. */
+"Would you mind giving us 5 stars on App Store as well?" = "Würde es Ihnen etwas ausmachen, uns im App Store ebenfalls 5 Sterne zu geben?";
+
+/* No comment provided by engineer. */
+"Would you mind giving us a star on GitHub as well?" = "Würde es Ihnen etwas ausmachen, uns auch auf GitHub einen Stern zu geben?";
+
+/* No comment provided by engineer. */
+"Would you mind giving us some feedback?" = "Würde es Ihnen etwas ausmachen, uns ein Feedback zu geben?";

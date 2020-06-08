@@ -14,6 +14,9 @@
 "Always translate the selected text" = "始终翻译所选文本";
 
 /* No comment provided by engineer. */
+"App Store" = "App Store";
+
+/* No comment provided by engineer. */
 "Arabic" = "阿拉伯语";
 
 /* No comment provided by engineer. */
@@ -56,6 +59,9 @@
 "German" = "德语";
 
 /* No comment provided by engineer. */
+"GitHub" = "GitHub";
+
+/* No comment provided by engineer. */
 "Greek" = "希腊语";
 
 /* No comment provided by engineer. */
@@ -69,6 +75,9 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "印地语";
+
+/* No comment provided by engineer. */
+"How would you rate this version?" = "您如何评价这个版本？";
 
 /* No comment provided by engineer. */
 "Hungarian" = "匈牙利语";
@@ -116,6 +125,9 @@
 "Nepali" = "尼泊尔语";
 
 /* No comment provided by engineer. */
+"No thanks" = "取消";
+
+/* No comment provided by engineer. */
 "Norwegian" = "挪威语";
 
 /* No comment provided by engineer. */
@@ -158,6 +170,9 @@
 "Sanskrit" = "梵语";
 
 /* No comment provided by engineer. */
+"Send Feedback…" = "发送反馈…";
+
+/* No comment provided by engineer. */
 "Serbian" = "塞尔维亚语";
 
 /* No comment provided by engineer. */
@@ -171,6 +186,9 @@
 
 /* No comment provided by engineer. */
 "Spanish" = "西班牙语";
+
+/* No comment provided by engineer. */
+"Sure, open %@" = "好，打开%@";
 
 /* No comment provided by engineer. */
 "Swahili" = "斯瓦希里语";
@@ -189,6 +207,12 @@
 
 /* No comment provided by engineer. */
 "Thai" = "泰语";
+
+/* No comment provided by engineer. */
+"Thank you 👍" = "谢谢您";
+
+/* No comment provided by engineer. */
+"Thank you!! 🙏" = "太谢谢你了！！ 🙇🏻‍♂️";
 
 /* No comment provided by engineer. */
 "Toolbar button behavior" = "工具栏按钮行为";
@@ -219,3 +243,12 @@
 
 /* No comment provided by engineer. */
 "Window" = "窗口";
+
+/* No comment provided by engineer. */
+"Would you mind giving us 5 stars on App Store as well?" = "你介意在App Store上给我们5颗星吗？";
+
+/* No comment provided by engineer. */
+"Would you mind giving us a star on GitHub as well?" = "你介意在GitHub上也给我们一颗星吗？";
+
+/* No comment provided by engineer. */
+"Would you mind giving us some feedback?" = "你介意给我们一些反馈吗？";

@@ -14,6 +14,9 @@
 "Always translate the selected text" = "Toujours traduire le texte sélectionné";
 
 /* No comment provided by engineer. */
+"App Store" = "App Store";
+
+/* No comment provided by engineer. */
 "Arabic" = "Arabe";
 
 /* No comment provided by engineer. */
@@ -56,6 +59,9 @@
 "German" = "Allemand";
 
 /* No comment provided by engineer. */
+"GitHub" = "GitHub";
+
+/* No comment provided by engineer. */
 "Greek" = "Grec";
 
 /* No comment provided by engineer. */
@@ -69,6 +75,9 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "Hindi";
+
+/* No comment provided by engineer. */
+"How would you rate this version?" = "Comment évaluez-vous cette version ?";
 
 /* No comment provided by engineer. */
 "Hungarian" = "Hongrois";
@@ -116,6 +125,9 @@
 "Nepali" = "Népalais";
 
 /* No comment provided by engineer. */
+"No thanks" = "Non merci";
+
+/* No comment provided by engineer. */
 "Norwegian" = "Norvégien";
 
 /* No comment provided by engineer. */
@@ -158,6 +170,9 @@
 "Sanskrit" = "Sanskrit";
 
 /* No comment provided by engineer. */
+"Send Feedback…" = "Envoyez vos commentaires…";
+
+/* No comment provided by engineer. */
 "Serbian" = "Serbe";
 
 /* No comment provided by engineer. */
@@ -171,6 +186,9 @@
 
 /* No comment provided by engineer. */
 "Spanish" = "Espagnol";
+
+/* No comment provided by engineer. */
+"Sure, open %@" = "Bien sûr, ouvrez %@";
 
 /* No comment provided by engineer. */
 "Swahili" = "Swahili";
@@ -189,6 +207,12 @@
 
 /* No comment provided by engineer. */
 "Thai" = "Thaï";
+
+/* No comment provided by engineer. */
+"Thank you 👍" = "Merci 👍";
+
+/* No comment provided by engineer. */
+"Thank you!! 🙏" = "Merci !! 🙏";
 
 /* No comment provided by engineer. */
 "Toolbar button behavior" = "Comportement des boutons de la barre d'outils";
@@ -219,3 +243,12 @@
 
 /* No comment provided by engineer. */
 "Window" = "Fenêtre";
+
+/* No comment provided by engineer. */
+"Would you mind giving us 5 stars on App Store as well?" = "Pourriez-vous également nous donner 5 étoiles sur l'App Store ?";
+
+/* No comment provided by engineer. */
+"Would you mind giving us a star on GitHub as well?" = "Pourriez-vous également nous donner une étoile sur GitHub ?";
+
+/* No comment provided by engineer. */
+"Would you mind giving us some feedback?" = "Pourriez-vous nous faire part de vos commentaires ?";

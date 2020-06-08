@@ -14,6 +14,9 @@
 "Always translate the selected text" = "Traducir siempre el texto seleccionado";
 
 /* No comment provided by engineer. */
+"App Store" = "App Store";
+
+/* No comment provided by engineer. */
 "Arabic" = "Árabe";
 
 /* No comment provided by engineer. */
@@ -56,6 +59,9 @@
 "German" = "Aleman";
 
 /* No comment provided by engineer. */
+"GitHub" = "GitHub";
+
+/* No comment provided by engineer. */
 "Greek" = "Griego";
 
 /* No comment provided by engineer. */
@@ -69,6 +75,9 @@
 
 /* No comment provided by engineer. */
 "Hindi" = "Hindi";
+
+/* No comment provided by engineer. */
+"How would you rate this version?" = "¿Como calificarias esta versión?";
 
 /* No comment provided by engineer. */
 "Hungarian" = "Húngaro";
@@ -116,6 +125,9 @@
 "Nepali" = "Nepalí";
 
 /* No comment provided by engineer. */
+"No thanks" = "No thanks";
+
+/* No comment provided by engineer. */
 "Norwegian" = "Noruego";
 
 /* No comment provided by engineer. */
@@ -158,6 +170,9 @@
 "Sanskrit" = "Sánscrito";
 
 /* No comment provided by engineer. */
+"Send Feedback…" = "Send Feedback…";
+
+/* No comment provided by engineer. */
 "Serbian" = "Serbio";
 
 /* No comment provided by engineer. */
@@ -171,6 +186,9 @@
 
 /* No comment provided by engineer. */
 "Spanish" = "Español";
+
+/* No comment provided by engineer. */
+"Sure, open %@" = "Sure, open %@";
 
 /* No comment provided by engineer. */
 "Swahili" = "Swahili";
@@ -189,6 +207,12 @@
 
 /* No comment provided by engineer. */
 "Thai" = "Tailandés";
+
+/* No comment provided by engineer. */
+"Thank you 👍" = "Thank you 👍";
+
+/* No comment provided by engineer. */
+"Thank you!! 🙏" = "Thank you!! 🙏";
 
 /* No comment provided by engineer. */
 "Toolbar button behavior" = "Comportamiento de los botones de la barra de herramientas";
@@ -219,3 +243,12 @@
 
 /* No comment provided by engineer. */
 "Window" = "Ventana";
+
+/* No comment provided by engineer. */
+"Would you mind giving us 5 stars on App Store as well?" = "Would you mind giving us 5 stars on App Store as well?";
+
+/* No comment provided by engineer. */
+"Would you mind giving us a star on GitHub as well?" = "Would you mind giving us a star on GitHub as well?";
+
+/* No comment provided by engineer. */
+"Would you mind giving us some feedback?" = "Would you mind giving us some feedback?";
