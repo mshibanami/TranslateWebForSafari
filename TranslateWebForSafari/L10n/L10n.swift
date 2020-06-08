@@ -60,7 +60,7 @@ class L10n {
     
     // MARK: Translation Service
     
-    static let baidu = "Baidu"
+    static let baidu = NSLocalizedString("Baidu", comment: "")
     static let bing = "Bing"
     static let deepL = "DeepL"
     static let google = "Google"
