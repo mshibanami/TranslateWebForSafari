@@ -62,4 +62,12 @@ class TranslateWebForSafariTests: XCTestCase {
         let url = media.makeURL(for: .google, targetLanguage: targetLanguage)!
         XCTAssertEqual(url.absoluteString, "https://translate.google.com/?tl=ja&sl=en&text=abc%20%E3%81%82%E3%81%84%E3%81%86%E3%81%88%E3%81%8A%20def")
     }
+    
+    func testTextTranslationURLIncludingPlusSign() throws {
+        let sourceLanguage = Language(id: "en", localizedName: L10n.english)
+        let targetLanguage = Language(id: "ja", localizedName: L10n.japanese)
+        let media = TranslationMedia.text("hello+world", sourceLanguage)
+        let url = media.makeURL(for: .yandex, targetLanguage: targetLanguage)!
+        XCTAssertEqual(url.absoluteString, "https://translate.yandex.com/?lang=en-ja&text=hello%2Bworld")
+    }
 }

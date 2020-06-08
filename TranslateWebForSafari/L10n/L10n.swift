@@ -64,6 +64,7 @@ class L10n {
     static let bing = "Bing"
     static let deepL = "DeepL"
     static let google = "Google"
+    static let yandex = NSLocalizedString("Yandex", comment: "")
     
     // MARK: Rating App
     
@@ -140,6 +141,8 @@ class L10n {
     static let danish = NSLocalizedString("Danish", comment: "")
     static let divehi = "Divehi"
     static let dutch = NSLocalizedString("Dutch", comment: "")
+    static let elvishSindarin = "Elvish (Sindarin)"
+    static let emoji = "Emoji"
     static let english = NSLocalizedString("English", comment: "")
     static let esperanto = "Esperanto"
     static let estonian = NSLocalizedString("Estonian", comment: "")
@@ -158,12 +161,14 @@ class L10n {
     static let greek = NSLocalizedString("Greek", comment: "")
     static let guarani = "Guarani"
     static let gujarati = "Gujarati"
+    static let haitian = "Haitian"
     static let haitianCreole = "Haitian Creole"
     static let hakhaChin = "Hakha Chin"
     static let hausa = "Hausa"
     static let hawaiian = "Hawaiian"
     static let hebrew = NSLocalizedString("Hebrew", comment: "")
     static let hiligaynon = "Hiligaynon"
+    static let hillMari = "Hill Mari"
     static let hindi = NSLocalizedString("Hindi", comment: "")
     static let hmong = "Hmong"
     static let hmongDaw = "Hmong Daw"
@@ -187,6 +192,7 @@ class L10n {
     static let kashmiri = "Kashmiri"
     static let kashubian = "Kashubian"
     static let kazakh = NSLocalizedString("Kazakh", comment: "")
+    static let kazakhLatin = "Kazakh (Latin)"
     static let khmer = "Khmer"
     static let kinyarwanda = "Kinyarwanda"
     static let kiswahili = "Kiswahili"
@@ -219,6 +225,7 @@ class L10n {
     static let manx = "Manx"
     static let maori = "Maori"
     static let marathi = "Marathi"
+    static let mari = "Mari"
     static let marshallese = "Marshallese"
     static let mauritianCreole = "Mauritian Creole"
     static let middleFrench = "Middle French"
@@ -262,6 +269,7 @@ class L10n {
     static let sardinian = "Sardinian"
     static let scots = "Scots"
     static let scotsGaelic = "Scots Gaelic"
+    static let scottishGaelic = "Scottish Gaelic"
     static let serbian = NSLocalizedString("Serbian", comment: "")
     static let serbianCyrillic = NSLocalizedString("Serbian (Cyrillic)", comment: "")
     static let serbianLatin = NSLocalizedString("Serbian (Latin)", comment: "")
@@ -272,6 +280,7 @@ class L10n {
     static let silesian = "Silesian"
     static let sindhi = "Sindhi"
     static let sinhala = "Sinhala"
+    static let sinhalese = "Sinhalese"
     static let slovak = "Slovak"
     static let slovenian = "Slovenian"
     static let somali = "Somali"
@@ -298,11 +307,13 @@ class L10n {
     static let turkish = NSLocalizedString("Turkish", comment: "")
     static let turkmen = "Turkmen"
     static let twi = "Twi"
+    static let udmurt = "Udmurt"
     static let ukrainian = "Ukrainian"
     static let upperSorbian = "Upper Sorbian"
     static let urdu = "Urdu"
     static let uyghur = NSLocalizedString("Uyghur", comment: "")
     static let uzbek = "Uzbek"
+    static let uzbekCyrillic = "Uzbek (Cyrillic)"
     static let venda = "Venda"
     static let vietnamese = "Vietnamese"
     static let walloon = "Walloon"
@@ -310,6 +321,7 @@ class L10n {
     static let westernFrisian = "Western Frisian"
     static let wolof = "Wolof"
     static let xhosa = "Xhosa"
+    static let yakut = "Yakut"
     static let yiddish = "Yiddish"
     static let yoruba = "Yoruba"
     static let yucatecMaya = "Yucatec Maya"

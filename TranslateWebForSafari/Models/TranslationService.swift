@@ -7,6 +7,7 @@ enum TranslationService: String, CaseIterable {
     case bing = "bing"
     case deepL = "deepL"
     case google = "google"
+    case yandex = "yandex"
     
     var localizedName: String {
         switch self {
@@ -18,6 +19,8 @@ enum TranslationService: String, CaseIterable {
             return L10n.deepL
         case .google:
             return L10n.google
+        case .yandex:
+            return L10n.yandex
         }
     }
     
@@ -25,21 +28,23 @@ enum TranslationService: String, CaseIterable {
         switch self {
         case .baidu, .deepL:
             return false
-        case .bing, .google:
+        case .bing, .google, .yandex:
             return true
         }
     }
     
     func supportedLanguages() -> [Language] {
         switch self {
-        case .google:
-            return supportedLanguagesInGoogle()
+        case .baidu:
+            return supportedLanguagesInBaidu()
         case .bing:
             return supportedLanguagesInBing()
         case .deepL:
             return supportedLanguagesInDeepL()
-        case .baidu:
-            return supportedLanguagesInBaidu()
+        case .google:
+            return supportedLanguagesInGoogle()
+        case .yandex:
+            return supportedLanguagesInYandex()
         }
     }
     
@@ -481,6 +486,110 @@ private extension TranslationService {
         ]
     }
     
+    func supportedLanguagesInYandex() -> [Language] {
+        return [
+            Language(id: "af", localizedName: L10n.afrikaans),
+            Language(id: "am", localizedName: L10n.amharic),
+            Language(id: "ar", localizedName: L10n.arabic),
+            Language(id: "az", localizedName: L10n.azerbaijani),
+            Language(id: "ba", localizedName: L10n.bashkir),
+            Language(id: "be", localizedName: L10n.belarusian),
+            Language(id: "bg", localizedName: L10n.bulgarian),
+            Language(id: "bn", localizedName: L10n.bengali),
+            Language(id: "bs", localizedName: L10n.bosnian),
+            Language(id: "ca", localizedName: L10n.catalan),
+            Language(id: "ceb", localizedName: L10n.cebuano),
+            Language(id: "cs", localizedName: L10n.czech),
+            Language(id: "cv", localizedName: L10n.chuvash),
+            Language(id: "cy", localizedName: L10n.welsh),
+            Language(id: "da", localizedName: L10n.danish),
+            Language(id: "de", localizedName: L10n.german),
+            Language(id: "el", localizedName: L10n.greek),
+            Language(id: "emj", localizedName: L10n.emoji),
+            Language(id: "en", localizedName: L10n.english),
+            Language(id: "eo", localizedName: L10n.esperanto),
+            Language(id: "es", localizedName: L10n.spanish),
+            Language(id: "et", localizedName: L10n.estonian),
+            Language(id: "eu", localizedName: L10n.basque),
+            Language(id: "fa", localizedName: L10n.persian),
+            Language(id: "fi", localizedName: L10n.finnish),
+            Language(id: "fr", localizedName: L10n.french),
+            Language(id: "ga", localizedName: L10n.irish),
+            Language(id: "gd", localizedName: L10n.scottishGaelic),
+            Language(id: "gl", localizedName: L10n.galician),
+            Language(id: "gu", localizedName: L10n.gujarati),
+            Language(id: "he", localizedName: L10n.hebrew),
+            Language(id: "hi", localizedName: L10n.hindi),
+            Language(id: "hr", localizedName: L10n.croatian),
+            Language(id: "ht", localizedName: L10n.haitian),
+            Language(id: "hu", localizedName: L10n.hungarian),
+            Language(id: "hy", localizedName: L10n.armenian),
+            Language(id: "id", localizedName: L10n.indonesian),
+            Language(id: "is", localizedName: L10n.icelandic),
+            Language(id: "it", localizedName: L10n.italian),
+            Language(id: "ja", localizedName: L10n.japanese),
+            Language(id: "jv", localizedName: L10n.javanese),
+            Language(id: "ka", localizedName: L10n.georgian),
+            Language(id: "kazlat", localizedName: L10n.kazakhLatin),
+            Language(id: "kk", localizedName: L10n.kazakh),
+            Language(id: "km", localizedName: L10n.khmer),
+            Language(id: "kn", localizedName: L10n.kannada),
+            Language(id: "ko", localizedName: L10n.korean),
+            Language(id: "ky", localizedName: L10n.kyrgyz),
+            Language(id: "la", localizedName: L10n.latin),
+            Language(id: "lb", localizedName: L10n.luxembourgish),
+            Language(id: "lo", localizedName: L10n.lao),
+            Language(id: "lt", localizedName: L10n.lithuanian),
+            Language(id: "lv", localizedName: L10n.latvian),
+            Language(id: "mg", localizedName: L10n.malagasy),
+            Language(id: "mhr", localizedName: L10n.mari),
+            Language(id: "mi", localizedName: L10n.maori),
+            Language(id: "mk", localizedName: L10n.macedonian),
+            Language(id: "ml", localizedName: L10n.malayalam),
+            Language(id: "mn", localizedName: L10n.mongolian),
+            Language(id: "mr", localizedName: L10n.marathi),
+            Language(id: "mrj", localizedName: L10n.hillMari),
+            Language(id: "ms", localizedName: L10n.malay),
+            Language(id: "mt", localizedName: L10n.maltese),
+            Language(id: "my", localizedName: L10n.burmese),
+            Language(id: "ne", localizedName: L10n.nepali),
+            Language(id: "nl", localizedName: L10n.dutch),
+            Language(id: "no", localizedName: L10n.norwegian),
+            Language(id: "pa", localizedName: L10n.punjabi),
+            Language(id: "pap", localizedName: L10n.papiamento),
+            Language(id: "pl", localizedName: L10n.polish),
+            Language(id: "pt", localizedName: L10n.portuguese),
+            Language(id: "ro", localizedName: L10n.romanian),
+            Language(id: "ru", localizedName: L10n.russian),
+            Language(id: "sah", localizedName: L10n.yakut),
+            Language(id: "si", localizedName: L10n.sinhalese),
+            Language(id: "sjn", localizedName: L10n.elvishSindarin),
+            Language(id: "sk", localizedName: L10n.slovak),
+            Language(id: "sl", localizedName: L10n.slovenian),
+            Language(id: "sq", localizedName: L10n.albanian),
+            Language(id: "sr", localizedName: L10n.serbian),
+            Language(id: "su", localizedName: L10n.sundanese),
+            Language(id: "sv", localizedName: L10n.swedish),
+            Language(id: "sw", localizedName: L10n.swahili),
+            Language(id: "ta", localizedName: L10n.tamil),
+            Language(id: "te", localizedName: L10n.telugu),
+            Language(id: "tg", localizedName: L10n.tajik),
+            Language(id: "th", localizedName: L10n.thai),
+            Language(id: "tl", localizedName: L10n.tagalog),
+            Language(id: "tr", localizedName: L10n.turkish),
+            Language(id: "tt", localizedName: L10n.tatar),
+            Language(id: "udm", localizedName: L10n.udmurt),
+            Language(id: "uk", localizedName: L10n.ukrainian),
+            Language(id: "ur", localizedName: L10n.urdu),
+            Language(id: "uz", localizedName: L10n.uzbek),
+            Language(id: "uzbcyr", localizedName: L10n.uzbekCyrillic),
+            Language(id: "vi", localizedName: L10n.vietnamese),
+            Language(id: "xh", localizedName: L10n.xhosa),
+            Language(id: "yi", localizedName: L10n.yiddish),
+            Language(id: "zh", localizedName: L10n.chinese)
+        ]
+    }
+    
     func systemLanguageCodesTable() -> [(systemCode: String, serviceCode: String)] {
         switch self {
         case .baidu:
@@ -522,6 +631,8 @@ private extension TranslationService {
                 ("zh-Hans", "zh-CN"),
                 ("zh-Hant", "zh-TW"),
             ]
+        case .yandex:
+            return []
         }
     }
 }
