@@ -122,7 +122,7 @@ class L10n {
     static let burmese = "Burmese"
     static let canadianFrench = "Canadian French"
     static let cantonese = NSLocalizedString("Cantonese", comment: "")
-    static let cantoneseTraditional = "Cantonese (Traditional)"
+    static let cantoneseTraditional = NSLocalizedString("Cantonese (Traditional)", comment: "")
     static let catalan = "Catalan"
     static let cebuano = "Cebuano"
     static let cherokee = "Cherokee"
@@ -267,7 +267,7 @@ class L10n {
     static let samoan = "Samoan"
     static let sanskrit = NSLocalizedString("Sanskrit", comment: "")
     static let sardinian = "Sardinian"
-    static let scots = "Scots"
+    static let scots = NSLocalizedString("Scots", comment: "")
     static let scotsGaelic = "Scots Gaelic"
     static let scottishGaelic = "Scottish Gaelic"
     static let serbian = NSLocalizedString("Serbian", comment: "")
@@ -308,7 +308,7 @@ class L10n {
     static let turkmen = "Turkmen"
     static let twi = "Twi"
     static let udmurt = "Udmurt"
-    static let ukrainian = "Ukrainian"
+    static let ukrainian = NSLocalizedString("Ukrainian", comment: "")
     static let upperSorbian = "Upper Sorbian"
     static let urdu = "Urdu"
     static let uyghur = NSLocalizedString("Uyghur", comment: "")

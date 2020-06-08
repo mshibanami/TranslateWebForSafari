@@ -26,6 +26,9 @@
 "Cantonese" = "粤语";
 
 /* No comment provided by engineer. */
+"Cantonese (Traditional)" = "粤语 (繁体)";
+
+/* No comment provided by engineer. */
 "Chinese" = "中文";
 
 /* No comment provided by engineer. */
@@ -173,6 +176,9 @@
 "Sanskrit" = "梵语";
 
 /* No comment provided by engineer. */
+"Scots" = "苏格兰语";
+
+/* No comment provided by engineer. */
 "Send Feedback…" = "发送反馈…";
 
 /* No comment provided by engineer. */
@@ -234,6 +240,9 @@
 
 /* No comment provided by engineer. */
 "Turkish" = "土耳其语";
+
+/* No comment provided by engineer. */
+"Ukrainian" = "乌克兰语";
 
 /* No comment provided by engineer. */
 "Uyghur" = "维吾尔语";

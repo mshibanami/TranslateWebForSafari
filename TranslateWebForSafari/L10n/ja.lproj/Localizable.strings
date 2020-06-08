@@ -26,6 +26,9 @@
 "Cantonese" = "広東語";
 
 /* No comment provided by engineer. */
+"Cantonese (Traditional)" = "広東語 (繁体字)";
+
+/* No comment provided by engineer. */
 "Chinese" = "中国語";
 
 /* No comment provided by engineer. */
@@ -173,6 +176,9 @@
 "Sanskrit" = "サンスクリット語";
 
 /* No comment provided by engineer. */
+"Scots" = "スコットランド語";
+
+/* No comment provided by engineer. */
 "Send Feedback…" = "フィードバックを送る…";
 
 /* No comment provided by engineer. */
@@ -234,6 +240,9 @@
 
 /* No comment provided by engineer. */
 "Turkish" = "トルコ語";
+
+/* No comment provided by engineer. */
+"Ukrainian" = "ウクライナ語";
 
 /* No comment provided by engineer. */
 "Uyghur" = "ウイグル語";
