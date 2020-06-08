@@ -31,6 +31,8 @@ enum TranslationMedia {
             return makeURLForDeepL(targetLanguage: targetLanguage)
         case .google:
             return makeURLForGoogle(targetLanguage: targetLanguage)
+        case .yandex:
+            return makeURLForYandex(targetLanguage: targetLanguage)
         }
     }
 
@@ -88,6 +90,21 @@ enum TranslationMedia {
         case let .page(url, _):
             parameters.append((key: "u", value: url.absoluteString.removingPercentEncoding ?? ""))
             return URL(string: "https://translate.google.com/translate?\(parameters.makeQueryString())")
+        }
+    }
+    
+    private func makeURLForYandex(targetLanguage: Language) -> URL? {
+        var parameters: [URLQueryParameter] = [
+            (key: "lang", value: [sourceLanguage?.id, targetLanguage.id].compactMap { $0 }.joined(separator: "-"))
+        ]
+        
+        switch self {
+        case let .text(text, _):
+            parameters.append((key: "text", value: text))
+            return URL(string: "https://translate.yandex.com/?\(parameters.makeQueryString())")
+        case let .page(url, _):
+            parameters.append((key: "url", value: url.absoluteString.removingPercentEncoding ?? ""))
+            return URL(string: "https://translate.yandex.com/translate?\(parameters.makeQueryString())")
         }
     }
 }
