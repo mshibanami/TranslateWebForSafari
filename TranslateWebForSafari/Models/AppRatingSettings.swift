@@ -20,10 +20,10 @@ enum AppRatingSettings {
             UserDefaults.group.lastRunBundleVersion = Consts.bundleVersion
             UserDefaults.group.translationCountForCurrentVersion = 0
         }
-        Log.info("UserDefaults.lastRatedDate: \(String(describing: UserDefaults.group.lastRatedDate))")
-        Log.info("UserDefaults.lastRatedBundleVersion: \(String(describing: UserDefaults.group.lastRatedBundleVersion))")
-        Log.info("UserDefaults.lastRunBundleVersion: \(String(describing: UserDefaults.group.lastRunBundleVersion))")
-        Log.info("UserDefaults.translationCountForCurrentVersion: \(UserDefaults.group.translationCountForCurrentVersion)")
+        Log.info("[Settings] lastRatedDate: \(String(describing: UserDefaults.group.lastRatedDate))")
+        Log.info("[Settings] lastRatedBundleVersion: \(String(describing: UserDefaults.group.lastRatedBundleVersion))")
+        Log.info("[Settings] lastRunBundleVersion: \(String(describing: UserDefaults.group.lastRunBundleVersion))")
+        Log.info("[Settings] translationCountForCurrentVersion: \(UserDefaults.group.translationCountForCurrentVersion)")
     }
     
     static let feedbackServices: [AppFeedbackService] = {
