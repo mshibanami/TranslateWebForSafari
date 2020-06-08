@@ -610,6 +610,8 @@ private extension TranslationService {
                 ("mk", "mac"),
                 ("ms", "may"),
                 ("ne", "nep"),
+                ("pt-BR", "pot"),
+                ("pt-PT", "pt"),
                 ("ro", "rom"),
                 ("sv", "swe"),
                 ("sr", "srp"),
@@ -619,20 +621,32 @@ private extension TranslationService {
                 ("zh-Hant", "cht")
             ]
         case .bing:
-            return []
+            return [
+                ("pt-BR", "pt"),
+                ("pt-PT", "pt-pt"),
+            ]
         case .deepL:
             return [
+                ("pt-BR", "pt"),
+                ("pt-PT", "pt"),
                 ("zh-Hans", "zh"),
                 ("zh-Hant", "zh"),
             ]
         case .google:
             return [
+                ("pt-BR", "pt"),
+                ("pt-PT", "pt"),
                 ("he", "iw"),
                 ("zh-Hans", "zh-CN"),
                 ("zh-Hant", "zh-TW"),
             ]
         case .yandex:
-            return []
+            return [
+                ("pt-BR", "pt"),
+                ("pt-PT", "pt"),
+                ("zh-Hans", "zh"),
+                ("zh-Hant", "zh"),
+            ]
         }
     }
 }
