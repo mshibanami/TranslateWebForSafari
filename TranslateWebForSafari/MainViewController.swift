@@ -258,12 +258,12 @@ class MainViewController: NSViewController {
         let settings = UserDefaults.group
         
         pageTranslateToPopUpButton.removeAllItems()
-        for language in settings.pageTranslationService.supportedLanguages() {
+        for language in settings.pageTranslationService.supportedLanguagesForPageTranslation() {
             pageTranslateToPopUpButton.addItem(withTitle: language.titleForMenu)
         }
         
         textTranslateToPopUpButton.removeAllItems()
-        for language in settings.textTranslationService.supportedLanguages() {
+        for language in settings.textTranslationService.supportedLanguagesForTextTranslation() {
             textTranslateToPopUpButton.addItem(withTitle: language.titleForMenu)
         }
         
@@ -278,7 +278,7 @@ class MainViewController: NSViewController {
         if let index = Self.pageTranslationServices.firstIndex(of: pageService) {
             pageTranslationServicePopUpButton.selectItem(at: index)
         }
-        if let index = pageService.supportedLanguages().firstIndex(of: settings.pageTargetLanguage) {
+        if let index = pageService.supportedLanguagesForPageTranslation().firstIndex(of: settings.pageTargetLanguage) {
             pageTranslateToPopUpButton.selectItem(at: index)
         }
         
@@ -287,7 +287,7 @@ class MainViewController: NSViewController {
         if let index = Self.textTranslationServices.firstIndex(of: textService) {
             textTranslationServicePopUpButton.selectItem(at: index)
         }
-        if let index = textService.supportedLanguages().firstIndex(of: settings.textTargetLanguage) {
+        if let index = textService.supportedLanguagesForTextTranslation().firstIndex(of: settings.textTargetLanguage) {
             textTranslateToPopUpButton.selectItem(at: index)
         }
         
@@ -364,7 +364,7 @@ class MainViewController: NSViewController {
             assertionFailure()
             return
         }
-        UserDefaults.group.pageTargetLanguage = service.supportedLanguages()[pageTranslateToPopUpButton.indexOfSelectedItem]
+        UserDefaults.group.pageTargetLanguage = service.supportedLanguagesForPageTranslation()[pageTranslateToPopUpButton.indexOfSelectedItem]
     }
     
     @objc private func didSelectTextTranslateTo(_ sender: NSView) {
@@ -372,7 +372,7 @@ class MainViewController: NSViewController {
             assertionFailure()
             return
         }
-        UserDefaults.group.textTargetLanguage = service.supportedLanguages()[textTranslateToPopUpButton.indexOfSelectedItem]
+        UserDefaults.group.textTargetLanguage = service.supportedLanguagesForTextTranslation()[textTranslateToPopUpButton.indexOfSelectedItem]
     }
     
     @objc private func didSelectPageTranslationOpenInNewTabButton(_ sender: NSView) {

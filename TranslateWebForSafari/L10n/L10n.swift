@@ -64,6 +64,7 @@ class L10n {
     static let bing = "Bing"
     static let deepL = "DeepL"
     static let google = "Google"
+    static let papago = "Papago"
     static let yandex = NSLocalizedString("Yandex", comment: "")
     
     // MARK: Rating App

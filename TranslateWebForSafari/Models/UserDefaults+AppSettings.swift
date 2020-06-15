@@ -38,7 +38,7 @@ extension UserDefaults {
         set {
             let languageID = pageTargetLanguage.id
             set(newValue.rawValue, forKey: AppKey.pageTranslationService.rawValue)
-            pageTargetLanguage = newValue.supportedLanguages().first(where: { $0.id == languageID})
+            pageTargetLanguage = newValue.supportedLanguagesForPageTranslation().first(where: { $0.id == languageID})
                 ?? newValue.defaultLanguage()
         }
     }
@@ -47,7 +47,7 @@ extension UserDefaults {
         get {
             guard
                 let id = string(forKey: AppKey.pageTargetLanguage.rawValue),
-                let language = pageTranslationService.supportedLanguages().first(where: { $0.id == id }) else {
+                let language = pageTranslationService.supportedLanguagesForPageTranslation().first(where: { $0.id == id }) else {
                     return pageTranslationService.defaultLanguage()
             }
             return language
@@ -69,7 +69,7 @@ extension UserDefaults {
         set {
             let languageID = textTargetLanguage.id
             set(newValue.rawValue, forKey: AppKey.textTranslationService.rawValue)
-            textTargetLanguage = newValue.supportedLanguages().first(where: { $0.id == languageID})
+            textTargetLanguage = newValue.supportedLanguagesForTextTranslation().first(where: { $0.id == languageID})
                 ?? newValue.defaultLanguage()
         }
     }
@@ -78,7 +78,7 @@ extension UserDefaults {
         get {
             guard
                 let id = string(forKey: AppKey.textTargetLanguage.rawValue),
-                let language = textTranslationService.supportedLanguages().first(where: { $0.id == id }) else {
+                let language = textTranslationService.supportedLanguagesForTextTranslation().first(where: { $0.id == id }) else {
                     return textTranslationService.defaultLanguage()
             }
             return language

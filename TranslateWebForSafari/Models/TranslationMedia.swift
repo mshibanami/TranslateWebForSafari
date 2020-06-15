@@ -31,6 +31,8 @@ enum TranslationMedia {
             return makeURLForDeepL(targetLanguage: targetLanguage)
         case .google:
             return makeURLForGoogle(targetLanguage: targetLanguage)
+        case .papago:
+            return makeURLForPapago(targetLanguage: targetLanguage)
         case .yandex:
             return makeURLForYandex(targetLanguage: targetLanguage)
         }
@@ -90,6 +92,26 @@ enum TranslationMedia {
         case let .page(url, _):
             parameters.append((key: "u", value: url.absoluteString.removingPercentEncoding ?? ""))
             return URL(string: "https://translate.google.com/translate?\(parameters.makeQueryString())")
+        }
+    }
+    
+    private func makeURLForPapago(targetLanguage: Language) -> URL? {
+        var parameters: [URLQueryParameter] = []
+        switch self {
+        case let .text(text, _):
+            parameters.append(contentsOf: [
+                (key: "tk", value: targetLanguage.id),
+                (key: "sk", value: sourceLanguage?.id ?? "auto"),
+                (key: "st", value: text)
+            ])
+            return URL(string: "https://papago.naver.com/?\(parameters.makeQueryString())")
+        case let .page(url, _):
+            parameters.append(contentsOf: [
+                (key: "target", value: targetLanguage.id),
+                (key: "source", value: sourceLanguage?.id ?? "auto"),
+                (key: "url", value: url.absoluteString.removingPercentEncoding ?? "")
+            ])
+            return URL(string: "https://papago.naver.net/website?\(parameters.makeQueryString())")
         }
     }
     
