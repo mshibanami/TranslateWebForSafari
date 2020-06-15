@@ -1,4 +1,4 @@
-# Translate Web For Safari Gen for Safari
+# Translate Web For Safari
 
 This is a Safari extension that translates the current tab or selected text.
 
