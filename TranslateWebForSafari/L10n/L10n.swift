@@ -315,7 +315,7 @@ class L10n {
     static let uzbek = "Uzbek"
     static let uzbekCyrillic = "Uzbek (Cyrillic)"
     static let venda = "Venda"
-    static let vietnamese = "Vietnamese"
+    static let vietnamese = NSLocalizedString("Vietnamese", comment: "")
     static let walloon = "Walloon"
     static let welsh = NSLocalizedString("Welsh", comment: "")
     static let westernFrisian = "Western Frisian"
