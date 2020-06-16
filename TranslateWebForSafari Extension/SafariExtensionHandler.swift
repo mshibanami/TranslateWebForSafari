@@ -32,7 +32,12 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     static let languageDetector = LanguageDetector()
     
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
+        Log.info("\(#function) - \(messageName)")
         page.getPropertiesWithCompletionHandler { properties in
+            guard properties?.isActive ?? false else {
+                Log.info("Finished message handling without doing anything. (The page isn't active.)")
+                return
+            }
             switch messageName {
             case "selectionChanged":
                 let selectedTextKey = "selectedText"
@@ -76,6 +81,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
     override func toolbarItemClicked(in window: SFSafariWindow) {
+        Log.info("\(#function)")
         switch UserDefaults.group.toolbarItemBehavior {
         case .alwaysTranslatePage:
             window.triggerPageTranslation()
@@ -189,14 +195,12 @@ private extension SFSafariWindow {
     }
     
     func openTranslatedPageForActivePage(language: Language?) {
-        getActiveTab { tab in
-            tab?.getActivePage { page in
-                page?.getPropertiesWithCompletionHandler { properties in
-                    guard let url = properties?.url else {
-                        return
-                    }
-                    self.openPage(for: .page(url, language))
+        getActivePage { page in
+            page?.getPropertiesWithCompletionHandler { properties in
+                guard let url = properties?.url else {
+                    return
                 }
+                self.openPage(for: .page(url, language))
             }
         }
     }
