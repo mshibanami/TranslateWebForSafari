@@ -36,8 +36,8 @@ extension UserDefaults {
         }
         
         set {
-            let languageID = pageTargetLanguage.id
             set(newValue.rawValue, forKey: AppKey.pageTranslationService.rawValue)
+            let languageID = pageTargetLanguage.id
             pageTargetLanguage = newValue.supportedLanguagesForPageTranslation().first(where: { $0.id == languageID})
                 ?? newValue.defaultLanguage()
         }
@@ -67,8 +67,8 @@ extension UserDefaults {
             return service
         }
         set {
-            let languageID = textTargetLanguage.id
             set(newValue.rawValue, forKey: AppKey.textTranslationService.rawValue)
+            let languageID = textTargetLanguage.id
             textTargetLanguage = newValue.supportedLanguagesForTextTranslation().first(where: { $0.id == languageID})
                 ?? newValue.defaultLanguage()
         }

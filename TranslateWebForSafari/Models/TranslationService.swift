@@ -39,34 +39,34 @@ enum TranslationService: String, CaseIterable {
     func supportedLanguagesForTextTranslation() -> [Language] {
         switch self {
         case .baidu:
-            return supportedLanguagesInBaidu()
+            return Self.supportedLanguagesInBaidu()
         case .bing:
-            return supportedLanguagesInBing()
+            return Self.supportedLanguagesInBing()
         case .deepL:
-            return supportedLanguagesInDeepL()
+            return Self.supportedLanguagesInDeepL()
         case .google:
-            return supportedLanguagesInGoogle()
+            return Self.supportedLanguagesInGoogle()
         case .papago:
-            return supportedLanguagesInPapagoForTextTranslation()
+            return Self.supportedLanguagesInPapagoForTextTranslation()
         case .yandex:
-            return supportedLanguagesInYandex()
+            return Self.supportedLanguagesInYandex()
         }
     }
     
     func supportedLanguagesForPageTranslation() -> [Language] {
         switch self {
         case .baidu:
-            return supportedLanguagesInBaidu()
+            return Self.supportedLanguagesInBaidu()
         case .bing:
-            return supportedLanguagesInBing()
+            return Self.supportedLanguagesInBing()
         case .deepL:
-            return supportedLanguagesInDeepL()
+            return Self.supportedLanguagesInDeepL()
         case .google:
-            return supportedLanguagesInGoogle()
+            return Self.supportedLanguagesInGoogle()
         case .papago:
-            return supportedLanguagesInPapagoForPageTranslation()
+            return Self.supportedLanguagesInPapagoForPageTranslation()
         case .yandex:
-            return supportedLanguagesInYandex()
+            return Self.supportedLanguagesInYandex()
         }
     }
     
@@ -88,6 +88,70 @@ enum TranslationService: String, CaseIterable {
         return supportedLanguagesForTextTranslation().first(where: { $0.id == serviceCode })
     }
     
+    func systemLanguageCodesTable() -> [(systemCode: String, serviceCode: String)] {
+        switch self {
+        case .baidu:
+            return [
+                ("ar", "ar"),
+                ("ca", "cat"),
+                ("cy", "wel"),
+                ("da", "dan"),
+                ("es", "spa"),
+                ("et", "est"),
+                ("fa", "per"),
+                ("fr", "fra"),
+                ("ga", "gle"),
+                ("he", "heb"),
+                ("ja", "jp"),
+                ("jw", "jav"),
+                ("ko", "kor"),
+                ("mk", "mac"),
+                ("ms", "may"),
+                ("ne", "nep"),
+                ("pt-BR", "pot"),
+                ("pt-PT", "pt"),
+                ("ro", "rom"),
+                ("sv", "swe"),
+                ("sr", "srp"),
+                ("ta", "tam"),
+                ("vi", "vie"),
+                ("zh-Hans", "zh"),
+                ("zh-Hant", "cht")
+            ]
+        case .bing:
+            return [
+                ("pt-BR", "pt"),
+                ("pt-PT", "pt-pt"),
+            ]
+        case .deepL:
+            return [
+                ("pt-BR", "pt"),
+                ("pt-PT", "pt"),
+                ("zh-Hans", "zh"),
+                ("zh-Hant", "zh"),
+            ]
+        case .google:
+            return [
+                ("pt-BR", "pt"),
+                ("pt-PT", "pt"),
+                ("he", "iw"),
+                ("zh-Hans", "zh-CN"),
+                ("zh-Hant", "zh-TW"),
+            ]
+        case .papago:
+            return [
+                ("zh-Hans", "zh-CN"),
+                ("zh-Hant", "zh-TW"),
+            ]
+        case .yandex:
+            return [
+                ("pt-BR", "pt"),
+                ("pt-PT", "pt"),
+                ("zh-Hans", "zh"),
+                ("zh-Hant", "zh"),
+            ]
+        }
+    }
 }
 
 private extension Bundle {
@@ -97,7 +161,7 @@ private extension Bundle {
 }
 
 private extension TranslationService {
-    func supportedLanguagesInGoogle() -> [Language] {
+    static func supportedLanguagesInGoogle() -> [Language] {
         return [
             Language(id: "af", localizedName: L10n.afrikaans),
             Language(id: "am", localizedName: L10n.amharic),
@@ -211,7 +275,7 @@ private extension TranslationService {
         ]
     }
     
-    func supportedLanguagesInBing() -> [Language] {
+    static func supportedLanguagesInBing() -> [Language] {
         return [
             Language(id: "af", localizedName: L10n.afrikaans),
             Language(id: "ar", localizedName: L10n.arabic),
@@ -287,7 +351,7 @@ private extension TranslationService {
         ]
     }
     
-    func supportedLanguagesInDeepL() -> [Language] {
+    static func supportedLanguagesInDeepL() -> [Language] {
         return [
             Language(id: "de", localizedName: L10n.german),
             Language(id: "en", localizedName: L10n.english),
@@ -303,7 +367,7 @@ private extension TranslationService {
         ]
     }
     
-    func supportedLanguagesInBaidu() -> [Language] {
+    static func supportedLanguagesInBaidu() -> [Language] {
         return [
             Language(id: "ach", localizedName: L10n.achinese),
             Language(id: "afr", localizedName: L10n.afrikaans),
@@ -508,7 +572,7 @@ private extension TranslationService {
         ]
     }
     
-    func supportedLanguagesInPapagoForTextTranslation() -> [Language] {
+    static func supportedLanguagesInPapagoForTextTranslation() -> [Language] {
         return [
             Language(id: "de", localizedName: L10n.german),
             Language(id: "en", localizedName: L10n.english),
@@ -528,7 +592,7 @@ private extension TranslationService {
         ]
     }
     
-    func supportedLanguagesInPapagoForPageTranslation() -> [Language] {
+    static func supportedLanguagesInPapagoForPageTranslation() -> [Language] {
         return [
             Language(id: "en", localizedName: L10n.english),
             Language(id: "ja", localizedName: L10n.japanese),
@@ -538,7 +602,7 @@ private extension TranslationService {
         ]
     }
     
-    func supportedLanguagesInYandex() -> [Language] {
+    static func supportedLanguagesInYandex() -> [Language] {
         return [
             Language(id: "af", localizedName: L10n.afrikaans),
             Language(id: "am", localizedName: L10n.amharic),
@@ -640,70 +704,5 @@ private extension TranslationService {
             Language(id: "yi", localizedName: L10n.yiddish),
             Language(id: "zh", localizedName: L10n.chinese)
         ]
-    }
-    
-    func systemLanguageCodesTable() -> [(systemCode: String, serviceCode: String)] {
-        switch self {
-        case .baidu:
-            return [
-                ("ar", "ar"),
-                ("ca", "cat"),
-                ("cy", "wel"),
-                ("da", "dan"),
-                ("es", "spa"),
-                ("et", "est"),
-                ("fa", "per"),
-                ("fr", "fra"),
-                ("ga", "gle"),
-                ("he", "heb"),
-                ("ja", "jp"),
-                ("jw", "jav"),
-                ("ko", "kor"),
-                ("mk", "mac"),
-                ("ms", "may"),
-                ("ne", "nep"),
-                ("pt-BR", "pot"),
-                ("pt-PT", "pt"),
-                ("ro", "rom"),
-                ("sv", "swe"),
-                ("sr", "srp"),
-                ("ta", "tam"),
-                ("vi", "vie"),
-                ("zh-Hans", "zh"),
-                ("zh-Hant", "cht")
-            ]
-        case .bing:
-            return [
-                ("pt-BR", "pt"),
-                ("pt-PT", "pt-pt"),
-            ]
-        case .deepL:
-            return [
-                ("pt-BR", "pt"),
-                ("pt-PT", "pt"),
-                ("zh-Hans", "zh"),
-                ("zh-Hant", "zh"),
-            ]
-        case .google:
-            return [
-                ("pt-BR", "pt"),
-                ("pt-PT", "pt"),
-                ("he", "iw"),
-                ("zh-Hans", "zh-CN"),
-                ("zh-Hant", "zh-TW"),
-            ]
-        case .papago:
-            return [
-                ("zh-Hans", "zh-CN"),
-                ("zh-Hant", "zh-TW"),
-            ]
-        case .yandex:
-            return [
-                ("pt-BR", "pt"),
-                ("pt-PT", "pt"),
-                ("zh-Hans", "zh"),
-                ("zh-Hant", "zh"),
-            ]
-        }
     }
 }
