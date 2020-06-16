@@ -147,6 +147,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     @discardableResult
     func openTextTranslationPageIfSelected(window: SFSafariWindow) -> Bool {
         guard let selectedText = State.shared.selectedText else {
+            Log.info("Failed to translate selection because no selection")
             return false
         }
         
