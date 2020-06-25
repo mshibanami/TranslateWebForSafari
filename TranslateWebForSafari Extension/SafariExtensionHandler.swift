@@ -69,6 +69,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                 } else {
                     language = nil
                 }
+                Log.info("Detected Language: \(language?.id ?? "nil")")
                 SFSafariApplication.getActiveWindow {
                     $0?.openTranslatedPageForActivePage(language: language)
                 }

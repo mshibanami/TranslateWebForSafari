@@ -35,8 +35,13 @@
     }
 
     function pageTranslationSendPageTextToExtension() {
+        const text = (
+            document.querySelector("article")
+            ?? document.querySelector("section")
+            ?? document.body
+        ).innerText
         safari.extension.dispatchMessage(
             'pageTranslationPageTextDispatched',
-            { "text": document.body.innerText });
+            { "text": text });
     }
 })();
