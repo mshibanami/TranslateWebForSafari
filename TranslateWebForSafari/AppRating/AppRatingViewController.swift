@@ -25,7 +25,7 @@ class AppRatingViewController: NSViewController {
         case 4:
             return .gotHighRate
         default:
-            assertionFailure()
+            Log.warn("selected rating is unknown: \(selectedRateIndex)")
             return .opening
         }
     }
