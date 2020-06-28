@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import ShortcutRecorder
 
 extension UserDefaults {
     enum AppKey: String {
@@ -21,8 +22,11 @@ extension UserDefaults {
         case lastRunBundleVersion = "lastRunBundleVersion"
         case lastRatedBundleVersion = "lastRatedBundleVersion"
         case lastRatedDate = "lastRatedDate"
+        case pageTranslationShortcut = "pageTranslationShortcut"
+        case textTranslationShortcut = "textTranslationShortcut"
+        case textOrPageTranslationShortcut = "textOrPageTranslationShortcut"
     }
-        
+    
     static var group: UserDefaults = UserDefaults(suiteName: "group.io.github.mshibanami.TranslateWebForSafari")!
     
     var pageTranslationService: TranslationService {
@@ -165,6 +169,39 @@ extension UserDefaults {
         }
         set {
             set(newValue, forKey: AppKey.lastRatedDate.rawValue)
+        }
+    }
+    
+    var pageTranslationShortcut: Shortcut? {
+        get {
+            return (object(forKey: AppKey.pageTranslationShortcut.rawValue) as? Data).flatMap {
+                NSKeyedUnarchiver.unarchiveObject(with: $0) as? Shortcut
+            }
+        }
+        set {
+            set(newValue, forKey: AppKey.pageTranslationShortcut.rawValue)
+        }
+    }
+    
+    var textTranslationShortcut: Shortcut? {
+        get {
+            return (object(forKey: AppKey.textTranslationShortcut.rawValue) as? Data).flatMap {
+                NSKeyedUnarchiver.unarchiveObject(with: $0) as? Shortcut
+            }
+        }
+        set {
+            set(newValue, forKey: AppKey.textTranslationShortcut.rawValue)
+        }
+    }
+    
+    var textOrPageTranslationShortcut: Shortcut? {
+        get {
+            return (object(forKey: AppKey.textOrPageTranslationShortcut.rawValue) as? Data).flatMap {
+                NSKeyedUnarchiver.unarchiveObject(with: $0) as? Shortcut
+            }
+        }
+        set {
+            set(newValue, forKey: AppKey.textOrPageTranslationShortcut.rawValue)
         }
     }
     

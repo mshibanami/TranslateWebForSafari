@@ -12,6 +12,16 @@
             sendSelectionToExtension();
         });
 
+    document.addEventListener(
+        'keydown',
+        (event) => {
+            if (document.hidden) {
+                return;
+            }
+            sendKeydownToExtension(event);
+        },
+        false);
+    
     safari.self.addEventListener(
         'message',
         (event) => {
@@ -43,5 +53,22 @@
         safari.extension.dispatchMessage(
             'pageTranslationPageTextDispatched',
             { "text": text });
+    }
+    
+    function sendKeydownToExtension(event) {
+        const modifierKeys = ["Meta", "Shift", "Alt", "Control"]
+        if modifierKeys.includes(event.key) {
+            return;
+        }
+        
+        safari.extension.dispatchMessage(
+            'shortcutReceived',
+            {
+              'key': event.key,
+              'isCommandPressed': event.metaKey,
+              'isShiftPressed': event.shiftKey,
+              'isControlPressed': event.ctrlKey,
+              'isOptionPressed': event.altKey,
+            });
     }
 })();

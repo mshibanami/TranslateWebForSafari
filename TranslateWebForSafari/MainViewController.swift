@@ -2,6 +2,7 @@
 
 import Cocoa
 import SafariServices.SFSafariApplication
+import ShortcutRecorder
 
 class MainViewController: NSViewController {
     private static let pageTranslationServices = TranslationService.allCases.filter { $0.supportsPageTranslation }
@@ -101,11 +102,30 @@ class MainViewController: NSViewController {
         return view
     }()
     
+    private lazy var shortcutsStackView: NSStackView = {
+        let view = NSStackView(views: [
+            NSStackView(views: [
+                NSTextField(settingLabelWithString: L10n.pageTranslation),
+                pageTranslationShortcutView]),
+            NSStackView(views: [
+                NSTextField(settingLabelWithString: L10n.textTranslation),
+                textTranslationShortcutView]),
+            NSStackView(views: [
+                NSTextField(settingLabelWithString: L10n.textOrPageTranslation),
+                textOrPageTranslationShortcutView]),
+        ])
+        view.spacing = 6
+        view.orientation = .vertical
+        view.alignment = .leading
+        return view
+    }()
+    
     private lazy var settingsGridView: NSGridView = {
         let view = NSGridView(views: [
             [NSTextField(settingLabelWithString: L10n.pageTranslation), pageTranslationStackView],
             [NSTextField(settingLabelWithString: L10n.textTranslation), textTranslationStackView],
-            [NSTextField(settingLabelWithString: L10n.toolbarItemBehavior), toolbarItemBehaviorStackView]
+            [NSTextField(settingLabelWithString: L10n.toolbarItemBehavior), toolbarItemBehaviorStackView],
+            [NSTextField(settingLabelWithString: L10n.keyboardShortcuts), shortcutsStackView],
         ])
         view.rowSpacing = 24
         view.column(at: 0).xPlacement = .trailing
@@ -156,6 +176,12 @@ class MainViewController: NSViewController {
         ])
         return view
     }()
+    
+    private let pageTranslationShortcutView = MainViewController.makeShortcutView(for: .pageTranslationShortcut)
+    private let textTranslationShortcutView = MainViewController.makeShortcutView(for: .textTranslationShortcut)
+    private let textOrPageTranslationShortcutView = MainViewController.makeShortcutView(for: .textOrPageTranslationShortcut)
+    
+    private static let userDefaultsController: NSUserDefaultsController = NSUserDefaultsController(defaults: UserDefaults.group, initialValues: nil)
     
     override func loadView() {
         let titleStackView = NSStackView(views: [
@@ -337,6 +363,16 @@ class MainViewController: NSViewController {
         view.layer?.backgroundColor = Colors.separatorColor.cgColor
         view.heightAnchor.constraint(equalToConstant: 1).isActive = true
         return view
+    }
+    
+    private static func makeShortcutView(for key: UserDefaults.AppKey) -> RecorderControl {
+        let control = RecorderControl()
+        control.bind(
+            .value,
+            to: userDefaultsController,
+            withKeyPath: "values.\(key.rawValue)",
+            options: [.valueTransformerName: NSValueTransformerName.keyedUnarchiveFromDataTransformerName])
+        return control
     }
     
     // MARK: Actions

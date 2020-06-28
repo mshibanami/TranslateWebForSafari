@@ -1,6 +1,7 @@
 // Copyright (c) 2020 Manabu Nakazawa. Licensed under the MIT license. See LICENSE in the project root for license information.
 
 import SafariServices
+import ShortcutRecorder
 
 class SafariExtensionHandler: SFSafariExtensionHandler {
     private class State {
@@ -33,50 +34,101 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     override func messageReceived(withName messageName: String, from page: SFSafariPage, userInfo: [String : Any]?) {
         Log.info("\(#function) - \(messageName)")
-        page.getPropertiesWithCompletionHandler { properties in
+        page.getPropertiesWithCompletionHandler { [weak self] properties in
+            guard let self = self else {
+                return
+            }
             guard properties?.isActive ?? false else {
                 Log.info("Finished message handling without doing anything. (The page isn't active.)")
                 return
             }
             switch messageName {
             case "selectionChanged":
-                let selectedTextKey = "selectedText"
-                let selectedTextOptional = (userInfo ?? [:])[selectedTextKey]
-                guard let selectedText = selectedTextOptional as? String else {
-                    assertionFailure("Unexpected data type or it's not set: \(selectedTextKey)=\(String(describing: selectedTextOptional))")
-                    return
-                }
-                State.shared.selectedText = selectedText
-                page.getContainingWindow {
-                    guard let window = $0 else {
-                        return
-                    }
-                    self.updateToolbarItemLabel(in: window)
-                }
+                self.selectionChanged(page: page, userInfo: userInfo)
             case "pageTranslationPageTextDispatched":
-                let textKey = "text"
-                let textOptional = (userInfo ?? [:])[textKey]
-                guard let text = textOptional as? String else {
-                    assertionFailure("Unexpected data type or it's not set: \(textKey)=\(String(describing: textOptional))")
-                    return
-                }
-                
-                let language: Language?
-                if #available(OSX 10.14, *) {
-                    language = SafariExtensionHandler.languageDetector.detect(
-                        text: text,
-                        for: UserDefaults.group.pageTranslationService)
-                } else {
-                    language = nil
-                }
-                Log.info("Detected Language: \(language?.id ?? "nil")")
-                SFSafariApplication.getActiveWindow {
-                    $0?.openTranslatedPageForActivePage(language: language)
-                }
-                break
+                self.pageTranslationPageTextDispatched(userInfo: userInfo)
+            case "shortcutReceived":
+                self.shortcutReceived(page: page, userInfo: userInfo ?? [:])
             default:
-                assertionFailure("Message name \(messageName) is not supported")
-                break
+                Log.warn("Message name \(messageName) is not supported")
+            }
+        }
+    }
+    
+    private func selectionChanged(page: SFSafariPage, userInfo: [String: Any]?) {
+        let selectedTextKey = "selectedText"
+        let selectedTextOptional = (userInfo ?? [:])[selectedTextKey]
+        guard let selectedText = selectedTextOptional as? String else {
+            assertionFailure("Unexpected data type or it's not set: \(selectedTextKey)=\(String(describing: selectedTextOptional))")
+            return
+        }
+        State.shared.selectedText = selectedText
+        page.getContainingWindow {
+            guard let window = $0 else {
+                return
+            }
+            self.updateToolbarItemLabel(in: window)
+        }
+    }
+    
+    private func pageTranslationPageTextDispatched(userInfo: [String: Any]?) {
+        let textKey = "text"
+        let textOptional = (userInfo ?? [:])[textKey]
+        guard let text = textOptional as? String else {
+            assertionFailure("Unexpected data type or it's not set: \(textKey)=\(String(describing: textOptional))")
+            return
+        }
+        
+        let language: Language?
+        if #available(OSX 10.14, *) {
+            language = SafariExtensionHandler.languageDetector.detect(
+                text: text,
+                for: UserDefaults.group.pageTranslationService)
+        } else {
+            language = nil
+        }
+        Log.info("Detected Language: \(language?.id ?? "nil")")
+        SFSafariApplication.getActiveWindow {
+            $0?.openTranslatedPageForActivePage(language: language)
+        }
+    }
+    
+    private func shortcutReceived(page: SFSafariPage, userInfo: [String: Any]) {
+        guard let key = userInfo["key"] as? String,
+            let isCommandPressed = userInfo["isCommandPressed"] as? Bool,
+            let isShiftPressed = userInfo["isShiftPressed"] as? Bool,
+            let isControlPressed = userInfo["isControlPressed"] as? Bool,
+            let isOptionPressed = userInfo["isOptionPressed"] as? Bool else {
+                assertionFailure("Unexpected data type or it's not set.")
+                return
+        }
+        var keyEquivalent = ""
+        keyEquivalent.append(isCommandPressed ? "⌘" : "")
+        keyEquivalent.append(isShiftPressed ? "⇧" : "")
+        keyEquivalent.append(isControlPressed ? "^" : "")
+        keyEquivalent.append(isOptionPressed ? "⌥" : "")
+        keyEquivalent.append(key)
+        
+        guard let shortcut = Shortcut(keyEquivalent: keyEquivalent) else {
+            Log.warn("Failed to create shortcut from \(keyEquivalent)")
+            return
+        }
+        Log.debug("shortcut: \(shortcut)")
+        let group = UserDefaults.group
+        page.getContainingWindow { [weak self] window in
+            guard let self = self, let window = window else {
+                return
+            }
+            switch shortcut {
+            case group.pageTranslationShortcut:
+                window.triggerPageTranslation()
+            case group.textTranslationShortcut:
+                self.openTextTranslationPageIfSelected(window: window)
+            case group.textOrPageTranslationShortcut:
+                self.openTranslatedTextOrPage(window: window)
+            default:
+                Log.debug("No action found for the shortcut \(shortcut)")
+                return
             }
         }
     }
@@ -89,9 +141,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         case .alwaysTranslateSelectedText:
             openTextTranslationPageIfSelected(window: window)
         case .translateTextIfSelected:
-            if !openTextTranslationPageIfSelected(window: window) {
-                window.triggerPageTranslation()
-            }
+            openTranslatedTextOrPage(window: window)
         }
     }
     
@@ -146,7 +196,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
     @discardableResult
-    func openTextTranslationPageIfSelected(window: SFSafariWindow) -> Bool {
+    private func openTextTranslationPageIfSelected(window: SFSafariWindow) -> Bool {
         guard let selectedText = State.shared.selectedText else {
             Log.info("Failed to translate selection because no selection")
             return false
@@ -162,6 +212,12 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         }
         window.openPage(for: .text(selectedText, sourceLanguage))
         return true
+    }
+    
+    private func openTranslatedTextOrPage(window: SFSafariWindow) {
+        if !openTextTranslationPageIfSelected(window: window) {
+            window.triggerPageTranslation()
+        }
     }
 }
 
@@ -248,7 +304,7 @@ private extension SFSafariWindow {
     }
 }
 
-private extension SFSafariTab {
+extension SFSafariTab {
     func mojaveCompatibleNavigate(to url: URL) {
         if Consts.usesMojaveCompatibleAPIOnly {
             getActivePage {
