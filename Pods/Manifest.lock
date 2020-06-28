@@ -1,0 +1,16 @@
+PODS:
+  - ShortcutRecorder (3.1)
+
+DEPENDENCIES:
+  - ShortcutRecorder
+
+SPEC REPOS:
+  trunk:
+    - ShortcutRecorder
+
+SPEC CHECKSUMS:
+  ShortcutRecorder: fdf620aca34101b0cba3b10fca815e0459254189
+
+PODFILE CHECKSUM: d7bfcd8923a2cedb732318592763b07736b2bea9
+
+COCOAPODS: 1.9.3

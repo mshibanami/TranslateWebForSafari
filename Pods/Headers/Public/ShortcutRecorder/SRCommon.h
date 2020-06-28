@@ -1,0 +1,1 @@
+../../../ShortcutRecorder/Library/SRCommon.h

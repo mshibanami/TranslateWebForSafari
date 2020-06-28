@@ -1,0 +1,1537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0368B5BA1F0E05C48442FAAC8A753BFB /* SRKeyCodeTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = FBD0440B313548457A59A6DAD92A316F /* SRKeyCodeTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		155B67056366F86FBFECBE97C7A1A811 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 95CD671260BC9F73E4296CDDB8A5E383 /* ru.lproj */; };
+		16703A536AED335E3A7986F85EF7AAD1 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A5CD5AFD55E86C5D69812AE01A9770 /* Cocoa.framework */; };
+		182E4F80ACC10762F0C0CBE5A8FA8675 /* SRShortcutController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62109FD4F332E2B8B6ECBBD867AA120 /* SRShortcutController.m */; };
+		1BC403582F263E5302B2086A0C9BCB31 /* SRKeyBindingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB39985B633A6EA94DDAFF706C07602 /* SRKeyBindingTransformer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		1E1A4A4954D95DFA65EA7D41A966B263 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A5CD5AFD55E86C5D69812AE01A9770 /* Cocoa.framework */; };
+		213E401C4C6A74362AEAE9F949474C20 /* SRShortcutFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 83BCA5C712D19F2981C3DDF728069591 /* SRShortcutFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2195625F09F7ADF14E8BAC326E717C65 /* Pods-TranslateWebForSafariTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 395E983EA3257C85005E693DBB217362 /* Pods-TranslateWebForSafariTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21D23B6B20C01C54990159D50FBA1FDE /* SRModifierFlagsTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = ED724494351302BA0CA0A45B35FA2D12 /* SRModifierFlagsTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		26603F5C622F75567A59F861CE792A0B /* ShortcutRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 70240D4D4B772ADA1C3EA61B93E7C7A6 /* ShortcutRecorder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		280786EA823C5F8AD89FAD722FF250A7 /* SRShortcutAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E09015F2D3BEAA248B63C87981C5C375 /* SRShortcutAction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28B392D53D7E33CBBEEBF361365A16A5 /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B495E3EADBF176549EEC0B6FBFF0F1F /* SRRecorderControl.m */; };
+		2B77C0EBAF89EE7D33D88E7409A9BBCB /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 66CFDA78E71600E15E0B09AC43552248 /* ko.lproj */; };
+		2E1844C7298EFC729A6874186F743936 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 75754FC4EE5248C569E9DFBE1D62080E /* ja.lproj */; };
+		2EBB19965D964E15720295AF558883FA /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7868283D58543B0D964BCEE78125AC9F /* SRKeyCodeTransformer.m */; };
+		31A40F40B391555FA1DDF62B8CDA699A /* SRShortcutValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B4C99832A499AEC648474EF8FBB3002 /* SRShortcutValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33EF831C5B4CE700ADA1CB279FF47AA4 /* SRKeyBindingTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = DFB39985B633A6EA94DDAFF706C07602 /* SRKeyBindingTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		34463E5DF1A1EC524B3BA68FFC3B576F /* nl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 929E85CCBBF271F9C77C82677E3C46E5 /* nl.lproj */; };
+		3496AC2FB873BF5E3E99AE6B0AC2408A /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 451C1ABF288B32FF37182075AE6063E2 /* pl.lproj */; };
+		36B566D626965610D34E80317CDC8F19 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8361FDCE534C28CE8EACD6B796A834DB /* Carbon.framework */; };
+		36C95CB529B2A994BBE6B1F6D630DE88 /* SRShortcutController.h in Headers */ = {isa = PBXBuildFile; fileRef = 62BB64EC620CE737C271A1F2E385AE59 /* SRShortcutController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		372BAA2C1EAB81C02EE5B083E781065B /* SRRecorderControlStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A47CC95FFA6F64019ACF76033E96B649 /* SRRecorderControlStyle.m */; };
+		38599513CE12815DEB6AB58CB28149CE /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = FF6C9963129C49D21176E713D013C9D5 /* pt.lproj */; };
+		3AF5080B9D7AE7E64586E9C777D72C46 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A5CD5AFD55E86C5D69812AE01A9770 /* Cocoa.framework */; };
+		3BB85FF7364C2D9C69ECA70FCE1D92E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F4164A3598AA1981E63B6D4D06436F5 /* Images.xcassets */; };
+		4360EDB4251DAF31AB6801889A8A6A9B /* ShortcutRecorder-library-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B472D78190F57ECDC8D0978BA5C969D /* ShortcutRecorder-library-dummy.m */; };
+		44A21633CEF06BA0BCA1E28FA3C0E415 /* SRShortcutValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B4C99832A499AEC648474EF8FBB3002 /* SRShortcutValidator.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		475853D4F2E346652C275933491C7DB1 /* SRKeyBindingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B304DE9510F9B7C59CB7B950676B6 /* SRKeyBindingTransformer.m */; };
+		4A33E12445384E6BCD6E50257697A1BC /* SRShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD192236579829D024D9F45210504B /* SRShortcut.m */; };
+		4B57497B4D768CF4971B2DA709FC6687 /* SRRecorderControlStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = A47CC95FFA6F64019ACF76033E96B649 /* SRRecorderControlStyle.m */; };
+		57CC8EF9746A77CE94A2539B97EBBEF9 /* SRKeyCodeTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = FBD0440B313548457A59A6DAD92A316F /* SRKeyCodeTransformer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		58CEF95A71D62CF71A91F077E0449658 /* ShortcutRecorder-framework-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48E614B16B591942B5ABA5ABB1FE893F /* ShortcutRecorder-framework-dummy.m */; };
+		59E282A254490DA44CB8BACD197DE5C3 /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2012187A26FB98945F71BAC02B864C /* SRCommon.m */; };
+		5DA31A10342D3EC3B7A4C22F852AC6EA /* sv.lproj in Resources */ = {isa = PBXBuildFile; fileRef = B0F6FEF0BCEA28ECEAAE492290BC5C35 /* sv.lproj */; };
+		5EE300C26BB0F2C74A67B4DEC2CFA38C /* SRShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C558DADE2E52C18FF9568F40775102 /* SRShortcutValidator.m */; };
+		635E4B8A5F9CDCDDAA4B1B9F28EEF664 /* SRShortcut.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FD192236579829D024D9F45210504B /* SRShortcut.m */; };
+		647A1AD7FA773392C7363850DA9FC573 /* SRShortcutController.m in Sources */ = {isa = PBXBuildFile; fileRef = B62109FD4F332E2B8B6ECBBD867AA120 /* SRShortcutController.m */; };
+		6591203336BB84D44985C221BC429082 /* SRKeyCodeTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7868283D58543B0D964BCEE78125AC9F /* SRKeyCodeTransformer.m */; };
+		68A428DBC13ED7847FCDE6DA7764AA3C /* SRShortcut.h in Headers */ = {isa = PBXBuildFile; fileRef = 0961D115CD46D420402287299CE93291 /* SRShortcut.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6B35278B5CB466A3200E7156A04585EF /* SRKeyBindingTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E6B304DE9510F9B7C59CB7B950676B6 /* SRKeyBindingTransformer.m */; };
+		716A0B2080D8CA73D55194893CFD522F /* SRShortcutAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A3CAAB8EA47497FE372B3AC5A9D2F /* SRShortcutAction.m */; };
+		7174711EF7BC77D37361299CD344E59D /* SRShortcutFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 081822CF822593D57F4885FC872DDFBC /* SRShortcutFormatter.m */; };
+		746C34B4B32F47C131964442A5432D60 /* ca.lproj in Resources */ = {isa = PBXBuildFile; fileRef = EC3D46ABCC3C7117622EC9E7186A52A2 /* ca.lproj */; };
+		775C5CC17A01FB6EBC0D4586EBFD9247 /* th.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 3A9EEC48E4D78BFB126FAFD974233B61 /* th.lproj */; };
+		78E5B9D0E2B754016629ED8FE46C725A /* ShortcutRecorder-framework-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F10315EC5C837D494C9B3D64B33E4100 /* ShortcutRecorder-framework-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7973160BF8DCB2EEAF297B36BEB14ECE /* SRShortcutValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 20C558DADE2E52C18FF9568F40775102 /* SRShortcutValidator.m */; };
+		7A0DFFE165E660C9D51C7444B38D2FD3 /* nb.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 2090EABA672DF64AF5A21FA0AEFD6D7C /* nb.lproj */; };
+		800A19159EF171430D7BA1359B12BDCE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A5CD5AFD55E86C5D69812AE01A9770 /* Cocoa.framework */; };
+		80E6FA5F4F60EE9ECD74F7B5A8D39063 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 97156C137E1A02836380B87EC1565D37 /* zh-Hant.lproj */; };
+		8858517A3EA2C4CC970AF941D4213285 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 50DDBC91B15A854BCCD380B55FEDD806 /* it.lproj */; };
+		8B82343A1C63CD66C3538916CA59B417 /* SRModifierFlagsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C419628992A5492E4438FA4F9FE275 /* SRModifierFlagsTransformer.m */; };
+		8BA865017D9CD94A5C656058AA6837F5 /* ShortcutRecorder.h in Headers */ = {isa = PBXBuildFile; fileRef = 70240D4D4B772ADA1C3EA61B93E7C7A6 /* ShortcutRecorder.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8BBAA2367FF1AE6566148A5DD8F004BF /* SRKeyEquivalentModifierMaskTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 22415F2824F7B1E17C6B918C8B9E1E83 /* SRKeyEquivalentModifierMaskTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FBC392582144395EE3F50CC26131CDB /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = BDB4586DEB6DE1B68E25987BDE487E2D /* de.lproj */; };
+		943ECA59199046F548B3C3BB3C28DFE5 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 43E1B5CCE05E3F04625FE4544007F338 /* fr.lproj */; };
+		95C1B03EA5B2F89B840D61E9F40AA979 /* Pods-TranslateWebForSafariTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F7D9E509FDCC570F73B75D575FAA54D5 /* Pods-TranslateWebForSafariTests-dummy.m */; };
+		97C0CCE329A658E396AA7BFE197C284D /* SRRecorderControl.h in Headers */ = {isa = PBXBuildFile; fileRef = A338A87E144EBC0C1ECB465C171A1BC5 /* SRRecorderControl.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9B0A74DAE5B302043087F229F93988B8 /* SRModifierFlagsTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C419628992A5492E4438FA4F9FE275 /* SRModifierFlagsTransformer.m */; };
+		9E4828C568E39D187213E6E695A29DB2 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AB381F3E5F9E9CBF1EDC0043B7594D7A /* zh-Hans.lproj */; };
+		A0541A8625FAAA656DECA5D0356D419A /* SRRecorderControlStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EB8D44A08DC7C22AFDA472603AFF536 /* SRRecorderControlStyle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0D2645E5F968691AE31821D736DCC93 /* SRModifierFlagsTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = ED724494351302BA0CA0A45B35FA2D12 /* SRModifierFlagsTransformer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A6733E868E171A320014EF8043990E5B /* SRShortcut.h in Headers */ = {isa = PBXBuildFile; fileRef = 0961D115CD46D420402287299CE93291 /* SRShortcut.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A93A0981ECC426EECA079CCB38AAE8D1 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E66467CE4C3DAC4FF113B54583F0D03 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-dummy.m */; };
+		AC57FD9B43B69F0529C77BEAE5B28779 /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 7722AA2D91EA0A751B3CAB2CCD439775 /* en.lproj */; };
+		ADAF7EB67AA06F98FC99577F09A0D71E /* SRRecorderControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B495E3EADBF176549EEC0B6FBFF0F1F /* SRRecorderControl.m */; };
+		ADFDA6D1A25AF70BDA2823CF67DD091A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A5CD5AFD55E86C5D69812AE01A9770 /* Cocoa.framework */; };
+		AECE6A83337007473083E96C4538692D /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 6A2AE11EF7641328F131C603094C4F21 /* cs.lproj */; };
+		AEEA416686C5180C43DC171DC5833CEF /* SRKeyEquivalentModifierMaskTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 22415F2824F7B1E17C6B918C8B9E1E83 /* SRKeyEquivalentModifierMaskTransformer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		AF02BF3A3D981DC5A80356FAAA5FFF6E /* pt-BR.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E186F8D90EAB984DDB84F12AD667AA30 /* pt-BR.lproj */; };
+		B03B8D4B4505E72ADCD1E90A4FA6152A /* SRShortcutAction.h in Headers */ = {isa = PBXBuildFile; fileRef = E09015F2D3BEAA248B63C87981C5C375 /* SRShortcutAction.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B176464BEAE7F45D2A53D5940B1F310B /* SRRecorderControl.h in Headers */ = {isa = PBXBuildFile; fileRef = A338A87E144EBC0C1ECB465C171A1BC5 /* SRRecorderControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4DB842F9019B6B07064FAF355E70B56 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D186DF8D948338C32D8406CB61A5191 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B55540D63C40A01BF8CE5EA27BA38FED /* SRKeyEquivalentModifierMaskTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC45F36B056C15D3CDBF2C034ACAB6B /* SRKeyEquivalentModifierMaskTransformer.m */; };
+		B645478C6E5F06F03E4A8CB23A4BB303 /* Pods-TranslateWebForSafari Extension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C16EA435C551117FCB2662765D43FC7 /* Pods-TranslateWebForSafari Extension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B68A5655C7B23AA77DC1BBAFFE32EBF7 /* Pods-TranslateWebForSafari-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E92FC9E6B27869E481C141C12BEB3B3 /* Pods-TranslateWebForSafari-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B780B5D866591CD5E64F4B749FAFA23B /* SRKeyEquivalentTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5DB5EA82C7D4E0771F5B7DC63FEE5F /* SRKeyEquivalentTransformer.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BACE1CEBF485E26DF5C89CFD7595ED6F /* SRKeyEquivalentTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10774BD237339DBB79275FF9C95BD44A /* SRKeyEquivalentTransformer.m */; };
+		BE80DDC6EAA667B5332104873F1493DF /* SRShortcutController.h in Headers */ = {isa = PBXBuildFile; fileRef = 62BB64EC620CE737C271A1F2E385AE59 /* SRShortcutController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BF83D61E880732FC6D3A65E12E2A93EB /* SRCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A78C778E3E610212A725FF4E54749A7 /* SRCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BFB919151325A2A83CC6F25A678BFB7C /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A0354CB53D4B6C8AB75C02A47000B1B5 /* es.lproj */; };
+		C0D6E6B50810874B51DAAE655A414554 /* SRRecorderControlStyle.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EB8D44A08DC7C22AFDA472603AFF536 /* SRRecorderControlStyle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C1476FB6FA3218CD56F2DA7847A17599 /* SRKeyEquivalentModifierMaskTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FC45F36B056C15D3CDBF2C034ACAB6B /* SRKeyEquivalentModifierMaskTransformer.m */; };
+		C44C33306228DE57A809A29B875CA7D1 /* sk.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 00DCE0F977746C80118427CCBA9C2923 /* sk.lproj */; };
+		C8778AE048EE91F257A97C9B5D1C5F55 /* SRKeyEquivalentTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C5DB5EA82C7D4E0771F5B7DC63FEE5F /* SRKeyEquivalentTransformer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D7E1352CAE80EF578997679ABD07861D /* SRCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2012187A26FB98945F71BAC02B864C /* SRCommon.m */; };
+		DBE6D45AA404C786D1727B5A64B18313 /* Pods-TranslateWebForSafari Extension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6199D2440D3AFECF270D1800A7A6011 /* Pods-TranslateWebForSafari Extension-dummy.m */; };
+		DC2601CA9A936E1070EE30D8131ADAEA /* SRShortcutFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 081822CF822593D57F4885FC872DDFBC /* SRShortcutFormatter.m */; };
+		DE451EF3F765F9617D722E7266E7DFB2 /* Pods-TranslateWebForSafari-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F40FF0A9123DD13BE137C6C272A03AD /* Pods-TranslateWebForSafari-dummy.m */; };
+		E4403378ED4BB4785F5498101B2CB0D4 /* el.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 515DA1CECDF15F8224173E7F2756FBC9 /* el.lproj */; };
+		EA75CC2C7C5BCD28214AE7BA1A7E2CCC /* SRCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A78C778E3E610212A725FF4E54749A7 /* SRCommon.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EC55DF74A485DBA7A1B4682F185CD25C /* SRShortcutFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 83BCA5C712D19F2981C3DDF728069591 /* SRShortcutFormatter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		EDB2A281C6C4B5E1E3B4266020E0029B /* SRShortcutAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6A3CAAB8EA47497FE372B3AC5A9D2F /* SRShortcutAction.m */; };
+		F5EAC3E19EE5A29ADBBE9D45BB4CBDC0 /* SRKeyEquivalentTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 10774BD237339DBB79275FF9C95BD44A /* SRKeyEquivalentTransformer.m */; };
+		FA465C301DA74B844B1F736AD51891D1 /* ro.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AFF9D130A6AE2B9DB8E37060B567FE55 /* ro.lproj */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09476556B931EC15A2658C95D9A7A58A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56BF710958782268ED9C992917D83465;
+			remoteInfo = "Pods-TranslateWebForSafari";
+		};
+		335D232F63FEF4640FD344DF53D28AB0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A43103CBFAF5F9BBC1CB219A9D6D9712;
+			remoteInfo = "ShortcutRecorder-framework";
+		};
+		7CA0F39742D284FD73308D660F424E96 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A43103CBFAF5F9BBC1CB219A9D6D9712;
+			remoteInfo = "ShortcutRecorder-framework";
+		};
+		FA57ECC70D3DD09A00EE0C3BDF763F1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A43103CBFAF5F9BBC1CB219A9D6D9712;
+			remoteInfo = "ShortcutRecorder-framework";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00DCE0F977746C80118427CCBA9C2923 /* sk.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sk.lproj; path = Resources/sk.lproj; sourceTree = "<group>"; };
+		081822CF822593D57F4885FC872DDFBC /* SRShortcutFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRShortcutFormatter.m; path = Library/SRShortcutFormatter.m; sourceTree = "<group>"; };
+		0961D115CD46D420402287299CE93291 /* SRShortcut.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRShortcut.h; path = Library/SRShortcut.h; sourceTree = "<group>"; };
+		0BFE8F8261AD5FF3E8EFD74B057D77E5 /* ShortcutRecorder-library-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ShortcutRecorder-library-prefix.pch"; path = "../ShortcutRecorder-library/ShortcutRecorder-library-prefix.pch"; sourceTree = "<group>"; };
+		0CA9EF555512CFAEF518AE3615078DC4 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests-Info.plist"; sourceTree = "<group>"; };
+		0EB8D44A08DC7C22AFDA472603AFF536 /* SRRecorderControlStyle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRRecorderControlStyle.h; path = Library/SRRecorderControlStyle.h; sourceTree = "<group>"; };
+		0F4DD6FA636B1E23E1E73C6B41845B41 /* Pods-TranslateWebForSafari-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranslateWebForSafari-acknowledgements.plist"; sourceTree = "<group>"; };
+		10774BD237339DBB79275FF9C95BD44A /* SRKeyEquivalentTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKeyEquivalentTransformer.m; path = Library/SRKeyEquivalentTransformer.m; sourceTree = "<group>"; };
+		1646C1E7D6184FCDE7D289529477296F /* ShortcutRecorder-library.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "ShortcutRecorder-library.debug.xcconfig"; path = "../ShortcutRecorder-library/ShortcutRecorder-library.debug.xcconfig"; sourceTree = "<group>"; };
+		1B472D78190F57ECDC8D0978BA5C969D /* ShortcutRecorder-library-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ShortcutRecorder-library-dummy.m"; path = "../ShortcutRecorder-library/ShortcutRecorder-library-dummy.m"; sourceTree = "<group>"; };
+		1C16EA435C551117FCB2662765D43FC7 /* Pods-TranslateWebForSafari Extension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TranslateWebForSafari Extension-umbrella.h"; sourceTree = "<group>"; };
+		1E6B304DE9510F9B7C59CB7B950676B6 /* SRKeyBindingTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKeyBindingTransformer.m; path = Library/SRKeyBindingTransformer.m; sourceTree = "<group>"; };
+		2090EABA672DF64AF5A21FA0AEFD6D7C /* nb.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nb.lproj; path = Resources/nb.lproj; sourceTree = "<group>"; };
+		20C558DADE2E52C18FF9568F40775102 /* SRShortcutValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRShortcutValidator.m; path = Library/SRShortcutValidator.m; sourceTree = "<group>"; };
+		22415F2824F7B1E17C6B918C8B9E1E83 /* SRKeyEquivalentModifierMaskTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKeyEquivalentModifierMaskTransformer.h; path = Library/SRKeyEquivalentModifierMaskTransformer.h; sourceTree = "<group>"; };
+		246B31C6C3EABB2D87AC4E31B8FD870C /* ShortcutRecorder-framework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ShortcutRecorder-framework.release.xcconfig"; sourceTree = "<group>"; };
+		2B24C3E41A565DE1C593F1B58838882E /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		34FD192236579829D024D9F45210504B /* SRShortcut.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRShortcut.m; path = Library/SRShortcut.m; sourceTree = "<group>"; };
+		395E983EA3257C85005E693DBB217362 /* Pods-TranslateWebForSafariTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TranslateWebForSafariTests-umbrella.h"; sourceTree = "<group>"; };
+		3A78C778E3E610212A725FF4E54749A7 /* SRCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRCommon.h; path = Library/SRCommon.h; sourceTree = "<group>"; };
+		3A9EEC48E4D78BFB126FAFD974233B61 /* th.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = th.lproj; path = Resources/th.lproj; sourceTree = "<group>"; };
+		3CB980630ABE470F1205252869DCB5DB /* Pods-TranslateWebForSafari.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TranslateWebForSafari.release.xcconfig"; sourceTree = "<group>"; };
+		3E37775D2DD262C8A9FF7E8D1053895A /* Pods-TranslateWebForSafari-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TranslateWebForSafari-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3F24F09C52190C605374550355FCA761 /* Pods-TranslateWebForSafari Extension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TranslateWebForSafari Extension.modulemap"; sourceTree = "<group>"; };
+		43E1B5CCE05E3F04625FE4544007F338 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = Resources/fr.lproj; sourceTree = "<group>"; };
+		451C1ABF288B32FF37182075AE6063E2 /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = Resources/pl.lproj; sourceTree = "<group>"; };
+		48E614B16B591942B5ABA5ABB1FE893F /* ShortcutRecorder-framework-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ShortcutRecorder-framework-dummy.m"; sourceTree = "<group>"; };
+		4B4C99832A499AEC648474EF8FBB3002 /* SRShortcutValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRShortcutValidator.h; path = Library/SRShortcutValidator.h; sourceTree = "<group>"; };
+		50DDBC91B15A854BCCD380B55FEDD806 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = Resources/it.lproj; sourceTree = "<group>"; };
+		515DA1CECDF15F8224173E7F2756FBC9 /* el.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = el.lproj; path = Resources/el.lproj; sourceTree = "<group>"; };
+		51F82630016C01D0A36DC107639397EB /* ShortcutRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ShortcutRecorder.framework; path = "ShortcutRecorder-framework.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		54584B314E46F1D1AA1C301230011214 /* Pods-TranslateWebForSafari-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranslateWebForSafari-Info.plist"; sourceTree = "<group>"; };
+		5B2012187A26FB98945F71BAC02B864C /* SRCommon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRCommon.m; path = Library/SRCommon.m; sourceTree = "<group>"; };
+		629E49D71FB26029926BBA085F494D63 /* Pods_TranslateWebForSafari.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TranslateWebForSafari.framework; path = "Pods-TranslateWebForSafari.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		62BB64EC620CE737C271A1F2E385AE59 /* SRShortcutController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRShortcutController.h; path = Library/SRShortcutController.h; sourceTree = "<group>"; };
+		641E74B1E6B5D40CDE084CC19BB31AEE /* Pods-TranslateWebForSafari Extension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TranslateWebForSafari Extension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		65A5B1B3DA192BCD6B94CAC35E7BE6AC /* Pods-TranslateWebForSafariTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TranslateWebForSafariTests.modulemap"; sourceTree = "<group>"; };
+		66CFDA78E71600E15E0B09AC43552248 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = Resources/ko.lproj; sourceTree = "<group>"; };
+		6833A6590B0E810BCA50FE4911B59CE5 /* Pods-TranslateWebForSafari Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TranslateWebForSafari Extension.release.xcconfig"; sourceTree = "<group>"; };
+		6A2AE11EF7641328F131C603094C4F21 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = cs.lproj; path = Resources/cs.lproj; sourceTree = "<group>"; };
+		6C5DB5EA82C7D4E0771F5B7DC63FEE5F /* SRKeyEquivalentTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKeyEquivalentTransformer.h; path = Library/SRKeyEquivalentTransformer.h; sourceTree = "<group>"; };
+		70240D4D4B772ADA1C3EA61B93E7C7A6 /* ShortcutRecorder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ShortcutRecorder.h; path = Library/ShortcutRecorder.h; sourceTree = "<group>"; };
+		70A4B2A07D928B2A293CD1EE607F1ABD /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		72296C88DDA829FEFFE4A365AD238356 /* Pods_TranslateWebForSafariTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TranslateWebForSafariTests.framework; path = "Pods-TranslateWebForSafariTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7236208A325C40C4E29F9C9F7E5CB957 /* ShortcutRecorder-library.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "ShortcutRecorder-library.release.xcconfig"; path = "../ShortcutRecorder-library/ShortcutRecorder-library.release.xcconfig"; sourceTree = "<group>"; };
+		73AAD7EB65C6CDD4C5E3CC20130E87AB /* Pods_TranslateWebForSafari_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TranslateWebForSafari_Extension.framework; path = "Pods-TranslateWebForSafari Extension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7432C0A538500FAC7843ABA50E1DD5EF /* Pods-TranslateWebForSafariTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranslateWebForSafariTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		75754FC4EE5248C569E9DFBE1D62080E /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = Resources/ja.lproj; sourceTree = "<group>"; };
+		7722AA2D91EA0A751B3CAB2CCD439775 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = Resources/en.lproj; sourceTree = "<group>"; };
+		7868283D58543B0D964BCEE78125AC9F /* SRKeyCodeTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKeyCodeTransformer.m; path = Library/SRKeyCodeTransformer.m; sourceTree = "<group>"; };
+		7E92FC9E6B27869E481C141C12BEB3B3 /* Pods-TranslateWebForSafari-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TranslateWebForSafari-umbrella.h"; sourceTree = "<group>"; };
+		7F40FF0A9123DD13BE137C6C272A03AD /* Pods-TranslateWebForSafari-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TranslateWebForSafari-dummy.m"; sourceTree = "<group>"; };
+		7F6A3CAAB8EA47497FE372B3AC5A9D2F /* SRShortcutAction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRShortcutAction.m; path = Library/SRShortcutAction.m; sourceTree = "<group>"; };
+		7FC45F36B056C15D3CDBF2C034ACAB6B /* SRKeyEquivalentModifierMaskTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRKeyEquivalentModifierMaskTransformer.m; path = Library/SRKeyEquivalentModifierMaskTransformer.m; sourceTree = "<group>"; };
+		8361FDCE534C28CE8EACD6B796A834DB /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Carbon.framework; sourceTree = DEVELOPER_DIR; };
+		83BCA5C712D19F2981C3DDF728069591 /* SRShortcutFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRShortcutFormatter.h; path = Library/SRShortcutFormatter.h; sourceTree = "<group>"; };
+		8B495E3EADBF176549EEC0B6FBFF0F1F /* SRRecorderControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRRecorderControl.m; path = Library/SRRecorderControl.m; sourceTree = "<group>"; };
+		8C1E547028F853FF50AE4346A35134DB /* Pods-TranslateWebForSafariTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranslateWebForSafariTests-Info.plist"; sourceTree = "<group>"; };
+		8F4164A3598AA1981E63B6D4D06436F5 /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resources/Images.xcassets; sourceTree = "<group>"; };
+		8FE86AA26CC8EF1C8C54636ACCEE182C /* ShortcutRecorder-framework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "ShortcutRecorder-framework.debug.xcconfig"; sourceTree = "<group>"; };
+		929E85CCBBF271F9C77C82677E3C46E5 /* nl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = nl.lproj; path = Resources/nl.lproj; sourceTree = "<group>"; };
+		95CD671260BC9F73E4296CDDB8A5E383 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = Resources/ru.lproj; sourceTree = "<group>"; };
+		965A6451F10044E17ED78522CF5A0E0E /* Pods-TranslateWebForSafariTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TranslateWebForSafariTests.release.xcconfig"; sourceTree = "<group>"; };
+		97156C137E1A02836380B87EC1565D37 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "Resources/zh-Hant.lproj"; sourceTree = "<group>"; };
+		9D186DF8D948338C32D8406CB61A5191 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests-umbrella.h"; sourceTree = "<group>"; };
+		9D75CB41EBD2EC14C1D677C181A964A1 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E66467CE4C3DAC4FF113B54583F0D03 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests-dummy.m"; sourceTree = "<group>"; };
+		9F46113AFF1E5F997293C374CB3F317C /* Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0354CB53D4B6C8AB75C02A47000B1B5 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = Resources/es.lproj; sourceTree = "<group>"; };
+		A0C419628992A5492E4438FA4F9FE275 /* SRModifierFlagsTransformer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRModifierFlagsTransformer.m; path = Library/SRModifierFlagsTransformer.m; sourceTree = "<group>"; };
+		A12CB463008A952D1E2DE8BA8DA01FC2 /* ShortcutRecorder-framework.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "ShortcutRecorder-framework.modulemap"; sourceTree = "<group>"; };
+		A338A87E144EBC0C1ECB465C171A1BC5 /* SRRecorderControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRRecorderControl.h; path = Library/SRRecorderControl.h; sourceTree = "<group>"; };
+		A47CC95FFA6F64019ACF76033E96B649 /* SRRecorderControlStyle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRRecorderControlStyle.m; path = Library/SRRecorderControlStyle.m; sourceTree = "<group>"; };
+		A7289C0266C8AF1005EEC78A92BA626A /* Pods-TranslateWebForSafariTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TranslateWebForSafariTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		AB381F3E5F9E9CBF1EDC0043B7594D7A /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "Resources/zh-Hans.lproj"; sourceTree = "<group>"; };
+		AFF9D130A6AE2B9DB8E37060B567FE55 /* ro.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ro.lproj; path = Resources/ro.lproj; sourceTree = "<group>"; };
+		AFFE45C72E205749AB36457A88798020 /* Pods-TranslateWebForSafari.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TranslateWebForSafari.modulemap"; sourceTree = "<group>"; };
+		B0F6FEF0BCEA28ECEAAE492290BC5C35 /* sv.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = sv.lproj; path = Resources/sv.lproj; sourceTree = "<group>"; };
+		B62109FD4F332E2B8B6ECBBD867AA120 /* SRShortcutController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SRShortcutController.m; path = Library/SRShortcutController.m; sourceTree = "<group>"; };
+		BDB4586DEB6DE1B68E25987BDE487E2D /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = Resources/de.lproj; sourceTree = "<group>"; };
+		BE0BB2D144BE1F58C8D404A45C1C98EA /* ShortcutRecorder-framework-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ShortcutRecorder-framework-Info.plist"; sourceTree = "<group>"; };
+		C1E0642BEE7EAB9BFDEBD715E002F30F /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests-frameworks.sh"; sourceTree = "<group>"; };
+		C53E65E0FB71AC9B9A4682BA28F0F0C8 /* libShortcutRecorder-library.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libShortcutRecorder-library.a"; path = "libShortcutRecorder-library.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6199D2440D3AFECF270D1800A7A6011 /* Pods-TranslateWebForSafari Extension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TranslateWebForSafari Extension-dummy.m"; sourceTree = "<group>"; };
+		C83B57723925621B1CDDF8971FEE3928 /* Pods-TranslateWebForSafariTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TranslateWebForSafariTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2193DA890149B8F1178079147BCCB24 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D3F00AAA06B4D9EE121B7CE9EE60833A /* Pods-TranslateWebForSafari.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TranslateWebForSafari.debug.xcconfig"; sourceTree = "<group>"; };
+		DE305737CE9772395782D581152F6E5C /* Pods-TranslateWebForSafari Extension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranslateWebForSafari Extension-Info.plist"; sourceTree = "<group>"; };
+		DFA00B4FB3A52DCECB2B6356F7852C8A /* Pods-TranslateWebForSafari Extension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranslateWebForSafari Extension-acknowledgements.plist"; sourceTree = "<group>"; };
+		DFB39985B633A6EA94DDAFF706C07602 /* SRKeyBindingTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKeyBindingTransformer.h; path = Library/SRKeyBindingTransformer.h; sourceTree = "<group>"; };
+		E09015F2D3BEAA248B63C87981C5C375 /* SRShortcutAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRShortcutAction.h; path = Library/SRShortcutAction.h; sourceTree = "<group>"; };
+		E186F8D90EAB984DDB84F12AD667AA30 /* pt-BR.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "pt-BR.lproj"; path = "Resources/pt-BR.lproj"; sourceTree = "<group>"; };
+		E567FB8C6495F029A10D711B56CB36FC /* Pods-TranslateWebForSafari Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TranslateWebForSafari Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		EC3D46ABCC3C7117622EC9E7186A52A2 /* ca.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ca.lproj; path = Resources/ca.lproj; sourceTree = "<group>"; };
+		ED724494351302BA0CA0A45B35FA2D12 /* SRModifierFlagsTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRModifierFlagsTransformer.h; path = Library/SRModifierFlagsTransformer.h; sourceTree = "<group>"; };
+		EF2B9ADC98C6BB1646007CE239D1AEF0 /* Pods-TranslateWebForSafari-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TranslateWebForSafari-frameworks.sh"; sourceTree = "<group>"; };
+		F10315EC5C837D494C9B3D64B33E4100 /* ShortcutRecorder-framework-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShortcutRecorder-framework-umbrella.h"; sourceTree = "<group>"; };
+		F3A5CD5AFD55E86C5D69812AE01A9770 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		F5806EDC963F0EF7D87977D0A5F8DE98 /* ShortcutRecorder-framework-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ShortcutRecorder-framework-prefix.pch"; sourceTree = "<group>"; };
+		F7D9E509FDCC570F73B75D575FAA54D5 /* Pods-TranslateWebForSafariTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TranslateWebForSafariTests-dummy.m"; sourceTree = "<group>"; };
+		FBD0440B313548457A59A6DAD92A316F /* SRKeyCodeTransformer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRKeyCodeTransformer.h; path = Library/SRKeyCodeTransformer.h; sourceTree = "<group>"; };
+		FEA27074F5A317E360B2CE6E869110F5 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests.modulemap"; sourceTree = "<group>"; };
+		FF6C9963129C49D21176E713D013C9D5 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = Resources/pt.lproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		387136D1AD606DF80399AEE43A9D1840 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16703A536AED335E3A7986F85EF7AAD1 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49E320B1FC45B295348CC47EC30C38AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ADFDA6D1A25AF70BDA2823CF67DD091A /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		646535BA46465AC81EBED9051F9007B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36B566D626965610D34E80317CDC8F19 /* Carbon.framework in Frameworks */,
+				800A19159EF171430D7BA1359B12BDCE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834DAC79098809572F9E2233503F44BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E1A4A4954D95DFA65EA7D41A966B263 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AFB950B95F04BAAACEA27A5808B77C90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7E81C2A20B237A73E3CF2D18D16947C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AF5080B9D7AE7E64586E9C777D72C46 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22553437EF6A09E9ED1DC9A4749A3B87 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				44603CBA90EC6203D556FF6052F3DB8E /* Pods-TranslateWebForSafari */,
+				7D76C9E167A30EF095500BE82D44D19D /* Pods-TranslateWebForSafari Extension */,
+				888E60E394865300D50E96FD33EA53C8 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests */,
+				5228A0350F7B61416DE5D0C94667C298 /* Pods-TranslateWebForSafariTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		2EB46ECB1DE5DA922D89BFA28A0D5B63 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				8361FDCE534C28CE8EACD6B796A834DB /* Carbon.framework */,
+				F3A5CD5AFD55E86C5D69812AE01A9770 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		44603CBA90EC6203D556FF6052F3DB8E /* Pods-TranslateWebForSafari */ = {
+			isa = PBXGroup;
+			children = (
+				AFFE45C72E205749AB36457A88798020 /* Pods-TranslateWebForSafari.modulemap */,
+				3E37775D2DD262C8A9FF7E8D1053895A /* Pods-TranslateWebForSafari-acknowledgements.markdown */,
+				0F4DD6FA636B1E23E1E73C6B41845B41 /* Pods-TranslateWebForSafari-acknowledgements.plist */,
+				7F40FF0A9123DD13BE137C6C272A03AD /* Pods-TranslateWebForSafari-dummy.m */,
+				EF2B9ADC98C6BB1646007CE239D1AEF0 /* Pods-TranslateWebForSafari-frameworks.sh */,
+				54584B314E46F1D1AA1C301230011214 /* Pods-TranslateWebForSafari-Info.plist */,
+				7E92FC9E6B27869E481C141C12BEB3B3 /* Pods-TranslateWebForSafari-umbrella.h */,
+				D3F00AAA06B4D9EE121B7CE9EE60833A /* Pods-TranslateWebForSafari.debug.xcconfig */,
+				3CB980630ABE470F1205252869DCB5DB /* Pods-TranslateWebForSafari.release.xcconfig */,
+			);
+			name = "Pods-TranslateWebForSafari";
+			path = "Target Support Files/Pods-TranslateWebForSafari";
+			sourceTree = "<group>";
+		};
+		5228A0350F7B61416DE5D0C94667C298 /* Pods-TranslateWebForSafariTests */ = {
+			isa = PBXGroup;
+			children = (
+				65A5B1B3DA192BCD6B94CAC35E7BE6AC /* Pods-TranslateWebForSafariTests.modulemap */,
+				A7289C0266C8AF1005EEC78A92BA626A /* Pods-TranslateWebForSafariTests-acknowledgements.markdown */,
+				7432C0A538500FAC7843ABA50E1DD5EF /* Pods-TranslateWebForSafariTests-acknowledgements.plist */,
+				F7D9E509FDCC570F73B75D575FAA54D5 /* Pods-TranslateWebForSafariTests-dummy.m */,
+				8C1E547028F853FF50AE4346A35134DB /* Pods-TranslateWebForSafariTests-Info.plist */,
+				395E983EA3257C85005E693DBB217362 /* Pods-TranslateWebForSafariTests-umbrella.h */,
+				C83B57723925621B1CDDF8971FEE3928 /* Pods-TranslateWebForSafariTests.debug.xcconfig */,
+				965A6451F10044E17ED78522CF5A0E0E /* Pods-TranslateWebForSafariTests.release.xcconfig */,
+			);
+			name = "Pods-TranslateWebForSafariTests";
+			path = "Target Support Files/Pods-TranslateWebForSafariTests";
+			sourceTree = "<group>";
+		};
+		796A22D6B01A655916C38EEA4D29915A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC3D46ABCC3C7117622EC9E7186A52A2 /* ca.lproj */,
+				6A2AE11EF7641328F131C603094C4F21 /* cs.lproj */,
+				BDB4586DEB6DE1B68E25987BDE487E2D /* de.lproj */,
+				515DA1CECDF15F8224173E7F2756FBC9 /* el.lproj */,
+				7722AA2D91EA0A751B3CAB2CCD439775 /* en.lproj */,
+				A0354CB53D4B6C8AB75C02A47000B1B5 /* es.lproj */,
+				43E1B5CCE05E3F04625FE4544007F338 /* fr.lproj */,
+				8F4164A3598AA1981E63B6D4D06436F5 /* Images.xcassets */,
+				50DDBC91B15A854BCCD380B55FEDD806 /* it.lproj */,
+				75754FC4EE5248C569E9DFBE1D62080E /* ja.lproj */,
+				66CFDA78E71600E15E0B09AC43552248 /* ko.lproj */,
+				2090EABA672DF64AF5A21FA0AEFD6D7C /* nb.lproj */,
+				929E85CCBBF271F9C77C82677E3C46E5 /* nl.lproj */,
+				451C1ABF288B32FF37182075AE6063E2 /* pl.lproj */,
+				FF6C9963129C49D21176E713D013C9D5 /* pt.lproj */,
+				E186F8D90EAB984DDB84F12AD667AA30 /* pt-BR.lproj */,
+				AFF9D130A6AE2B9DB8E37060B567FE55 /* ro.lproj */,
+				95CD671260BC9F73E4296CDDB8A5E383 /* ru.lproj */,
+				00DCE0F977746C80118427CCBA9C2923 /* sk.lproj */,
+				B0F6FEF0BCEA28ECEAAE492290BC5C35 /* sv.lproj */,
+				3A9EEC48E4D78BFB126FAFD974233B61 /* th.lproj */,
+				AB381F3E5F9E9CBF1EDC0043B7594D7A /* zh-Hans.lproj */,
+				97156C137E1A02836380B87EC1565D37 /* zh-Hant.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		7D76C9E167A30EF095500BE82D44D19D /* Pods-TranslateWebForSafari Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3F24F09C52190C605374550355FCA761 /* Pods-TranslateWebForSafari Extension.modulemap */,
+				641E74B1E6B5D40CDE084CC19BB31AEE /* Pods-TranslateWebForSafari Extension-acknowledgements.markdown */,
+				DFA00B4FB3A52DCECB2B6356F7852C8A /* Pods-TranslateWebForSafari Extension-acknowledgements.plist */,
+				C6199D2440D3AFECF270D1800A7A6011 /* Pods-TranslateWebForSafari Extension-dummy.m */,
+				DE305737CE9772395782D581152F6E5C /* Pods-TranslateWebForSafari Extension-Info.plist */,
+				1C16EA435C551117FCB2662765D43FC7 /* Pods-TranslateWebForSafari Extension-umbrella.h */,
+				E567FB8C6495F029A10D711B56CB36FC /* Pods-TranslateWebForSafari Extension.debug.xcconfig */,
+				6833A6590B0E810BCA50FE4911B59CE5 /* Pods-TranslateWebForSafari Extension.release.xcconfig */,
+			);
+			name = "Pods-TranslateWebForSafari Extension";
+			path = "Target Support Files/Pods-TranslateWebForSafari Extension";
+			sourceTree = "<group>";
+		};
+		888E60E394865300D50E96FD33EA53C8 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FEA27074F5A317E360B2CE6E869110F5 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.modulemap */,
+				D2193DA890149B8F1178079147BCCB24 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-acknowledgements.markdown */,
+				2B24C3E41A565DE1C593F1B58838882E /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-acknowledgements.plist */,
+				9E66467CE4C3DAC4FF113B54583F0D03 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-dummy.m */,
+				C1E0642BEE7EAB9BFDEBD715E002F30F /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-frameworks.sh */,
+				0CA9EF555512CFAEF518AE3615078DC4 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-Info.plist */,
+				9D186DF8D948338C32D8406CB61A5191 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-umbrella.h */,
+				70A4B2A07D928B2A293CD1EE607F1ABD /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.debug.xcconfig */,
+				9D75CB41EBD2EC14C1D677C181A964A1 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.release.xcconfig */,
+			);
+			name = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests";
+			path = "Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests";
+			sourceTree = "<group>";
+		};
+		9243E99E381440029A767FA8C5A2E4F9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A12CB463008A952D1E2DE8BA8DA01FC2 /* ShortcutRecorder-framework.modulemap */,
+				48E614B16B591942B5ABA5ABB1FE893F /* ShortcutRecorder-framework-dummy.m */,
+				BE0BB2D144BE1F58C8D404A45C1C98EA /* ShortcutRecorder-framework-Info.plist */,
+				F5806EDC963F0EF7D87977D0A5F8DE98 /* ShortcutRecorder-framework-prefix.pch */,
+				F10315EC5C837D494C9B3D64B33E4100 /* ShortcutRecorder-framework-umbrella.h */,
+				8FE86AA26CC8EF1C8C54636ACCEE182C /* ShortcutRecorder-framework.debug.xcconfig */,
+				246B31C6C3EABB2D87AC4E31B8FD870C /* ShortcutRecorder-framework.release.xcconfig */,
+				1B472D78190F57ECDC8D0978BA5C969D /* ShortcutRecorder-library-dummy.m */,
+				0BFE8F8261AD5FF3E8EFD74B057D77E5 /* ShortcutRecorder-library-prefix.pch */,
+				1646C1E7D6184FCDE7D289529477296F /* ShortcutRecorder-library.debug.xcconfig */,
+				7236208A325C40C4E29F9C9F7E5CB957 /* ShortcutRecorder-library.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ShortcutRecorder-framework";
+			sourceTree = "<group>";
+		};
+		AEBBA53D03248DEE80A05C693D85AD99 /* ShortcutRecorder */ = {
+			isa = PBXGroup;
+			children = (
+				70240D4D4B772ADA1C3EA61B93E7C7A6 /* ShortcutRecorder.h */,
+				3A78C778E3E610212A725FF4E54749A7 /* SRCommon.h */,
+				5B2012187A26FB98945F71BAC02B864C /* SRCommon.m */,
+				DFB39985B633A6EA94DDAFF706C07602 /* SRKeyBindingTransformer.h */,
+				1E6B304DE9510F9B7C59CB7B950676B6 /* SRKeyBindingTransformer.m */,
+				FBD0440B313548457A59A6DAD92A316F /* SRKeyCodeTransformer.h */,
+				7868283D58543B0D964BCEE78125AC9F /* SRKeyCodeTransformer.m */,
+				22415F2824F7B1E17C6B918C8B9E1E83 /* SRKeyEquivalentModifierMaskTransformer.h */,
+				7FC45F36B056C15D3CDBF2C034ACAB6B /* SRKeyEquivalentModifierMaskTransformer.m */,
+				6C5DB5EA82C7D4E0771F5B7DC63FEE5F /* SRKeyEquivalentTransformer.h */,
+				10774BD237339DBB79275FF9C95BD44A /* SRKeyEquivalentTransformer.m */,
+				ED724494351302BA0CA0A45B35FA2D12 /* SRModifierFlagsTransformer.h */,
+				A0C419628992A5492E4438FA4F9FE275 /* SRModifierFlagsTransformer.m */,
+				A338A87E144EBC0C1ECB465C171A1BC5 /* SRRecorderControl.h */,
+				8B495E3EADBF176549EEC0B6FBFF0F1F /* SRRecorderControl.m */,
+				0EB8D44A08DC7C22AFDA472603AFF536 /* SRRecorderControlStyle.h */,
+				A47CC95FFA6F64019ACF76033E96B649 /* SRRecorderControlStyle.m */,
+				0961D115CD46D420402287299CE93291 /* SRShortcut.h */,
+				34FD192236579829D024D9F45210504B /* SRShortcut.m */,
+				E09015F2D3BEAA248B63C87981C5C375 /* SRShortcutAction.h */,
+				7F6A3CAAB8EA47497FE372B3AC5A9D2F /* SRShortcutAction.m */,
+				62BB64EC620CE737C271A1F2E385AE59 /* SRShortcutController.h */,
+				B62109FD4F332E2B8B6ECBBD867AA120 /* SRShortcutController.m */,
+				83BCA5C712D19F2981C3DDF728069591 /* SRShortcutFormatter.h */,
+				081822CF822593D57F4885FC872DDFBC /* SRShortcutFormatter.m */,
+				4B4C99832A499AEC648474EF8FBB3002 /* SRShortcutValidator.h */,
+				20C558DADE2E52C18FF9568F40775102 /* SRShortcutValidator.m */,
+				796A22D6B01A655916C38EEA4D29915A /* Resources */,
+				9243E99E381440029A767FA8C5A2E4F9 /* Support Files */,
+			);
+			name = ShortcutRecorder;
+			path = ShortcutRecorder;
+			sourceTree = "<group>";
+		};
+		C080C886C9E2F80D52E3E86A62E5B711 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2EB46ECB1DE5DA922D89BFA28A0D5B63 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				C080C886C9E2F80D52E3E86A62E5B711 /* Frameworks */,
+				EA2EAA3FA43EBDE14047977B7331B151 /* Pods */,
+				D36AEF60924F6F6455FB1C035E31772D /* Products */,
+				22553437EF6A09E9ED1DC9A4749A3B87 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D36AEF60924F6F6455FB1C035E31772D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C53E65E0FB71AC9B9A4682BA28F0F0C8 /* libShortcutRecorder-library.a */,
+				629E49D71FB26029926BBA085F494D63 /* Pods_TranslateWebForSafari.framework */,
+				73AAD7EB65C6CDD4C5E3CC20130E87AB /* Pods_TranslateWebForSafari_Extension.framework */,
+				9F46113AFF1E5F997293C374CB3F317C /* Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework */,
+				72296C88DDA829FEFFE4A365AD238356 /* Pods_TranslateWebForSafariTests.framework */,
+				51F82630016C01D0A36DC107639397EB /* ShortcutRecorder.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA2EAA3FA43EBDE14047977B7331B151 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEBBA53D03248DEE80A05C693D85AD99 /* ShortcutRecorder */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		063075CA3C5650DBF44DEAA5E48FE201 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BA865017D9CD94A5C656058AA6837F5 /* ShortcutRecorder.h in Headers */,
+				EA75CC2C7C5BCD28214AE7BA1A7E2CCC /* SRCommon.h in Headers */,
+				1BC403582F263E5302B2086A0C9BCB31 /* SRKeyBindingTransformer.h in Headers */,
+				57CC8EF9746A77CE94A2539B97EBBEF9 /* SRKeyCodeTransformer.h in Headers */,
+				AEEA416686C5180C43DC171DC5833CEF /* SRKeyEquivalentModifierMaskTransformer.h in Headers */,
+				B780B5D866591CD5E64F4B749FAFA23B /* SRKeyEquivalentTransformer.h in Headers */,
+				A0D2645E5F968691AE31821D736DCC93 /* SRModifierFlagsTransformer.h in Headers */,
+				97C0CCE329A658E396AA7BFE197C284D /* SRRecorderControl.h in Headers */,
+				C0D6E6B50810874B51DAAE655A414554 /* SRRecorderControlStyle.h in Headers */,
+				A6733E868E171A320014EF8043990E5B /* SRShortcut.h in Headers */,
+				B03B8D4B4505E72ADCD1E90A4FA6152A /* SRShortcutAction.h in Headers */,
+				BE80DDC6EAA667B5332104873F1493DF /* SRShortcutController.h in Headers */,
+				EC55DF74A485DBA7A1B4682F185CD25C /* SRShortcutFormatter.h in Headers */,
+				44A21633CEF06BA0BCA1E28FA3C0E415 /* SRShortcutValidator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0A24306BDFEEEFD978ABD7816AB1D5A9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B68A5655C7B23AA77DC1BBAFFE32EBF7 /* Pods-TranslateWebForSafari-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1012B9CE1DBEB4AE2B16111DBE77F2FB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78E5B9D0E2B754016629ED8FE46C725A /* ShortcutRecorder-framework-umbrella.h in Headers */,
+				26603F5C622F75567A59F861CE792A0B /* ShortcutRecorder.h in Headers */,
+				BF83D61E880732FC6D3A65E12E2A93EB /* SRCommon.h in Headers */,
+				33EF831C5B4CE700ADA1CB279FF47AA4 /* SRKeyBindingTransformer.h in Headers */,
+				0368B5BA1F0E05C48442FAAC8A753BFB /* SRKeyCodeTransformer.h in Headers */,
+				8BBAA2367FF1AE6566148A5DD8F004BF /* SRKeyEquivalentModifierMaskTransformer.h in Headers */,
+				C8778AE048EE91F257A97C9B5D1C5F55 /* SRKeyEquivalentTransformer.h in Headers */,
+				21D23B6B20C01C54990159D50FBA1FDE /* SRModifierFlagsTransformer.h in Headers */,
+				B176464BEAE7F45D2A53D5940B1F310B /* SRRecorderControl.h in Headers */,
+				A0541A8625FAAA656DECA5D0356D419A /* SRRecorderControlStyle.h in Headers */,
+				68A428DBC13ED7847FCDE6DA7764AA3C /* SRShortcut.h in Headers */,
+				280786EA823C5F8AD89FAD722FF250A7 /* SRShortcutAction.h in Headers */,
+				36C95CB529B2A994BBE6B1F6D630DE88 /* SRShortcutController.h in Headers */,
+				213E401C4C6A74362AEAE9F949474C20 /* SRShortcutFormatter.h in Headers */,
+				31A40F40B391555FA1DDF62B8CDA699A /* SRShortcutValidator.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EF1A6EB3DD2432582F44526DC94BB69 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B4DB842F9019B6B07064FAF355E70B56 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63F9815A7364FB0FBC29991EB53D54CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2195625F09F7ADF14E8BAC326E717C65 /* Pods-TranslateWebForSafariTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		984D6CECC5B50E490F405F715FC4756A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B645478C6E5F06F03E4A8CB23A4BB303 /* Pods-TranslateWebForSafari Extension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2A22D5A7FDC22289E6CF0E654A1DF409 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F40A5B47685269C5F65363C8CC9AF0C2 /* Build configuration list for PBXNativeTarget "Pods-TranslateWebForSafari-TranslateWebForSafariUITests" */;
+			buildPhases = (
+				1EF1A6EB3DD2432582F44526DC94BB69 /* Headers */,
+				62A826039BFB220FC34FD672100B0456 /* Sources */,
+				49E320B1FC45B295348CC47EC30C38AF /* Frameworks */,
+				E78EB8267586127469AF9182020F730C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BEE86CD790E0565A37BD0C984B40E83 /* PBXTargetDependency */,
+			);
+			name = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests";
+			productName = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests";
+			productReference = 9F46113AFF1E5F997293C374CB3F317C /* Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		37C3C9CAB23A1167FCC2951E5F131D15 /* Pods-TranslateWebForSafari Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DCB2EEDF6D4D71103AD40D76EBC0F9F2 /* Build configuration list for PBXNativeTarget "Pods-TranslateWebForSafari Extension" */;
+			buildPhases = (
+				984D6CECC5B50E490F405F715FC4756A /* Headers */,
+				1EAB35EF1DAAD443C2E357DA66409D1F /* Sources */,
+				D7E81C2A20B237A73E3CF2D18D16947C /* Frameworks */,
+				ED55D28D4C532DACF196AE955ED29195 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D41D4BA3C89C627DE1FFF72BA39DA759 /* PBXTargetDependency */,
+			);
+			name = "Pods-TranslateWebForSafari Extension";
+			productName = "Pods-TranslateWebForSafari Extension";
+			productReference = 73AAD7EB65C6CDD4C5E3CC20130E87AB /* Pods_TranslateWebForSafari_Extension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		56BF710958782268ED9C992917D83465 /* Pods-TranslateWebForSafari */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C54ED68642AFCB9878A98EC5C5E2A597 /* Build configuration list for PBXNativeTarget "Pods-TranslateWebForSafari" */;
+			buildPhases = (
+				0A24306BDFEEEFD978ABD7816AB1D5A9 /* Headers */,
+				20F489577374C8E5D6CD14A711013E7D /* Sources */,
+				834DAC79098809572F9E2233503F44BD /* Frameworks */,
+				F7C83A76900F5FB11F4869A6A43804FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B4A6BE8386B0768522078E8FEEEC1D31 /* PBXTargetDependency */,
+			);
+			name = "Pods-TranslateWebForSafari";
+			productName = "Pods-TranslateWebForSafari";
+			productReference = 629E49D71FB26029926BBA085F494D63 /* Pods_TranslateWebForSafari.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5A223B902F3B7581C9CFCD71520E6B61 /* ShortcutRecorder-library */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 985A58016E78299B9222B0E1C27BCD37 /* Build configuration list for PBXNativeTarget "ShortcutRecorder-library" */;
+			buildPhases = (
+				063075CA3C5650DBF44DEAA5E48FE201 /* Headers */,
+				F239D17BD8AA1B2667F5C40225601728 /* Sources */,
+				AFB950B95F04BAAACEA27A5808B77C90 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShortcutRecorder-library";
+			productName = "ShortcutRecorder-library";
+			productReference = C53E65E0FB71AC9B9A4682BA28F0F0C8 /* libShortcutRecorder-library.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		A43103CBFAF5F9BBC1CB219A9D6D9712 /* ShortcutRecorder-framework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FDBA81C60621B2F18CE3B238E2571D3 /* Build configuration list for PBXNativeTarget "ShortcutRecorder-framework" */;
+			buildPhases = (
+				1012B9CE1DBEB4AE2B16111DBE77F2FB /* Headers */,
+				04C46BE9550DAD38C9E215F5A4586431 /* Sources */,
+				646535BA46465AC81EBED9051F9007B2 /* Frameworks */,
+				DCC6E14F8573B899060357FA30204C01 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShortcutRecorder-framework";
+			productName = "ShortcutRecorder-framework";
+			productReference = 51F82630016C01D0A36DC107639397EB /* ShortcutRecorder.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EB0BF280F4C52922B9D50F32122845A0 /* Pods-TranslateWebForSafariTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 52C78894BB76A1FFEAE85701FC27165B /* Build configuration list for PBXNativeTarget "Pods-TranslateWebForSafariTests" */;
+			buildPhases = (
+				63F9815A7364FB0FBC29991EB53D54CA /* Headers */,
+				106A3BC3D735B6EFBDE1DC9F6C82265C /* Sources */,
+				387136D1AD606DF80399AEE43A9D1840 /* Frameworks */,
+				1EB9ACFA73E219810358214A7BD920BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AC483D200E474BE7CA453356AF6BFF2 /* PBXTargetDependency */,
+			);
+			name = "Pods-TranslateWebForSafariTests";
+			productName = "Pods-TranslateWebForSafariTests";
+			productReference = 72296C88DDA829FEFFE4A365AD238356 /* Pods_TranslateWebForSafariTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 10.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = D36AEF60924F6F6455FB1C035E31772D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				56BF710958782268ED9C992917D83465 /* Pods-TranslateWebForSafari */,
+				37C3C9CAB23A1167FCC2951E5F131D15 /* Pods-TranslateWebForSafari Extension */,
+				2A22D5A7FDC22289E6CF0E654A1DF409 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests */,
+				EB0BF280F4C52922B9D50F32122845A0 /* Pods-TranslateWebForSafariTests */,
+				A43103CBFAF5F9BBC1CB219A9D6D9712 /* ShortcutRecorder-framework */,
+				5A223B902F3B7581C9CFCD71520E6B61 /* ShortcutRecorder-library */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1EB9ACFA73E219810358214A7BD920BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DCC6E14F8573B899060357FA30204C01 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				746C34B4B32F47C131964442A5432D60 /* ca.lproj in Resources */,
+				AECE6A83337007473083E96C4538692D /* cs.lproj in Resources */,
+				8FBC392582144395EE3F50CC26131CDB /* de.lproj in Resources */,
+				E4403378ED4BB4785F5498101B2CB0D4 /* el.lproj in Resources */,
+				AC57FD9B43B69F0529C77BEAE5B28779 /* en.lproj in Resources */,
+				BFB919151325A2A83CC6F25A678BFB7C /* es.lproj in Resources */,
+				943ECA59199046F548B3C3BB3C28DFE5 /* fr.lproj in Resources */,
+				3BB85FF7364C2D9C69ECA70FCE1D92E3 /* Images.xcassets in Resources */,
+				8858517A3EA2C4CC970AF941D4213285 /* it.lproj in Resources */,
+				2E1844C7298EFC729A6874186F743936 /* ja.lproj in Resources */,
+				2B77C0EBAF89EE7D33D88E7409A9BBCB /* ko.lproj in Resources */,
+				7A0DFFE165E660C9D51C7444B38D2FD3 /* nb.lproj in Resources */,
+				34463E5DF1A1EC524B3BA68FFC3B576F /* nl.lproj in Resources */,
+				3496AC2FB873BF5E3E99AE6B0AC2408A /* pl.lproj in Resources */,
+				AF02BF3A3D981DC5A80356FAAA5FFF6E /* pt-BR.lproj in Resources */,
+				38599513CE12815DEB6AB58CB28149CE /* pt.lproj in Resources */,
+				FA465C301DA74B844B1F736AD51891D1 /* ro.lproj in Resources */,
+				155B67056366F86FBFECBE97C7A1A811 /* ru.lproj in Resources */,
+				C44C33306228DE57A809A29B875CA7D1 /* sk.lproj in Resources */,
+				5DA31A10342D3EC3B7A4C22F852AC6EA /* sv.lproj in Resources */,
+				775C5CC17A01FB6EBC0D4586EBFD9247 /* th.lproj in Resources */,
+				9E4828C568E39D187213E6E695A29DB2 /* zh-Hans.lproj in Resources */,
+				80E6FA5F4F60EE9ECD74F7B5A8D39063 /* zh-Hant.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E78EB8267586127469AF9182020F730C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED55D28D4C532DACF196AE955ED29195 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C83A76900F5FB11F4869A6A43804FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04C46BE9550DAD38C9E215F5A4586431 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58CEF95A71D62CF71A91F077E0449658 /* ShortcutRecorder-framework-dummy.m in Sources */,
+				59E282A254490DA44CB8BACD197DE5C3 /* SRCommon.m in Sources */,
+				6B35278B5CB466A3200E7156A04585EF /* SRKeyBindingTransformer.m in Sources */,
+				2EBB19965D964E15720295AF558883FA /* SRKeyCodeTransformer.m in Sources */,
+				B55540D63C40A01BF8CE5EA27BA38FED /* SRKeyEquivalentModifierMaskTransformer.m in Sources */,
+				F5EAC3E19EE5A29ADBBE9D45BB4CBDC0 /* SRKeyEquivalentTransformer.m in Sources */,
+				9B0A74DAE5B302043087F229F93988B8 /* SRModifierFlagsTransformer.m in Sources */,
+				ADAF7EB67AA06F98FC99577F09A0D71E /* SRRecorderControl.m in Sources */,
+				4B57497B4D768CF4971B2DA709FC6687 /* SRRecorderControlStyle.m in Sources */,
+				4A33E12445384E6BCD6E50257697A1BC /* SRShortcut.m in Sources */,
+				EDB2A281C6C4B5E1E3B4266020E0029B /* SRShortcutAction.m in Sources */,
+				182E4F80ACC10762F0C0CBE5A8FA8675 /* SRShortcutController.m in Sources */,
+				DC2601CA9A936E1070EE30D8131ADAEA /* SRShortcutFormatter.m in Sources */,
+				7973160BF8DCB2EEAF297B36BEB14ECE /* SRShortcutValidator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		106A3BC3D735B6EFBDE1DC9F6C82265C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95C1B03EA5B2F89B840D61E9F40AA979 /* Pods-TranslateWebForSafariTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1EAB35EF1DAAD443C2E357DA66409D1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBE6D45AA404C786D1727B5A64B18313 /* Pods-TranslateWebForSafari Extension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20F489577374C8E5D6CD14A711013E7D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE451EF3F765F9617D722E7266E7DFB2 /* Pods-TranslateWebForSafari-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62A826039BFB220FC34FD672100B0456 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A93A0981ECC426EECA079CCB38AAE8D1 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F239D17BD8AA1B2667F5C40225601728 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4360EDB4251DAF31AB6801889A8A6A9B /* ShortcutRecorder-library-dummy.m in Sources */,
+				D7E1352CAE80EF578997679ABD07861D /* SRCommon.m in Sources */,
+				475853D4F2E346652C275933491C7DB1 /* SRKeyBindingTransformer.m in Sources */,
+				6591203336BB84D44985C221BC429082 /* SRKeyCodeTransformer.m in Sources */,
+				C1476FB6FA3218CD56F2DA7847A17599 /* SRKeyEquivalentModifierMaskTransformer.m in Sources */,
+				BACE1CEBF485E26DF5C89CFD7595ED6F /* SRKeyEquivalentTransformer.m in Sources */,
+				8B82343A1C63CD66C3538916CA59B417 /* SRModifierFlagsTransformer.m in Sources */,
+				28B392D53D7E33CBBEEBF361365A16A5 /* SRRecorderControl.m in Sources */,
+				372BAA2C1EAB81C02EE5B083E781065B /* SRRecorderControlStyle.m in Sources */,
+				635E4B8A5F9CDCDDAA4B1B9F28EEF664 /* SRShortcut.m in Sources */,
+				716A0B2080D8CA73D55194893CFD522F /* SRShortcutAction.m in Sources */,
+				647A1AD7FA773392C7363850DA9FC573 /* SRShortcutController.m in Sources */,
+				7174711EF7BC77D37361299CD344E59D /* SRShortcutFormatter.m in Sources */,
+				5EE300C26BB0F2C74A67B4DEC2CFA38C /* SRShortcutValidator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BEE86CD790E0565A37BD0C984B40E83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ShortcutRecorder-framework";
+			target = A43103CBFAF5F9BBC1CB219A9D6D9712 /* ShortcutRecorder-framework */;
+			targetProxy = 335D232F63FEF4640FD344DF53D28AB0 /* PBXContainerItemProxy */;
+		};
+		5AC483D200E474BE7CA453356AF6BFF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-TranslateWebForSafari";
+			target = 56BF710958782268ED9C992917D83465 /* Pods-TranslateWebForSafari */;
+			targetProxy = 09476556B931EC15A2658C95D9A7A58A /* PBXContainerItemProxy */;
+		};
+		B4A6BE8386B0768522078E8FEEEC1D31 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ShortcutRecorder-framework";
+			target = A43103CBFAF5F9BBC1CB219A9D6D9712 /* ShortcutRecorder-framework */;
+			targetProxy = 7CA0F39742D284FD73308D660F424E96 /* PBXContainerItemProxy */;
+		};
+		D41D4BA3C89C627DE1FFF72BA39DA759 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ShortcutRecorder-framework";
+			target = A43103CBFAF5F9BBC1CB219A9D6D9712 /* ShortcutRecorder-framework */;
+			targetProxy = FA57ECC70D3DD09A00EE0C3BDF763F1C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		076ABFAD15A27D311A295A1DC51FADCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1646C1E7D6184FCDE7D289529477296F /* ShortcutRecorder-library.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/ShortcutRecorder-library/ShortcutRecorder-library-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ShortcutRecorder;
+				PRODUCT_NAME = "ShortcutRecorder-library";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Debug;
+		};
+		108D9608BCE3E4924B0C61EFF2906CF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7236208A325C40C4E29F9C9F7E5CB957 /* ShortcutRecorder-library.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREFIX_HEADER = "Target Support Files/ShortcutRecorder-library/ShortcutRecorder-library-prefix.pch";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = ShortcutRecorder;
+				PRODUCT_NAME = "ShortcutRecorder-library";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+			};
+			name = Release;
+		};
+		3FD5D8C61462AE613D7DD7ED518F19A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 246B31C6C3EABB2D87AC4E31B8FD870C /* ShortcutRecorder-framework.release.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/ShortcutRecorder-framework/ShortcutRecorder-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ShortcutRecorder-framework/ShortcutRecorder-framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/ShortcutRecorder-framework/ShortcutRecorder-framework.modulemap";
+				PRODUCT_MODULE_NAME = ShortcutRecorder;
+				PRODUCT_NAME = ShortcutRecorder;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		68ABEAAE5C8C94A80098439F139530DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C83B57723925621B1CDDF8971FEE3928 /* Pods-TranslateWebForSafariTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-TranslateWebForSafariTests/Pods-TranslateWebForSafariTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-TranslateWebForSafariTests/Pods-TranslateWebForSafariTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7E201EB993DE086516AD79AFFDF24AD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 965A6451F10044E17ED78522CF5A0E0E /* Pods-TranslateWebForSafariTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-TranslateWebForSafariTests/Pods-TranslateWebForSafariTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-TranslateWebForSafariTests/Pods-TranslateWebForSafariTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9382317ED75CFC741F429FC224405042 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		99D0A9D95EDA468980844AE8659CA22C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D75CB41EBD2EC14C1D677C181A964A1 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests/Pods-TranslateWebForSafari-TranslateWebForSafariUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests/Pods-TranslateWebForSafari-TranslateWebForSafariUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9F4BA81D7C383E71E7DD7FD84DBD20BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3F00AAA06B4D9EE121B7CE9EE60833A /* Pods-TranslateWebForSafari.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-TranslateWebForSafari/Pods-TranslateWebForSafari-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-TranslateWebForSafari/Pods-TranslateWebForSafari.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A3C8341D369155DCDA0BCBAAC08002FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E567FB8C6495F029A10D711B56CB36FC /* Pods-TranslateWebForSafari Extension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-TranslateWebForSafari Extension/Pods-TranslateWebForSafari Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-TranslateWebForSafari Extension/Pods-TranslateWebForSafari Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B9CE0B79EE0C88CC1BB6AA255628825E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FE86AA26CC8EF1C8C54636ACCEE182C /* ShortcutRecorder-framework.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				GCC_PREFIX_HEADER = "Target Support Files/ShortcutRecorder-framework/ShortcutRecorder-framework-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ShortcutRecorder-framework/ShortcutRecorder-framework-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MODULEMAP_FILE = "Target Support Files/ShortcutRecorder-framework/ShortcutRecorder-framework.modulemap";
+				PRODUCT_MODULE_NAME = ShortcutRecorder;
+				PRODUCT_NAME = ShortcutRecorder;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CAAB295289BDFBDE066161A67B86E8BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6833A6590B0E810BCA50FE4911B59CE5 /* Pods-TranslateWebForSafari Extension.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-TranslateWebForSafari Extension/Pods-TranslateWebForSafari Extension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-TranslateWebForSafari Extension/Pods-TranslateWebForSafari Extension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4DEAC9B52796426D2A37E7074A1738D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		F204015D4BFF88C140E105C6902E665D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CB980630ABE470F1205252869DCB5DB /* Pods-TranslateWebForSafari.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-TranslateWebForSafari/Pods-TranslateWebForSafari-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-TranslateWebForSafari/Pods-TranslateWebForSafari.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F24EB12E8FEF6DFF403CE0BA534E427E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70A4B2A07D928B2A293CD1EE607F1ABD /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_VERSION = A;
+				INFOPLIST_FILE = "Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests/Pods-TranslateWebForSafari-TranslateWebForSafariUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MODULEMAP_FILE = "Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests/Pods-TranslateWebForSafari-TranslateWebForSafariUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FDBA81C60621B2F18CE3B238E2571D3 /* Build configuration list for PBXNativeTarget "ShortcutRecorder-framework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B9CE0B79EE0C88CC1BB6AA255628825E /* Debug */,
+				3FD5D8C61462AE613D7DD7ED518F19A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9382317ED75CFC741F429FC224405042 /* Debug */,
+				E4DEAC9B52796426D2A37E7074A1738D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		52C78894BB76A1FFEAE85701FC27165B /* Build configuration list for PBXNativeTarget "Pods-TranslateWebForSafariTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				68ABEAAE5C8C94A80098439F139530DA /* Debug */,
+				7E201EB993DE086516AD79AFFDF24AD8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		985A58016E78299B9222B0E1C27BCD37 /* Build configuration list for PBXNativeTarget "ShortcutRecorder-library" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				076ABFAD15A27D311A295A1DC51FADCB /* Debug */,
+				108D9608BCE3E4924B0C61EFF2906CF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C54ED68642AFCB9878A98EC5C5E2A597 /* Build configuration list for PBXNativeTarget "Pods-TranslateWebForSafari" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4BA81D7C383E71E7DD7FD84DBD20BE /* Debug */,
+				F204015D4BFF88C140E105C6902E665D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DCB2EEDF6D4D71103AD40D76EBC0F9F2 /* Build configuration list for PBXNativeTarget "Pods-TranslateWebForSafari Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3C8341D369155DCDA0BCBAAC08002FF /* Debug */,
+				CAAB295289BDFBDE066161A67B86E8BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F40A5B47685269C5F65363C8CC9AF0C2 /* Build configuration list for PBXNativeTarget "Pods-TranslateWebForSafari-TranslateWebForSafariUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F24EB12E8FEF6DFF403CE0BA534E427E /* Debug */,
+				99D0A9D95EDA468980844AE8659CA22C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

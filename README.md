@@ -15,6 +15,10 @@ Please feel free to send a feedback if you found a problem.
 
 ![screenshot1](screenshots/3.jpg)
 
+## Acknowledgements
+
+- [Kentzo / ShortcutRecorder](https://github.com/Kentzo/ShortcutRecorder)
+
 ## Licence
 
 [MIT](LICENSE)

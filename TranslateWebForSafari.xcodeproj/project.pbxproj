@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,11 @@
 		00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */; };
 		00DD6A82246659DD004684DA /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A81246659DD004684DA /* script.js */; };
 		00DD6A84246659DD004684DA /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */; };
+		27F3D3EA67A8702361EA2CA0 /* Pods_TranslateWebForSafariTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312BB78E476CC873DA818067 /* Pods_TranslateWebForSafariTests.framework */; };
 		28B65A0A247FF754009FBD19 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B6CCE2476AD2500C25112 /* Consts.swift */; };
+		9F05996E74FF14542B20C3D5 /* Pods_TranslateWebForSafari.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A27285B3A158C583603BF00 /* Pods_TranslateWebForSafari.framework */; };
+		C52EF45E3D2BAE48F56D0F3C /* Pods_TranslateWebForSafari_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BED2499625D6DC1ED46D708 /* Pods_TranslateWebForSafari_Extension.framework */; };
+		E0AE6F446FAE326B27FF0ED2 /* Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D82FEDE0EA6CF3847392D3A /* Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +152,18 @@
 		00DD6A81246659DD004684DA /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		00DD6A85246659DD004684DA /* TranslateWebForSafari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari_Extension.entitlements; sourceTree = "<group>"; };
+		1122CC402FBA890EFA2EE4C8 /* Pods-TranslateWebForSafariTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateWebForSafariTests.release.xcconfig"; path = "Target Support Files/Pods-TranslateWebForSafariTests/Pods-TranslateWebForSafariTests.release.xcconfig"; sourceTree = "<group>"; };
+		312BB78E476CC873DA818067 /* Pods_TranslateWebForSafariTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranslateWebForSafariTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D82FEDE0EA6CF3847392D3A /* Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AC6ED89AFA3BCF37E5CB5F7 /* Pods-TranslateWebForSafari Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateWebForSafari Extension.release.xcconfig"; path = "Target Support Files/Pods-TranslateWebForSafari Extension/Pods-TranslateWebForSafari Extension.release.xcconfig"; sourceTree = "<group>"; };
+		8A27285B3A158C583603BF00 /* Pods_TranslateWebForSafari.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranslateWebForSafari.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BED2499625D6DC1ED46D708 /* Pods_TranslateWebForSafari_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranslateWebForSafari_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		926B5AF7A174610490364E94 /* Pods-TranslateWebForSafari.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateWebForSafari.debug.xcconfig"; path = "Target Support Files/Pods-TranslateWebForSafari/Pods-TranslateWebForSafari.debug.xcconfig"; sourceTree = "<group>"; };
+		A633389D9695781AE4B250F7 /* Pods-TranslateWebForSafari Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateWebForSafari Extension.debug.xcconfig"; path = "Target Support Files/Pods-TranslateWebForSafari Extension/Pods-TranslateWebForSafari Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		B42FD3396659D4AE7DCF6B9A /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests.debug.xcconfig"; path = "Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests/Pods-TranslateWebForSafari-TranslateWebForSafariUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BAA794832C3759C246B4879B /* Pods-TranslateWebForSafariTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateWebForSafariTests.debug.xcconfig"; path = "Target Support Files/Pods-TranslateWebForSafariTests/Pods-TranslateWebForSafariTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE447D70BD744EBDF5736B26 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateWebForSafari-TranslateWebForSafariUITests.release.xcconfig"; path = "Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests/Pods-TranslateWebForSafari-TranslateWebForSafariUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FFC4ED50E0098273D120F77D /* Pods-TranslateWebForSafari.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateWebForSafari.release.xcconfig"; path = "Target Support Files/Pods-TranslateWebForSafari/Pods-TranslateWebForSafari.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F05996E74FF14542B20C3D5 /* Pods_TranslateWebForSafari.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F3D3EA67A8702361EA2CA0 /* Pods_TranslateWebForSafariTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0AE6F446FAE326B27FF0ED2 /* Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00DD6A77246659DD004684DA /* Cocoa.framework in Frameworks */,
+				C52EF45E3D2BAE48F56D0F3C /* Pods_TranslateWebForSafari_Extension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,6 +261,7 @@
 				00DD6A78246659DD004684DA /* TranslateWebForSafari Extension */,
 				00DD6A75246659DD004684DA /* Frameworks */,
 				00DD6A49246659DA004684DA /* Products */,
+				7C220644129CC8A464B8EF16 /* Pods */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -297,6 +318,10 @@
 			isa = PBXGroup;
 			children = (
 				00DD6A76246659DD004684DA /* Cocoa.framework */,
+				8A27285B3A158C583603BF00 /* Pods_TranslateWebForSafari.framework */,
+				8BED2499625D6DC1ED46D708 /* Pods_TranslateWebForSafari_Extension.framework */,
+				5D82FEDE0EA6CF3847392D3A /* Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework */,
+				312BB78E476CC873DA818067 /* Pods_TranslateWebForSafariTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -313,6 +338,21 @@
 			path = "TranslateWebForSafari Extension";
 			sourceTree = "<group>";
 		};
+		7C220644129CC8A464B8EF16 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				926B5AF7A174610490364E94 /* Pods-TranslateWebForSafari.debug.xcconfig */,
+				FFC4ED50E0098273D120F77D /* Pods-TranslateWebForSafari.release.xcconfig */,
+				A633389D9695781AE4B250F7 /* Pods-TranslateWebForSafari Extension.debug.xcconfig */,
+				7AC6ED89AFA3BCF37E5CB5F7 /* Pods-TranslateWebForSafari Extension.release.xcconfig */,
+				B42FD3396659D4AE7DCF6B9A /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.debug.xcconfig */,
+				CE447D70BD744EBDF5736B26 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.release.xcconfig */,
+				BAA794832C3759C246B4879B /* Pods-TranslateWebForSafariTests.debug.xcconfig */,
+				1122CC402FBA890EFA2EE4C8 /* Pods-TranslateWebForSafariTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -320,10 +360,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00DD6A8C246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafari" */;
 			buildPhases = (
+				B85DB7173FB8C6BCC9AFE450 /* [CP] Check Pods Manifest.lock */,
 				00DD6A44246659DA004684DA /* Sources */,
 				00DD6A45246659DA004684DA /* Frameworks */,
 				00DD6A46246659DA004684DA /* Resources */,
 				00DD6A8B246659DD004684DA /* Embed App Extensions */,
+				8B7BF143253926C4E83A6BD0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -339,6 +381,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00DD6A8F246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafariTests" */;
 			buildPhases = (
+				8A957299B7111FB7C4F3B3E3 /* [CP] Check Pods Manifest.lock */,
 				00DD6A57246659DD004684DA /* Sources */,
 				00DD6A58246659DD004684DA /* Frameworks */,
 				00DD6A59246659DD004684DA /* Resources */,
@@ -357,9 +400,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00DD6A92246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafariUITests" */;
 			buildPhases = (
+				6DA52D0A48251970CC237558 /* [CP] Check Pods Manifest.lock */,
 				00DD6A62246659DD004684DA /* Sources */,
 				00DD6A63246659DD004684DA /* Frameworks */,
 				00DD6A64246659DD004684DA /* Resources */,
+				62305D51B34F78A5FC14D409 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -375,6 +420,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00DD6A88246659DD004684DA /* Build configuration list for PBXNativeTarget "TranslateWebForSafari Extension" */;
 			buildPhases = (
+				60FBA139E9FF34F45024A20C /* [CP] Check Pods Manifest.lock */,
 				00DD6A6D246659DD004684DA /* Sources */,
 				00DD6A6E246659DD004684DA /* Frameworks */,
 				00DD6A6F246659DD004684DA /* Resources */,
@@ -481,6 +527,131 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		60FBA139E9FF34F45024A20C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TranslateWebForSafari Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62305D51B34F78A5FC14D409 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests/Pods-TranslateWebForSafari-TranslateWebForSafariUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests/Pods-TranslateWebForSafari-TranslateWebForSafariUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TranslateWebForSafari-TranslateWebForSafariUITests/Pods-TranslateWebForSafari-TranslateWebForSafariUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DA52D0A48251970CC237558 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TranslateWebForSafari-TranslateWebForSafariUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A957299B7111FB7C4F3B3E3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TranslateWebForSafariTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B7BF143253926C4E83A6BD0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TranslateWebForSafari/Pods-TranslateWebForSafari-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TranslateWebForSafari/Pods-TranslateWebForSafari-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TranslateWebForSafari/Pods-TranslateWebForSafari-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B85DB7173FB8C6BCC9AFE450 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TranslateWebForSafari-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		00DD6A44246659DA004684DA /* Sources */ = {
@@ -716,6 +887,7 @@
 		};
 		00DD6A89246659DD004684DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A633389D9695781AE4B250F7 /* Pods-TranslateWebForSafari Extension.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "TranslateWebForSafari Extension/TranslateWebForSafari_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -739,6 +911,7 @@
 		};
 		00DD6A8A246659DD004684DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AC6ED89AFA3BCF37E5CB5F7 /* Pods-TranslateWebForSafari Extension.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "TranslateWebForSafari Extension/TranslateWebForSafari_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
@@ -762,6 +935,7 @@
 		};
 		00DD6A8D246659DD004684DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 926B5AF7A174610490364E94 /* Pods-TranslateWebForSafari.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -786,6 +960,7 @@
 		};
 		00DD6A8E246659DD004684DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFC4ED50E0098273D120F77D /* Pods-TranslateWebForSafari.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -810,6 +985,7 @@
 		};
 		00DD6A90246659DD004684DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BAA794832C3759C246B4879B /* Pods-TranslateWebForSafariTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -832,6 +1008,7 @@
 		};
 		00DD6A91246659DD004684DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1122CC402FBA890EFA2EE4C8 /* Pods-TranslateWebForSafariTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -854,6 +1031,7 @@
 		};
 		00DD6A93246659DD004684DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B42FD3396659D4AE7DCF6B9A /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -874,6 +1052,7 @@
 		};
 		00DD6A94246659DD004684DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE447D70BD744EBDF5736B26 /* Pods-TranslateWebForSafari-TranslateWebForSafariUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
