@@ -57,7 +57,7 @@
     
     function sendKeydownToExtension(event) {
         const modifierKeys = ["Meta", "Shift", "Alt", "Control"]
-        if modifierKeys.includes(event.key) {
+        if (modifierKeys.includes(event.key)) {
             return;
         }
         
