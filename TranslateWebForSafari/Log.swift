@@ -9,7 +9,21 @@
 import Foundation
 
 enum Log {
+    static func debug(_ format: String, args: CVarArg...) {
+        #if DEBUG
+        log(prefix: "⚫️", format: format, args: args)
+        #endif
+    }
+    
     static func info(_ format: String, args: CVarArg...) {
-        NSLog("🔵" + format, args)
+        log(prefix: "🔵", format: format, args: args)
+    }
+    
+    static func warn(_ format: String, args: CVarArg...) {
+        log(prefix: "🟠", format: format, args: args)
+    }
+    
+    private static func log(prefix: String, format: String, args: CVarArg...) {
+        NSLog(prefix + format, args)
     }
 }
