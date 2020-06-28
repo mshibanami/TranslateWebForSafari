@@ -113,6 +113,9 @@
 "Kazakh" = "哈萨克语";
 
 /* No comment provided by engineer. */
+"Keyboard shortcuts" = "键盘快捷键";
+
+/* No comment provided by engineer. */
 "Korean" = "韩语";
 
 /* No comment provided by engineer. */
@@ -210,6 +213,9 @@
 
 /* No comment provided by engineer. */
 "Tamil" = "泰米尔语";
+
+/* No comment provided by engineer. */
+"Text or Page Translation" = "文本或页面翻译";
 
 /* No comment provided by engineer. */
 "Text Translation" = "文本翻译";

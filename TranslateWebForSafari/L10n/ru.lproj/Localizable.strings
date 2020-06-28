@@ -113,6 +113,9 @@
 "Kazakh" = "Казахский";
 
 /* No comment provided by engineer. */
+"Keyboard shortcuts" = "Горячие клавиши";
+
+/* No comment provided by engineer. */
 "Korean" = "Корейский";
 
 /* No comment provided by engineer. */
@@ -210,6 +213,9 @@
 
 /* No comment provided by engineer. */
 "Tamil" = "Тамил";
+
+/* No comment provided by engineer. */
+"Text or Page Translation" = "Перевод текста или страницы";
 
 /* No comment provided by engineer. */
 "Text Translation" = "Перевод текста";
