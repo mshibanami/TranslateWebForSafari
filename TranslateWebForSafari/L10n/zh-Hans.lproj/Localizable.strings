@@ -140,6 +140,9 @@
 "Norwegian" = "挪威语";
 
 /* No comment provided by engineer. */
+"Note: If the shortcuts you set conflicts with the shortcuts of Safari or other extensions, the settings here may not be enabled." = "注意：如果你设置的快捷方式与Safari或其他扩展的快捷方式冲突，这里的设置可能无法启用。";
+
+/* No comment provided by engineer. */
 "Old English" = "古英语";
 
 /* No comment provided by engineer. */

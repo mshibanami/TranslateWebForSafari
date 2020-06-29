@@ -140,6 +140,9 @@
 "Norwegian" = "Norwegisch";
 
 /* No comment provided by engineer. */
+"Note: If the shortcuts you set conflicts with the shortcuts of Safari or other extensions, the settings here may not be enabled." = "Hinweis: Wenn die von Ihnen festgelegten Verknüpfungen mit den Verknüpfungen von Safari oder anderen Erweiterungen in Konflikt stehen, sind die Einstellungen hier möglicherweise nicht aktiviert.";
+
+/* No comment provided by engineer. */
 "Old English" = "Altenglisch";
 
 /* No comment provided by engineer. */
@@ -218,7 +221,7 @@
 "Text or Page Translation" = "Text- oder Seitenübersetzung";
 
 /* No comment provided by engineer. */
-"Text Translation" = "Text Translation";
+"Text Translation" = "Text-Übersetzung";
 
 /* No comment provided by engineer. */
 "Thai" = "Thai";

@@ -140,6 +140,9 @@
 "Norwegian" = "Norueguês";
 
 /* No comment provided by engineer. */
+"Note: If the shortcuts you set conflicts with the shortcuts of Safari or other extensions, the settings here may not be enabled." = "Nota: Se os atalhos definidos entrarem em conflito com os atalhos do Safari ou outras extensões, as configurações aqui podem não ser habilitadas.";
+
+/* No comment provided by engineer. */
 "Old English" = "Inglês antigo";
 
 /* No comment provided by engineer. */

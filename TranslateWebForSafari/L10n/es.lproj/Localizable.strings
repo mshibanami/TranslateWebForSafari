@@ -140,6 +140,9 @@
 "Norwegian" = "Noruego";
 
 /* No comment provided by engineer. */
+"Note: If the shortcuts you set conflicts with the shortcuts of Safari or other extensions, the settings here may not be enabled." = "Nota: si los atajos que configuras entran en conflicto con los atajos de Safari u otras extensiones, es posible que la configuración aquí no esté activada.";
+
+/* No comment provided by engineer. */
 "Old English" = "Inglés antiguo";
 
 /* No comment provided by engineer. */
