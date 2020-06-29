@@ -113,6 +113,14 @@ class MainViewController: NSViewController {
             NSStackView(views: [
                 NSTextField(settingLabelWithString: L10n.textOrPageTranslation),
                 textOrPageTranslationShortcutView]),
+            {
+                let textField = NSTextField(labelWithString: L10n.keyboardShortcutsSettingsCaution)
+                textField.font = NSFont.systemFont(ofSize: 11)
+                textField.lineBreakMode = .byWordWrapping
+                textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
+                textField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+                return textField
+            }()
         ])
         view.spacing = 6
         view.orientation = .vertical

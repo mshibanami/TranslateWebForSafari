@@ -46,6 +46,7 @@ class L10n {
     static let translateTo = NSLocalizedString("Translate to", comment: "")
     static let toolbarItemBehavior = NSLocalizedString("Toolbar button behavior", comment: "")
     static let keyboardShortcuts = NSLocalizedString("Keyboard shortcuts", comment: "")
+    static let keyboardShortcutsSettingsCaution = NSLocalizedString("Note: If the shortcuts you set conflicts with the shortcuts of Safari or other extensions, the settings here may not be enabled.", comment: "")
     static let alwaysTranslatePage = NSLocalizedString("Always translate the current page", comment: "")
     static let alwaysTranslateSelectedText = NSLocalizedString("Always translate the selected text", comment: "")
     static let translateTextIfSelected = NSLocalizedString("If text is selected, translate it, otherwise translate the current page", comment: "")
