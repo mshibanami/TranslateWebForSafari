@@ -34,7 +34,9 @@ extension UserDefaults {
             guard
                 let serviceValue = string(forKey: AppKey.pageTranslationService.rawValue),
                 let service = TranslationService(rawValue: serviceValue) else {
-                    return .google
+                    return Locale.current.regionCode == "CN"
+                        ? .yandex
+                        : .google
             }
             return service
         }

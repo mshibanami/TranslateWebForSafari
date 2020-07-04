@@ -85,13 +85,20 @@ enum TranslationMedia {
             (key: "tl", value: targetLanguage.id),
             (key: "sl", value: sourceLanguage?.id ?? "auto")
         ]
+        let baseURLString: String
+        if let regionCode = Locale.current.regionCode,
+            regionCode == "CN" {
+            baseURLString = "https://translate.google.cn"
+        } else {
+            baseURLString = "https://translate.google.com"
+        }
         switch self {
         case let .text(text, _):
             parameters.append((key: "text", value: text))
-            return URL(string: "https://translate.google.com/?\(parameters.makeQueryString())")
+            return URL(string: "\(baseURLString)/?\(parameters.makeQueryString())")
         case let .page(url, _):
             parameters.append((key: "u", value: url.absoluteString.removingPercentEncoding ?? ""))
-            return URL(string: "https://translate.google.com/translate?\(parameters.makeQueryString())")
+            return URL(string: "\(baseURLString)/translate?\(parameters.makeQueryString())")
         }
     }
     
