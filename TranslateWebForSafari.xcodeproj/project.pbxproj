@@ -56,6 +56,7 @@
 		00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */; };
 		00DD6A82246659DD004684DA /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A81246659DD004684DA /* script.js */; };
 		00DD6A84246659DD004684DA /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */; };
+		00EC49FC24B0C18F0043C90C /* FeedbackMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EC49FB24B0C18F0043C90C /* FeedbackMenuPresenter.swift */; };
 		27F3D3EA67A8702361EA2CA0 /* Pods_TranslateWebForSafariTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312BB78E476CC873DA818067 /* Pods_TranslateWebForSafariTests.framework */; };
 		28B65A0A247FF754009FBD19 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004B6CCE2476AD2500C25112 /* Consts.swift */; };
 		9F05996E74FF14542B20C3D5 /* Pods_TranslateWebForSafari.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A27285B3A158C583603BF00 /* Pods_TranslateWebForSafari.framework */; };
@@ -152,6 +153,7 @@
 		00DD6A81246659DD004684DA /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
 		00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		00DD6A85246659DD004684DA /* TranslateWebForSafari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari_Extension.entitlements; sourceTree = "<group>"; };
+		00EC49FB24B0C18F0043C90C /* FeedbackMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackMenuPresenter.swift; sourceTree = "<group>"; };
 		1122CC402FBA890EFA2EE4C8 /* Pods-TranslateWebForSafariTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranslateWebForSafariTests.release.xcconfig"; path = "Target Support Files/Pods-TranslateWebForSafariTests/Pods-TranslateWebForSafariTests.release.xcconfig"; sourceTree = "<group>"; };
 		312BB78E476CC873DA818067 /* Pods_TranslateWebForSafariTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranslateWebForSafariTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D82FEDE0EA6CF3847392D3A /* Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranslateWebForSafari_TranslateWebForSafariUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -211,6 +213,7 @@
 				0093F9DD248BCF75000DA70D /* AppRatingService.swift */,
 				00368E722488EE73001C4224 /* RateAppView.swift */,
 				00368E7C248A416A001C4224 /* AppRatingViewController.swift */,
+				00EC49FB24B0C18F0043C90C /* FeedbackMenuPresenter.swift */,
 				00368E7E248A451D001C4224 /* RateApp.xcassets */,
 			);
 			path = AppRating;
@@ -674,6 +677,7 @@
 				00B1D36924866EF000232F3A /* Colors.swift in Sources */,
 				00DD6A4E246659DA004684DA /* AppDelegate.swift in Sources */,
 				00C726DE247D222400090155 /* ToolbarItemBehavior.swift in Sources */,
+				00EC49FC24B0C18F0043C90C /* FeedbackMenuPresenter.swift in Sources */,
 				004D82872479289000817E8B /* Collection+Extensions.swift in Sources */,
 				00D524202479613000556BA4 /* TranslationMedia.swift in Sources */,
 				001853AD246D676600C75E4D /* L10n.swift in Sources */,

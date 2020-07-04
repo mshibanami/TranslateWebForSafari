@@ -52,15 +52,24 @@ class MainViewController: NSViewController {
         return button
     }()
     
-    private lazy var aboutThisExtensionButton: NSButton = {
-        let button = NSButton(title: L10n.aboutThisExtension, target: self, action: #selector(didSelectAboutThisApp(_:)))
-        button.font = NSFont.boldSystemFont(ofSize: 12)
-        button.setButtonType(.momentaryPushIn)
-        button.isBordered = true
-        button.showsBorderOnlyWhileMouseInside = true
-        button.bezelStyle = .recessed
+    private lazy var sendFeedbackButton: NSButton = {
+        let button = NSButton(title: L10n.sendFeedback, target: self, action: #selector(didSelectSendFeedback(_:)))
         button.setContentHuggingPriority(.required, for: .horizontal)
         return button
+    }()
+    
+    private lazy var aboutThisExtensionButton: NSButton = {
+        let button = NSButton(title: L10n.aboutThisExtension, target: self, action: #selector(didSelectAboutThisApp(_:)))
+        button.setContentHuggingPriority(.required, for: .horizontal)
+        return button
+    }()
+    
+    private lazy var bottomButtonsView: NSStackView = {
+        let view = NSStackView(views: [
+            sendFeedbackButton,
+            aboutThisExtensionButton,
+        ])
+        return view
     }()
     
     private lazy var pageTranslationStackView: NSStackView = {
@@ -169,9 +178,21 @@ class MainViewController: NSViewController {
     
     private lazy var textTranslationOpenInNewTabButton = NSButton(checkboxWithTitle: L10n.openInNewTab, target: self, action: #selector(didSelectTextTranslationOpenInNewTabButton(_:)))
     
-    private lazy var appRatingViewController = AppRatingViewController(
-        ratingService: AppRatingSettings.ratingService,
-        feedbackServices: AppRatingSettings.feedbackServices)
+    private lazy var appRatingViewController: AppRatingViewController = {
+        let viewController = AppRatingViewController(ratingService: AppRatingSettings.ratingService)
+        viewController.onSelectDismiss = { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.appRatingViewController.view.isHidden = true
+            self.appRatingViewController.heightConstraint?.constant = 0
+            self.view.window?.setContentSize(self.view.fittingSize)
+            AppRatingSettings.markLastAppRating()
+        }
+        return viewController
+    }()
+    
+    private let feedbackMenuPresenter = FeedbackMenuPresenter(onFinishSelectingMenuItem: {})
     
     private lazy var rateAppContainerView: NSView = {
         let view = NSView()
@@ -228,7 +249,7 @@ class MainViewController: NSViewController {
             settingsGridView,
             settingsLowerSeparator,
             openSafariPreferencesButton,
-            aboutThisExtensionButton
+            bottomButtonsView
         ])
         contentStackView.orientation = .vertical
         contentStackView.distribution = .fill
@@ -236,7 +257,6 @@ class MainViewController: NSViewController {
         contentStackView.setCustomSpacing(30, after: settingsUpperSeparator)
         contentStackView.setCustomSpacing(30, after: settingsGridView)
         contentStackView.setCustomSpacing(30, after: settingsLowerSeparator)
-        contentStackView.setCustomSpacing(10, after: aboutThisExtensionButton)
         
         let contentEdgeView = NSView()
         contentEdgeView.addAutoLayoutSubview(contentStackView)
@@ -268,24 +288,7 @@ class MainViewController: NSViewController {
             appRatingViewController.view.fillToSuperview()
         }
         
-        setupGestureHandlers()
         resetUI()
-    }
-    
-    private func setupGestureHandlers() {
-        openSafariPreferencesButton.target = self
-        openSafariPreferencesButton.action = #selector(didSelectOpenSafariPreferences(_:))
-        aboutThisExtensionButton.target = self
-        aboutThisExtensionButton.action = #selector(didSelectAboutThisApp(_:))
-        appRatingViewController.onSelectDismiss = { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.appRatingViewController.view.isHidden = true
-            self.appRatingViewController.heightConstraint?.constant = 0
-            self.view.window?.setContentSize(self.view.fittingSize)
-            AppRatingSettings.markLastAppRating()
-        }
     }
     
     private func resetUI() {
@@ -385,6 +388,10 @@ class MainViewController: NSViewController {
     
     // MARK: Actions
     
+    @objc private func didSelectSendFeedback(_ sender: NSView) {
+        feedbackMenuPresenter.showMenu(with: nil, for: sender)
+    }
+
     @objc private func didSelectPageTranslationService(_ sender: NSView) {
         guard let service = currentSelectionOfPageTranslationService() else {
             assertionFailure()

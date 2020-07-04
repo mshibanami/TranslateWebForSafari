@@ -47,11 +47,12 @@ class AppRatingViewController: NSViewController {
     }()
     
     private let ratingService: AppRatingService
-    private let feedbackServices: [AppFeedbackService]
+    private lazy var feedbackMenuPresenter = FeedbackMenuPresenter(onFinishSelectingMenuItem: {
+        self.onSelectDismiss?()
+    })
     
-    init(ratingService: AppRatingService, feedbackServices: [AppFeedbackService]) {
+    init(ratingService: AppRatingService) {
         self.ratingService = ratingService
-        self.feedbackServices = feedbackServices
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -118,20 +119,7 @@ class AppRatingViewController: NSViewController {
                 NSWorkspace.shared.open(self.ratingService.url)
                 self.onSelectDismiss?()
             case .gotLowRate:
-                let menu = NSMenu()
-                menu.items = self.feedbackServices.enumerated().map { index, service in
-                    let menuItem = NSMenuItem(
-                        title: service.serviceTitle,
-                        action: #selector(self.didSelectFeedbackMenuItem(_:)),
-                        keyEquivalent: "")
-                    menuItem.tag = index
-                    return menuItem
-                }
-                
-                guard let event = NSApplication.shared.currentEvent else {
-                    return
-                }
-                NSMenu.popUpContextMenu(menu, with: event, for: view)
+                self.feedbackMenuPresenter.showMenu(with: nil, for: view)
             }
         }
     }
@@ -189,15 +177,6 @@ class AppRatingViewController: NSViewController {
                 }
             }
         })
-    }
-    
-    @objc private func didSelectFeedbackMenuItem(_ sender: NSMenuItem) {
-        guard let service = feedbackServices[optional: sender.tag] else {
-            assertionFailure()
-            return
-        }
-        NSWorkspace.shared.open(service.url)
-        self.onSelectDismiss?()
     }
 }
 
