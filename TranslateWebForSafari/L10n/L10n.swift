@@ -42,6 +42,7 @@ class L10n {
     static let menuItemClose = NSLocalizedString("Close", comment: "")
     static let pageTranslation = NSLocalizedString("Page Translation", comment: "")
     static let textTranslation = NSLocalizedString("Text Translation", comment: "")
+    static let textTranslationServiceCaution = NSLocalizedString("Note: Due to censorship in some countries, some translation services may not be available. Please make sure that you can actually access the service.", comment: "")
     static let textOrPageTranslation = NSLocalizedString("Text or Page Translation", comment: "")
     static let translateTo = NSLocalizedString("Translate to", comment: "")
     static let toolbarItemBehavior = NSLocalizedString("Toolbar button behavior", comment: "")

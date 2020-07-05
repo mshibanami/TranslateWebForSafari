@@ -43,4 +43,11 @@ extension NSView {
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view, positioned: place, relativeTo: otherView)
     }
+    
+    func subviews<T>(of type: T.Type) -> [T] {
+        return subviews.compactMap { $0 as? T }
+            + subviews
+                .compactMap({ $0.subviews(of: T.self) })
+                .reduce(into: [], { $0 += $1 })
+    }
 }

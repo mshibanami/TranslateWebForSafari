@@ -8,7 +8,9 @@ class MainViewController: NSViewController {
     private static let pageTranslationServices = TranslationService.allCases.filter { $0.supportsPageTranslation }
     private static let textTranslationServices = TranslationService.allCases
     private static let toolbarItemBehavior = ToolbarItemBehavior.allCases
-        
+
+    private static let userDefaultsController: NSUserDefaultsController = NSUserDefaultsController(defaults: UserDefaults.group, initialValues: nil)
+    
     private let appIconImageView: NSImageView = {
         let image = NSImage(named: "AppIcon")!
         let view = NSImageView(image: image)
@@ -75,6 +77,7 @@ class MainViewController: NSViewController {
     private lazy var pageTranslationStackView: NSStackView = {
         let view = NSStackView(views: [
             pageTranslationServicePopUpButton,
+            NSTextField(noteLabelWithString: L10n.textTranslationServiceCaution),
             NSStackView(views: [
                 NSTextField(settingLabelWithString: L10n.translateTo),
                 pageTranslateToPopUpButton]),
@@ -122,14 +125,7 @@ class MainViewController: NSViewController {
             NSStackView(views: [
                 NSTextField(settingLabelWithString: L10n.textOrPageTranslation),
                 textOrPageTranslationShortcutView]),
-            {
-                let textField = NSTextField(labelWithString: L10n.keyboardShortcutsSettingsCaution)
-                textField.font = NSFont.systemFont(ofSize: 11)
-                textField.lineBreakMode = .byWordWrapping
-                textField.setContentHuggingPriority(.defaultLow, for: .horizontal)
-                textField.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
-                return textField
-            }()
+            NSTextField(noteLabelWithString: L10n.keyboardShortcutsSettingsCaution)
         ])
         view.spacing = 6
         view.orientation = .vertical
@@ -147,6 +143,27 @@ class MainViewController: NSViewController {
         view.rowSpacing = 24
         view.column(at: 0).xPlacement = .trailing
         view.rowAlignment = .firstBaseline
+        return view
+    }()
+    
+    private lazy var extensionDisabledView: NSView = {
+        let view = MouseDownUpBlockingView()
+        view.wantsLayer = true
+        view.layer?.backgroundColor = NSColor.windowBackgroundColor.withAlphaComponent(0.85).cgColor
+        let stackView = NSStackView(
+            views:[
+                {
+                    let textField = NSTextField(labelWithString: "This extension is disabled.\nPrease enable in Safari Preferences.")
+                    textField.font = NSFont.boldSystemFont(ofSize: 20)
+                    textField.alignment = .center
+                    return textField
+                }(),
+                openSafariPreferencesButton
+        ])
+        stackView.spacing = 18
+        stackView.orientation = .vertical
+        view.addAutoLayoutSubview(stackView)
+        stackView.centerInSuperview()
         return view
     }()
     
@@ -209,8 +226,13 @@ class MainViewController: NSViewController {
     private let pageTranslationShortcutView = MainViewController.makeShortcutView(for: .pageTranslationShortcut)
     private let textTranslationShortcutView = MainViewController.makeShortcutView(for: .textTranslationShortcut)
     private let textOrPageTranslationShortcutView = MainViewController.makeShortcutView(for: .textOrPageTranslationShortcut)
+    private var extensionStateRefreshTimer: Timer?
     
-    private static let userDefaultsController: NSUserDefaultsController = NSUserDefaultsController(defaults: UserDefaults.group, initialValues: nil)
+    private var isExtensionEnabled: Bool = false {
+        didSet {
+            updateUI()
+        }
+    }
     
     override func loadView() {
         let titleStackView = NSStackView(views: [
@@ -226,7 +248,7 @@ class MainViewController: NSViewController {
             titleStackView,
             versionLabel
         ])
-        headerTrailingStackView.spacing = 8
+        headerTrailingStackView.spacing = 0
         headerTrailingStackView.orientation = .vertical
         headerTrailingStackView.alignment = .leading
         headerTrailingStackView.distribution = .fill
@@ -272,7 +294,13 @@ class MainViewController: NSViewController {
         let view = NSView()
         view.addAutoLayoutSubview(stackView)
         stackView.fillToSuperview()
+        view.addAutoLayoutSubview(extensionDisabledView)
+        
         NSLayoutConstraint.activate([
+            extensionDisabledView.topAnchor.constraint(equalTo: settingsGridView.topAnchor),
+            extensionDisabledView.bottomAnchor.constraint(equalTo: settingsGridView.bottomAnchor),
+            extensionDisabledView.leadingAnchor.constraint(equalTo: settingsGridView.leadingAnchor),
+            extensionDisabledView.trailingAnchor.constraint(equalTo: settingsGridView.trailingAnchor),
             aboutThisExtensionButton.trailingAnchor.constraint(equalTo: contentStackView.trailingAnchor),
             rateAppContainerView.widthAnchor.constraint(equalTo: view.widthAnchor)
         ])
@@ -288,6 +316,11 @@ class MainViewController: NSViewController {
             appRatingViewController.view.fillToSuperview()
         }
         
+        extensionStateRefreshTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            self?.refreshExtensionState()
+        }
+        
+        refreshExtensionState()
         resetUI()
     }
     
@@ -307,7 +340,22 @@ class MainViewController: NSViewController {
         updateUI()
     }
     
+    private func refreshExtensionState() {
+        SFSafariExtensionManager.getStateOfSafariExtension(withIdentifier: Consts.extensionBundleIdentifier) { state, error in
+            guard let state = state else {
+                return
+            }
+            DispatchQueue.main.async {
+                self.isExtensionEnabled = state.isEnabled
+            }
+        }
+    }
+    
     private func updateUI() {
+        extensionDisabledView.isHidden = isExtensionEnabled
+        settingsGridView.subviews(of: NSButton.self).forEach { $0.isEnabled = isExtensionEnabled }
+        settingsGridView.subviews(of: RecorderControl.self).forEach { $0.isEnabled = isExtensionEnabled }
+        
         let settings = UserDefaults.group
         
         // Page Translation
@@ -445,7 +493,7 @@ class MainViewController: NSViewController {
     }
     
     @objc private func didSelectOpenSafariPreferences(_ sender: NSView) {
-        SFSafariApplication.showPreferencesForExtension(withIdentifier: "io.github.mshibanami.TranslateWebForSafari.Extension")
+        SFSafariApplication.showPreferencesForExtension(withIdentifier: Consts.extensionBundleIdentifier)
     }
     
     @objc private func didSelectAboutThisApp(_ sender: AnyObject?) {
@@ -462,5 +510,20 @@ private extension Language {
 private extension NSTextField {
     convenience init(settingLabelWithString string: String) {
         self.init(labelWithString: string + ":")
+    }
+    
+    convenience init(noteLabelWithString string: String) {
+        self.init(labelWithString: string)
+        font = NSFont.systemFont(ofSize: 11)
+        lineBreakMode = .byWordWrapping
+        setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
+    }
+}
+
+private class MouseDownUpBlockingView: NSView {
+    override func mouseDown(with event: NSEvent) {
+    }
+    
+    override func mouseUp(with event: NSEvent) {
     }
 }

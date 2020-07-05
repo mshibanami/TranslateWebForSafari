@@ -22,4 +22,5 @@ enum Consts {
             return true
         }
     }()
+    static let extensionBundleIdentifier = "io.github.mshibanami.TranslateWebForSafari.Extension"
 }

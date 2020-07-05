@@ -232,7 +232,6 @@
 		006CE50124783B0600256895 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				004B6CCE2476AD2500C25112 /* Consts.swift */,
 				006CE4FD24781F4500256895 /* Language.swift */,
 				00D5241E24795F1300556BA4 /* TranslationMedia.swift */,
 				006CE4FB2478191A00256895 /* TranslationService.swift */,
@@ -241,7 +240,6 @@
 				00A42DDD248204AA003F24AA /* LanguageDetector.swift */,
 				0041D92D24850A4E00E24AFE /* TransitionBehavior.swift */,
 				00B1D36824866EF000232F3A /* Colors.swift */,
-				006A9908248D120800503F5D /* AppRatingSettings.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,6 +286,8 @@
 				00DD6A56246659DD004684DA /* Info.plist */,
 				00DD6A4D246659DA004684DA /* AppDelegate.swift */,
 				00DD6A52246659DA004684DA /* MainViewController.swift */,
+				006A9908248D120800503F5D /* AppRatingSettings.swift */,
+				004B6CCE2476AD2500C25112 /* Consts.swift */,
 				00C80BCC248D021600DF1FDF /* Log.swift */,
 				00DD6A54246659DD004684DA /* Assets.xcassets */,
 				004D82852479287C00817E8B /* Utilities */,
