@@ -153,9 +153,11 @@ class MainViewController: NSViewController {
         let stackView = NSStackView(
             views:[
                 {
-                    let textField = NSTextField(labelWithString: "This extension is disabled.\nPrease enable in Safari Preferences.")
+                    let textField = NSTextField(labelWithString: L10n.extensionIsDisabled)
                     textField.font = NSFont.boldSystemFont(ofSize: 20)
                     textField.alignment = .center
+                    textField.lineBreakMode = .byWordWrapping
+                    textField.widthAnchor.constraint(lessThanOrEqualToConstant: 300).isActive = true
                     return textField
                 }(),
                 openSafariPreferencesButton
@@ -270,7 +272,6 @@ class MainViewController: NSViewController {
             settingsUpperSeparator,
             settingsGridView,
             settingsLowerSeparator,
-            openSafariPreferencesButton,
             bottomButtonsView
         ])
         contentStackView.orientation = .vertical
@@ -278,7 +279,7 @@ class MainViewController: NSViewController {
         contentStackView.setCustomSpacing(20, after: headerStackView)
         contentStackView.setCustomSpacing(30, after: settingsUpperSeparator)
         contentStackView.setCustomSpacing(30, after: settingsGridView)
-        contentStackView.setCustomSpacing(30, after: settingsLowerSeparator)
+        contentStackView.setCustomSpacing(20, after: settingsLowerSeparator)
         
         let contentEdgeView = NSView()
         contentEdgeView.addAutoLayoutSubview(contentStackView)
