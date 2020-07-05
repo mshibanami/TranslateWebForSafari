@@ -140,6 +140,9 @@
 "Norwegian" = "Норве́жский";
 
 /* No comment provided by engineer. */
+"Note: Due to censorship in some countries, some translation services may not be available. Please make sure that you can actually access the service." = "Примечание: Из-за цензуры в некоторых странах некоторые услуги по переводу страниц могут быть недоступны. Пожалуйста, убедитесь заранее, что вы действительно можете получить доступ к этой услуге.";
+
+/* No comment provided by engineer. */
 "Note: If the shortcuts you set conflicts with the shortcuts of Safari or other extensions, the settings here may not be enabled." = "Примечание: Если заданные вами ярлыки конфликтуют с ярлыками в Safari или других расширениях, настройки здесь могут быть не включены.";
 
 /* No comment provided by engineer. */
