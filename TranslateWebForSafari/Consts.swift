@@ -23,4 +23,9 @@ enum Consts {
         }
     }()
     static let extensionBundleIdentifier = "io.github.mshibanami.TranslateWebForSafari.Extension"
+    
+    static let isDownloadedFromAppStore: Bool = {
+        let url = Bundle.main.bundleURL.appendingPathComponent("Contents/_MASReceipt/receipt")
+        return FileManager.default.fileExists(atPath: url.path)
+    }()
 }

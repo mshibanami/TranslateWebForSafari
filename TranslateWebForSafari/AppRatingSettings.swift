@@ -10,7 +10,7 @@ import Foundation
 
 enum AppRatingSettings {
     static let ratingService: AppRatingService = {
-        return Self.isDownloadedFromAppStore
+        return Consts.isDownloadedFromAppStore
             ? .appStore(appAppleID: Consts.appAppleID)
             : .gitHub(userID: Consts.gitHubUserID, repositoryID: Consts.gitHubRepositoryID)
     }()
@@ -52,10 +52,4 @@ enum AppRatingSettings {
         UserDefaults.group.translationCountForCurrentVersion += 1
         Log.info("Translation Count: \(UserDefaults.group.translationCountForCurrentVersion)")
     }
-    
-    private static let isDownloadedFromAppStore: Bool = {
-        let url = Bundle.main.bundleURL.appendingPathComponent("Contents/_MASReceipt/receipt")
-        return FileManager.default.fileExists(atPath: url.path)
-    }()
-    
 }

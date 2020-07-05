@@ -20,8 +20,11 @@ enum AppFeedbackService {
                 mailTo: address,
                 subject: "Feedback for \(L10n.appName)",
                 body: """
-                \n\n\(L10n.appName) \(Consts.bundleShortVersion) (\(Consts.bundleVersion))
-                macOS \(ProcessInfo.processInfo.operatingSystemVersionString)
+                \n
+                • \(L10n.appName) \(Consts.bundleShortVersion) (\(Consts.bundleVersion)) \(Consts.isDownloadedFromAppStore ? "App Store" : "GitHub")
+                • macOS \(ProcessInfo.processInfo.operatingSystemVersionString)
+                • Language: \(Locale.current.languageCode ?? "-")
+                • Region: \(Locale.current.regionCode ?? "-")
                 """)
         case let .twitter(userID):
             return URL(string: "https://twitter.com/\(userID)")!
