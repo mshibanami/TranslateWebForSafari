@@ -68,6 +68,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
                 return
             }
             self.updateToolbarItemLabel(in: window)
+            SFSafariApplication.setToolbarItemsNeedUpdate()
         }
     }
     
@@ -146,9 +147,12 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
-        window.getActivePage {
-            $0?.dispatchMessageToScript(withName: "updateSelection")
+        switch UserDefaults.group.toolbarItemBehavior {
+        case .alwaysTranslatePage, .translateTextIfSelected:
             validationHandler(true, "")
+        case .alwaysTranslateSelectedText:
+            let isSelected = !(State.shared.selectedText?.isEmpty ?? true)
+            validationHandler(isSelected, "")
         }
     }
     
@@ -187,11 +191,27 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     
     private func updateToolbarItemLabel(in window: SFSafariWindow) {
         window.getToolbarItem {
-            if let _ = State.shared.selectedText {
-                $0?.setLabel(L10n.menuTranslateText(with: State.shared.makeShortenedSelectedText() ?? ""))
-            } else {
-                $0?.setLabel(L10n.toolbarItemTranslatePage)
+            guard let toolbarItem = $0 else {
+                return
             }
+            let label: String
+            switch UserDefaults.group.toolbarItemBehavior {
+            case .alwaysTranslatePage:
+                label = L10n.toolbarItemTranslatePage
+            case .alwaysTranslateSelectedText:
+                if let shortenedSelected = State.shared.makeShortenedSelectedText() {
+                    label = L10n.menuTranslateText(with: shortenedSelected)
+                } else {
+                    label = L10n.toolbarItemNoTextIsSelected
+                }
+            case .translateTextIfSelected:
+                if let shortenedSelected = State.shared.makeShortenedSelectedText() {
+                    label = L10n.menuTranslateText(with: shortenedSelected)
+                } else {
+                    label = L10n.toolbarItemTranslatePage
+                }
+            }
+            toolbarItem.setLabel(label)
         }
     }
     

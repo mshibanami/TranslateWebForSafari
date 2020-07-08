@@ -53,6 +53,7 @@ class L10n {
     static let translateTextIfSelected = NSLocalizedString("If text is selected, translate it, otherwise translate the current page", comment: "")
     static let openSafariPreferences = NSLocalizedString("Open Safari Preferences…", comment: "")
     static let extensionIsDisabled = NSLocalizedString("Please enable the extension in Safari Preferences.", comment: "")
+    static let toolbarItemNoTextIsSelected = NSLocalizedString("No text is selected.", comment: "")
     static let aboutThisExtension = NSLocalizedString("About this extension", comment: "")
     static let recommended = NSLocalizedString("(recommended)", comment: "")
     static func textAndRecommended(text: String) -> String {
