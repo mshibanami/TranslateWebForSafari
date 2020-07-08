@@ -59,7 +59,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         let selectedTextKey = "selectedText"
         let selectedTextOptional = (userInfo ?? [:])[selectedTextKey]
         guard let selectedText = selectedTextOptional as? String else {
-            assertionFailure("Unexpected data type or it's not set: \(selectedTextKey)=\(String(describing: selectedTextOptional))")
+            Log.warn("Unexpected data type or it's not set: \(selectedTextKey)=\(String(describing: selectedTextOptional))")
             return
         }
         State.shared.selectedText = selectedText
@@ -75,7 +75,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         let textKey = "text"
         let textOptional = (userInfo ?? [:])[textKey]
         guard let text = textOptional as? String else {
-            assertionFailure("Unexpected data type or it's not set: \(textKey)=\(String(describing: textOptional))")
+            Log.warn("Unexpected data type or it's not set: \(textKey)=\(String(describing: textOptional))")
             return
         }
         
