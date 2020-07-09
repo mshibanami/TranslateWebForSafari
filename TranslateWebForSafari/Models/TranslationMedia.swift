@@ -1,10 +1,4 @@
-//
-//  TranslationMedia.swift
-//  TranslateWebForSafari Extension
-//
-//  Created by Manabu Nakazawa on 23/5/20.
-//  Copyright © 2020 Manabu Nakazawa. All rights reserved.
-//
+// Copyright (c) 2020 Manabu Nakazawa. Licensed under the MIT license. See LICENSE in the project root for license information.
 
 import Foundation
 
@@ -86,8 +80,7 @@ enum TranslationMedia {
             (key: "sl", value: sourceLanguage?.id ?? "auto")
         ]
         let baseURLString: String
-        if let regionCode = Locale.current.regionCode,
-            regionCode == "CN" {
+        if Locale.current.isInChina {
             baseURLString = "https://translate.google.cn"
         } else {
             baseURLString = "https://translate.google.com"

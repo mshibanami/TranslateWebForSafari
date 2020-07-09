@@ -75,14 +75,17 @@ class MainViewController: NSViewController {
     }()
     
     private lazy var pageTranslationStackView: NSStackView = {
-        let view = NSStackView(views: [
+        let views: [NSView?] = [
             pageTranslationServicePopUpButton,
-            NSTextField(noteLabelWithString: L10n.textTranslationServiceCaution),
+            Locale.current.isInChina
+                ? NSTextField(noteLabelWithString: L10n.textTranslationServiceCaution)
+                : nil,
             NSStackView(views: [
                 NSTextField(settingLabelWithString: L10n.translateTo),
                 pageTranslateToPopUpButton]),
             pageTranslationOpenInNewTabButton
-        ])
+        ]
+        let view = NSStackView(views: views.compactMap { $0 })
         view.spacing = 6
         view.orientation = .vertical
         view.alignment = .leading
