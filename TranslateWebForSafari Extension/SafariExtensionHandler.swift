@@ -285,10 +285,11 @@ private extension SFSafariWindow {
     
     func openPage(for media: TranslationMedia) {
         let settings = UserDefaults.group
-
+        
         guard let url = media.makeURL(
             for: settings.translationService(for: media),
-            targetLanguage: settings.language(for: media)) else {
+            targetLanguage: settings.language(for: media),
+            regionCode: Locale.current.regionCode) else {
                 return
         }
         

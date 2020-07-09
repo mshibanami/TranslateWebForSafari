@@ -15,16 +15,16 @@ enum TranslationMedia {
         }
     }
     
-    func makeURL(for service: TranslationService, targetLanguage: Language) -> URL? {
+    func makeURL(for service: TranslationService, targetLanguage: Language, regionCode: String?) -> URL? {
         switch service {
         case .baidu:
-            return makeURLForBaidu(targetLanguage: targetLanguage)
+            return makeURLForBaidu(targetLanguage: targetLanguage, regionCode: regionCode)
         case .bing:
             return makeURLForBing(targetLanguage: targetLanguage)
         case .deepL:
-            return makeURLForDeepL(targetLanguage: targetLanguage)
+            return makeURLForDeepL(targetLanguage: targetLanguage, regionCode: regionCode)
         case .google:
-            return makeURLForGoogle(targetLanguage: targetLanguage)
+            return makeURLForGoogle(targetLanguage: targetLanguage, regionCode: regionCode)
         case .papago:
             return makeURLForPapago(targetLanguage: targetLanguage)
         case .yandex:
@@ -32,7 +32,7 @@ enum TranslationMedia {
         }
     }
 
-    private func makeURLForBaidu(targetLanguage: Language) -> URL? {
+    private func makeURLForBaidu(targetLanguage: Language, regionCode: String?) -> URL? {
         switch self {
         case let .text(text, sourceLanguage):
             let sourceID = sourceLanguage?.id ?? "auto"
@@ -40,7 +40,7 @@ enum TranslationMedia {
             return URL(string: "https://fanyi.baidu.com/#\(sourceID)/\(targetLanguage.id)/\(encodedText)")
         case .page:
             assertionFailure("Baidu doesn't support page translation")
-            return makeURLForGoogle(targetLanguage: targetLanguage)
+            return makeURLForGoogle(targetLanguage: targetLanguage, regionCode: regionCode)
         }
     }
     
@@ -62,7 +62,7 @@ enum TranslationMedia {
         return urlComponents.url
     }
     
-    private func makeURLForDeepL(targetLanguage: Language) -> URL? {
+    private func makeURLForDeepL(targetLanguage: Language, regionCode: String?) -> URL? {
         switch self {
         case let .text(text, sourceLanguage):
             let encodedText = text.addingPercentEncoding(withAllowedCharacters: .rfc3986Unreserved) ?? ""
@@ -70,29 +70,29 @@ enum TranslationMedia {
             return URL(string: "https://www.deepl.com/translator#\(sourceCode)/\(targetLanguage.id)/\(encodedText)")
         case .page:
             assertionFailure("DeepL doesn't support page translation")
-            return makeURLForGoogle(targetLanguage: targetLanguage)
+            return makeURLForGoogle(targetLanguage: targetLanguage, regionCode: regionCode)
         }
     }
     
-    private func makeURLForGoogle(targetLanguage: Language) -> URL? {
+    private func makeURLForGoogle(targetLanguage: Language, regionCode: String?) -> URL? {
         var parameters: [URLQueryParameter] = [
             (key: "tl", value: targetLanguage.id),
             (key: "sl", value: sourceLanguage?.id ?? "auto")
         ]
-        let baseURLString: String
-        if Locale.current.isInChina {
-            baseURLString = "https://translate.google.cn"
-        } else {
-            baseURLString = "https://translate.google.com"
-        }
+        
+        let baseURL = makeBaseURLForGoogle(regionCode: regionCode)
+        var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
+
         switch self {
         case let .text(text, _):
             parameters.append((key: "text", value: text))
-            return URL(string: "\(baseURLString)/?\(parameters.makeQueryString())")
+            urlComponents?.percentEncodedQuery = parameters.makeQueryString()
         case let .page(url, _):
+            urlComponents?.path = "/translate"
             parameters.append((key: "u", value: url.absoluteString.removingPercentEncoding ?? ""))
-            return URL(string: "\(baseURLString)/translate?\(parameters.makeQueryString())")
+            urlComponents?.percentEncodedQuery = parameters.makeQueryString()
         }
+        return urlComponents?.url
     }
     
     private func makeURLForPapago(targetLanguage: Language) -> URL? {
@@ -127,6 +127,19 @@ enum TranslationMedia {
         case let .page(url, _):
             parameters.append((key: "url", value: url.absoluteString.removingPercentEncoding ?? ""))
             return URL(string: "https://translate.yandex.com/translate?\(parameters.makeQueryString())")
+        }
+    }
+    
+    private func makeBaseURLForGoogle(regionCode: String?) -> URL {
+        let defaultURL = URL(string: "https://translate.google.com/")!
+        guard let regionCode = regionCode else {
+            return defaultURL
+        }
+        switch regionCode {
+        case "CN":
+            return URL(string: "https://translate.google.cn/")!
+        default:
+            return defaultURL
         }
     }
 }
