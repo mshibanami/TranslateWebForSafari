@@ -34,7 +34,7 @@
 		<array>
 			<dict>
 				<key>Script</key>
-				<string>script.js</string>
+				<string>translate-web.js</string>
 			</dict>
 		</array>
 		<key>SFSafariContextMenu</key>

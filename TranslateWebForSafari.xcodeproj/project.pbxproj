@@ -54,7 +54,7 @@
 		00DD6A72246659DD004684DA /* TranslateWebForSafari Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 00DD6A71246659DD004684DA /* TranslateWebForSafari Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		00DD6A77246659DD004684DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00DD6A76246659DD004684DA /* Cocoa.framework */; };
 		00DD6A7A246659DD004684DA /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */; };
-		00DD6A82246659DD004684DA /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A81246659DD004684DA /* script.js */; };
+		00DD6A82246659DD004684DA /* translate-web.js in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A81246659DD004684DA /* translate-web.js */; };
 		00DD6A84246659DD004684DA /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */; };
 		00EC49FC24B0C18F0043C90C /* FeedbackMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00EC49FB24B0C18F0043C90C /* FeedbackMenuPresenter.swift */; };
 		27F3D3EA67A8702361EA2CA0 /* Pods_TranslateWebForSafariTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 312BB78E476CC873DA818067 /* Pods_TranslateWebForSafariTests.framework */; };
@@ -150,7 +150,7 @@
 		00DD6A76246659DD004684DA /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
 		00DD6A80246659DD004684DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00DD6A81246659DD004684DA /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		00DD6A81246659DD004684DA /* translate-web.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = "translate-web.js"; sourceTree = "<group>"; };
 		00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
 		00DD6A85246659DD004684DA /* TranslateWebForSafari_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TranslateWebForSafari_Extension.entitlements; sourceTree = "<group>"; };
 		00EC49FB24B0C18F0043C90C /* FeedbackMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackMenuPresenter.swift; sourceTree = "<group>"; };
@@ -333,7 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				00DD6A85246659DD004684DA /* TranslateWebForSafari_Extension.entitlements */,
-				00DD6A81246659DD004684DA /* script.js */,
+				00DD6A81246659DD004684DA /* translate-web.js */,
 				00DD6A83246659DD004684DA /* ToolbarItemIcon.pdf */,
 				00DD6A80246659DD004684DA /* Info.plist */,
 				00DD6A79246659DD004684DA /* SafariExtensionHandler.swift */,
@@ -524,7 +524,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00DD6A84246659DD004684DA /* ToolbarItemIcon.pdf in Resources */,
-				00DD6A82246659DD004684DA /* script.js in Resources */,
+				00DD6A82246659DD004684DA /* translate-web.js in Resources */,
 				001853B1246D8CC400C75E4D /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
