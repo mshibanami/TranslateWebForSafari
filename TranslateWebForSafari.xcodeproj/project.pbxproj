@@ -23,8 +23,6 @@
 		004D82872479289000817E8B /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D82862479289000817E8B /* Collection+Extensions.swift */; };
 		006A9909248D120800503F5D /* AppRatingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A9908248D120800503F5D /* AppRatingSettings.swift */; };
 		006A990A248D129800503F5D /* AppRatingSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006A9908248D120800503F5D /* AppRatingSettings.swift */; };
-		006C784524B751BC0022C16B /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C784424B751BC0022C16B /* Locale+Extensions.swift */; };
-		006C784624B752C40022C16B /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006C784424B751BC0022C16B /* Locale+Extensions.swift */; };
 		006CE4FC2478191A00256895 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		006CE4FE24781F4500256895 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
 		006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
@@ -123,7 +121,6 @@
 		004B6CCE2476AD2500C25112 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		004D82862479289000817E8B /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
 		006A9908248D120800503F5D /* AppRatingSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingSettings.swift; sourceTree = "<group>"; };
-		006C784424B751BC0022C16B /* Locale+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		006CE4FB2478191A00256895 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		006CE4FD24781F4500256895 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppSettings.swift"; sourceTree = "<group>"; };
@@ -228,7 +225,6 @@
 				004D82862479289000817E8B /* Collection+Extensions.swift */,
 				00368E7524891764001C4224 /* NSView+Extensions.swift */,
 				0093F9E4248C88CB000DA70D /* URLQueryParameter.swift */,
-				006C784424B751BC0022C16B /* Locale+Extensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -670,7 +666,6 @@
 				00368E7D248A416A001C4224 /* AppRatingViewController.swift in Sources */,
 				00368E7624891764001C4224 /* NSView+Extensions.swift in Sources */,
 				00C80BCD248D021600DF1FDF /* Log.swift in Sources */,
-				006C784524B751BC0022C16B /* Locale+Extensions.swift in Sources */,
 				0093F9DC248B9535000DA70D /* AppRatedView.swift in Sources */,
 				00368E732488EE73001C4224 /* RateAppView.swift in Sources */,
 				0093F9E1248BE056000DA70D /* AppFeedbackService.swift in Sources */,
@@ -721,7 +716,6 @@
 				00D5241B24793A0A00556BA4 /* Language.swift in Sources */,
 				00D5241F24795F1400556BA4 /* TranslationMedia.swift in Sources */,
 				00C726DF247D711C00090155 /* ToolbarItemBehavior.swift in Sources */,
-				006C784624B752C40022C16B /* Locale+Extensions.swift in Sources */,
 				006A990A248D129800503F5D /* AppRatingSettings.swift in Sources */,
 				001853AE246D686E00C75E4D /* L10n.swift in Sources */,
 				00C80BCE248D02B400DF1FDF /* Log.swift in Sources */,

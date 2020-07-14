@@ -140,9 +140,6 @@
 "Norwegian" = "挪威语";
 
 /* No comment provided by engineer. */
-"Note: Due to censorship in some countries, some translation services may not be available. Please make sure that you can actually access the service." = "注意：由于部分国家的审查制度，可能无法提供部分页面翻译服务。请提前确认您是否能实际使用该服务。";
-
-/* No comment provided by engineer. */
 "Note: If the shortcuts you set conflicts with the shortcuts of Safari or other extensions, the settings here may not be enabled." = "注意：如果你设置的快捷方式与Safari或其他扩展的快捷方式冲突，这里的设置可能无法启用。";
 
 /* No comment provided by engineer. */
