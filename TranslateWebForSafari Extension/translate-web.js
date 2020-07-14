@@ -1,8 +1,4 @@
-(function() {
-    if (window.top !== window) {
-        return;
-    }
-
+(function () {
     document.addEventListener(
         'selectionchange',
         () => {
@@ -21,22 +17,39 @@
             sendKeydownToExtension(event);
         },
         false);
-    
+
     safari.self.addEventListener(
         'message',
         (event) => {
             if (document.hidden) {
                 return;
             }
-            if (event.name == 'updateSelection') {
-                sendSelectionToExtension();
-            } else if (event.name == 'pageTranslationGetPageText') {
-                pageTranslationSendPageTextToExtension();
-            } else if (event.name == 'navigate') {
-                window.location = event.message.url;
+            switch (event.name) {
+                case 'updateSelection':
+                    sendSelectionToExtension();
+                    break;
             }
         },
         false);
+
+    if (window.top === window) {
+        safari.self.addEventListener(
+            'message',
+            (event) => {
+                if (document.hidden) {
+                    return;
+                }
+                switch (event.name) {
+                    case 'pageTranslationGetPageTextSample':
+                        pageTranslationSendPageTextSampleToExtension();
+                        break;
+                    case 'navigate':
+                        window.location = event.message.url;
+                        break;
+                }
+            },
+            false);
+    }
 
     function sendSelectionToExtension() {
         safari.extension.dispatchMessage(
@@ -44,7 +57,7 @@
             { "selectedText": document.getSelection().toString() });
     }
 
-    function pageTranslationSendPageTextToExtension() {
+    function pageTranslationSendPageTextSampleToExtension() {
         const text = (
             document.querySelector("article")
             ?? document.querySelector("section")
@@ -54,21 +67,20 @@
             'pageTranslationPageTextDispatched',
             { "text": text });
     }
-    
+
     function sendKeydownToExtension(event) {
         const modifierKeys = ["Meta", "Shift", "Alt", "Control"]
         if (modifierKeys.includes(event.key)) {
             return;
         }
-        
         safari.extension.dispatchMessage(
             'shortcutReceived',
             {
-              'key': event.key,
-              'isCommandPressed': event.metaKey,
-              'isShiftPressed': event.shiftKey,
-              'isControlPressed': event.ctrlKey,
-              'isOptionPressed': event.altKey,
+                'key': event.key,
+                'isCommandPressed': event.metaKey,
+                'isShiftPressed': event.shiftKey,
+                'isControlPressed': event.ctrlKey,
+                'isOptionPressed': event.altKey,
             });
     }
 })();

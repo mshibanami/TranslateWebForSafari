@@ -11,6 +11,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
             didSet {
                 let text = selectedText?.trimmingCharacters(in: .whitespacesAndNewlines)
                 selectedText = (text?.isEmpty ?? true) ? nil : text
+                Log.debug("selected: \(selectedText ?? "nil")")
             }
         }
         
@@ -267,8 +268,9 @@ private extension SFSafariPage {
 
 private extension SFSafariWindow {
     func triggerPageTranslation() {
+        Log.info("\(#function)")
         getActivePage {
-            $0?.dispatchMessageToScript(withName: "pageTranslationGetPageText")
+            $0?.dispatchMessageToScript(withName: "pageTranslationGetPageTextSample")
         }
     }
     
