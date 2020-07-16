@@ -896,7 +896,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TranslateWebForSafari Extension/TranslateWebForSafari_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = ZVWN4UJS9M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "TranslateWebForSafari Extension/Info.plist";
@@ -905,7 +905,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.13;
+				MARKETING_VERSION = 1.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -920,7 +920,7 @@
 				CODE_SIGN_ENTITLEMENTS = "TranslateWebForSafari Extension/TranslateWebForSafari_Extension.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = ZVWN4UJS9M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "TranslateWebForSafari Extension/Info.plist";
@@ -929,7 +929,7 @@
 					"@executable_path/../Frameworks",
 					"@executable_path/../../../../Frameworks",
 				);
-				MARKETING_VERSION = 1.13;
+				MARKETING_VERSION = 1.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari.Extension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -947,7 +947,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = ZVWN4UJS9M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = TranslateWebForSafari/Info.plist;
@@ -955,7 +955,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.13;
+				MARKETING_VERSION = 1.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -972,7 +972,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 21;
+				CURRENT_PROJECT_VERSION = 22;
 				DEVELOPMENT_TEAM = ZVWN4UJS9M;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = TranslateWebForSafari/Info.plist;
@@ -980,7 +980,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.13;
+				MARKETING_VERSION = 1.14;
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.mshibanami.TranslateWebForSafari;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
