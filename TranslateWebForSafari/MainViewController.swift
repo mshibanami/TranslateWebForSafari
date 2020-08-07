@@ -172,9 +172,9 @@ class MainViewController: NSViewController {
     private lazy var pageTranslationServicePopUpButton: NSPopUpButton = {
         let button = NSPopUpButton(title: "", target: self, action: #selector(didSelectPageTranslationService(_:)))
         let menu = NSMenu()
-        menu.items = Self.pageTranslationServices.map {
-            NSMenuItem(title: $0.localizedName, action: nil, keyEquivalent: "")
-        }
+        Self.pageTranslationServices
+            .map { NSMenuItem(title: $0.localizedName, action: nil, keyEquivalent: "") }
+            .forEach { menu.addItem($0) } // Don't use setter of menu.items because of High Sierra's limitation
         button.menu = menu
         return button
     }()
@@ -186,9 +186,9 @@ class MainViewController: NSViewController {
     private lazy var textTranslationServicePopUpButton: NSPopUpButton = {
         let button = NSPopUpButton(title: "", target: self, action: #selector(didSelectTextTranslationService(_:)))
         let menu = NSMenu()
-        menu.items = Self.textTranslationServices.map {
-            NSMenuItem(title: $0.localizedName, action: nil, keyEquivalent: "")
-        }
+        Self.textTranslationServices
+            .map { NSMenuItem(title: $0.localizedName, action: nil, keyEquivalent: "") }
+            .forEach { menu.addItem($0) } // Don't use setter of menu.items because of High Sierra's limitation
         button.menu = menu
         return button
     }()

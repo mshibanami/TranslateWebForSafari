@@ -13,15 +13,17 @@ class FeedbackMenuPresenter {
     
     func showMenu(with event: NSEvent?, for view: NSView) {
         let menu = NSMenu()
-        menu.items = services.enumerated().map { index, service in
-            let menuItem = NSMenuItem(
-                title: service.serviceTitle,
-                action: #selector(self.didSelectFeedbackMenuItem(_:)),
-                keyEquivalent: "")
-            menuItem.target = self
-            menuItem.tag = index
-            return menuItem
-        }
+        services.enumerated()
+            .map({ index, service in
+                let menuItem = NSMenuItem(
+                    title: service.serviceTitle,
+                    action: #selector(self.didSelectFeedbackMenuItem(_:)),
+                    keyEquivalent: "")
+                menuItem.target = self
+                menuItem.tag = index
+                return menuItem
+            })
+            .forEach { menu.addItem($0) } // Don't use setter of menu.items because of High Sierra's limitation
         
         guard let event = event ?? NSApplication.shared.currentEvent else {
             return
