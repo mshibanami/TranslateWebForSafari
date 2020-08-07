@@ -11,9 +11,7 @@
 		001853AE246D686E00C75E4D /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001853AC246D676600C75E4D /* L10n.swift */; };
 		001853B0246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
 		001853B1246D8CC400C75E4D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 001853B3246D8CC400C75E4D /* Localizable.strings */; };
-		00368E732488EE73001C4224 /* RateAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00368E722488EE73001C4224 /* RateAppView.swift */; };
 		00368E7624891764001C4224 /* NSView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00368E7524891764001C4224 /* NSView+Extensions.swift */; };
-		00368E7D248A416A001C4224 /* AppRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00368E7C248A416A001C4224 /* AppRatingViewController.swift */; };
 		00368E7F248A451D001C4224 /* RateApp.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00368E7E248A451D001C4224 /* RateApp.xcassets */; };
 		003FC5C2248248E700CA10AD /* LanguageDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A42DDD248204AA003F24AA /* LanguageDetector.swift */; };
 		003FC5C324825DBB00CA10AD /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 004D82862479289000817E8B /* Collection+Extensions.swift */; };
@@ -26,9 +24,6 @@
 		006CE4FC2478191A00256895 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FB2478191A00256895 /* TranslationService.swift */; };
 		006CE4FE24781F4500256895 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FD24781F4500256895 /* Language.swift */; };
 		006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */; };
-		0093F9DC248B9535000DA70D /* AppRatedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9DB248B9535000DA70D /* AppRatedView.swift */; };
-		0093F9DE248BCF75000DA70D /* AppRatingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9DD248BCF75000DA70D /* AppRatingService.swift */; };
-		0093F9DF248BCFF2000DA70D /* AppRatingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9DD248BCF75000DA70D /* AppRatingService.swift */; };
 		0093F9E1248BE056000DA70D /* AppFeedbackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9E0248BE056000DA70D /* AppFeedbackService.swift */; };
 		0093F9E5248C88CB000DA70D /* URLQueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9E4248C88CB000DA70D /* URLQueryParameter.swift */; };
 		0093F9E6248C891F000DA70D /* URLQueryParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0093F9E4248C88CB000DA70D /* URLQueryParameter.swift */; };
@@ -113,9 +108,7 @@
 		001853BA246D91F300C75E4D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		001DCAD624753A7B00867B94 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		001DCAD824753A8900867B94 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
-		00368E722488EE73001C4224 /* RateAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateAppView.swift; sourceTree = "<group>"; };
 		00368E7524891764001C4224 /* NSView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView+Extensions.swift"; sourceTree = "<group>"; };
-		00368E7C248A416A001C4224 /* AppRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingViewController.swift; sourceTree = "<group>"; };
 		00368E7E248A451D001C4224 /* RateApp.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = RateApp.xcassets; sourceTree = "<group>"; };
 		0041D92D24850A4E00E24AFE /* TransitionBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionBehavior.swift; sourceTree = "<group>"; };
 		004B6CCE2476AD2500C25112 /* Consts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
@@ -124,8 +117,6 @@
 		006CE4FB2478191A00256895 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 		006CE4FD24781F4500256895 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		006CE4FF2478388500256895 /* UserDefaults+AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AppSettings.swift"; sourceTree = "<group>"; };
-		0093F9DB248B9535000DA70D /* AppRatedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatedView.swift; sourceTree = "<group>"; };
-		0093F9DD248BCF75000DA70D /* AppRatingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRatingService.swift; sourceTree = "<group>"; };
 		0093F9E0248BE056000DA70D /* AppFeedbackService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFeedbackService.swift; sourceTree = "<group>"; };
 		0093F9E4248C88CB000DA70D /* URLQueryParameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLQueryParameter.swift; sourceTree = "<group>"; };
 		00A42DDD248204AA003F24AA /* LanguageDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDetector.swift; sourceTree = "<group>"; };
@@ -209,10 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				0093F9E0248BE056000DA70D /* AppFeedbackService.swift */,
-				0093F9DB248B9535000DA70D /* AppRatedView.swift */,
-				0093F9DD248BCF75000DA70D /* AppRatingService.swift */,
-				00368E722488EE73001C4224 /* RateAppView.swift */,
-				00368E7C248A416A001C4224 /* AppRatingViewController.swift */,
 				00EC49FB24B0C18F0043C90C /* FeedbackMenuPresenter.swift */,
 				00368E7E248A451D001C4224 /* RateApp.xcassets */,
 			);
@@ -663,14 +650,10 @@
 			files = (
 				00DD6A53246659DA004684DA /* MainViewController.swift in Sources */,
 				004B6CCF2476AD2500C25112 /* Consts.swift in Sources */,
-				00368E7D248A416A001C4224 /* AppRatingViewController.swift in Sources */,
 				00368E7624891764001C4224 /* NSView+Extensions.swift in Sources */,
 				00C80BCD248D021600DF1FDF /* Log.swift in Sources */,
-				0093F9DC248B9535000DA70D /* AppRatedView.swift in Sources */,
-				00368E732488EE73001C4224 /* RateAppView.swift in Sources */,
 				0093F9E1248BE056000DA70D /* AppFeedbackService.swift in Sources */,
 				0093F9E5248C88CB000DA70D /* URLQueryParameter.swift in Sources */,
-				0093F9DE248BCF75000DA70D /* AppRatingService.swift in Sources */,
 				006CE4FE24781F4500256895 /* Language.swift in Sources */,
 				006A9909248D120800503F5D /* AppRatingSettings.swift in Sources */,
 				006CE5002478388500256895 /* UserDefaults+AppSettings.swift in Sources */,
@@ -708,7 +691,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0093F9E6248C891F000DA70D /* URLQueryParameter.swift in Sources */,
-				0093F9DF248BCFF2000DA70D /* AppRatingService.swift in Sources */,
 				0041D92F24850FA300E24AFE /* TransitionBehavior.swift in Sources */,
 				00D524192479393800556BA4 /* UserDefaults+AppSettings.swift in Sources */,
 				0093F9E7248CFA2F000DA70D /* AppFeedbackService.swift in Sources */,

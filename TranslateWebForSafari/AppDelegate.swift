@@ -13,6 +13,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         setupWindow()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            AppRatingSettings.showAppRatingRequestIfNeeded()
+        }
     }
 
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {

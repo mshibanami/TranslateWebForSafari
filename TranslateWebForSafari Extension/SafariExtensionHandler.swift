@@ -311,6 +311,7 @@ private extension SFSafariWindow {
         case .newTab:
             openTab(with: url, makeActiveIfPossible: true)
         }
+        AppRatingSettings.showAppRatingRequestIfNeeded()
         AppRatingSettings.incrementTranslationCount()
     }
     

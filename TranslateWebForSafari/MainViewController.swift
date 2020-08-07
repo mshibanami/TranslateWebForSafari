@@ -3,6 +3,7 @@
 import Cocoa
 import SafariServices.SFSafariApplication
 import ShortcutRecorder
+import StoreKit
 
 class MainViewController: NSViewController {
     private static let pageTranslationServices = TranslationService.allCases.filter { $0.supportsPageTranslation }
@@ -197,20 +198,6 @@ class MainViewController: NSViewController {
     
     private lazy var textTranslationOpenInNewTabButton = NSButton(checkboxWithTitle: L10n.openInNewTab, target: self, action: #selector(didSelectTextTranslationOpenInNewTabButton(_:)))
     
-    private lazy var appRatingViewController: AppRatingViewController = {
-        let viewController = AppRatingViewController(ratingService: AppRatingSettings.ratingService)
-        viewController.onSelectDismiss = { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.appRatingViewController.view.isHidden = true
-            self.appRatingViewController.heightConstraint?.constant = 0
-            self.view.window?.setContentSize(self.view.fittingSize)
-            AppRatingSettings.markLastAppRating()
-        }
-        return viewController
-    }()
-    
     private let feedbackMenuPresenter = FeedbackMenuPresenter(onFinishSelectingMenuItem: {})
     
     private lazy var rateAppContainerView: NSView = {
@@ -310,12 +297,6 @@ class MainViewController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if AppRatingSettings.showsAppRatingRequest {
-            addChild(appRatingViewController)
-            rateAppContainerView.addAutoLayoutSubview(appRatingViewController.view, positioned: .below)
-            appRatingViewController.view.fillToSuperview()
-        }
         
         extensionStateRefreshTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.refreshExtensionState()

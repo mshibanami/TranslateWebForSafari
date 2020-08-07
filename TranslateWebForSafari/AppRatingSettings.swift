@@ -1,14 +1,9 @@
 // Copyright (c) 2020 Manabu Nakazawa. Licensed under the MIT license. See LICENSE in the project root for license information.
 
 import Foundation
+import StoreKit
 
 enum AppRatingSettings {
-    static let ratingService: AppRatingService = {
-        return Consts.isDownloadedFromAppStore
-            ? .appStore(appAppleID: Consts.appAppleID)
-            : .gitHub(userID: Consts.gitHubUserID, repositoryID: Consts.gitHubRepositoryID)
-    }()
-    
     static func setup() {
         if UserDefaults.group.lastRunBundleVersion != Consts.bundleVersion {
             UserDefaults.group.lastRunBundleVersion = Consts.bundleVersion
@@ -28,13 +23,12 @@ enum AppRatingSettings {
         ]
     }()
     
-    static var showsAppRatingRequest: Bool {
-        let elapesedSinceLastRating = Date().timeIntervalSince1970
-            - (UserDefaults.group.lastRatedDate ?? Date.distantPast).timeIntervalSince1970
-        
-        return UserDefaults.group.lastRatedBundleVersion != Consts.bundleVersion
-            && UserDefaults.group.translationCountForCurrentVersion > 1
-            && elapesedSinceLastRating > TimeInterval(60 * 60 * 24 * 30)
+    static func showAppRatingRequestIfNeeded() {
+        guard #available(OSX 10.14, *), AppRatingSettings.showsAppRatingRequest else {
+            return
+        }
+        SKStoreReviewController.requestReview()
+        markLastAppRating()
     }
     
     static func markLastAppRating() {
@@ -45,5 +39,11 @@ enum AppRatingSettings {
     static func incrementTranslationCount() {
         UserDefaults.group.translationCountForCurrentVersion += 1
         Log.info("Translation Count: \(UserDefaults.group.translationCountForCurrentVersion)")
+    }
+    
+    private static var showsAppRatingRequest: Bool {
+        return Consts.isDownloadedFromAppStore
+            && UserDefaults.group.lastRatedDate == nil
+            && UserDefaults.group.translationCountForCurrentVersion > 20
     }
 }
