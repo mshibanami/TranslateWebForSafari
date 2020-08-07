@@ -1,6 +1,7 @@
 // Copyright (c) 2020 Manabu Nakazawa. Licensed under the MIT license. See LICENSE in the project root for license information.
 
 import Foundation
+import SafariServices
 
 enum AppFeedbackService {
     case email(address: String)
@@ -10,6 +11,7 @@ enum AppFeedbackService {
     var url: URL {
         switch self {
         case let .email(address):
+            let safariServiceVersionString = safariServicesAvailableVersion().flatMap { "\($0.rawValue)" } ?? "???"
             return URL(
                 mailTo: address,
                 subject: "Feedback for \(L10n.appName)",
@@ -17,6 +19,7 @@ enum AppFeedbackService {
                 \n
                 • \(L10n.appName) \(Consts.bundleShortVersion) (\(Consts.bundleVersion)) \(Consts.isDownloadedFromAppStore ? "App Store" : "GitHub")
                 • macOS \(ProcessInfo.processInfo.operatingSystemVersionString)
+                • SFSafariServicesVersion.rawValue \(safariServiceVersionString)
                 • Language: \(Locale.current.languageCode ?? "-")
                 • Region: \(Locale.current.regionCode ?? "-")
                 """)
@@ -50,4 +53,17 @@ private extension URL {
         components.percentEncodedQuery = percentEncodedQueries.makeQueryString()
         self = components.url!
     }
+}
+
+private func safariServicesAvailableVersion() -> SFSafariServicesVersion? {
+    let allPossibleVersions: [SFSafariServicesVersion] = (0..<100)
+        .compactMap { SFSafariServicesVersion(rawValue: $0) }
+        .reversed()
+    for version in allPossibleVersions {
+        if SFSafariServicesAvailable(version) {
+            return version
+        }
+    }
+    assertionFailure()
+    return nil
 }
