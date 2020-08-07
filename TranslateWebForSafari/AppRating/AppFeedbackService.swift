@@ -19,7 +19,7 @@ enum AppFeedbackService {
                 \n
                 • \(L10n.appName) \(Consts.bundleShortVersion) (\(Consts.bundleVersion)) \(Consts.isDownloadedFromAppStore ? "App Store" : "GitHub")
                 • macOS \(ProcessInfo.processInfo.operatingSystemVersionString)
-                • SFSafariServicesVersion.rawValue \(safariServiceVersionString)
+                • SFSafariServicesVersion.rawValue: \(safariServiceVersionString)
                 • Language: \(Locale.current.languageCode ?? "-")
                 • Region: \(Locale.current.regionCode ?? "-")
                 """)

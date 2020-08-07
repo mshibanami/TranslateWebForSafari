@@ -34,6 +34,7 @@ class L10n {
     static let menuItemQuitApp = String(format: NSLocalizedString("Quit %@", comment: ""), appShortName)
     static let menuItemWindow = NSLocalizedString("Window", comment: "")
     static let menuItemClose = NSLocalizedString("Close", comment: "")
+    static let howToUse = NSLocalizedString("How to Use", comment: "")
     static let pageTranslation = NSLocalizedString("Page Translation", comment: "")
     static let textTranslation = NSLocalizedString("Text Translation", comment: "")
     static let textOrPageTranslation = NSLocalizedString("Text or Page Translation", comment: "")

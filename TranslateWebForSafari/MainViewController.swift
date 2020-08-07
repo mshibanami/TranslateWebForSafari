@@ -55,6 +55,11 @@ class MainViewController: NSViewController {
         return button
     }()
     
+    private lazy var howToUseButton: NSButton = {
+        let button = NSButton(title: L10n.howToUse, target: self, action: #selector(didSelectHowToUse(_:)))
+        return button
+    }()
+    
     private lazy var sendFeedbackButton: NSButton = {
         let button = NSButton(title: L10n.sendFeedback, target: self, action: #selector(didSelectSendFeedback(_:)))
         button.setContentHuggingPriority(.required, for: .horizontal)
@@ -70,6 +75,8 @@ class MainViewController: NSViewController {
     private lazy var bottomButtonsView: NSStackView = {
         let view = NSStackView(views: [
             sendFeedbackButton,
+            NSView(),
+            howToUseButton,
             aboutThisExtensionButton,
         ])
         return view
@@ -417,6 +424,10 @@ class MainViewController: NSViewController {
     }
     
     // MARK: Actions
+    
+    @objc private func didSelectHowToUse(_ sender: NSButton) {
+        NSWorkspace.shared.open(Consts.appReviewURL)
+    }
     
     @objc private func didSelectSendFeedback(_ sender: NSView) {
         feedbackMenuPresenter.showMenu(with: nil, for: sender)
