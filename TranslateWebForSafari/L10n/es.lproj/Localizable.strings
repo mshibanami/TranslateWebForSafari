@@ -83,6 +83,9 @@
 "Hindi" = "Hindi";
 
 /* No comment provided by engineer. */
+"How to Use" = "Cómo se usa";
+
+/* No comment provided by engineer. */
 "How would you rate this version?" = "¿Como calificarias esta versión?";
 
 /* No comment provided by engineer. */
@@ -134,6 +137,9 @@
 "Nepali" = "Nepalí";
 
 /* No comment provided by engineer. */
+"No text is selected." = "No se selecciona ningún texto.";
+
+/* No comment provided by engineer. */
 "No thanks" = "No thanks";
 
 /* No comment provided by engineer. */
@@ -156,6 +162,9 @@
 
 /* No comment provided by engineer. */
 "Persian" = "Persa";
+
+/* No comment provided by engineer. */
+"Please enable the extension in Safari Preferences." = "Por favor, habilite la extensión en las Preferencias de Safari.";
 
 /* No comment provided by engineer. */
 "Polish" = "Polaco";
@@ -231,9 +240,6 @@
 
 /* No comment provided by engineer. */
 "Thank you!! 🙏" = "Thank you!! 🙏";
-
-/* No comment provided by engineer. */
-"Please enable the extension in Safari Preferences." = "Por favor, habilite la extensión en las Preferencias de Safari.";
 
 /* No comment provided by engineer. */
 "Toolbar button behavior" = "Comportamiento de los botones de la barra de herramientas";

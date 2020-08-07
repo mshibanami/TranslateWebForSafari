@@ -83,6 +83,9 @@
 "Hindi" = "印地语";
 
 /* No comment provided by engineer. */
+"How to Use" = "如何使用";
+
+/* No comment provided by engineer. */
 "How would you rate this version?" = "您如何评价这个版本？";
 
 /* No comment provided by engineer. */
@@ -134,6 +137,9 @@
 "Nepali" = "尼泊尔语";
 
 /* No comment provided by engineer. */
+"No text is selected." = "没有选择文字。";
+
+/* No comment provided by engineer. */
 "No thanks" = "取消";
 
 /* No comment provided by engineer. */
@@ -156,6 +162,9 @@
 
 /* No comment provided by engineer. */
 "Persian" = "波斯语";
+
+/* No comment provided by engineer. */
+"Please enable the extension in Safari Preferences." = "请在Safari偏好设置中启用该扩展。";
 
 /* No comment provided by engineer. */
 "Polish" = "波兰语";
@@ -231,9 +240,6 @@
 
 /* No comment provided by engineer. */
 "Thank you!! 🙏" = "太谢谢你了！！ 🙇🏻‍♂️";
-
-/* No comment provided by engineer. */
-"Please enable the extension in Safari Preferences." = "请在Safari偏好设置中启用该扩展。";
 
 /* No comment provided by engineer. */
 "Toolbar button behavior" = "工具栏按钮行为";
